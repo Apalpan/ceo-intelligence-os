@@ -1,4 +1,4 @@
-import { PanelLeftClose, PanelLeft, Command } from "lucide-react";
+import { PanelLeftClose, PanelLeft, Command, Activity, ExternalLink } from "lucide-react";
 import { WORKSPACES, WS_BY_ID, NAV_BY_ID } from "@/nav";
 import { useStore } from "@/store";
 import { cx, SHELL_STYLE } from "@/lib/format";
@@ -112,7 +112,14 @@ export function Sidebar({ route, param, navigate }: { route: string; param: stri
           </div>
         </nav>
 
-        <div className="border-t border-[var(--border)] p-2.5">
+        <div className="border-t border-[var(--border)] p-2.5 space-y-0.5">
+          <a href={`${import.meta.env.BASE_URL}activity/`} target="_blank" rel="noreferrer"
+            title="AECODE Activity Control OS"
+            className={cx("w-full press flex items-center gap-2.5 rounded-lg h-9 text-[13px] text-fg-2 hover:bg-surface-2 hover:text-fg transition-colors",
+              collapsed ? "justify-center" : "px-2.5")}>
+            <Activity size={16} className="shrink-0" style={{ color: "var(--c-aecode)" }} />
+            {!collapsed && <><span className="flex-1 text-left truncate">AECODE Activity</span><ExternalLink size={12} className="opacity-50" /></>}
+          </a>
           <button onClick={toggleSidebar}
             className={cx("hidden lg:flex w-full press items-center gap-2 rounded-lg h-9 text-xs text-muted hover:text-fg-2 hover:bg-surface-2 transition-colors",
               collapsed ? "justify-center" : "px-2.5")}>

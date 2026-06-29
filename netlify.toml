@@ -1,0 +1,14 @@
+# Netlify deploy config for CEO Intelligence OS.
+# Data JSON is committed (public/data), so the build needs no vault access.
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# Hash routing → no SPA rewrites strictly needed, but keep deep links safe.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

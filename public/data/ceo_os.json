@@ -1,0 +1,5065 @@
+{
+  "meta": {
+    "generated_at": "2026-06-28 19:10",
+    "vault": "D:\\AP\\AP_Knowledge_OS\\00_CEO_Intelligence",
+    "first_run": true,
+    "corte": "2026-06-28 16:25 PET",
+    "counts": {
+      "empresas": 6,
+      "proyectos": 22,
+      "colaboradores": 24,
+      "riesgos": 19,
+      "bloqueos": 14,
+      "decisiones": 8,
+      "prioridades": 13,
+      "agentes": 27,
+      "procesos": 12,
+      "deltas": 0
+    }
+  },
+  "empresas": [
+    {
+      "id": "emp-gen",
+      "nombre": "GEN+",
+      "color": "genplus",
+      "n_proyectos": 10,
+      "health_score": 77,
+      "risk_score": 51,
+      "ai_native_score": 52,
+      "process_score": 53,
+      "estado_global": "amarillo",
+      "presente": true,
+      "owner": "Alejandro"
+    },
+    {
+      "id": "emp-aecode",
+      "nombre": "AECODE",
+      "color": "aecode",
+      "n_proyectos": 8,
+      "health_score": 76,
+      "risk_score": 53,
+      "ai_native_score": 52,
+      "process_score": 52,
+      "estado_global": "amarillo",
+      "presente": true,
+      "owner": "Alejandro"
+    },
+    {
+      "id": "emp-visionpro",
+      "nombre": "VisionPro",
+      "color": "visionpro",
+      "n_proyectos": 2,
+      "health_score": 79,
+      "risk_score": 51,
+      "ai_native_score": 60,
+      "process_score": 40,
+      "estado_global": "amarillo",
+      "presente": true,
+      "owner": "Alejandro"
+    },
+    {
+      "id": "emp-agentflow",
+      "nombre": "AgentFlow",
+      "color": "agentflow",
+      "n_proyectos": 1,
+      "health_score": 65,
+      "risk_score": 38,
+      "ai_native_score": 60,
+      "process_score": 46,
+      "estado_global": "amarillo",
+      "presente": true,
+      "owner": "Alejandro"
+    },
+    {
+      "id": "emp-thesia",
+      "nombre": "THESIA",
+      "color": "thesia",
+      "n_proyectos": 1,
+      "health_score": 56,
+      "risk_score": 35,
+      "ai_native_score": 67,
+      "process_score": "No se tiene claro",
+      "estado_global": "amarillo",
+      "presente": true,
+      "owner": "Alejandro"
+    },
+    {
+      "id": "emp-ap",
+      "nombre": "AP",
+      "color": "ap",
+      "n_proyectos": 0,
+      "health_score": 50,
+      "risk_score": "No se tiene claro",
+      "ai_native_score": 38,
+      "process_score": 68,
+      "estado_global": "amarillo",
+      "presente": true,
+      "owner": "Alejandro"
+    }
+  ],
+  "areas": [
+    {
+      "id": "area-gen-caja",
+      "empresa": "GEN+",
+      "nombre": "Caja",
+      "n_proyectos": 1,
+      "health_score": 67,
+      "risk_score": 38,
+      "estado": "amarillo"
+    },
+    {
+      "id": "area-gen-delivery-bim",
+      "empresa": "GEN+",
+      "nombre": "Delivery BIM",
+      "n_proyectos": 6,
+      "health_score": 77,
+      "risk_score": 42,
+      "estado": "verde"
+    },
+    {
+      "id": "area-gen-producto-consultoria",
+      "empresa": "GEN+",
+      "nombre": "Producto/consultoria",
+      "n_proyectos": 1,
+      "health_score": 79,
+      "risk_score": 35,
+      "estado": "verde"
+    },
+    {
+      "id": "area-gen-producto-interno",
+      "empresa": "GEN+",
+      "nombre": "Producto interno",
+      "n_proyectos": 1,
+      "health_score": 90,
+      "risk_score": 20,
+      "estado": "verde"
+    },
+    {
+      "id": "area-gen-comercial",
+      "empresa": "GEN+",
+      "nombre": "Comercial",
+      "n_proyectos": 1,
+      "health_score": 71,
+      "risk_score": 20,
+      "estado": "amarillo"
+    },
+    {
+      "id": "area-aecode-summit",
+      "empresa": "AECODE",
+      "nombre": "Summit",
+      "n_proyectos": 3,
+      "health_score": 74,
+      "risk_score": 47,
+      "estado": "amarillo"
+    },
+    {
+      "id": "area-aecode-training",
+      "empresa": "AECODE",
+      "nombre": "Training",
+      "n_proyectos": 1,
+      "health_score": 67,
+      "risk_score": 53,
+      "estado": "amarillo"
+    },
+    {
+      "id": "area-aecode-comercial-b2c",
+      "empresa": "AECODE",
+      "nombre": "Comercial B2C",
+      "n_proyectos": 1,
+      "health_score": 79,
+      "risk_score": 35,
+      "estado": "verde"
+    },
+    {
+      "id": "area-aecode-marketing",
+      "empresa": "AECODE",
+      "nombre": "Marketing",
+      "n_proyectos": 1,
+      "health_score": 71,
+      "risk_score": 35,
+      "estado": "amarillo"
+    },
+    {
+      "id": "area-aecode-producto-digital",
+      "empresa": "AECODE",
+      "nombre": "Producto digital",
+      "n_proyectos": 1,
+      "health_score": 90,
+      "risk_score": 35,
+      "estado": "verde"
+    },
+    {
+      "id": "area-aecode-startup",
+      "empresa": "AECODE",
+      "nombre": "Startup",
+      "n_proyectos": 1,
+      "health_score": 79,
+      "risk_score": 20,
+      "estado": "verde"
+    },
+    {
+      "id": "area-visionpro-producto-obra",
+      "empresa": "VisionPro",
+      "nombre": "Producto/obra",
+      "n_proyectos": 1,
+      "health_score": 79,
+      "risk_score": 53,
+      "estado": "verde"
+    },
+    {
+      "id": "area-visionpro-comercial",
+      "empresa": "VisionPro",
+      "nombre": "Comercial",
+      "n_proyectos": 1,
+      "health_score": 79,
+      "risk_score": 20,
+      "estado": "verde"
+    },
+    {
+      "id": "area-thesia-startup-documentacion",
+      "empresa": "THESIA",
+      "nombre": "Startup/documentacion",
+      "n_proyectos": 1,
+      "health_score": 56,
+      "risk_score": 35,
+      "estado": "amarillo"
+    },
+    {
+      "id": "area-agentflow-automatizacion",
+      "empresa": "AgentFlow",
+      "nombre": "Automatizacion",
+      "n_proyectos": 1,
+      "health_score": 65,
+      "risk_score": 35,
+      "estado": "amarillo"
+    }
+  ],
+  "proyectos": [
+    {
+      "id": "prj-gen-cobranzas-gen",
+      "empresa": "GEN+",
+      "area": "Caja",
+      "nombre": "Cobranzas GEN+",
+      "responsable": "Julie",
+      "avance_reportado": 35,
+      "avance_validado": 35,
+      "estado": "rojo",
+      "pendientes": "Compromisos de pago por fila",
+      "bloqueos": "No se tiene claro",
+      "riesgos": "Avance tecnico sin caja",
+      "proximo_hito": "Tablero diario caja",
+      "evidencia": "Reporte Julie 2026-06-28",
+      "confianza": "Alta",
+      "health_score": 67,
+      "risk_score": 38,
+      "ceo_attention": 75,
+      "impacto_caja": 100,
+      "impacto_cliente": 50,
+      "fuente": "01_Matriz_Proyectos.md"
+    },
+    {
+      "id": "prj-gen-ptar-atarjea-buzones",
+      "empresa": "GEN+",
+      "area": "Delivery BIM",
+      "nombre": "PTAR Atarjea / Buzones",
+      "responsable": "Kevin / Luis / Julie",
+      "avance_reportado": 60,
+      "avance_validado": 60,
+      "estado": "amarillo",
+      "pendientes": "Validacion Ricardo, pago, evidencia final",
+      "bloqueos": "Validacion especialista",
+      "riesgos": "Reabrir cierre tecnico",
+      "proximo_hito": "Confirmacion formal",
+      "evidencia": "Reportes Kevin, Luis, Julie",
+      "confianza": "Alta",
+      "health_score": 79,
+      "risk_score": 35,
+      "ceo_attention": 58,
+      "impacto_caja": 50,
+      "impacto_cliente": 100,
+      "fuente": "01_Matriz_Proyectos.md"
+    },
+    {
+      "id": "prj-gen-ca-ete",
+      "empresa": "GEN+",
+      "area": "Delivery BIM",
+      "nombre": "Cañete",
+      "responsable": "Fabrizio / Israel / Robert / Luis",
+      "avance_reportado": 95,
+      "avance_validado": 95,
+      "estado": "rojo",
+      "pendientes": "Matriz alcance, congelar version, reportes/informes",
+      "bloqueos": "Cambios supervision y alcance ambiguo",
+      "riesgos": "Retrabajo no valorizado",
+      "proximo_hito": "Matriz dentro/fuera de alcance",
+      "evidencia": "Reportes Israel, Robert, Luis",
+      "confianza": "Alta",
+      "health_score": 83,
+      "risk_score": 53,
+      "ceo_attention": 82,
+      "impacto_caja": 50,
+      "impacto_cliente": 100,
+      "fuente": "01_Matriz_Proyectos.md"
+    },
+    {
+      "id": "prj-gen-faucett",
+      "empresa": "GEN+",
+      "area": "Delivery BIM",
+      "nombre": "Faucett",
+      "responsable": "Fabrizio / Israel",
+      "avance_reportado": 100,
+      "avance_validado": 100,
+      "estado": "rojo",
+      "pendientes": "Metodologia puentes, info HH, cotizacion adicional",
+      "bloqueos": "Falta info/metodologia/personal",
+      "riesgos": "Confundir InfraWorks con BIM cerrado",
+      "proximo_hito": "Metodo y alcance aprobados",
+      "evidencia": "Reporte Israel / Fabrizio",
+      "confianza": "Alta",
+      "health_score": 84,
+      "risk_score": 53,
+      "ceo_attention": 82,
+      "impacto_caja": 50,
+      "impacto_cliente": 100,
+      "fuente": "01_Matriz_Proyectos.md"
+    },
+    {
+      "id": "prj-gen-dovelas-panama",
+      "empresa": "GEN+",
+      "area": "Delivery BIM",
+      "nombre": "Dovelas Panama",
+      "responsable": "Fabrizio / Guisella / Julie",
+      "avance_reportado": 35,
+      "avance_validado": 35,
+      "estado": "rojo",
+      "pendientes": "Programacion Ignacio, cambios por dovela, valorizacion",
+      "bloqueos": "Programacion externa",
+      "riesgos": "Reproceso sin cobro",
+      "proximo_hito": "Matriz dovela-estado-cambio",
+      "evidencia": "Reporte Guisella / Fabrizio",
+      "confianza": "Alta",
+      "health_score": 67,
+      "risk_score": 53,
+      "ceo_attention": 82,
+      "impacto_caja": 50,
+      "impacto_cliente": 100,
+      "fuente": "01_Matriz_Proyectos.md"
+    },
+    {
+      "id": "prj-gen-the-circle",
+      "empresa": "GEN+",
+      "area": "Delivery BIM",
+      "nombre": "The Circle",
+      "responsable": "Fabrizio / Guisella",
+      "avance_reportado": 60,
+      "avance_validado": 60,
+      "estado": "amarillo",
+      "pendientes": "Planilla corregida y envio",
+      "bloqueos": "Validacion externa",
+      "riesgos": "Modelado interno sin entrega cerrada",
+      "proximo_hito": "Enviar planilla",
+      "evidencia": "Reporte Guisella / Fabrizio",
+      "confianza": "Alta",
+      "health_score": 79,
+      "risk_score": 35,
+      "ceo_attention": 58,
+      "impacto_caja": 50,
+      "impacto_cliente": 100,
+      "fuente": "01_Matriz_Proyectos.md"
+    },
+    {
+      "id": "prj-gen-puente-tingo",
+      "empresa": "GEN+",
+      "area": "Delivery BIM",
+      "nombre": "Puente Tingo",
+      "responsable": "Fabrizio / Luis",
+      "avance_reportado": 60,
+      "avance_validado": 50,
+      "estado": "amarillo",
+      "pendientes": "Acceso 02 / entregable Rhino",
+      "bloqueos": "No se tiene claro",
+      "riesgos": "Tareas cliente vs GEN+ mezcladas",
+      "proximo_hito": "Cierre alcance GEN+",
+      "evidencia": "Reportes Fabrizio, Luis",
+      "confianza": "Media",
+      "health_score": 71,
+      "risk_score": 20,
+      "ceo_attention": 48,
+      "impacto_caja": 50,
+      "impacto_cliente": 100,
+      "fuente": "01_Matriz_Proyectos.md"
+    },
+    {
+      "id": "prj-gen-esparq",
+      "empresa": "GEN+",
+      "area": "Producto/consultoria",
+      "nombre": "ESPARQ",
+      "responsable": "Alejandro / Daniella / Fabrizio / Yary",
+      "avance_reportado": 60,
+      "avance_validado": 60,
+      "estado": "amarillo",
+      "pendientes": "11 casos, demo, roles, datos, paneles, DoD",
+      "bloqueos": "Reunion full Sistemas pendiente",
+      "riesgos": "Alcance crece sin contrato operativo",
+      "proximo_hito": "Demo 3 funcionalidades",
+      "evidencia": "ESPARQ Hub / Fabrizio / Daniella",
+      "confianza": "Alta",
+      "health_score": 79,
+      "risk_score": 35,
+      "ceo_attention": 58,
+      "impacto_caja": 50,
+      "impacto_cliente": 100,
+      "fuente": "01_Matriz_Proyectos.md"
+    },
+    {
+      "id": "prj-gen-agente-inmobiliario-gen",
+      "empresa": "GEN+",
+      "area": "Producto interno",
+      "nombre": "Agente Inmobiliario GEN+",
+      "responsable": "Fabrizio",
+      "avance_reportado": 100,
+      "avance_validado": 100,
+      "estado": "amarillo",
+      "pendientes": "One Page nocturno y ficha guia",
+      "bloqueos": "No se tiene claro",
+      "riesgos": "Activo casi cerrado queda abierto",
+      "proximo_hito": "Checklist final",
+      "evidencia": "Reporte Fabrizio",
+      "confianza": "Alta",
+      "health_score": 90,
+      "risk_score": 20,
+      "ceo_attention": 38,
+      "impacto_caja": 50,
+      "impacto_cliente": 50,
+      "fuente": "01_Matriz_Proyectos.md"
+    },
+    {
+      "id": "prj-gen-uncp-osp-nestle-gore-otros",
+      "empresa": "GEN+",
+      "area": "Comercial",
+      "nombre": "UNCP / OSP / Nestle / GORE / otros",
+      "responsable": "Julie / Daniella",
+      "avance_reportado": 60,
+      "avance_validado": 50,
+      "estado": "amarillo",
+      "pendientes": "TDR, siguiente paso, cotizaciones",
+      "bloqueos": "No se tiene claro",
+      "riesgos": "Oportunidades sin fecha ni owner",
+      "proximo_hito": "Priorizacion UNCP y OSP",
+      "evidencia": "Reportes Julie / Daniella",
+      "confianza": "Media",
+      "health_score": 71,
+      "risk_score": 20,
+      "ceo_attention": 51,
+      "impacto_caja": 100,
+      "impacto_cliente": 50,
+      "fuente": "01_Matriz_Proyectos.md"
+    },
+    {
+      "id": "prj-aecode-sponsors-pipeline",
+      "empresa": "AECODE",
+      "area": "Summit",
+      "nombre": "Sponsors / pipeline",
+      "responsable": "Erika / Paola / Julie",
+      "avance_reportado": 35,
+      "avance_validado": 35,
+      "estado": "rojo",
+      "pendientes": "40 llamadas, beneficios, delegaciones, pagos",
+      "bloqueos": "Sheet vivo no integrado",
+      "riesgos": "Caja y experiencia sponsor no cruzadas",
+      "proximo_hito": "Corte sponsor diario",
+      "evidencia": "Reporte Erika/Paola, Julie",
+      "confianza": "Alta",
+      "health_score": 67,
+      "risk_score": 53,
+      "ceo_attention": 95,
+      "impacto_caja": 100,
+      "impacto_cliente": 100,
+      "fuente": "01_Matriz_Proyectos.md"
+    },
+    {
+      "id": "prj-aecode-web-app-agenda",
+      "empresa": "AECODE",
+      "area": "Summit",
+      "nombre": "Web / App / agenda",
+      "responsable": "Marlon / Yary / Anderson / Fabrizio",
+      "avance_reportado": 97,
+      "avance_validado": 97,
+      "estado": "amarillo",
+      "pendientes": "QA, deploy agenda, sponsors dinamicos, test App",
+      "bloqueos": "Anderson/Marlon/Yudely",
+      "riesgos": "Web lista visualmente sin QA/dev cerrado",
+      "proximo_hito": "QA responsive y test App",
+      "evidencia": "Reportes Marlon, Yary, Fabrizio",
+      "confianza": "Alta",
+      "health_score": 89,
+      "risk_score": 35,
+      "ceo_attention": 58,
+      "impacto_caja": 50,
+      "impacto_cliente": 100,
+      "fuente": "01_Matriz_Proyectos.md"
+    },
+    {
+      "id": "prj-aecode-pre-congreso",
+      "empresa": "AECODE",
+      "area": "Summit",
+      "nombre": "Pre Congreso",
+      "responsable": "Arantxa / Jessica / Enma",
+      "avance_reportado": 35,
+      "avance_validado": 35,
+      "estado": "rojo",
+      "pendientes": "Pieza, landing, grupos, GHL, correo, pauta",
+      "bloqueos": "Ventana corta",
+      "riesgos": "Bajo volumen de captacion",
+      "proximo_hito": "Sprint 24h 2026-06-29",
+      "evidencia": "Reporte Arantxa",
+      "confianza": "Alta",
+      "health_score": 67,
+      "risk_score": 53,
+      "ceo_attention": 82,
+      "impacto_caja": 50,
+      "impacto_cliente": 100,
+      "fuente": "01_Matriz_Proyectos.md"
+    },
+    {
+      "id": "prj-aecode-diplomados-certificados",
+      "empresa": "AECODE",
+      "area": "Training",
+      "nombre": "Diplomados/certificados",
+      "responsable": "Carolina / Patrick / Marlon / Kevin / Julie",
+      "avance_reportado": 35,
+      "avance_validado": 35,
+      "estado": "rojo",
+      "pendientes": "CIP, sustitutorios, rubricas, entregables, licencias",
+      "bloqueos": "Licencias agotadas",
+      "riesgos": "Reclamos y friccion postventa",
+      "proximo_hito": "Tablero por diplomado",
+      "evidencia": "Reportes Carolina, Marlon, Julie, Kevin",
+      "confianza": "Alta",
+      "health_score": 67,
+      "risk_score": 53,
+      "ceo_attention": 72,
+      "impacto_caja": 50,
+      "impacto_cliente": 50,
+      "fuente": "01_Matriz_Proyectos.md"
+    },
+    {
+      "id": "prj-aecode-ventas-training",
+      "empresa": "AECODE",
+      "area": "Comercial B2C",
+      "nombre": "Ventas Training",
+      "responsable": "Talia / Genesis / Yadira / Reiner",
+      "avance_reportado": 60,
+      "avance_validado": 60,
+      "estado": "amarillo",
+      "pendientes": "Validar cifra oficial, SLA, webinar Vial, brochure IA",
+      "bloqueos": "Blanquito/GHL y materiales",
+      "riesgos": "Forecast inconsistente",
+      "proximo_hito": "Cifra oficial y tablero semanal",
+      "evidencia": "Reportes Talia, Genesis, Yadira",
+      "confianza": "Alta",
+      "health_score": 79,
+      "risk_score": 35,
+      "ceo_attention": 61,
+      "impacto_caja": 100,
+      "impacto_cliente": 50,
+      "fuente": "01_Matriz_Proyectos.md"
+    },
+    {
+      "id": "prj-aecode-summit-reto-ia-training",
+      "empresa": "AECODE",
+      "area": "Marketing",
+      "nombre": "Summit / Reto IA / Training",
+      "responsable": "Arantxa / Enma / Jessica / Anggie",
+      "avance_reportado": 60,
+      "avance_validado": 50,
+      "estado": "amarillo",
+      "pendientes": "Integracion GHL, videos, agenda, dashboard metricas",
+      "bloqueos": "Material audiovisual y owner GHL",
+      "riesgos": "Marketing sin atribucion a ventas",
+      "proximo_hito": "Dashboard pieza-canal-lead-venta",
+      "evidencia": "Reportes Arantxa, Jessica, Enma",
+      "confianza": "Media",
+      "health_score": 71,
+      "risk_score": 35,
+      "ceo_attention": 58,
+      "impacto_caja": 50,
+      "impacto_cliente": 100,
+      "fuente": "01_Matriz_Proyectos.md"
+    },
+    {
+      "id": "prj-aecode-fase-2-fase-3-aecode",
+      "empresa": "AECODE",
+      "area": "Producto digital",
+      "nombre": "Fase 2 / Fase 3 / AECODE",
+      "responsable": "Yary / Marlon / Anderson / Yudely / Fabrizio",
+      "avance_reportado": 100,
+      "avance_validado": 100,
+      "estado": "amarillo",
+      "pendientes": "Implementacion dev, aula virtual, algoritmo con Emanuel",
+      "bloqueos": "Dev/backend/credenciales",
+      "riesgos": "Investigacion sin producto operativo",
+      "proximo_hito": "Separar handoff vs implementacion",
+      "evidencia": "Reportes Yary, Marlon, Fabrizio",
+      "confianza": "Alta",
+      "health_score": 90,
+      "risk_score": 35,
+      "ceo_attention": 48,
+      "impacto_caja": 50,
+      "impacto_cliente": 50,
+      "fuente": "01_Matriz_Proyectos.md"
+    },
+    {
+      "id": "prj-aecode-kaman-convocatorias",
+      "empresa": "AECODE",
+      "area": "Startup",
+      "nombre": "Kaman / convocatorias",
+      "responsable": "Daniella / Julie / Alejandro",
+      "avance_reportado": 60,
+      "avance_validado": 60,
+      "estado": "amarillo",
+      "pendientes": "Postmortem, StartUPC, THESIA fechas",
+      "bloqueos": "No se tiene claro",
+      "riesgos": "Repetir falla de preparacion",
+      "proximo_hito": "Postmortem Kaman",
+      "evidencia": "Reportes Daniella, Julie, Kaman",
+      "confianza": "Alta",
+      "health_score": 79,
+      "risk_score": 20,
+      "ceo_attention": 38,
+      "impacto_caja": 50,
+      "impacto_cliente": 50,
+      "fuente": "01_Matriz_Proyectos.md"
+    },
+    {
+      "id": "prj-visionpro-pdk-ascent",
+      "empresa": "VisionPro",
+      "area": "Producto/obra",
+      "nombre": "PDK Ascent",
+      "responsable": "Marlon / Emanuel / Yary / Daniella / Erika",
+      "avance_reportado": 80,
+      "avance_validado": 80,
+      "estado": "rojo",
+      "pendientes": "Demo web, usuarios, UX, AWS, internet, funcionalidades IA",
+      "bloqueos": "Conectividad obra y definicion PDK",
+      "riesgos": "Tecnologia no se vuelve producto vendible",
+      "proximo_hito": "Demo estable + roadmap IA",
+      "evidencia": "Backlog PDK / Marlon / Yary / Daniella",
+      "confianza": "Alta",
+      "health_score": 79,
+      "risk_score": 53,
+      "ceo_attention": 82,
+      "impacto_caja": 50,
+      "impacto_cliente": 100,
+      "fuente": "01_Matriz_Proyectos.md"
+    },
+    {
+      "id": "prj-visionpro-visionpro-decks",
+      "empresa": "VisionPro",
+      "area": "Comercial",
+      "nombre": "VisionPro decks",
+      "responsable": "Daniella / Julie / Erika",
+      "avance_reportado": 60,
+      "avance_validado": 60,
+      "estado": "amarillo",
+      "pendientes": "Conectar deck con evidencia, precio, alcance y SLA",
+      "bloqueos": "No se tiene claro",
+      "riesgos": "Promesa comercial sin demo operable",
+      "proximo_hito": "Oferta piloto VisionPro",
+      "evidencia": "Reporte Daniella / Backlog PDK",
+      "confianza": "Alta",
+      "health_score": 79,
+      "risk_score": 20,
+      "ceo_attention": 51,
+      "impacto_caja": 100,
+      "impacto_cliente": 50,
+      "fuente": "01_Matriz_Proyectos.md"
+    },
+    {
+      "id": "prj-thesia-thesia-presupuesto-tesis-juan",
+      "empresa": "THESIA",
+      "area": "Startup/documentacion",
+      "nombre": "THESIA presupuesto / Tesis Juan",
+      "responsable": "Julie / Fabrizio",
+      "avance_reportado": 60,
+      "avance_validado": 50,
+      "estado": "amarillo",
+      "pendientes": "Solicitud formal y traspaso de informacion",
+      "bloqueos": "No se tiene claro",
+      "riesgos": "Se diluye por WIP",
+      "proximo_hito": "No se tiene claro",
+      "evidencia": "Reportes Julie / Fabrizio",
+      "confianza": "Media",
+      "health_score": 56,
+      "risk_score": 35,
+      "ceo_attention": 38,
+      "impacto_caja": 50,
+      "impacto_cliente": 50,
+      "fuente": "01_Matriz_Proyectos.md"
+    },
+    {
+      "id": "prj-agentflow-migracion-flujos",
+      "empresa": "AgentFlow",
+      "area": "Automatizacion",
+      "nombre": "Migracion flujos",
+      "responsable": "Emanuel / Fabrizio / Marlon",
+      "avance_reportado": 100,
+      "avance_validado": 84,
+      "estado": "amarillo",
+      "pendientes": "Migracion con Emanuel 0%; primer flujo probado",
+      "bloqueos": "No se tiene claro",
+      "riesgos": "Automatizacion sin output operativo",
+      "proximo_hito": "No se tiene claro",
+      "evidencia": "Reportes Emanuel / Fabrizio",
+      "confianza": "Media",
+      "health_score": 65,
+      "risk_score": 35,
+      "ceo_attention": 38,
+      "impacto_caja": 50,
+      "impacto_cliente": 50,
+      "fuente": "01_Matriz_Proyectos.md"
+    }
+  ],
+  "colaboradores": [
+    {
+      "id": "col-julie",
+      "nombre": "Julie",
+      "empresa_area": "GEN+ / AECODE / Startup",
+      "empresas": [
+        "GEN+",
+        "AECODE"
+      ],
+      "proyectos": "Caja, sponsors, Training, convocatorias",
+      "n_proyectos": 4,
+      "actividades": "Pagos, facturas, sponsors, licencias, plataforma, startup",
+      "pendientes": "Tablero caja/sponsors/licencias",
+      "carga": "Alta",
+      "carga_val": 0.8,
+      "riesgos": "Caja sin fecha y licencias agotadas",
+      "necesita_feedback": true,
+      "proxima_accion": "Definir apoyo mid time o owner temporal",
+      "wip_score": 83,
+      "bottleneck_score": 76,
+      "context_quality_score": 70,
+      "ai_leverage_score": 50,
+      "ai_native_score": 53,
+      "herramientas_actuales": [
+        "Excel",
+        "WhatsApp"
+      ],
+      "herramientas_recomendadas": [
+        "Cobranzas Agent",
+        "Sheets IA"
+      ],
+      "agentes_recomendados": [
+        "Cobranzas Agent",
+        "Sponsors Agent"
+      ],
+      "procesos_delegables": [
+        "Tablero de caja diario",
+        "Recordatorios de cobro"
+      ],
+      "confianza_ai": "Inferido",
+      "fuente": "02_Matriz_Colaboradores.md"
+    },
+    {
+      "id": "col-marlon",
+      "nombre": "Marlon",
+      "empresa_area": "AECODE / GEN+ / VisionPro",
+      "empresas": [
+        "GEN+",
+        "AECODE",
+        "VisionPro"
+      ],
+      "proyectos": "Summit, Web, certificados, BESCO, VisionPro, Community",
+      "n_proyectos": 6,
+      "actividades": "Implementacion web, certificados, BESCO C#, VisionPro, logística Summit",
+      "pendientes": "QA/deploy, internet, BESCO e2e, produccion formularios",
+      "carga": "Muy alta",
+      "carga_val": 1.0,
+      "riesgos": "WIP excesivo",
+      "necesita_feedback": true,
+      "proxima_accion": "Reducir a 4 frentes maximos",
+      "wip_score": 100,
+      "bottleneck_score": 100,
+      "context_quality_score": 60,
+      "ai_leverage_score": 60,
+      "ai_native_score": 60,
+      "herramientas_actuales": [
+        "Claude Code",
+        "C#",
+        "Canva"
+      ],
+      "herramientas_recomendadas": [
+        "Summit Agent",
+        "QA Agent"
+      ],
+      "agentes_recomendados": [
+        "Summit Agent",
+        "Computer Vision Product Agent"
+      ],
+      "procesos_delegables": [
+        "QA web",
+        "Seguimiento de certificados"
+      ],
+      "confianza_ai": "Inferido",
+      "fuente": "02_Matriz_Colaboradores.md"
+    },
+    {
+      "id": "col-fabrizio",
+      "nombre": "Fabrizio",
+      "empresa_area": "GEN+ / AECODE / THESIA",
+      "empresas": [
+        "GEN+",
+        "AECODE",
+        "THESIA"
+      ],
+      "proyectos": "ESPARQ, BIM, IA, AgentFlow, Summit",
+      "n_proyectos": 5,
+      "actividades": "Muchos cierres parciales al 100%",
+      "pendientes": "Pendientes al 0% que desbloquean valor",
+      "carga": "Muy alta",
+      "carga_val": 1.0,
+      "riesgos": "Avance sin cierre final",
+      "necesita_feedback": true,
+      "proxima_accion": "Tablero 72h por pendiente 0%",
+      "wip_score": 100,
+      "bottleneck_score": 89,
+      "context_quality_score": 70,
+      "ai_leverage_score": 66,
+      "ai_native_score": 67,
+      "herramientas_actuales": [
+        "Claude Code",
+        "Revit",
+        "Codex"
+      ],
+      "herramientas_recomendadas": [
+        "Delivery BIM Agent",
+        "Propuestas Agent"
+      ],
+      "agentes_recomendados": [
+        "Delivery BIM Agent",
+        "Propuestas / Contratos Agent"
+      ],
+      "procesos_delegables": [
+        "Reportes de cierre",
+        "Documentación de entregables"
+      ],
+      "confianza_ai": "Inferido",
+      "fuente": "02_Matriz_Colaboradores.md"
+    },
+    {
+      "id": "col-yary",
+      "nombre": "Yary",
+      "empresa_area": "AECODE / VisionPro / GEN+",
+      "empresas": [
+        "GEN+",
+        "AECODE",
+        "VisionPro"
+      ],
+      "proyectos": "App Summit, Summit Web, Fase 2/3, VisionPro, SPARRQ",
+      "n_proyectos": 6,
+      "actividades": "19/31 items, 76% global, handoffs altos",
+      "pendientes": "Bloqueos de Anderson, Marlon, Emanuel, Yudely",
+      "carga": "Alta",
+      "carga_val": 0.8,
+      "riesgos": "Handoff listo aparece como atraso suyo",
+      "necesita_feedback": true,
+      "proxima_accion": "Tablero de bloqueos por tercero",
+      "wip_score": 92,
+      "bottleneck_score": 84,
+      "context_quality_score": 60,
+      "ai_leverage_score": 56,
+      "ai_native_score": 58,
+      "herramientas_actuales": [
+        "Figma",
+        "HTML"
+      ],
+      "herramientas_recomendadas": [
+        "Producto Digital / Testing Agent"
+      ],
+      "agentes_recomendados": [
+        "Producto Digital / Testing Agent"
+      ],
+      "procesos_delegables": [
+        "Handoff dev/QA",
+        "Documentación de componentes"
+      ],
+      "confianza_ai": "Inferido",
+      "fuente": "02_Matriz_Colaboradores.md"
+    },
+    {
+      "id": "col-carolina",
+      "nombre": "Carolina",
+      "empresa_area": "AECODE Training",
+      "empresas": [
+        "AECODE"
+      ],
+      "proyectos": "Diplomados/certificados",
+      "n_proyectos": 2,
+      "actividades": "Estado academico por diplomado",
+      "pendientes": "CIP, sustitutorios, rubricas, entregables",
+      "carga": "Alta",
+      "carga_val": 0.8,
+      "riesgos": "Reclamos por cierre incompleto",
+      "necesita_feedback": true,
+      "proxima_accion": "Tablero cierre academico",
+      "wip_score": 65,
+      "bottleneck_score": 63,
+      "context_quality_score": 60,
+      "ai_leverage_score": 46,
+      "ai_native_score": 50,
+      "herramientas_actuales": [
+        "Sheets",
+        "Zoom"
+      ],
+      "herramientas_recomendadas": [
+        "Training Operations Agent"
+      ],
+      "agentes_recomendados": [
+        "Training Operations Agent",
+        "Certificados Agent"
+      ],
+      "procesos_delegables": [
+        "Tablero por diplomado",
+        "Estado de certificados"
+      ],
+      "confianza_ai": "Inferido",
+      "fuente": "02_Matriz_Colaboradores.md"
+    },
+    {
+      "id": "col-talia",
+      "nombre": "Talia",
+      "empresa_area": "AECODE Comercial",
+      "empresas": [
+        "AECODE"
+      ],
+      "proyectos": "Training, Summit",
+      "n_proyectos": 2,
+      "actividades": "118 ventas junio, lectura funnel",
+      "pendientes": "Seguimiento masivo, certificados en brochures, Summit manual",
+      "carga": "Alta",
+      "carga_val": 0.8,
+      "riesgos": "Conversion baja por friccion",
+      "necesita_feedback": true,
+      "proxima_accion": "SLA comercial diario",
+      "wip_score": 65,
+      "bottleneck_score": 63,
+      "context_quality_score": 60,
+      "ai_leverage_score": 50,
+      "ai_native_score": 51,
+      "herramientas_actuales": [
+        "GHL",
+        "WhatsApp"
+      ],
+      "herramientas_recomendadas": [
+        "Ventas B2C Agent"
+      ],
+      "agentes_recomendados": [
+        "Ventas B2C Agent"
+      ],
+      "procesos_delegables": [
+        "SLA por lead",
+        "Reporte de funnel"
+      ],
+      "confianza_ai": "Inferido",
+      "fuente": "02_Matriz_Colaboradores.md"
+    },
+    {
+      "id": "col-genesis",
+      "nombre": "Genesis",
+      "empresa_area": "AECODE Comercial",
+      "empresas": [
+        "AECODE"
+      ],
+      "proyectos": "Vial, IA, AutoBIM",
+      "n_proyectos": 3,
+      "actividades": "131 ventas junio reportadas, seguimiento y llamadas",
+      "pendientes": "Validar cifra vs Talia, Blanquito, GHL, webinars",
+      "carga": "Media-alta",
+      "carga_val": 0.65,
+      "riesgos": "Datos comerciales inconsistentes",
+      "necesita_feedback": true,
+      "proxima_accion": "Validar corte oficial 118 vs 131",
+      "wip_score": 68,
+      "bottleneck_score": 65,
+      "context_quality_score": 50,
+      "ai_leverage_score": 44,
+      "ai_native_score": 45,
+      "herramientas_actuales": [
+        "GHL",
+        "WhatsApp"
+      ],
+      "herramientas_recomendadas": [
+        "Ventas B2C Agent"
+      ],
+      "agentes_recomendados": [
+        "Ventas B2C Agent"
+      ],
+      "procesos_delegables": [
+        "Seguimiento de leads",
+        "Corte de ventas"
+      ],
+      "confianza_ai": "Inferido",
+      "fuente": "02_Matriz_Colaboradores.md"
+    },
+    {
+      "id": "col-yadira",
+      "nombre": "Yadira",
+      "empresa_area": "AECODE Comercial",
+      "empresas": [
+        "AECODE"
+      ],
+      "proyectos": "IA, AutoBIM, Summit, Vial",
+      "n_proyectos": 4,
+      "actividades": "9 operaciones 24-26, 4 Summit, 2 IA completas, 2 cuotas IA",
+      "pendientes": "Seguimiento cuotas, brochure IA, leads Vial",
+      "carga": "Media",
+      "carga_val": 0.5,
+      "riesgos": "Ventas parciales mal contadas",
+      "necesita_feedback": true,
+      "proxima_accion": "Separar venta completa vs primera cuota",
+      "wip_score": 71,
+      "bottleneck_score": 68,
+      "context_quality_score": 50,
+      "ai_leverage_score": 40,
+      "ai_native_score": 42,
+      "herramientas_actuales": [
+        "GHL"
+      ],
+      "herramientas_recomendadas": [
+        "Ventas B2C Agent"
+      ],
+      "agentes_recomendados": [
+        "Ventas B2C Agent"
+      ],
+      "procesos_delegables": [
+        "Separar venta completa/cuota"
+      ],
+      "confianza_ai": "Inferido",
+      "fuente": "02_Matriz_Colaboradores.md"
+    },
+    {
+      "id": "col-erika",
+      "nombre": "Erika",
+      "empresa_area": "AECODE Summit",
+      "empresas": [
+        "AECODE"
+      ],
+      "proyectos": "Sponsors / alianzas",
+      "n_proyectos": 2,
+      "actividades": "Ownership CRM sponsors",
+      "pendientes": "40 llamadas, sponsors calientes, pagos",
+      "carga": "Alta",
+      "carga_val": 0.8,
+      "riesgos": "Sponsors se enfrian",
+      "necesita_feedback": true,
+      "proxima_accion": "Corte sponsor con Paola/Julie",
+      "wip_score": 65,
+      "bottleneck_score": 63,
+      "context_quality_score": 70,
+      "ai_leverage_score": 52,
+      "ai_native_score": 54,
+      "herramientas_actuales": [
+        "Sheets",
+        "WhatsApp"
+      ],
+      "herramientas_recomendadas": [
+        "Sponsors Agent"
+      ],
+      "agentes_recomendados": [
+        "Sponsors Agent"
+      ],
+      "procesos_delegables": [
+        "CRM sponsors vivo",
+        "Corte sponsor diario"
+      ],
+      "confianza_ai": "Inferido",
+      "fuente": "02_Matriz_Colaboradores.md"
+    },
+    {
+      "id": "col-paola",
+      "nombre": "Paola",
+      "empresa_area": "AECODE Summit",
+      "empresas": [
+        "AECODE"
+      ],
+      "proyectos": "Control operativo sponsors",
+      "n_proyectos": 1,
+      "actividades": "Dashboard y soporte control",
+      "pendientes": "Cruce pago-beneficio-delegacion",
+      "carga": "Alta",
+      "carga_val": 0.8,
+      "riesgos": "Pipeline depende de memoria individual",
+      "necesita_feedback": true,
+      "proxima_accion": "Tablero diario de cierre",
+      "wip_score": 56,
+      "bottleneck_score": 56,
+      "context_quality_score": 70,
+      "ai_leverage_score": 52,
+      "ai_native_score": 56,
+      "herramientas_actuales": [
+        "Sheets"
+      ],
+      "herramientas_recomendadas": [
+        "Sponsors Agent"
+      ],
+      "agentes_recomendados": [
+        "Sponsors Agent"
+      ],
+      "procesos_delegables": [
+        "Cruce pago-beneficio-delegación"
+      ],
+      "confianza_ai": "Inferido",
+      "fuente": "02_Matriz_Colaboradores.md"
+    },
+    {
+      "id": "col-arantxa",
+      "nombre": "Arantxa",
+      "empresa_area": "AECODE Marketing",
+      "empresas": [
+        "AECODE"
+      ],
+      "proyectos": "Reto IA, Pre Congreso, Summit",
+      "n_proyectos": 3,
+      "actividades": "Calendario, publicaciones, grupos externos",
+      "pendientes": "Sprint Pre Congreso, videos, agenda, speakers",
+      "carga": "Alta",
+      "carga_val": 0.8,
+      "riesgos": "Ventana corta 2026-07-01/02",
+      "necesita_feedback": true,
+      "proxima_accion": "Sprint 24h",
+      "wip_score": 74,
+      "bottleneck_score": 70,
+      "context_quality_score": 60,
+      "ai_leverage_score": 54,
+      "ai_native_score": 53,
+      "herramientas_actuales": [
+        "Meta Ads",
+        "GHL",
+        "Canva"
+      ],
+      "herramientas_recomendadas": [
+        "Marketing Attribution Agent"
+      ],
+      "agentes_recomendados": [
+        "Marketing Attribution Agent"
+      ],
+      "procesos_delegables": [
+        "Sprint de campaña",
+        "Landing"
+      ],
+      "confianza_ai": "Inferido",
+      "fuente": "02_Matriz_Colaboradores.md"
+    },
+    {
+      "id": "col-jessica",
+      "nombre": "Jessica",
+      "empresa_area": "AECODE Marketing/GHL",
+      "empresas": [
+        "AECODE"
+      ],
+      "proyectos": "Summit, VIP virtual, Training",
+      "n_proyectos": 3,
+      "actividades": "Flujo VIP, wa.links, campanas, estrategia Training",
+      "pendientes": "Integracion GHL, owners, tracking",
+      "carga": "Media-alta",
+      "carga_val": 0.65,
+      "riesgos": "GHL sin adopcion comercial",
+      "necesita_feedback": true,
+      "proxima_accion": "Probar flujo end-to-end",
+      "wip_score": 68,
+      "bottleneck_score": 65,
+      "context_quality_score": 50,
+      "ai_leverage_score": 56,
+      "ai_native_score": 53,
+      "herramientas_actuales": [
+        "GHL"
+      ],
+      "herramientas_recomendadas": [
+        "Marketing Attribution Agent"
+      ],
+      "agentes_recomendados": [
+        "Marketing Attribution Agent"
+      ],
+      "procesos_delegables": [
+        "Flujos GHL",
+        "Tracking end-to-end"
+      ],
+      "confianza_ai": "Inferido",
+      "fuente": "02_Matriz_Colaboradores.md"
+    },
+    {
+      "id": "col-enma",
+      "nombre": "Enma",
+      "empresa_area": "AECODE Marketing",
+      "empresas": [
+        "AECODE"
+      ],
+      "proyectos": "Brochures, piezas, TikTok, speakers",
+      "n_proyectos": 4,
+      "actividades": "Piezas y metricas altas de TikTok",
+      "pendientes": "Validacion comercial y certificados",
+      "carga": "Alta",
+      "carga_val": 0.8,
+      "riesgos": "Piezas sin conversion medida",
+      "necesita_feedback": false,
+      "proxima_accion": "Tablero pieza-canal-venta",
+      "wip_score": 74,
+      "bottleneck_score": 65,
+      "context_quality_score": 50,
+      "ai_leverage_score": 50,
+      "ai_native_score": 49,
+      "herramientas_actuales": [
+        "Canva",
+        "TikTok"
+      ],
+      "herramientas_recomendadas": [
+        "Marketing Attribution Agent"
+      ],
+      "agentes_recomendados": [
+        "Marketing Attribution Agent"
+      ],
+      "procesos_delegables": [
+        "Piezas",
+        "Brochures versión única"
+      ],
+      "confianza_ai": "Inferido",
+      "fuente": "02_Matriz_Colaboradores.md"
+    },
+    {
+      "id": "col-anggie",
+      "nombre": "Anggie",
+      "empresa_area": "AECODE Growth",
+      "empresas": [
+        "AECODE"
+      ],
+      "proyectos": "Reto IA, Summit, marketing",
+      "n_proyectos": 3,
+      "actividades": "Sistema parcial de agentes marketing",
+      "pendientes": "Dashboard de metricas",
+      "carga": "Media",
+      "carga_val": 0.5,
+      "riesgos": "Feedback cualitativo sin datos",
+      "necesita_feedback": false,
+      "proxima_accion": "Convertir agente en dashboard",
+      "wip_score": 53,
+      "bottleneck_score": 48,
+      "context_quality_score": 50,
+      "ai_leverage_score": 50,
+      "ai_native_score": 50,
+      "herramientas_actuales": [
+        "Agentes marketing"
+      ],
+      "herramientas_recomendadas": [
+        "Marketing Attribution Agent"
+      ],
+      "agentes_recomendados": [
+        "Marketing Attribution Agent"
+      ],
+      "procesos_delegables": [
+        "Dashboard de métricas"
+      ],
+      "confianza_ai": "Inferido",
+      "fuente": "02_Matriz_Colaboradores.md"
+    },
+    {
+      "id": "col-kevin",
+      "nombre": "Kevin",
+      "empresa_area": "GEN+ / AECODE",
+      "empresas": [
+        "GEN+",
+        "AECODE"
+      ],
+      "proyectos": "PTAR, BESCO, plataforma, Forma",
+      "n_proyectos": 4,
+      "actividades": "12 paquetes, 3 scripts, 4 cursos, 16 excels",
+      "pendientes": "Matriz plataforma y foco BIM",
+      "carga": "Alta",
+      "carga_val": 0.8,
+      "riesgos": "Pierde foco tecnico por soporte",
+      "necesita_feedback": true,
+      "proxima_accion": "Asignacion preferente BIM",
+      "wip_score": 83,
+      "bottleneck_score": 76,
+      "context_quality_score": 60,
+      "ai_leverage_score": 56,
+      "ai_native_score": 56,
+      "herramientas_actuales": [
+        "Revit",
+        "Python",
+        "C#"
+      ],
+      "herramientas_recomendadas": [
+        "QA/QC BIM Agent"
+      ],
+      "agentes_recomendados": [
+        "QA/QC BIM Agent",
+        "Delivery BIM Agent"
+      ],
+      "procesos_delegables": [
+        "Scripts BESCO",
+        "Plataforma"
+      ],
+      "confianza_ai": "Inferido",
+      "fuente": "02_Matriz_Colaboradores.md"
+    },
+    {
+      "id": "col-israel",
+      "nombre": "Israel",
+      "empresa_area": "GEN+ BIM",
+      "empresas": [
+        "GEN+"
+      ],
+      "proyectos": "Cañete, Faucett, San Martin",
+      "n_proyectos": 3,
+      "actividades": "Cañete 90% federado, Faucett InfraWorks 100% posible",
+      "pendientes": "Alcance Cañete, metodologia Faucett",
+      "carga": "Alta",
+      "carga_val": 0.8,
+      "riesgos": "Retrabajo fuera de alcance",
+      "necesita_feedback": true,
+      "proxima_accion": "Matriz observaciones dentro/fuera",
+      "wip_score": 74,
+      "bottleneck_score": 70,
+      "context_quality_score": 60,
+      "ai_leverage_score": 42,
+      "ai_native_score": 46,
+      "herramientas_actuales": [
+        "Revit",
+        "InfraWorks"
+      ],
+      "herramientas_recomendadas": [
+        "Control de Alcance BIM Agent"
+      ],
+      "agentes_recomendados": [
+        "Control de Alcance BIM Agent"
+      ],
+      "procesos_delegables": [
+        "Matriz de alcance"
+      ],
+      "confianza_ai": "Inferido",
+      "fuente": "02_Matriz_Colaboradores.md"
+    },
+    {
+      "id": "col-robert-herrera",
+      "nombre": "Robert Herrera",
+      "empresa_area": "GEN+ BIM",
+      "empresas": [
+        "GEN+"
+      ],
+      "proyectos": "Cañete / Faucett posible",
+      "n_proyectos": 2,
+      "actividades": "Cañete 95%, alcantarillas, metrados, planos",
+      "pendientes": "Congelar posicion y afinar detalles",
+      "carga": "Media-alta",
+      "carga_val": 0.65,
+      "riesgos": "Laminas se rompen por cambios",
+      "necesita_feedback": false,
+      "proxima_accion": "Confirmar con Israel version final",
+      "wip_score": 50,
+      "bottleneck_score": 46,
+      "context_quality_score": 50,
+      "ai_leverage_score": 32,
+      "ai_native_score": 36,
+      "herramientas_actuales": [
+        "Revit"
+      ],
+      "herramientas_recomendadas": [
+        "Delivery BIM Agent"
+      ],
+      "agentes_recomendados": [
+        "Delivery BIM Agent"
+      ],
+      "procesos_delegables": [
+        "Reporte de avance estandarizado"
+      ],
+      "confianza_ai": "Inferido",
+      "fuente": "02_Matriz_Colaboradores.md"
+    },
+    {
+      "id": "col-luis-vergara",
+      "nombre": "Luis Vergara",
+      "empresa_area": "GEN+ BIM",
+      "empresas": [
+        "GEN+"
+      ],
+      "proyectos": "Cañete, PTAR, Puente Tingo",
+      "n_proyectos": 3,
+      "actividades": "150 m muro, 7 buzones, 6 tablas, Rhino",
+      "pendientes": "Evidencia y primer entregable Rhino",
+      "carga": "Media",
+      "carga_val": 0.5,
+      "riesgos": "Reproceso invisible por topografia/cambios",
+      "necesita_feedback": false,
+      "proxima_accion": "Documentar flujos y cambios",
+      "wip_score": 53,
+      "bottleneck_score": 48,
+      "context_quality_score": 50,
+      "ai_leverage_score": 32,
+      "ai_native_score": 36,
+      "herramientas_actuales": [
+        "Revit",
+        "Rhino"
+      ],
+      "herramientas_recomendadas": [
+        "Delivery BIM Agent"
+      ],
+      "agentes_recomendados": [
+        "Delivery BIM Agent"
+      ],
+      "procesos_delegables": [
+        "Documentar flujos y cambios"
+      ],
+      "confianza_ai": "Inferido",
+      "fuente": "02_Matriz_Colaboradores.md"
+    },
+    {
+      "id": "col-guisella",
+      "nombre": "Guisella",
+      "empresa_area": "GEN+ BIM",
+      "empresas": [
+        "GEN+"
+      ],
+      "proyectos": "Dovelas, The Circle",
+      "n_proyectos": 2,
+      "actividades": "13 dovelas, 157.4 tn, correccion nervios",
+      "pendientes": "Programacion Ignacio, planilla The Circle",
+      "carga": "Media",
+      "carga_val": 0.5,
+      "riesgos": "Cambios sin valorizacion",
+      "necesita_feedback": false,
+      "proxima_accion": "Matriz dovela y envio planilla",
+      "wip_score": 44,
+      "bottleneck_score": 42,
+      "context_quality_score": 50,
+      "ai_leverage_score": 32,
+      "ai_native_score": 36,
+      "herramientas_actuales": [
+        "Revit"
+      ],
+      "herramientas_recomendadas": [
+        "Control de Alcance BIM Agent"
+      ],
+      "agentes_recomendados": [
+        "Control de Alcance BIM Agent"
+      ],
+      "procesos_delegables": [
+        "Matriz dovela",
+        "Valorización de cambios"
+      ],
+      "confianza_ai": "Inferido",
+      "fuente": "02_Matriz_Colaboradores.md"
+    },
+    {
+      "id": "col-daniella",
+      "nombre": "Daniella",
+      "empresa_area": "GEN+ / AECODE / VisionPro",
+      "empresas": [
+        "GEN+",
+        "AECODE",
+        "VisionPro"
+      ],
+      "proyectos": "ESPARQ, VisionPro, Summit, Kaman",
+      "n_proyectos": 4,
+      "actividades": "13 materiales Canva y actividades transversales",
+      "pendientes": "P0 ESPARQ, Summit, PDK, Kaman postmortem",
+      "carga": "Muy alta",
+      "carga_val": 1.0,
+      "riesgos": "WIP excede capacidad sana",
+      "necesita_feedback": true,
+      "proxima_accion": "Priorizar ESPARQ/Summit/PDK",
+      "wip_score": 91,
+      "bottleneck_score": 93,
+      "context_quality_score": 70,
+      "ai_leverage_score": 58,
+      "ai_native_score": 60,
+      "herramientas_actuales": [
+        "Canva",
+        "Claude"
+      ],
+      "herramientas_recomendadas": [
+        "Comercial B2B Agent",
+        "Startup Agent"
+      ],
+      "agentes_recomendados": [
+        "Startup / Convocatorias Agent",
+        "Comercial B2B Agent"
+      ],
+      "procesos_delegables": [
+        "Materiales comerciales",
+        "Postmortems"
+      ],
+      "confianza_ai": "Inferido",
+      "fuente": "02_Matriz_Colaboradores.md"
+    },
+    {
+      "id": "col-emanuel",
+      "nombre": "Emanuel",
+      "empresa_area": "AgentFlow / VisionPro / AECODE",
+      "empresas": [
+        "GEN+",
+        "AECODE",
+        "VisionPro",
+        "AgentFlow"
+      ],
+      "proyectos": "AI Ops, reporte proyectos, VisionPro",
+      "n_proyectos": 3,
+      "actividades": "Solicito reporte detallado y formato",
+      "pendientes": "Recibir normalizacion y migrar AgentFlow",
+      "carga": "Media",
+      "carga_val": 0.5,
+      "riesgos": "Actividad sin entregable tecnico cerrado",
+      "necesita_feedback": true,
+      "proxima_accion": "Primer flujo con log y evidencia",
+      "wip_score": 62,
+      "bottleneck_score": 61,
+      "context_quality_score": 50,
+      "ai_leverage_score": 64,
+      "ai_native_score": 60,
+      "herramientas_actuales": [
+        "Python",
+        "AWS",
+        "n8n"
+      ],
+      "herramientas_recomendadas": [
+        "Workflow Migration Agent"
+      ],
+      "agentes_recomendados": [
+        "Workflow Migration Agent",
+        "Demo / Deployment Agent",
+        "Context Pipeline Agent"
+      ],
+      "procesos_delegables": [
+        "Migración de flujos",
+        "Diagnóstico conectividad"
+      ],
+      "confianza_ai": "Inferido",
+      "fuente": "02_Matriz_Colaboradores.md"
+    },
+    {
+      "id": "col-anderson",
+      "nombre": "Anderson",
+      "empresa_area": "AECODE Dev",
+      "empresas": [
+        "AECODE"
+      ],
+      "proyectos": "App Summit / Fase 2",
+      "n_proyectos": 2,
+      "actividades": "No se tiene claro",
+      "pendientes": "Testeo App Summit y aula virtual",
+      "carga": "No se tiene claro",
+      "carga_val": 0.5,
+      "riesgos": "Bloquea QA sin reporte propio",
+      "necesita_feedback": true,
+      "proxima_accion": "Fecha de testeo",
+      "wip_score": 53,
+      "bottleneck_score": 54,
+      "context_quality_score": 30,
+      "ai_leverage_score": 36,
+      "ai_native_score": 35,
+      "herramientas_actuales": [
+        "Dev"
+      ],
+      "herramientas_recomendadas": [
+        "Summit Agent"
+      ],
+      "agentes_recomendados": [
+        "Summit Agent"
+      ],
+      "procesos_delegables": [
+        "Testeo App Summit"
+      ],
+      "confianza_ai": "Inferido",
+      "fuente": "02_Matriz_Colaboradores.md"
+    },
+    {
+      "id": "col-yudely",
+      "nombre": "Yudely",
+      "empresa_area": "Operaciones/producto",
+      "empresas": [
+        "AP"
+      ],
+      "proyectos": "Fase 3 Summit / CONEIC",
+      "n_proyectos": 2,
+      "actividades": "No se tiene claro",
+      "pendientes": "Revision Fase 3 Summit",
+      "carga": "No se tiene claro",
+      "carga_val": 0.5,
+      "riesgos": "Bloqueos por revision pendiente",
+      "necesita_feedback": true,
+      "proxima_accion": "Agendar revision",
+      "wip_score": 53,
+      "bottleneck_score": 54,
+      "context_quality_score": 40,
+      "ai_leverage_score": 36,
+      "ai_native_score": 38,
+      "herramientas_actuales": [
+        "Sheets"
+      ],
+      "herramientas_recomendadas": [
+        "Producto Digital / Testing Agent"
+      ],
+      "agentes_recomendados": [
+        "Producto Digital / Testing Agent"
+      ],
+      "procesos_delegables": [
+        "Revisión Fase 3"
+      ],
+      "confianza_ai": "Inferido",
+      "fuente": "02_Matriz_Colaboradores.md"
+    },
+    {
+      "id": "col-patrick",
+      "nombre": "Patrick",
+      "empresa_area": "AECODE Postventa",
+      "empresas": [
+        "AECODE"
+      ],
+      "proyectos": "Certificados, recursos, Zoom",
+      "n_proyectos": 3,
+      "actividades": "Evidencia historica y soporte",
+      "pendientes": "Matriz certificados/notas/recursos",
+      "carga": "Media",
+      "carga_val": 0.5,
+      "riesgos": "Reclamos por trazabilidad",
+      "necesita_feedback": false,
+      "proxima_accion": "Integrarse al tablero academico",
+      "wip_score": 53,
+      "bottleneck_score": 48,
+      "context_quality_score": 50,
+      "ai_leverage_score": 42,
+      "ai_native_score": 44,
+      "herramientas_actuales": [
+        "Zoom",
+        "Sheets"
+      ],
+      "herramientas_recomendadas": [
+        "Certificados Agent"
+      ],
+      "agentes_recomendados": [
+        "Certificados Agent"
+      ],
+      "procesos_delegables": [
+        "Matriz certificados/notas/recursos"
+      ],
+      "confianza_ai": "Inferido",
+      "fuente": "02_Matriz_Colaboradores.md"
+    }
+  ],
+  "riesgos": [
+    {
+      "id": "risk-gen-9-facturas-edp-gen-por-cobrar",
+      "tipo": "Financiero",
+      "riesgo": "9 facturas/EDP GEN+ por cobrar",
+      "empresa": "GEN+",
+      "area": "Caja",
+      "proyecto": "Cobranzas",
+      "responsable": "Julie",
+      "causa": "Seguimiento sin tablero por monto/fecha",
+      "impacto": "Caja queda desconectada del avance tecnico",
+      "urgencia": "P0",
+      "accion": "Tablero diario con compromiso y evidencia",
+      "dueno_sugerido": "Julie",
+      "risk_score": 78,
+      "estado": "abierto",
+      "confianza": "Alta",
+      "fuente": "03_Bloqueos_Riesgos.md"
+    },
+    {
+      "id": "risk-aecode-sponsors-summit-sin-cruce-pago-beneficio-delegac",
+      "tipo": "Comercial",
+      "riesgo": "Sponsors Summit sin cruce pago-beneficio-delegacion",
+      "empresa": "AECODE",
+      "area": "Summit",
+      "proyecto": "Sponsors",
+      "responsable": "Erika / Paola / Julie",
+      "causa": "CRM, cobro y produccion no integrados",
+      "impacto": "Riesgo de sponsor insatisfecho y caja incompleta",
+      "urgencia": "P0",
+      "accion": "Cruzar sponsor, pago, beneficio, delegacion, stand, ponente",
+      "dueno_sugerido": "Paola",
+      "risk_score": 74,
+      "estado": "abierto",
+      "confianza": "Alta",
+      "fuente": "03_Bloqueos_Riesgos.md"
+    },
+    {
+      "id": "risk-aecode-pre-congreso-con-ventana-muy-corta",
+      "tipo": "Operativo",
+      "riesgo": "Pre Congreso con ventana muy corta",
+      "empresa": "AECODE",
+      "area": "Marketing",
+      "proyecto": "Pre Congreso",
+      "responsable": "Arantxa / Jessica",
+      "causa": "Activacion tardia por foco en Reto IA",
+      "impacto": "Baja captacion y baja trazabilidad",
+      "urgencia": "P0",
+      "accion": "Sprint 24h: pieza, landing, grupos, GHL, correo, pauta",
+      "dueno_sugerido": "Arantxa",
+      "risk_score": 74,
+      "estado": "abierto",
+      "confianza": "Alta",
+      "fuente": "03_Bloqueos_Riesgos.md"
+    },
+    {
+      "id": "risk-aecode-certificados-cip-sustitutorios-y-rubricas-pendie",
+      "tipo": "Calidad",
+      "riesgo": "Certificados CIP/sustitutorios y rubricas pendientes",
+      "empresa": "AECODE",
+      "area": "Training",
+      "proyecto": "Diplomados",
+      "responsable": "Carolina / Patrick / Marlon",
+      "causa": "Cierres academicos simultaneos",
+      "impacto": "Reclamos y dano de experiencia alumno",
+      "urgencia": "P0",
+      "accion": "Tablero por diplomado y SLA de cierre",
+      "dueno_sugerido": "Carolina",
+      "risk_score": 74,
+      "estado": "abierto",
+      "confianza": "Alta",
+      "fuente": "03_Bloqueos_Riesgos.md"
+    },
+    {
+      "id": "risk-aecode-licencias-training-agotadas",
+      "tipo": "Operativo",
+      "riesgo": "Licencias Training agotadas",
+      "empresa": "AECODE",
+      "area": "Training",
+      "proyecto": "Plataforma/licencias",
+      "responsable": "Julie / Kevin",
+      "causa": "Falta stock y ausencia Ivana",
+      "impacto": "Accesos bloqueados",
+      "urgencia": "P0",
+      "accion": "Resolver 60 licencias y owner temporal",
+      "dueno_sugerido": "Julie",
+      "risk_score": 74,
+      "estado": "abierto",
+      "confianza": "Alta",
+      "fuente": "03_Bloqueos_Riesgos.md"
+    },
+    {
+      "id": "risk-visionpro-visionpro-depende-de-conectividad-de-obra",
+      "tipo": "Tecnico",
+      "riesgo": "VisionPro depende de conectividad de obra",
+      "empresa": "VisionPro",
+      "area": "Producto",
+      "proyecto": "PDK Ascent",
+      "responsable": "Marlon / Emanuel",
+      "causa": "Internet intermitente y arquitectura no cerrada",
+      "impacto": "Demo y validacion quedan bloqueadas",
+      "urgencia": "P0",
+      "accion": "Diagnostico conectividad + fallback edge/offline",
+      "dueno_sugerido": "Emanuel",
+      "risk_score": 74,
+      "estado": "abierto",
+      "confianza": "Alta",
+      "fuente": "03_Bloqueos_Riesgos.md"
+    },
+    {
+      "id": "risk-visionpro-demo-visionpro-no-productizada",
+      "tipo": "Tecnico",
+      "riesgo": "Demo VisionPro no productizada",
+      "empresa": "VisionPro",
+      "area": "Producto",
+      "proyecto": "PDK Ascent",
+      "responsable": "Emanuel / Marlon / Yary / Daniella",
+      "causa": "Backlog amplio sin corte MVP",
+      "impacto": "Venta se queda en presentacion",
+      "urgencia": "P1",
+      "accion": "Demo web estable, usuarios, UX y casos IA P0",
+      "dueno_sugerido": "Marlon",
+      "risk_score": 57,
+      "estado": "abierto",
+      "confianza": "Alta",
+      "fuente": "03_Bloqueos_Riesgos.md"
+    },
+    {
+      "id": "risk-gen-wip-excesivo-de-marlon",
+      "tipo": "Coordinacion",
+      "riesgo": "WIP excesivo de Marlon",
+      "empresa": "GEN+",
+      "area": "Dev",
+      "proyecto": "Multiproyecto",
+      "responsable": "Marlon",
+      "causa": "13 frentes activos",
+      "impacto": "Cuellos de botella y cierres incompletos",
+      "urgencia": "P0",
+      "accion": "Limitar a 4 frentes activos",
+      "dueno_sugerido": "Alejandro",
+      "risk_score": 78,
+      "estado": "abierto",
+      "confianza": "Alta",
+      "fuente": "03_Bloqueos_Riesgos.md"
+    },
+    {
+      "id": "risk-gen-wip-excesivo-de-fabrizio",
+      "tipo": "Coordinacion",
+      "riesgo": "WIP excesivo de Fabrizio",
+      "empresa": "GEN+",
+      "area": "Producto/delivery",
+      "proyecto": "Multiproyecto",
+      "responsable": "Fabrizio",
+      "causa": "Demasiados frentes al 100% parcial y 0% final",
+      "impacto": "Avance sin cierre comercial/producto",
+      "urgencia": "P0",
+      "accion": "Tablero 72h de pendientes al 0%",
+      "dueno_sugerido": "Alejandro",
+      "risk_score": 78,
+      "estado": "abierto",
+      "confianza": "Alta",
+      "fuente": "03_Bloqueos_Riesgos.md"
+    },
+    {
+      "id": "risk-aecode-cifras-ventas-aecode-inconsistentes",
+      "tipo": "Comercial",
+      "riesgo": "Cifras ventas AECODE inconsistentes",
+      "empresa": "AECODE",
+      "area": "Comercial",
+      "proyecto": "Training",
+      "responsable": "Talia / Genesis",
+      "causa": "Diferente criterio de corte",
+      "impacto": "Forecast y decisiones comerciales erroneas",
+      "urgencia": "P1",
+      "accion": "Validar cifra oficial 118 vs 131",
+      "dueno_sugerido": "Talia",
+      "risk_score": 66,
+      "estado": "abierto",
+      "confianza": "Alta",
+      "fuente": "03_Bloqueos_Riesgos.md"
+    },
+    {
+      "id": "risk-aecode-brochures-ia-vial-autobim-con-observaciones",
+      "tipo": "Comunicacion",
+      "riesgo": "Brochures IA/Vial/AutoBIM con observaciones",
+      "empresa": "AECODE",
+      "area": "Comercial/marketing",
+      "proyecto": "Training",
+      "responsable": "Talia / Genesis / Enma",
+      "causa": "Material tarde o no actualizado",
+      "impacto": "Leads pierden confianza y conversion",
+      "urgencia": "P1",
+      "accion": "Version unica aprobada por programa",
+      "dueno_sugerido": "Enma",
+      "risk_score": 57,
+      "estado": "abierto",
+      "confianza": "Alta",
+      "fuente": "03_Bloqueos_Riesgos.md"
+    },
+    {
+      "id": "risk-aecode-ghl-no-integrado-completamente",
+      "tipo": "Operativo",
+      "riesgo": "GHL no integrado completamente",
+      "empresa": "AECODE",
+      "area": "Marketing/CRM",
+      "proyecto": "Summit / Training",
+      "responsable": "Jessica",
+      "causa": "Falta owner y tracking end-to-end",
+      "impacto": "Leads sin trazabilidad",
+      "urgencia": "P1",
+      "accion": "Owner por flujo + prueba tracking",
+      "dueno_sugerido": "Jessica",
+      "risk_score": 62,
+      "estado": "abierto",
+      "confianza": "Alta",
+      "fuente": "03_Bloqueos_Riesgos.md"
+    },
+    {
+      "id": "risk-gen-ca-ete-con-alcance-y-observaciones-ambiguas",
+      "tipo": "Calidad",
+      "riesgo": "Cañete con alcance y observaciones ambiguas",
+      "empresa": "GEN+",
+      "area": "Delivery BIM",
+      "proyecto": "Cañete",
+      "responsable": "Israel / Fabrizio",
+      "causa": "Supervision pide estandar BIM fuera de alcance inicial",
+      "impacto": "Retrabajo no valorizado",
+      "urgencia": "P0",
+      "accion": "Matriz dentro/fuera de alcance",
+      "dueno_sugerido": "Israel",
+      "risk_score": 74,
+      "estado": "abierto",
+      "confianza": "Alta",
+      "fuente": "03_Bloqueos_Riesgos.md"
+    },
+    {
+      "id": "risk-gen-ca-ete-sin-version-congelada",
+      "tipo": "Calidad",
+      "riesgo": "Cañete sin version congelada",
+      "empresa": "GEN+",
+      "area": "Delivery BIM",
+      "proyecto": "Cañete",
+      "responsable": "Robert / Israel",
+      "causa": "Cambios de posicion rompen laminas y vistas",
+      "impacto": "Avance 95% puede reabrirse",
+      "urgencia": "P0",
+      "accion": "Congelar posicion y version antes de laminado final",
+      "dueno_sugerido": "Israel",
+      "risk_score": 74,
+      "estado": "abierto",
+      "confianza": "Alta",
+      "fuente": "03_Bloqueos_Riesgos.md"
+    },
+    {
+      "id": "risk-gen-dovelas-y-the-circle-absorben-cambios-sin-valorizac",
+      "tipo": "Financiero",
+      "riesgo": "Dovelas y The Circle absorben cambios sin valorizacion",
+      "empresa": "GEN+",
+      "area": "Delivery BIM",
+      "proyecto": "Ferralia / The Circle",
+      "responsable": "Fabrizio / Guisella / Julie",
+      "causa": "Nuevos planos y correcciones sin clasificacion",
+      "impacto": "Horas no cobradas",
+      "urgencia": "P1",
+      "accion": "Matriz cambio base/reproceso/adicional",
+      "dueno_sugerido": "Fabrizio",
+      "risk_score": 57,
+      "estado": "abierto",
+      "confianza": "Alta",
+      "fuente": "03_Bloqueos_Riesgos.md"
+    },
+    {
+      "id": "risk-gen-faucett-confunde-infraworks-con-avance-bim-detallad",
+      "tipo": "Tecnico",
+      "riesgo": "Faucett confunde InfraWorks con avance BIM detallado",
+      "empresa": "GEN+",
+      "area": "Delivery BIM",
+      "proyecto": "Faucett",
+      "responsable": "Israel / Fabrizio",
+      "causa": "Falta metodo Revit/Rhino e info HH",
+      "impacto": "Planificacion irreal",
+      "urgencia": "P1",
+      "accion": "Definir metodo y alcance antes de producir",
+      "dueno_sugerido": "Israel",
+      "risk_score": 57,
+      "estado": "abierto",
+      "confianza": "Alta",
+      "fuente": "03_Bloqueos_Riesgos.md"
+    },
+    {
+      "id": "risk-gen-esparq-puede-dispersarse",
+      "tipo": "Operativo",
+      "riesgo": "ESPARQ puede dispersarse",
+      "empresa": "GEN+",
+      "area": "Producto/consultoria",
+      "proyecto": "ESPARQ",
+      "responsable": "Daniella / Fabrizio",
+      "causa": "Discovery sin DoD cerrado",
+      "impacto": "Alcance informal y retrabajo",
+      "urgencia": "P1",
+      "accion": "DoD, roles, datos, 11 casos, demo",
+      "dueno_sugerido": "Daniella",
+      "risk_score": 57,
+      "estado": "abierto",
+      "confianza": "Alta",
+      "fuente": "03_Bloqueos_Riesgos.md"
+    },
+    {
+      "id": "risk-aecode-kaman-evidencia-deuda-de-gestion-startup",
+      "tipo": "Operativo",
+      "riesgo": "Kaman evidencia deuda de gestion startup",
+      "empresa": "AECODE",
+      "area": "Startup",
+      "proyecto": "Kaman",
+      "responsable": "Daniella / Alejandro",
+      "causa": "Deck/preparacion tarde",
+      "impacto": "Se repite perdida en convocatorias",
+      "urgencia": "P2",
+      "accion": "Postmortem y checklist startup",
+      "dueno_sugerido": "Daniella",
+      "risk_score": 42,
+      "estado": "abierto",
+      "confianza": "Alta",
+      "fuente": "03_Bloqueos_Riesgos.md"
+    },
+    {
+      "id": "risk-agentflow-agentflow-sin-primer-flujo-migrado",
+      "tipo": "Automatizacion",
+      "riesgo": "AgentFlow sin primer flujo migrado",
+      "empresa": "AgentFlow",
+      "area": "Automatizacion",
+      "proyecto": "Migracion",
+      "responsable": "Emanuel / Fabrizio",
+      "causa": "Documentacion sin implementacion",
+      "impacto": "No genera ventaja operativa aun",
+      "urgencia": "P2",
+      "accion": "Primer flujo con entrada, salida, log y fallback",
+      "dueno_sugerido": "Emanuel",
+      "risk_score": 42,
+      "estado": "abierto",
+      "confianza": "Alta",
+      "fuente": "03_Bloqueos_Riesgos.md"
+    }
+  ],
+  "bloqueos": [
+    {
+      "id": "blk-gen-ptar-atarjea-buzones",
+      "empresa": "GEN+",
+      "area": "Delivery BIM",
+      "proyecto": "PTAR Atarjea / Buzones",
+      "descripcion": "Validacion especialista",
+      "responsable_bloqueado": "Kevin / Luis / Julie",
+      "impacto": "Reabrir cierre tecnico",
+      "urgencia": "P1",
+      "accion_recomendada": "Confirmacion formal",
+      "estado": "abierto",
+      "confianza": "Alta",
+      "fuente": "01_Matriz_Proyectos.md"
+    },
+    {
+      "id": "blk-gen-ca-ete",
+      "empresa": "GEN+",
+      "area": "Delivery BIM",
+      "proyecto": "Cañete",
+      "descripcion": "Cambios supervision y alcance ambiguo",
+      "responsable_bloqueado": "Fabrizio / Israel / Robert / Luis",
+      "impacto": "Retrabajo no valorizado",
+      "urgencia": "P0",
+      "accion_recomendada": "Matriz dentro/fuera de alcance",
+      "estado": "abierto",
+      "confianza": "Alta",
+      "fuente": "01_Matriz_Proyectos.md"
+    },
+    {
+      "id": "blk-gen-faucett",
+      "empresa": "GEN+",
+      "area": "Delivery BIM",
+      "proyecto": "Faucett",
+      "descripcion": "Falta info/metodologia/personal",
+      "responsable_bloqueado": "Fabrizio / Israel",
+      "impacto": "Confundir InfraWorks con BIM cerrado",
+      "urgencia": "P0",
+      "accion_recomendada": "Metodo y alcance aprobados",
+      "estado": "abierto",
+      "confianza": "Alta",
+      "fuente": "01_Matriz_Proyectos.md"
+    },
+    {
+      "id": "blk-gen-dovelas-panama",
+      "empresa": "GEN+",
+      "area": "Delivery BIM",
+      "proyecto": "Dovelas Panama",
+      "descripcion": "Programacion externa",
+      "responsable_bloqueado": "Fabrizio / Guisella / Julie",
+      "impacto": "Reproceso sin cobro",
+      "urgencia": "P0",
+      "accion_recomendada": "Matriz dovela-estado-cambio",
+      "estado": "abierto",
+      "confianza": "Alta",
+      "fuente": "01_Matriz_Proyectos.md"
+    },
+    {
+      "id": "blk-gen-the-circle",
+      "empresa": "GEN+",
+      "area": "Delivery BIM",
+      "proyecto": "The Circle",
+      "descripcion": "Validacion externa",
+      "responsable_bloqueado": "Fabrizio / Guisella",
+      "impacto": "Modelado interno sin entrega cerrada",
+      "urgencia": "P1",
+      "accion_recomendada": "Enviar planilla",
+      "estado": "abierto",
+      "confianza": "Alta",
+      "fuente": "01_Matriz_Proyectos.md"
+    },
+    {
+      "id": "blk-gen-esparq",
+      "empresa": "GEN+",
+      "area": "Producto/consultoria",
+      "proyecto": "ESPARQ",
+      "descripcion": "Reunion full Sistemas pendiente",
+      "responsable_bloqueado": "Alejandro / Daniella / Fabrizio / Yary",
+      "impacto": "Alcance crece sin contrato operativo",
+      "urgencia": "P1",
+      "accion_recomendada": "Demo 3 funcionalidades",
+      "estado": "abierto",
+      "confianza": "Alta",
+      "fuente": "01_Matriz_Proyectos.md"
+    },
+    {
+      "id": "blk-aecode-sponsors-pipeline",
+      "empresa": "AECODE",
+      "area": "Summit",
+      "proyecto": "Sponsors / pipeline",
+      "descripcion": "Sheet vivo no integrado",
+      "responsable_bloqueado": "Erika / Paola / Julie",
+      "impacto": "Caja y experiencia sponsor no cruzadas",
+      "urgencia": "P0",
+      "accion_recomendada": "Corte sponsor diario",
+      "estado": "abierto",
+      "confianza": "Alta",
+      "fuente": "01_Matriz_Proyectos.md"
+    },
+    {
+      "id": "blk-aecode-web-app-agenda",
+      "empresa": "AECODE",
+      "area": "Summit",
+      "proyecto": "Web / App / agenda",
+      "descripcion": "Anderson/Marlon/Yudely",
+      "responsable_bloqueado": "Marlon / Yary / Anderson / Fabrizio",
+      "impacto": "Web lista visualmente sin QA/dev cerrado",
+      "urgencia": "P1",
+      "accion_recomendada": "QA responsive y test App",
+      "estado": "abierto",
+      "confianza": "Alta",
+      "fuente": "01_Matriz_Proyectos.md"
+    },
+    {
+      "id": "blk-aecode-pre-congreso",
+      "empresa": "AECODE",
+      "area": "Summit",
+      "proyecto": "Pre Congreso",
+      "descripcion": "Ventana corta",
+      "responsable_bloqueado": "Arantxa / Jessica / Enma",
+      "impacto": "Bajo volumen de captacion",
+      "urgencia": "P0",
+      "accion_recomendada": "Sprint 24h 2026-06-29",
+      "estado": "abierto",
+      "confianza": "Alta",
+      "fuente": "01_Matriz_Proyectos.md"
+    },
+    {
+      "id": "blk-aecode-diplomados-certificados",
+      "empresa": "AECODE",
+      "area": "Training",
+      "proyecto": "Diplomados/certificados",
+      "descripcion": "Licencias agotadas",
+      "responsable_bloqueado": "Carolina / Patrick / Marlon / Kevin / Julie",
+      "impacto": "Reclamos y friccion postventa",
+      "urgencia": "P0",
+      "accion_recomendada": "Tablero por diplomado",
+      "estado": "abierto",
+      "confianza": "Alta",
+      "fuente": "01_Matriz_Proyectos.md"
+    },
+    {
+      "id": "blk-aecode-ventas-training",
+      "empresa": "AECODE",
+      "area": "Comercial B2C",
+      "proyecto": "Ventas Training",
+      "descripcion": "Blanquito/GHL y materiales",
+      "responsable_bloqueado": "Talia / Genesis / Yadira / Reiner",
+      "impacto": "Forecast inconsistente",
+      "urgencia": "P1",
+      "accion_recomendada": "Cifra oficial y tablero semanal",
+      "estado": "abierto",
+      "confianza": "Alta",
+      "fuente": "01_Matriz_Proyectos.md"
+    },
+    {
+      "id": "blk-aecode-summit-reto-ia-training",
+      "empresa": "AECODE",
+      "area": "Marketing",
+      "proyecto": "Summit / Reto IA / Training",
+      "descripcion": "Material audiovisual y owner GHL",
+      "responsable_bloqueado": "Arantxa / Enma / Jessica / Anggie",
+      "impacto": "Marketing sin atribucion a ventas",
+      "urgencia": "P1",
+      "accion_recomendada": "Dashboard pieza-canal-lead-venta",
+      "estado": "abierto",
+      "confianza": "Media",
+      "fuente": "01_Matriz_Proyectos.md"
+    },
+    {
+      "id": "blk-aecode-fase-2-fase-3-aecode",
+      "empresa": "AECODE",
+      "area": "Producto digital",
+      "proyecto": "Fase 2 / Fase 3 / AECODE",
+      "descripcion": "Dev/backend/credenciales",
+      "responsable_bloqueado": "Yary / Marlon / Anderson / Yudely / Fabrizio",
+      "impacto": "Investigacion sin producto operativo",
+      "urgencia": "P1",
+      "accion_recomendada": "Separar handoff vs implementacion",
+      "estado": "abierto",
+      "confianza": "Alta",
+      "fuente": "01_Matriz_Proyectos.md"
+    },
+    {
+      "id": "blk-visionpro-pdk-ascent",
+      "empresa": "VisionPro",
+      "area": "Producto/obra",
+      "proyecto": "PDK Ascent",
+      "descripcion": "Conectividad obra y definicion PDK",
+      "responsable_bloqueado": "Marlon / Emanuel / Yary / Daniella / Erika",
+      "impacto": "Tecnologia no se vuelve producto vendible",
+      "urgencia": "P0",
+      "accion_recomendada": "Demo estable + roadmap IA",
+      "estado": "abierto",
+      "confianza": "Alta",
+      "fuente": "01_Matriz_Proyectos.md"
+    }
+  ],
+  "decisiones": [
+    {
+      "id": "dec-tablero-operativo-p0-de-la-semana",
+      "titulo": "Tablero operativo P0 de la semana",
+      "nivel": "urgente",
+      "contexto": "caja GEN+, sponsors Summit y Training compiten por prioridad critica.",
+      "opciones": "A) tablero caja/Summit/Training integrado; B) empezar solo con Summit; C) empezar solo con caja.",
+      "recomendacion": "A, con Julie como caja, Paola como sponsor control y Carolina como Training.",
+      "riesgo_no_decidir": "se sigue avanzando sin control de cobro, beneficios ni certificados.",
+      "fecha_limite": "2026-06-29.",
+      "info_faltante": "monto por factura/EDP y estado vivo de sponsor Sheet.",
+      "estado": "pendiente",
+      "urgencia": "P0",
+      "confianza": "Alta",
+      "fuente": "04_Decisiones_CEO.md"
+    },
+    {
+      "id": "dec-limite-de-wip-de-marlon",
+      "titulo": "Limite de WIP de Marlon",
+      "nivel": "urgente",
+      "contexto": "Marlon reporta 13 frentes activos.",
+      "opciones": "A) 4 frentes activos; B) 6 frentes; C) mantener todo abierto.",
+      "recomendacion": "A: Summit web/presencial, VisionPro, certificados, BESCO o Community Web.",
+      "riesgo_no_decidir": "cuellos de botella, staging sin produccion, demo VisionPro bloqueada.",
+      "fecha_limite": "2026-06-29.",
+      "info_faltante": "disponibilidad real de Anderson/Yudely para absorber dev/QA.",
+      "estado": "pendiente",
+      "urgencia": "P0",
+      "confianza": "Alta",
+      "fuente": "04_Decisiones_CEO.md"
+    },
+    {
+      "id": "dec-limite-de-wip-de-fabrizio",
+      "titulo": "Limite de WIP de Fabrizio",
+      "nivel": "urgente",
+      "contexto": "muchos frentes al 100% parcial y pendientes al 0%.",
+      "opciones": "A) tablero 72h por pendientes al 0%; B) seguimiento general semanal; C) mantener reporte amplio.",
+      "recomendacion": "A.",
+      "riesgo_no_decidir": "avance no se convierte en caja, producto, demo o certificacion.",
+      "fecha_limite": "2026-06-29.",
+      "info_faltante": "lista validada de top 8 cierres por impacto.",
+      "estado": "pendiente",
+      "urgencia": "P0",
+      "confianza": "Alta",
+      "fuente": "04_Decisiones_CEO.md"
+    },
+    {
+      "id": "dec-ca-ete-alcance-base-vs-adicional",
+      "titulo": "Cañete: alcance base vs adicional",
+      "nivel": "urgente",
+      "contexto": "Israel, Robert y Luis muestran avance alto, pero tambien retrabajos por cambios y exigencias fuera de alcance.",
+      "opciones": "A) pausar refinamientos hasta matriz de alcance; B) seguir corrigiendo; C) cotizar adicional directo.",
+      "recomendacion": "A, luego C donde aplique.",
+      "riesgo_no_decidir": "GEN+ absorbe horas no valorizadas y retrabajo invisible.",
+      "fecha_limite": "2026-06-29.",
+      "info_faltante": "matriz de observaciones supervision.",
+      "estado": "pendiente",
+      "urgencia": "P0",
+      "confianza": "Alta",
+      "fuente": "04_Decisiones_CEO.md"
+    },
+    {
+      "id": "dec-visionpro-demo-vendible-vs-backlog-amplio",
+      "titulo": "VisionPro: demo vendible vs backlog amplio",
+      "nivel": "urgente",
+      "contexto": "PDK Ascent tiene backlog amplio, materiales comerciales y bloqueos de conectividad/demo.",
+      "opciones": "A) demo PDK vendible en 1 caso de uso; B) completar varios modulos IA; C) priorizar decks comerciales.",
+      "recomendacion": "A, con fallback de conectividad y oferta piloto.",
+      "riesgo_no_decidir": "VisionPro se vende como promesa sin prueba estable.",
+      "fecha_limite": "2026-06-30.",
+      "info_faltante": "estado real internet obra y URL demo.",
+      "estado": "pendiente",
+      "urgencia": "P0",
+      "confianza": "Alta",
+      "fuente": "04_Decisiones_CEO.md"
+    },
+    {
+      "id": "dec-aecode-training-numero-oficial-de-ventas-junio",
+      "titulo": "AECODE Training: numero oficial de ventas junio",
+      "nivel": "estrategica",
+      "contexto": "Talia reporta 118 ventas junio; Genesis reporta 131.",
+      "opciones": "No se tiene claro",
+      "recomendacion": "definir una regla oficial: ventas completas, primeras cuotas y acumuladas separadas.",
+      "riesgo_no_decidir": "forecast inflado o subestimado.",
+      "fecha_limite": "No se tiene claro",
+      "info_faltante": "No se tiene claro",
+      "estado": "pendiente",
+      "urgencia": "P1",
+      "confianza": "Alta",
+      "fuente": "04_Decisiones_CEO.md"
+    },
+    {
+      "id": "dec-esparq-definition-of-done-del-discovery",
+      "titulo": "ESPARQ: Definition of Done del Discovery",
+      "nivel": "estrategica",
+      "contexto": "hay discovery, demo, 11 casos, UX/UI, paneles y cronograma meta/contractual.",
+      "opciones": "No se tiene claro",
+      "recomendacion": "congelar DoD antes de producir mas pantallas.",
+      "riesgo_no_decidir": "scope creep y reunion sin decision.",
+      "fecha_limite": "No se tiene claro",
+      "info_faltante": "No se tiene claro",
+      "estado": "pendiente",
+      "urgencia": "P1",
+      "confianza": "Alta",
+      "fuente": "04_Decisiones_CEO.md"
+    },
+    {
+      "id": "dec-kaman-regla-startup-para-futuros-procesos",
+      "titulo": "Kaman: regla startup para futuros procesos",
+      "nivel": "estrategica",
+      "contexto": "AECODE no gano S/20,000 y la causa operativa incluye preparacion tardia.",
+      "opciones": "No se tiene claro",
+      "recomendacion": "checklist obligatorio de deck, metricas, narrativa, evidencia, ensayo y owner.",
+      "riesgo_no_decidir": "repetir perdida por gestion, no por calidad de producto.",
+      "fecha_limite": "No se tiene claro",
+      "info_faltante": "No se tiene claro",
+      "estado": "pendiente",
+      "urgencia": "P1",
+      "confianza": "Alta",
+      "fuente": "04_Decisiones_CEO.md"
+    }
+  ],
+  "prioridades": [
+    {
+      "id": "pri-caja-gen-y-sponsors-summit",
+      "titulo": "Caja GEN+ y sponsors Summit",
+      "nivel": "alta",
+      "owner": "Julie / Paola / Erika.",
+      "resultado_esperado": "tablero con monto, sponsor/proyecto, estado, responsable, fecha y evidencia.",
+      "fecha": "2026-06-29.",
+      "pregunta_daily": "que cobro o sponsor cambio de estado hoy.",
+      "estado": "abierta",
+      "confianza": "Alta",
+      "fuente": "05_Prioridades_Semana.md"
+    },
+    {
+      "id": "pri-aecode-training-certificados-licencias-y-cierres",
+      "titulo": "AECODE Training - certificados, licencias y cierres",
+      "nivel": "alta",
+      "owner": "Carolina / Patrick / Julie / Kevin / Marlon.",
+      "resultado_esperado": "matriz por diplomado con rubrica, entregable, certificado CIP, sustitutorio y bloqueo.",
+      "fecha": "2026-06-30.",
+      "pregunta_daily": "que alumno/programa sigue bloqueado y por que.",
+      "estado": "abierta",
+      "confianza": "Alta",
+      "fuente": "05_Prioridades_Semana.md"
+    },
+    {
+      "id": "pri-summit-sprint-comercial-logistico",
+      "titulo": "Summit - sprint comercial/logistico",
+      "nivel": "alta",
+      "owner": "Erika / Paola / Marlon / Arantxa / Fabrizio / Yary.",
+      "resultado_esperado": "40 llamadas sponsors, QA web, agenda version final, proveedores y piezas clave.",
+      "fecha": "2026-06-29.",
+      "pregunta_daily": "que sponsor, pieza o proveedor bloquea el evento.",
+      "estado": "abierta",
+      "confianza": "Alta",
+      "fuente": "05_Prioridades_Semana.md"
+    },
+    {
+      "id": "pri-pre-congreso",
+      "titulo": "Pre Congreso",
+      "nivel": "alta",
+      "owner": "Arantxa / Jessica / Enma.",
+      "resultado_esperado": "pieza ads, landing, grupos WhatsApp, GHL, correo automatico y pauta.",
+      "fecha": "2026-06-29.",
+      "pregunta_daily": "que canal ya esta capturando leads trazables.",
+      "estado": "abierta",
+      "confianza": "Alta",
+      "fuente": "05_Prioridades_Semana.md"
+    },
+    {
+      "id": "pri-ca-ete-y-delivery-bim-alcance",
+      "titulo": "Cañete y delivery BIM - alcance",
+      "nivel": "alta",
+      "owner": "Israel / Fabrizio / Robert / Luis / Julie.",
+      "resultado_esperado": "matriz dentro de alcance, fuera de alcance, requiere decision, valorizable.",
+      "fecha": "2026-06-29.",
+      "pregunta_daily": "que cambio es adicional y que evidencia lo prueba.",
+      "estado": "abierta",
+      "confianza": "Alta",
+      "fuente": "05_Prioridades_Semana.md"
+    },
+    {
+      "id": "pri-visionpro-pdk",
+      "titulo": "VisionPro PDK",
+      "nivel": "alta",
+      "owner": "Emanuel / Marlon / Yary / Daniella.",
+      "resultado_esperado": "demo web estable, diagnostico conectividad, funcionalidades IA P0, oferta piloto.",
+      "fecha": "2026-06-30.",
+      "pregunta_daily": "que impide mostrar una demo confiable al cliente.",
+      "estado": "abierta",
+      "confianza": "Alta",
+      "fuente": "05_Prioridades_Semana.md"
+    },
+    {
+      "id": "pri-esparq-discovery",
+      "titulo": "ESPARQ Discovery",
+      "nivel": "media",
+      "owner": "Daniella / Fabrizio / Yary / Alejandro.",
+      "resultado_esperado": "11 casos, demo, roles, datos, paneles y DoD.",
+      "fecha": "2026-06-30.",
+      "pregunta_daily": "que decision debe tomar ESPARQ despues de la demo.",
+      "estado": "abierta",
+      "confianza": "Alta",
+      "fuente": "05_Prioridades_Semana.md"
+    },
+    {
+      "id": "pri-aecode-comercial-cifra-oficial-y-sla",
+      "titulo": "AECODE Comercial - cifra oficial y SLA",
+      "nivel": "media",
+      "owner": "Talia / Genesis / Yadira / Jessica.",
+      "resultado_esperado": "ventas completas vs primeras cuotas vs acumuladas, SLA por lead.",
+      "fecha": "2026-06-29.",
+      "pregunta_daily": "que lead caliente no recibio siguiente toque.",
+      "estado": "abierta",
+      "confianza": "Alta",
+      "fuente": "05_Prioridades_Semana.md"
+    },
+    {
+      "id": "pri-besco",
+      "titulo": "BESCO",
+      "nivel": "media",
+      "owner": "Marlon / Kevin.",
+      "resultado_esperado": "checklist por Muros, Columnas, Vigas, Losas con pruebas end-to-end.",
+      "fecha": "No se tiene claro.",
+      "pregunta_daily": "que elemento esta probado con evidencia y cual no.",
+      "estado": "abierta",
+      "confianza": "Alta",
+      "fuente": "05_Prioridades_Semana.md"
+    },
+    {
+      "id": "pri-ghl-marketing-dashboard",
+      "titulo": "GHL / marketing dashboard",
+      "nivel": "media",
+      "owner": "Jessica / Anggie / Enma / Arantxa.",
+      "resultado_esperado": "pieza, canal, lead, conversion, venta y owner.",
+      "fecha": "No se tiene claro.",
+      "pregunta_daily": "que canal genera ventas y que canal solo genera actividad.",
+      "estado": "abierta",
+      "confianza": "Alta",
+      "fuente": "05_Prioridades_Semana.md"
+    },
+    {
+      "id": "pri-kaman-postmortem",
+      "titulo": "Kaman postmortem",
+      "nivel": "baja",
+      "owner": "Daniella / Alejandro.",
+      "resultado_esperado": "checklist para convocatorias y pitch startup.",
+      "fecha": "2026-06-30.",
+      "pregunta_daily": "No se tiene claro",
+      "estado": "abierta",
+      "confianza": "Alta",
+      "fuente": "05_Prioridades_Semana.md"
+    },
+    {
+      "id": "pri-thesia-tesis-juan",
+      "titulo": "THESIA / Tesis Juan",
+      "nivel": "baja",
+      "owner": "Fabrizio / Julie.",
+      "resultado_esperado": "informacion traspasada y solicitud de presupuesto/fechas.",
+      "fecha": "No se tiene claro.",
+      "pregunta_daily": "No se tiene claro",
+      "estado": "abierta",
+      "confianza": "Alta",
+      "fuente": "05_Prioridades_Semana.md"
+    },
+    {
+      "id": "pri-san-martin",
+      "titulo": "San Martin",
+      "nivel": "baja",
+      "owner": "Israel.",
+      "resultado_esperado": "decision reactivar/no reactivar y bloque de cierre de 0.5 a 1 dia.",
+      "fecha": "No se tiene claro.",
+      "pregunta_daily": "No se tiene claro",
+      "estado": "abierta",
+      "confianza": "Alta",
+      "fuente": "05_Prioridades_Semana.md"
+    }
+  ],
+  "tareas": [
+    {
+      "id": "task-caja-gen-y-sponsors-summit",
+      "empresa": "No se tiene claro",
+      "area": "No se tiene claro",
+      "proyecto": "Caja GEN+ y sponsors Summit",
+      "colaborador": "Julie / Paola / Erika.",
+      "descripcion": "tablero con monto, sponsor/proyecto, estado, responsable, fecha y evidencia.",
+      "estado": "pendiente",
+      "prioridad": "alta",
+      "fecha_objetivo": "2026-06-29.",
+      "resultado_esperado": "tablero con monto, sponsor/proyecto, estado, responsable, fecha y evidencia.",
+      "evidencia": "No se tiene claro",
+      "confianza": "Alta",
+      "fuente": "05_Prioridades_Semana.md"
+    },
+    {
+      "id": "task-aecode-training-certificados-licencias-y-cierres",
+      "empresa": "No se tiene claro",
+      "area": "No se tiene claro",
+      "proyecto": "AECODE Training - certificados, licencias y cierres",
+      "colaborador": "Carolina / Patrick / Julie / Kevin / Marlon.",
+      "descripcion": "matriz por diplomado con rubrica, entregable, certificado CIP, sustitutorio y bloqueo.",
+      "estado": "pendiente",
+      "prioridad": "alta",
+      "fecha_objetivo": "2026-06-30.",
+      "resultado_esperado": "matriz por diplomado con rubrica, entregable, certificado CIP, sustitutorio y bloqueo.",
+      "evidencia": "No se tiene claro",
+      "confianza": "Alta",
+      "fuente": "05_Prioridades_Semana.md"
+    },
+    {
+      "id": "task-summit-sprint-comercial-logistico",
+      "empresa": "No se tiene claro",
+      "area": "No se tiene claro",
+      "proyecto": "Summit - sprint comercial/logistico",
+      "colaborador": "Erika / Paola / Marlon / Arantxa / Fabrizio / Yary.",
+      "descripcion": "40 llamadas sponsors, QA web, agenda version final, proveedores y piezas clave.",
+      "estado": "pendiente",
+      "prioridad": "alta",
+      "fecha_objetivo": "2026-06-29.",
+      "resultado_esperado": "40 llamadas sponsors, QA web, agenda version final, proveedores y piezas clave.",
+      "evidencia": "No se tiene claro",
+      "confianza": "Alta",
+      "fuente": "05_Prioridades_Semana.md"
+    },
+    {
+      "id": "task-pre-congreso",
+      "empresa": "No se tiene claro",
+      "area": "No se tiene claro",
+      "proyecto": "Pre Congreso",
+      "colaborador": "Arantxa / Jessica / Enma.",
+      "descripcion": "pieza ads, landing, grupos WhatsApp, GHL, correo automatico y pauta.",
+      "estado": "pendiente",
+      "prioridad": "alta",
+      "fecha_objetivo": "2026-06-29.",
+      "resultado_esperado": "pieza ads, landing, grupos WhatsApp, GHL, correo automatico y pauta.",
+      "evidencia": "No se tiene claro",
+      "confianza": "Alta",
+      "fuente": "05_Prioridades_Semana.md"
+    },
+    {
+      "id": "task-ca-ete-y-delivery-bim-alcance",
+      "empresa": "No se tiene claro",
+      "area": "No se tiene claro",
+      "proyecto": "Cañete y delivery BIM - alcance",
+      "colaborador": "Israel / Fabrizio / Robert / Luis / Julie.",
+      "descripcion": "matriz dentro de alcance, fuera de alcance, requiere decision, valorizable.",
+      "estado": "pendiente",
+      "prioridad": "alta",
+      "fecha_objetivo": "2026-06-29.",
+      "resultado_esperado": "matriz dentro de alcance, fuera de alcance, requiere decision, valorizable.",
+      "evidencia": "No se tiene claro",
+      "confianza": "Alta",
+      "fuente": "05_Prioridades_Semana.md"
+    },
+    {
+      "id": "task-visionpro-pdk",
+      "empresa": "No se tiene claro",
+      "area": "No se tiene claro",
+      "proyecto": "VisionPro PDK",
+      "colaborador": "Emanuel / Marlon / Yary / Daniella.",
+      "descripcion": "demo web estable, diagnostico conectividad, funcionalidades IA P0, oferta piloto.",
+      "estado": "pendiente",
+      "prioridad": "alta",
+      "fecha_objetivo": "2026-06-30.",
+      "resultado_esperado": "demo web estable, diagnostico conectividad, funcionalidades IA P0, oferta piloto.",
+      "evidencia": "No se tiene claro",
+      "confianza": "Alta",
+      "fuente": "05_Prioridades_Semana.md"
+    },
+    {
+      "id": "task-esparq-discovery",
+      "empresa": "No se tiene claro",
+      "area": "No se tiene claro",
+      "proyecto": "ESPARQ Discovery",
+      "colaborador": "Daniella / Fabrizio / Yary / Alejandro.",
+      "descripcion": "11 casos, demo, roles, datos, paneles y DoD.",
+      "estado": "pendiente",
+      "prioridad": "media",
+      "fecha_objetivo": "2026-06-30.",
+      "resultado_esperado": "11 casos, demo, roles, datos, paneles y DoD.",
+      "evidencia": "No se tiene claro",
+      "confianza": "Alta",
+      "fuente": "05_Prioridades_Semana.md"
+    },
+    {
+      "id": "task-aecode-comercial-cifra-oficial-y-sla",
+      "empresa": "No se tiene claro",
+      "area": "No se tiene claro",
+      "proyecto": "AECODE Comercial - cifra oficial y SLA",
+      "colaborador": "Talia / Genesis / Yadira / Jessica.",
+      "descripcion": "ventas completas vs primeras cuotas vs acumuladas, SLA por lead.",
+      "estado": "pendiente",
+      "prioridad": "media",
+      "fecha_objetivo": "2026-06-29.",
+      "resultado_esperado": "ventas completas vs primeras cuotas vs acumuladas, SLA por lead.",
+      "evidencia": "No se tiene claro",
+      "confianza": "Alta",
+      "fuente": "05_Prioridades_Semana.md"
+    },
+    {
+      "id": "task-besco",
+      "empresa": "No se tiene claro",
+      "area": "No se tiene claro",
+      "proyecto": "BESCO",
+      "colaborador": "Marlon / Kevin.",
+      "descripcion": "checklist por Muros, Columnas, Vigas, Losas con pruebas end-to-end.",
+      "estado": "pendiente",
+      "prioridad": "media",
+      "fecha_objetivo": "No se tiene claro.",
+      "resultado_esperado": "checklist por Muros, Columnas, Vigas, Losas con pruebas end-to-end.",
+      "evidencia": "No se tiene claro",
+      "confianza": "Alta",
+      "fuente": "05_Prioridades_Semana.md"
+    },
+    {
+      "id": "task-ghl-marketing-dashboard",
+      "empresa": "No se tiene claro",
+      "area": "No se tiene claro",
+      "proyecto": "GHL / marketing dashboard",
+      "colaborador": "Jessica / Anggie / Enma / Arantxa.",
+      "descripcion": "pieza, canal, lead, conversion, venta y owner.",
+      "estado": "pendiente",
+      "prioridad": "media",
+      "fecha_objetivo": "No se tiene claro.",
+      "resultado_esperado": "pieza, canal, lead, conversion, venta y owner.",
+      "evidencia": "No se tiene claro",
+      "confianza": "Alta",
+      "fuente": "05_Prioridades_Semana.md"
+    },
+    {
+      "id": "task-kaman-postmortem",
+      "empresa": "No se tiene claro",
+      "area": "No se tiene claro",
+      "proyecto": "Kaman postmortem",
+      "colaborador": "Daniella / Alejandro.",
+      "descripcion": "checklist para convocatorias y pitch startup.",
+      "estado": "pendiente",
+      "prioridad": "baja",
+      "fecha_objetivo": "2026-06-30.",
+      "resultado_esperado": "checklist para convocatorias y pitch startup.",
+      "evidencia": "No se tiene claro",
+      "confianza": "Alta",
+      "fuente": "05_Prioridades_Semana.md"
+    },
+    {
+      "id": "task-thesia-tesis-juan",
+      "empresa": "No se tiene claro",
+      "area": "No se tiene claro",
+      "proyecto": "THESIA / Tesis Juan",
+      "colaborador": "Fabrizio / Julie.",
+      "descripcion": "informacion traspasada y solicitud de presupuesto/fechas.",
+      "estado": "pendiente",
+      "prioridad": "baja",
+      "fecha_objetivo": "No se tiene claro.",
+      "resultado_esperado": "informacion traspasada y solicitud de presupuesto/fechas.",
+      "evidencia": "No se tiene claro",
+      "confianza": "Alta",
+      "fuente": "05_Prioridades_Semana.md"
+    },
+    {
+      "id": "task-san-martin",
+      "empresa": "No se tiene claro",
+      "area": "No se tiene claro",
+      "proyecto": "San Martin",
+      "colaborador": "Israel.",
+      "descripcion": "decision reactivar/no reactivar y bloque de cierre de 0.5 a 1 dia.",
+      "estado": "pendiente",
+      "prioridad": "baja",
+      "fecha_objetivo": "No se tiene claro.",
+      "resultado_esperado": "decision reactivar/no reactivar y bloque de cierre de 0.5 a 1 dia.",
+      "evidencia": "No se tiene claro",
+      "confianza": "Alta",
+      "fuente": "05_Prioridades_Semana.md"
+    },
+    {
+      "id": "task-gen-cobranzas-gen",
+      "empresa": "GEN+",
+      "area": "Caja",
+      "proyecto": "Cobranzas GEN+",
+      "colaborador": "Julie",
+      "descripcion": "Compromisos de pago por fila",
+      "estado": "pendiente",
+      "prioridad": "alta",
+      "fecha_objetivo": "Tablero diario caja",
+      "resultado_esperado": "Tablero diario caja",
+      "evidencia": "Reporte Julie 2026-06-28",
+      "confianza": "Alta",
+      "fuente": "01_Matriz_Proyectos.md"
+    },
+    {
+      "id": "task-gen-ptar-atarjea-buzones",
+      "empresa": "GEN+",
+      "area": "Delivery BIM",
+      "proyecto": "PTAR Atarjea / Buzones",
+      "colaborador": "Kevin / Luis / Julie",
+      "descripcion": "Validacion Ricardo, pago, evidencia final",
+      "estado": "pendiente",
+      "prioridad": "media",
+      "fecha_objetivo": "Confirmacion formal",
+      "resultado_esperado": "Confirmacion formal",
+      "evidencia": "Reportes Kevin, Luis, Julie",
+      "confianza": "Alta",
+      "fuente": "01_Matriz_Proyectos.md"
+    },
+    {
+      "id": "task-gen-ca-ete",
+      "empresa": "GEN+",
+      "area": "Delivery BIM",
+      "proyecto": "Cañete",
+      "colaborador": "Fabrizio / Israel / Robert / Luis",
+      "descripcion": "Matriz alcance, congelar version, reportes/informes",
+      "estado": "pendiente",
+      "prioridad": "alta",
+      "fecha_objetivo": "Matriz dentro/fuera de alcance",
+      "resultado_esperado": "Matriz dentro/fuera de alcance",
+      "evidencia": "Reportes Israel, Robert, Luis",
+      "confianza": "Alta",
+      "fuente": "01_Matriz_Proyectos.md"
+    },
+    {
+      "id": "task-gen-faucett",
+      "empresa": "GEN+",
+      "area": "Delivery BIM",
+      "proyecto": "Faucett",
+      "colaborador": "Fabrizio / Israel",
+      "descripcion": "Metodologia puentes, info HH, cotizacion adicional",
+      "estado": "pendiente",
+      "prioridad": "alta",
+      "fecha_objetivo": "Metodo y alcance aprobados",
+      "resultado_esperado": "Metodo y alcance aprobados",
+      "evidencia": "Reporte Israel / Fabrizio",
+      "confianza": "Alta",
+      "fuente": "01_Matriz_Proyectos.md"
+    },
+    {
+      "id": "task-gen-dovelas-panama",
+      "empresa": "GEN+",
+      "area": "Delivery BIM",
+      "proyecto": "Dovelas Panama",
+      "colaborador": "Fabrizio / Guisella / Julie",
+      "descripcion": "Programacion Ignacio, cambios por dovela, valorizacion",
+      "estado": "pendiente",
+      "prioridad": "alta",
+      "fecha_objetivo": "Matriz dovela-estado-cambio",
+      "resultado_esperado": "Matriz dovela-estado-cambio",
+      "evidencia": "Reporte Guisella / Fabrizio",
+      "confianza": "Alta",
+      "fuente": "01_Matriz_Proyectos.md"
+    },
+    {
+      "id": "task-gen-the-circle",
+      "empresa": "GEN+",
+      "area": "Delivery BIM",
+      "proyecto": "The Circle",
+      "colaborador": "Fabrizio / Guisella",
+      "descripcion": "Planilla corregida y envio",
+      "estado": "pendiente",
+      "prioridad": "media",
+      "fecha_objetivo": "Enviar planilla",
+      "resultado_esperado": "Enviar planilla",
+      "evidencia": "Reporte Guisella / Fabrizio",
+      "confianza": "Alta",
+      "fuente": "01_Matriz_Proyectos.md"
+    },
+    {
+      "id": "task-gen-puente-tingo",
+      "empresa": "GEN+",
+      "area": "Delivery BIM",
+      "proyecto": "Puente Tingo",
+      "colaborador": "Fabrizio / Luis",
+      "descripcion": "Acceso 02 / entregable Rhino",
+      "estado": "pendiente",
+      "prioridad": "media",
+      "fecha_objetivo": "Cierre alcance GEN+",
+      "resultado_esperado": "Cierre alcance GEN+",
+      "evidencia": "Reportes Fabrizio, Luis",
+      "confianza": "Media",
+      "fuente": "01_Matriz_Proyectos.md"
+    },
+    {
+      "id": "task-gen-esparq",
+      "empresa": "GEN+",
+      "area": "Producto/consultoria",
+      "proyecto": "ESPARQ",
+      "colaborador": "Alejandro / Daniella / Fabrizio / Yary",
+      "descripcion": "11 casos, demo, roles, datos, paneles, DoD",
+      "estado": "pendiente",
+      "prioridad": "media",
+      "fecha_objetivo": "Demo 3 funcionalidades",
+      "resultado_esperado": "Demo 3 funcionalidades",
+      "evidencia": "ESPARQ Hub / Fabrizio / Daniella",
+      "confianza": "Alta",
+      "fuente": "01_Matriz_Proyectos.md"
+    },
+    {
+      "id": "task-gen-agente-inmobiliario-gen",
+      "empresa": "GEN+",
+      "area": "Producto interno",
+      "proyecto": "Agente Inmobiliario GEN+",
+      "colaborador": "Fabrizio",
+      "descripcion": "One Page nocturno y ficha guia",
+      "estado": "pendiente",
+      "prioridad": "media",
+      "fecha_objetivo": "Checklist final",
+      "resultado_esperado": "Checklist final",
+      "evidencia": "Reporte Fabrizio",
+      "confianza": "Alta",
+      "fuente": "01_Matriz_Proyectos.md"
+    },
+    {
+      "id": "task-gen-uncp-osp-nestle-gore-otros",
+      "empresa": "GEN+",
+      "area": "Comercial",
+      "proyecto": "UNCP / OSP / Nestle / GORE / otros",
+      "colaborador": "Julie / Daniella",
+      "descripcion": "TDR, siguiente paso, cotizaciones",
+      "estado": "pendiente",
+      "prioridad": "media",
+      "fecha_objetivo": "Priorizacion UNCP y OSP",
+      "resultado_esperado": "Priorizacion UNCP y OSP",
+      "evidencia": "Reportes Julie / Daniella",
+      "confianza": "Media",
+      "fuente": "01_Matriz_Proyectos.md"
+    },
+    {
+      "id": "task-aecode-sponsors-pipeline",
+      "empresa": "AECODE",
+      "area": "Summit",
+      "proyecto": "Sponsors / pipeline",
+      "colaborador": "Erika / Paola / Julie",
+      "descripcion": "40 llamadas, beneficios, delegaciones, pagos",
+      "estado": "pendiente",
+      "prioridad": "alta",
+      "fecha_objetivo": "Corte sponsor diario",
+      "resultado_esperado": "Corte sponsor diario",
+      "evidencia": "Reporte Erika/Paola, Julie",
+      "confianza": "Alta",
+      "fuente": "01_Matriz_Proyectos.md"
+    },
+    {
+      "id": "task-aecode-web-app-agenda",
+      "empresa": "AECODE",
+      "area": "Summit",
+      "proyecto": "Web / App / agenda",
+      "colaborador": "Marlon / Yary / Anderson / Fabrizio",
+      "descripcion": "QA, deploy agenda, sponsors dinamicos, test App",
+      "estado": "pendiente",
+      "prioridad": "media",
+      "fecha_objetivo": "QA responsive y test App",
+      "resultado_esperado": "QA responsive y test App",
+      "evidencia": "Reportes Marlon, Yary, Fabrizio",
+      "confianza": "Alta",
+      "fuente": "01_Matriz_Proyectos.md"
+    },
+    {
+      "id": "task-aecode-pre-congreso",
+      "empresa": "AECODE",
+      "area": "Summit",
+      "proyecto": "Pre Congreso",
+      "colaborador": "Arantxa / Jessica / Enma",
+      "descripcion": "Pieza, landing, grupos, GHL, correo, pauta",
+      "estado": "pendiente",
+      "prioridad": "alta",
+      "fecha_objetivo": "Sprint 24h 2026-06-29",
+      "resultado_esperado": "Sprint 24h 2026-06-29",
+      "evidencia": "Reporte Arantxa",
+      "confianza": "Alta",
+      "fuente": "01_Matriz_Proyectos.md"
+    },
+    {
+      "id": "task-aecode-diplomados-certificados",
+      "empresa": "AECODE",
+      "area": "Training",
+      "proyecto": "Diplomados/certificados",
+      "colaborador": "Carolina / Patrick / Marlon / Kevin / Julie",
+      "descripcion": "CIP, sustitutorios, rubricas, entregables, licencias",
+      "estado": "pendiente",
+      "prioridad": "alta",
+      "fecha_objetivo": "Tablero por diplomado",
+      "resultado_esperado": "Tablero por diplomado",
+      "evidencia": "Reportes Carolina, Marlon, Julie, Kevin",
+      "confianza": "Alta",
+      "fuente": "01_Matriz_Proyectos.md"
+    },
+    {
+      "id": "task-aecode-ventas-training",
+      "empresa": "AECODE",
+      "area": "Comercial B2C",
+      "proyecto": "Ventas Training",
+      "colaborador": "Talia / Genesis / Yadira / Reiner",
+      "descripcion": "Validar cifra oficial, SLA, webinar Vial, brochure IA",
+      "estado": "pendiente",
+      "prioridad": "media",
+      "fecha_objetivo": "Cifra oficial y tablero semanal",
+      "resultado_esperado": "Cifra oficial y tablero semanal",
+      "evidencia": "Reportes Talia, Genesis, Yadira",
+      "confianza": "Alta",
+      "fuente": "01_Matriz_Proyectos.md"
+    },
+    {
+      "id": "task-aecode-summit-reto-ia-training",
+      "empresa": "AECODE",
+      "area": "Marketing",
+      "proyecto": "Summit / Reto IA / Training",
+      "colaborador": "Arantxa / Enma / Jessica / Anggie",
+      "descripcion": "Integracion GHL, videos, agenda, dashboard metricas",
+      "estado": "pendiente",
+      "prioridad": "media",
+      "fecha_objetivo": "Dashboard pieza-canal-lead-venta",
+      "resultado_esperado": "Dashboard pieza-canal-lead-venta",
+      "evidencia": "Reportes Arantxa, Jessica, Enma",
+      "confianza": "Media",
+      "fuente": "01_Matriz_Proyectos.md"
+    },
+    {
+      "id": "task-aecode-fase-2-fase-3-aecode",
+      "empresa": "AECODE",
+      "area": "Producto digital",
+      "proyecto": "Fase 2 / Fase 3 / AECODE",
+      "colaborador": "Yary / Marlon / Anderson / Yudely / Fabrizio",
+      "descripcion": "Implementacion dev, aula virtual, algoritmo con Emanuel",
+      "estado": "pendiente",
+      "prioridad": "media",
+      "fecha_objetivo": "Separar handoff vs implementacion",
+      "resultado_esperado": "Separar handoff vs implementacion",
+      "evidencia": "Reportes Yary, Marlon, Fabrizio",
+      "confianza": "Alta",
+      "fuente": "01_Matriz_Proyectos.md"
+    },
+    {
+      "id": "task-aecode-kaman-convocatorias",
+      "empresa": "AECODE",
+      "area": "Startup",
+      "proyecto": "Kaman / convocatorias",
+      "colaborador": "Daniella / Julie / Alejandro",
+      "descripcion": "Postmortem, StartUPC, THESIA fechas",
+      "estado": "pendiente",
+      "prioridad": "media",
+      "fecha_objetivo": "Postmortem Kaman",
+      "resultado_esperado": "Postmortem Kaman",
+      "evidencia": "Reportes Daniella, Julie, Kaman",
+      "confianza": "Alta",
+      "fuente": "01_Matriz_Proyectos.md"
+    },
+    {
+      "id": "task-visionpro-pdk-ascent",
+      "empresa": "VisionPro",
+      "area": "Producto/obra",
+      "proyecto": "PDK Ascent",
+      "colaborador": "Marlon / Emanuel / Yary / Daniella / Erika",
+      "descripcion": "Demo web, usuarios, UX, AWS, internet, funcionalidades IA",
+      "estado": "pendiente",
+      "prioridad": "alta",
+      "fecha_objetivo": "Demo estable + roadmap IA",
+      "resultado_esperado": "Demo estable + roadmap IA",
+      "evidencia": "Backlog PDK / Marlon / Yary / Daniella",
+      "confianza": "Alta",
+      "fuente": "01_Matriz_Proyectos.md"
+    },
+    {
+      "id": "task-visionpro-visionpro-decks",
+      "empresa": "VisionPro",
+      "area": "Comercial",
+      "proyecto": "VisionPro decks",
+      "colaborador": "Daniella / Julie / Erika",
+      "descripcion": "Conectar deck con evidencia, precio, alcance y SLA",
+      "estado": "pendiente",
+      "prioridad": "media",
+      "fecha_objetivo": "Oferta piloto VisionPro",
+      "resultado_esperado": "Oferta piloto VisionPro",
+      "evidencia": "Reporte Daniella / Backlog PDK",
+      "confianza": "Alta",
+      "fuente": "01_Matriz_Proyectos.md"
+    },
+    {
+      "id": "task-thesia-thesia-presupuesto-tesis-juan",
+      "empresa": "THESIA",
+      "area": "Startup/documentacion",
+      "proyecto": "THESIA presupuesto / Tesis Juan",
+      "colaborador": "Julie / Fabrizio",
+      "descripcion": "Solicitud formal y traspaso de informacion",
+      "estado": "pendiente",
+      "prioridad": "media",
+      "fecha_objetivo": "No se tiene claro",
+      "resultado_esperado": "No se tiene claro",
+      "evidencia": "Reportes Julie / Fabrizio",
+      "confianza": "Media",
+      "fuente": "01_Matriz_Proyectos.md"
+    },
+    {
+      "id": "task-agentflow-migracion-flujos",
+      "empresa": "AgentFlow",
+      "area": "Automatizacion",
+      "proyecto": "Migracion flujos",
+      "colaborador": "Emanuel / Fabrizio / Marlon",
+      "descripcion": "Migracion con Emanuel 0%; primer flujo probado",
+      "estado": "pendiente",
+      "prioridad": "media",
+      "fecha_objetivo": "No se tiene claro",
+      "resultado_esperado": "No se tiene claro",
+      "evidencia": "Reportes Emanuel / Fabrizio",
+      "confianza": "Media",
+      "fuente": "01_Matriz_Proyectos.md"
+    }
+  ],
+  "evidencias": [
+    {
+      "id": "ev-gen-cobranzas-gen",
+      "tipo": "reporte",
+      "fuente": "Reporte Julie 2026-06-28",
+      "relacionado_con": "Cobranzas GEN+",
+      "empresa": "GEN+",
+      "fecha": "2026-06-28",
+      "confiabilidad": "Alta"
+    },
+    {
+      "id": "ev-gen-ptar-atarjea-buzones",
+      "tipo": "reporte",
+      "fuente": "Reportes Kevin, Luis, Julie",
+      "relacionado_con": "PTAR Atarjea / Buzones",
+      "empresa": "GEN+",
+      "fecha": "2026-06-28",
+      "confiabilidad": "Alta"
+    },
+    {
+      "id": "ev-gen-ca-ete",
+      "tipo": "reporte",
+      "fuente": "Reportes Israel, Robert, Luis",
+      "relacionado_con": "Cañete",
+      "empresa": "GEN+",
+      "fecha": "2026-06-28",
+      "confiabilidad": "Alta"
+    },
+    {
+      "id": "ev-gen-faucett",
+      "tipo": "reporte",
+      "fuente": "Reporte Israel / Fabrizio",
+      "relacionado_con": "Faucett",
+      "empresa": "GEN+",
+      "fecha": "2026-06-28",
+      "confiabilidad": "Alta"
+    },
+    {
+      "id": "ev-gen-dovelas-panama",
+      "tipo": "reporte",
+      "fuente": "Reporte Guisella / Fabrizio",
+      "relacionado_con": "Dovelas Panama",
+      "empresa": "GEN+",
+      "fecha": "2026-06-28",
+      "confiabilidad": "Alta"
+    },
+    {
+      "id": "ev-gen-the-circle",
+      "tipo": "reporte",
+      "fuente": "Reporte Guisella / Fabrizio",
+      "relacionado_con": "The Circle",
+      "empresa": "GEN+",
+      "fecha": "2026-06-28",
+      "confiabilidad": "Alta"
+    },
+    {
+      "id": "ev-gen-puente-tingo",
+      "tipo": "reporte",
+      "fuente": "Reportes Fabrizio, Luis",
+      "relacionado_con": "Puente Tingo",
+      "empresa": "GEN+",
+      "fecha": "2026-06-28",
+      "confiabilidad": "Media"
+    },
+    {
+      "id": "ev-gen-esparq",
+      "tipo": "reporte",
+      "fuente": "ESPARQ Hub / Fabrizio / Daniella",
+      "relacionado_con": "ESPARQ",
+      "empresa": "GEN+",
+      "fecha": "2026-06-28",
+      "confiabilidad": "Alta"
+    },
+    {
+      "id": "ev-gen-agente-inmobiliario-gen",
+      "tipo": "reporte",
+      "fuente": "Reporte Fabrizio",
+      "relacionado_con": "Agente Inmobiliario GEN+",
+      "empresa": "GEN+",
+      "fecha": "2026-06-28",
+      "confiabilidad": "Alta"
+    },
+    {
+      "id": "ev-gen-uncp-osp-nestle-gore-otros",
+      "tipo": "reporte",
+      "fuente": "Reportes Julie / Daniella",
+      "relacionado_con": "UNCP / OSP / Nestle / GORE / otros",
+      "empresa": "GEN+",
+      "fecha": "2026-06-28",
+      "confiabilidad": "Media"
+    },
+    {
+      "id": "ev-aecode-sponsors-pipeline",
+      "tipo": "reporte",
+      "fuente": "Reporte Erika/Paola, Julie",
+      "relacionado_con": "Sponsors / pipeline",
+      "empresa": "AECODE",
+      "fecha": "2026-06-28",
+      "confiabilidad": "Alta"
+    },
+    {
+      "id": "ev-aecode-web-app-agenda",
+      "tipo": "reporte",
+      "fuente": "Reportes Marlon, Yary, Fabrizio",
+      "relacionado_con": "Web / App / agenda",
+      "empresa": "AECODE",
+      "fecha": "2026-06-28",
+      "confiabilidad": "Alta"
+    },
+    {
+      "id": "ev-aecode-pre-congreso",
+      "tipo": "reporte",
+      "fuente": "Reporte Arantxa",
+      "relacionado_con": "Pre Congreso",
+      "empresa": "AECODE",
+      "fecha": "2026-06-28",
+      "confiabilidad": "Alta"
+    },
+    {
+      "id": "ev-aecode-diplomados-certificados",
+      "tipo": "reporte",
+      "fuente": "Reportes Carolina, Marlon, Julie, Kevin",
+      "relacionado_con": "Diplomados/certificados",
+      "empresa": "AECODE",
+      "fecha": "2026-06-28",
+      "confiabilidad": "Alta"
+    },
+    {
+      "id": "ev-aecode-ventas-training",
+      "tipo": "reporte",
+      "fuente": "Reportes Talia, Genesis, Yadira",
+      "relacionado_con": "Ventas Training",
+      "empresa": "AECODE",
+      "fecha": "2026-06-28",
+      "confiabilidad": "Alta"
+    },
+    {
+      "id": "ev-aecode-summit-reto-ia-training",
+      "tipo": "reporte",
+      "fuente": "Reportes Arantxa, Jessica, Enma",
+      "relacionado_con": "Summit / Reto IA / Training",
+      "empresa": "AECODE",
+      "fecha": "2026-06-28",
+      "confiabilidad": "Media"
+    },
+    {
+      "id": "ev-aecode-fase-2-fase-3-aecode",
+      "tipo": "reporte",
+      "fuente": "Reportes Yary, Marlon, Fabrizio",
+      "relacionado_con": "Fase 2 / Fase 3 / AECODE",
+      "empresa": "AECODE",
+      "fecha": "2026-06-28",
+      "confiabilidad": "Alta"
+    },
+    {
+      "id": "ev-aecode-kaman-convocatorias",
+      "tipo": "reporte",
+      "fuente": "Reportes Daniella, Julie, Kaman",
+      "relacionado_con": "Kaman / convocatorias",
+      "empresa": "AECODE",
+      "fecha": "2026-06-28",
+      "confiabilidad": "Alta"
+    },
+    {
+      "id": "ev-visionpro-pdk-ascent",
+      "tipo": "reporte",
+      "fuente": "Backlog PDK / Marlon / Yary / Daniella",
+      "relacionado_con": "PDK Ascent",
+      "empresa": "VisionPro",
+      "fecha": "2026-06-28",
+      "confiabilidad": "Alta"
+    },
+    {
+      "id": "ev-visionpro-visionpro-decks",
+      "tipo": "reporte",
+      "fuente": "Reporte Daniella / Backlog PDK",
+      "relacionado_con": "VisionPro decks",
+      "empresa": "VisionPro",
+      "fecha": "2026-06-28",
+      "confiabilidad": "Alta"
+    },
+    {
+      "id": "ev-thesia-thesia-presupuesto-tesis-juan",
+      "tipo": "reporte",
+      "fuente": "Reportes Julie / Fabrizio",
+      "relacionado_con": "THESIA presupuesto / Tesis Juan",
+      "empresa": "THESIA",
+      "fecha": "2026-06-28",
+      "confiabilidad": "Media"
+    },
+    {
+      "id": "ev-agentflow-migracion-flujos",
+      "tipo": "reporte",
+      "fuente": "Reportes Emanuel / Fabrizio",
+      "relacionado_con": "Migracion flujos",
+      "empresa": "AgentFlow",
+      "fecha": "2026-06-28",
+      "confiabilidad": "Media"
+    }
+  ],
+  "fuentes": [
+    {
+      "id": "src-prompt-coo-team-gen-aecode-reporte-3h-md",
+      "tipo": "md",
+      "ruta": "D:\\AP\\AP_Knowledge_OS\\08_Agentes_AI\\Prompts-Agentes\\Prompt-COO-Team-GEN-AECODE-Reporte-3h.md",
+      "nombre": "Prompt-COO-Team-GEN-AECODE-Reporte-3h.md",
+      "procesado": true,
+      "calidad": "Alta"
+    },
+    {
+      "id": "src-reporte-integral-proyectos-team-gen-2026-06-28-md",
+      "tipo": "md",
+      "ruta": "D:\\AP\\AP_Knowledge_OS\\09_Actividades Team\\Reporte-Integral-Proyectos-Team-GEN+-2026-06-28.md",
+      "nombre": "Reporte-Integral-Proyectos-Team-GEN+-2026-06-28.md",
+      "procesado": true,
+      "calidad": "Alta"
+    },
+    {
+      "id": "src-2026-06-28-md",
+      "tipo": "md",
+      "ruta": "D:\\AP\\AP_Knowledge_OS\\09_Actividades Team\\Reportes Diarios AP\\2026-06-28.md",
+      "nombre": "2026-06-28.md",
+      "procesado": true,
+      "calidad": "Alta"
+    },
+    {
+      "id": "src-dashboard-master-erika-paola-summit-md",
+      "tipo": "md",
+      "ruta": "D:\\AP\\AP_Knowledge_OS\\09_Actividades Team\\Dashboard-Master-Erika-Paola-Summit.md",
+      "nombre": "Dashboard-Master-Erika-Paola-Summit.md",
+      "procesado": true,
+      "calidad": "Alta"
+    },
+    {
+      "id": "src-reporte-erika-paola-sprint-cierre-summit-2026-06-28-md",
+      "tipo": "md",
+      "ruta": "D:\\AP\\AP_Knowledge_OS\\03_PROYECTOS\\AI-Construction-Summit\\Reporte-Erika-Paola-Sprint-Cierre-Summit-2026-06-28.md",
+      "nombre": "Reporte-Erika-Paola-Sprint-Cierre-Summit-2026-06-28.md",
+      "procesado": true,
+      "calidad": "Alta"
+    },
+    {
+      "id": "src-reporte-comercial-2026-06-28-md",
+      "tipo": "md",
+      "ruta": "D:\\AP\\AP_Knowledge_OS\\09_Actividades Team\\Actividades_TEAM\\Talia\\Reporte-Comercial-2026-06-28.md",
+      "nombre": "Reporte-Comercial-2026-06-28.md",
+      "procesado": true,
+      "calidad": "Alta"
+    },
+    {
+      "id": "src-estatus-comercial-2026-06-28-md",
+      "tipo": "md",
+      "ruta": "D:\\AP\\AP_Knowledge_OS\\09_Actividades Team\\Actividades_TEAM\\Genesis\\Estatus-Comercial-2026-06-28.md",
+      "nombre": "Estatus-Comercial-2026-06-28.md",
+      "procesado": true,
+      "calidad": "Alta"
+    },
+    {
+      "id": "src-reporte-comercial-2026-06-24-al-26-md",
+      "tipo": "md",
+      "ruta": "D:\\AP\\AP_Knowledge_OS\\09_Actividades Team\\Actividades_TEAM\\Yadira\\Reporte-Comercial-2026-06-24-al-26.md",
+      "nombre": "Reporte-Comercial-2026-06-24-al-26.md",
+      "procesado": true,
+      "calidad": "Alta"
+    },
+    {
+      "id": "src-reporte-status-diplomados-2026-06-28-md",
+      "tipo": "md",
+      "ruta": "D:\\AP\\AP_Knowledge_OS\\09_Actividades Team\\Actividades_TEAM\\Carolina\\Reporte-Status-Diplomados-2026-06-28.md",
+      "nombre": "Reporte-Status-Diplomados-2026-06-28.md",
+      "procesado": true,
+      "calidad": "Alta"
+    },
+    {
+      "id": "src-reporte-status-avance-marlon-2026-06-28-md",
+      "tipo": "md",
+      "ruta": "D:\\AP\\AP_Knowledge_OS\\09_Actividades Team\\Actividades_TEAM\\Marlon\\Reporte-Status-Avance-Marlon-2026-06-28.md",
+      "nombre": "Reporte-Status-Avance-Marlon-2026-06-28.md",
+      "procesado": true,
+      "calidad": "Alta"
+    },
+    {
+      "id": "src-informe-proyectos-activos-yary-2026-06-28-md",
+      "tipo": "md",
+      "ruta": "D:\\AP\\AP_Knowledge_OS\\09_Actividades Team\\Actividades_TEAM\\Yary\\Informe-Proyectos-Activos-Yary-2026-06-28.md",
+      "nombre": "Informe-Proyectos-Activos-Yary-2026-06-28.md",
+      "procesado": true,
+      "calidad": "Alta"
+    },
+    {
+      "id": "src-reporte-operativo-julie-2026-06-28-md",
+      "tipo": "md",
+      "ruta": "D:\\AP\\AP_Knowledge_OS\\09_Actividades Team\\Actividades_TEAM\\Julie\\Reporte-Operativo-Julie-2026-06-28.md",
+      "nombre": "Reporte-Operativo-Julie-2026-06-28.md",
+      "procesado": true,
+      "calidad": "Alta"
+    },
+    {
+      "id": "src-reporte-actividades-2026-06-28-md",
+      "tipo": "md",
+      "ruta": "D:\\AP\\AP_Knowledge_OS\\09_Actividades Team\\Actividades_TEAM\\Fabrizio\\Reporte-Actividades-2026-06-28.md",
+      "nombre": "Reporte-Actividades-2026-06-28.md",
+      "procesado": true,
+      "calidad": "Alta"
+    },
+    {
+      "id": "src-reporte-marketing-summit-retoia-2026-06-28-md",
+      "tipo": "md",
+      "ruta": "D:\\AP\\AP_Knowledge_OS\\09_Actividades Team\\Actividades_TEAM\\Arantxa\\Reporte-Marketing-Summit-RetoIA-2026-06-28.md",
+      "nombre": "Reporte-Marketing-Summit-RetoIA-2026-06-28.md",
+      "procesado": true,
+      "calidad": "Alta"
+    },
+    {
+      "id": "src-reporte-estatus-proyectos-2026-06-27-md",
+      "tipo": "md",
+      "ruta": "D:\\AP\\AP_Knowledge_OS\\09_Actividades Team\\Actividades_TEAM\\Jessica\\Reporte-Estatus-Proyectos-2026-06-27.md",
+      "nombre": "Reporte-Estatus-Proyectos-2026-06-27.md",
+      "procesado": true,
+      "calidad": "Alta"
+    },
+    {
+      "id": "src-reporte-diario-emanuel-2026-06-27-md",
+      "tipo": "md",
+      "ruta": "D:\\AP\\AP_Knowledge_OS\\09_Actividades Team\\Actividades_TEAM\\Emanuel\\Reporte-Diario-Emanuel-2026-06-27.md",
+      "nombre": "Reporte-Diario-Emanuel-2026-06-27.md",
+      "procesado": true,
+      "calidad": "Alta"
+    },
+    {
+      "id": "src-reporte-mensual-kevin-junio-2026-md",
+      "tipo": "md",
+      "ruta": "D:\\AP\\AP_Knowledge_OS\\09_Actividades Team\\Actividades_TEAM\\Kevin\\Reporte-Mensual-Kevin-Junio-2026.md",
+      "nombre": "Reporte-Mensual-Kevin-Junio-2026.md",
+      "procesado": true,
+      "calidad": "Alta"
+    },
+    {
+      "id": "src-reporte-status-bim-infraestructura-2026-06-28-md",
+      "tipo": "md",
+      "ruta": "D:\\AP\\AP_Knowledge_OS\\09_Actividades Team\\Actividades_TEAM\\Israel\\Reporte-Status-BIM-Infraestructura-2026-06-28.md",
+      "nombre": "Reporte-Status-BIM-Infraestructura-2026-06-28.md",
+      "procesado": true,
+      "calidad": "Alta"
+    },
+    {
+      "id": "src-reporte-avance-canete-2026-06-28-md",
+      "tipo": "md",
+      "ruta": "D:\\AP\\AP_Knowledge_OS\\09_Actividades Team\\Actividades_TEAM\\Robert Herrera\\Reporte-Avance-Canete-2026-06-28.md",
+      "nombre": "Reporte-Avance-Canete-2026-06-28.md",
+      "procesado": true,
+      "calidad": "Alta"
+    },
+    {
+      "id": "src-reporte-junio-2026-md",
+      "tipo": "md",
+      "ruta": "D:\\AP\\AP_Knowledge_OS\\09_Actividades Team\\Actividades_TEAM\\Luis Vergara\\Reporte-Junio-2026.md",
+      "nombre": "Reporte-Junio-2026.md",
+      "procesado": true,
+      "calidad": "Alta"
+    },
+    {
+      "id": "src-reporte-junio-2026-md",
+      "tipo": "md",
+      "ruta": "D:\\AP\\AP_Knowledge_OS\\09_Actividades Team\\Actividades_TEAM\\Guisella\\Reporte-Junio-2026.md",
+      "nombre": "Reporte-Junio-2026.md",
+      "procesado": true,
+      "calidad": "Alta"
+    },
+    {
+      "id": "src-reporte-canva-actividades-2026-06-24-md",
+      "tipo": "md",
+      "ruta": "D:\\AP\\AP_Knowledge_OS\\09_Actividades Team\\Actividades_TEAM\\Daniella\\Reporte-Canva-Actividades-2026-06-24.md",
+      "nombre": "Reporte-Canva-Actividades-2026-06-24.md",
+      "procesado": true,
+      "calidad": "Alta"
+    },
+    {
+      "id": "src-esparq-hub-md",
+      "tipo": "md",
+      "ruta": "D:\\AP\\AP_Knowledge_OS\\03_PROYECTOS\\GEN+-Proyectos\\GEN+ ESPARQ\\ESPARQ-Hub.md",
+      "nombre": "ESPARQ-Hub.md",
+      "procesado": true,
+      "calidad": "Alta"
+    },
+    {
+      "id": "src-gen-delivery-bim-control-alcance-w24-2026-06-13-md",
+      "tipo": "md",
+      "ruta": "D:\\AP\\AP_Knowledge_OS\\03_PROYECTOS\\GEN+-Proyectos\\GEN+-Delivery-BIM-Control-Alcance-W24-2026-06-13.md",
+      "nombre": "GEN+-Delivery-BIM-Control-Alcance-W24-2026-06-13.md",
+      "procesado": true,
+      "calidad": "Alta"
+    },
+    {
+      "id": "src-pdk-ascent-backlog-ejecutivo-2026-06-18-md",
+      "tipo": "md",
+      "ruta": "D:\\AP\\AP_Knowledge_OS\\03_PROYECTOS\\VisionPro\\05_Implementacion_Obra\\PDK_Ascent_Backlog_Ejecutivo_2026-06-18.md",
+      "nombre": "PDK_Ascent_Backlog_Ejecutivo_2026-06-18.md",
+      "procesado": true,
+      "calidad": "Alta"
+    },
+    {
+      "id": "src-demo-day-kaman-2026-06-24-md",
+      "tipo": "md",
+      "ruta": "D:\\AP\\AP_Knowledge_OS\\03_PROYECTOS\\STARTUPS\\Kaman\\02_Demo-Day\\Demo-Day-Kaman-2026-06-24.md",
+      "nombre": "Demo-Day-Kaman-2026-06-24.md",
+      "procesado": true,
+      "calidad": "Alta"
+    },
+    {
+      "id": "src-roles-responsabilidades-md",
+      "tipo": "md",
+      "ruta": "D:\\AP\\AP_Knowledge_OS\\04_Team GEN+\\Roles-Responsabilidades.md",
+      "nombre": "Roles-Responsabilidades.md",
+      "procesado": true,
+      "calidad": "Alta"
+    },
+    {
+      "id": "src-squads-operativos-2026-md",
+      "tipo": "md",
+      "ruta": "D:\\AP\\AP_Knowledge_OS\\04_Team GEN+\\Squads-Operativos-2026.md",
+      "nombre": "Squads-Operativos-2026.md",
+      "procesado": true,
+      "calidad": "Alta"
+    }
+  ],
+  "deltas": [],
+  "procesos": [
+    {
+      "id": "proc-gen-cobranza-gen",
+      "empresa": "GEN+",
+      "area": "Caja / Cobranzas",
+      "nombre": "Cobranza GEN+",
+      "input": "Facturas/EDP emitidas",
+      "output": "Pago cobrado + evidencia",
+      "owner": "Julie",
+      "sla": "Diario",
+      "herramientas": [
+        "Excel",
+        "WhatsApp"
+      ],
+      "herramientas_ia": [
+        "Cobranzas Agent"
+      ],
+      "agente_sugerido": "Cobranzas Agent",
+      "estado": "manual",
+      "process_score": 60,
+      "automatizable": true,
+      "prioridad_automatizacion": "P0",
+      "confianza": "Inferido",
+      "fuente": "seeds.py / 05_Mapeo de Procesos"
+    },
+    {
+      "id": "proc-gen-control-de-alcance-bim",
+      "empresa": "GEN+",
+      "area": "Delivery BIM",
+      "nombre": "Control de Alcance BIM",
+      "input": "Observaciones de supervisión",
+      "output": "Matriz base/adicional/reproceso",
+      "owner": "Israel",
+      "sla": "Por proyecto",
+      "herramientas": [
+        "Revit",
+        "Excel"
+      ],
+      "herramientas_ia": [
+        "Control de Alcance BIM Agent"
+      ],
+      "agente_sugerido": "Control de Alcance BIM Agent",
+      "estado": "manual",
+      "process_score": 46,
+      "automatizable": true,
+      "prioridad_automatizacion": "P0",
+      "confianza": "Inferido",
+      "fuente": "seeds.py / 05_Mapeo de Procesos"
+    },
+    {
+      "id": "proc-gen-ventas-b2b",
+      "empresa": "GEN+",
+      "area": "Comercial B2B",
+      "nombre": "Ventas B2B",
+      "input": "Lead / TDR",
+      "output": "Propuesta + contrato",
+      "owner": "Daniella",
+      "sla": "Por oportunidad",
+      "herramientas": [
+        "Drive",
+        "Canva"
+      ],
+      "herramientas_ia": [
+        "Comercial B2B Agent",
+        "Propuestas / Contratos Agent"
+      ],
+      "agente_sugerido": "Comercial B2B Agent",
+      "estado": "funcional",
+      "process_score": 53,
+      "automatizable": true,
+      "prioridad_automatizacion": "P2",
+      "confianza": "Inferido",
+      "fuente": "seeds.py / 05_Mapeo de Procesos"
+    },
+    {
+      "id": "proc-aecode-gesti-n-de-evento-summit",
+      "empresa": "AECODE",
+      "area": "Summit / eventos",
+      "nombre": "Gestión de Evento (Summit)",
+      "input": "Sponsors + agenda + producción",
+      "output": "Evento ejecutado + caja",
+      "owner": "Erika",
+      "sla": "Diario en sprint",
+      "herramientas": [
+        "Sheets",
+        "GHL",
+        "Canva"
+      ],
+      "herramientas_ia": [
+        "Sponsors Agent",
+        "Summit Agent"
+      ],
+      "agente_sugerido": "Sponsors Agent",
+      "estado": "funcional",
+      "process_score": 60,
+      "automatizable": true,
+      "prioridad_automatizacion": "P0",
+      "confianza": "Inferido",
+      "fuente": "seeds.py / 05_Mapeo de Procesos"
+    },
+    {
+      "id": "proc-aecode-coordinaci-n-acad-mica-postventa",
+      "empresa": "AECODE",
+      "area": "Training / coordinación académica",
+      "nombre": "Coordinación Académica + Postventa",
+      "input": "Programa + alumnos",
+      "output": "Certificados + cierre académico",
+      "owner": "Carolina",
+      "sla": "Por diplomado",
+      "herramientas": [
+        "Zoom",
+        "Sheets"
+      ],
+      "herramientas_ia": [
+        "Training Operations Agent",
+        "Certificados Agent"
+      ],
+      "agente_sugerido": "Training Operations Agent",
+      "estado": "manual",
+      "process_score": 54,
+      "automatizable": true,
+      "prioridad_automatizacion": "P0",
+      "confianza": "Inferido",
+      "fuente": "seeds.py / 05_Mapeo de Procesos"
+    },
+    {
+      "id": "proc-aecode-ventas-b2c-training",
+      "empresa": "AECODE",
+      "area": "Comercial B2C",
+      "nombre": "Ventas B2C Training",
+      "input": "Lead marketing",
+      "output": "Venta + matrícula",
+      "owner": "Talia",
+      "sla": "SLA por lead",
+      "herramientas": [
+        "GHL",
+        "WhatsApp"
+      ],
+      "herramientas_ia": [
+        "Ventas B2C Agent"
+      ],
+      "agente_sugerido": "Ventas B2C Agent",
+      "estado": "funcional",
+      "process_score": 53,
+      "automatizable": true,
+      "prioridad_automatizacion": "P0",
+      "confianza": "Inferido",
+      "fuente": "seeds.py / 05_Mapeo de Procesos"
+    },
+    {
+      "id": "proc-aecode-lanzamiento-pre-congreso",
+      "empresa": "AECODE",
+      "area": "Marketing / growth",
+      "nombre": "Lanzamiento / Pre Congreso",
+      "input": "Calendario campaña",
+      "output": "Leads trazables",
+      "owner": "Arantxa",
+      "sla": "Sprint 24-72h",
+      "herramientas": [
+        "Meta Ads",
+        "GHL",
+        "Canva"
+      ],
+      "herramientas_ia": [
+        "Marketing Attribution Agent"
+      ],
+      "agente_sugerido": "Marketing Attribution Agent",
+      "estado": "funcional",
+      "process_score": 49,
+      "automatizable": true,
+      "prioridad_automatizacion": "P1",
+      "confianza": "Inferido",
+      "fuente": "seeds.py / 05_Mapeo de Procesos"
+    },
+    {
+      "id": "proc-aecode-creaci-n-de-curso-producto",
+      "empresa": "AECODE",
+      "area": "Producto digital",
+      "nombre": "Creación de Curso / Producto",
+      "input": "Outline + handoff",
+      "output": "Producto digital operativo",
+      "owner": "Yary",
+      "sla": "Por fase",
+      "herramientas": [
+        "Figma",
+        "HTML",
+        "Claude Code"
+      ],
+      "herramientas_ia": [
+        "Producto Digital / Testing Agent"
+      ],
+      "agente_sugerido": "Producto Digital / Testing Agent",
+      "estado": "funcional",
+      "process_score": 55,
+      "automatizable": true,
+      "prioridad_automatizacion": "P2",
+      "confianza": "Inferido",
+      "fuente": "seeds.py / 05_Mapeo de Procesos"
+    },
+    {
+      "id": "proc-visionpro-implementaci-n-en-obra",
+      "empresa": "VisionPro",
+      "area": "VisionPro / computer vision",
+      "nombre": "Implementación en Obra",
+      "input": "Cámaras + conectividad",
+      "output": "Demo / monitoreo operativo",
+      "owner": "Emanuel",
+      "sla": "Por despliegue",
+      "herramientas": [
+        "AWS",
+        "Jetson",
+        "Python"
+      ],
+      "herramientas_ia": [
+        "Demo / Deployment Agent"
+      ],
+      "agente_sugerido": "Demo / Deployment Agent",
+      "estado": "manual",
+      "process_score": 40,
+      "automatizable": true,
+      "prioridad_automatizacion": "P0",
+      "confianza": "Inferido",
+      "fuente": "seeds.py / 05_Mapeo de Procesos"
+    },
+    {
+      "id": "proc-aecode-postulaci-n-a-startup",
+      "empresa": "AECODE",
+      "area": "Startup / convocatorias",
+      "nombre": "Postulación a Startup",
+      "input": "Convocatoria",
+      "output": "Aplicación + pitch",
+      "owner": "Daniella",
+      "sla": "Por convocatoria",
+      "herramientas": [
+        "Drive",
+        "Canva"
+      ],
+      "herramientas_ia": [
+        "Startup / Convocatorias Agent"
+      ],
+      "agente_sugerido": "Startup / Convocatorias Agent",
+      "estado": "caotico",
+      "process_score": 40,
+      "automatizable": true,
+      "prioridad_automatizacion": "P2",
+      "confianza": "Inferido",
+      "fuente": "seeds.py / 05_Mapeo de Procesos"
+    },
+    {
+      "id": "proc-agentflow-migraci-n-de-workflows",
+      "empresa": "AgentFlow",
+      "area": "AgentFlow / automatización",
+      "nombre": "Migración de Workflows",
+      "input": "Proceso manual",
+      "output": "Flujo automatizado + log",
+      "owner": "Emanuel",
+      "sla": "Por flujo",
+      "herramientas": [
+        "n8n",
+        "Claude Code"
+      ],
+      "herramientas_ia": [
+        "Workflow Migration Agent",
+        "Context Pipeline Agent"
+      ],
+      "agente_sugerido": "Workflow Migration Agent",
+      "estado": "manual",
+      "process_score": 46,
+      "automatizable": true,
+      "prioridad_automatizacion": "P1",
+      "confianza": "Inferido",
+      "fuente": "seeds.py / 05_Mapeo de Procesos"
+    },
+    {
+      "id": "proc-ap-knowledge-os-context-pipeline",
+      "empresa": "AP",
+      "area": "Knowledge OS",
+      "nombre": "Knowledge OS / Context Pipeline",
+      "input": "WhatsApp/Drive/Gmail/notas",
+      "output": "Vault normalizado + dashboard",
+      "owner": "Alejandro",
+      "sla": "Cada 3h / on-demand",
+      "herramientas": [
+        "Codex",
+        "Claude Code",
+        "Obsidian"
+      ],
+      "herramientas_ia": [
+        "Vault Intelligence Agent",
+        "Context Pipeline Agent"
+      ],
+      "agente_sugerido": "Vault Intelligence Agent",
+      "estado": "funcional",
+      "process_score": 68,
+      "automatizable": true,
+      "prioridad_automatizacion": "P1",
+      "confianza": "Inferido",
+      "fuente": "seeds.py / 05_Mapeo de Procesos"
+    }
+  ],
+  "agentes": [
+    {
+      "id": "agt-ap-ceo-briefing-agent",
+      "nombre": "CEO Briefing Agent",
+      "empresa": "AP",
+      "area": "CEO",
+      "proposito": "Generar briefing diario/semanal con deltas, riesgos P0 y decisiones.",
+      "owner_humano": "Alejandro",
+      "estado": "propuesto",
+      "impacto_estimado": 5,
+      "dificultad": 2,
+      "prioridad": "P0",
+      "prompt_base": "Lee el vault CEO Intelligence, compara contra baseline, entrega briefing ejecutivo de 30s + 7/30/90.",
+      "confianza": "Inferido",
+      "fuente": "seeds.py (catálogo de agentes)"
+    },
+    {
+      "id": "agt-ap-weekly-priorities-agent",
+      "nombre": "Weekly Priorities Agent",
+      "empresa": "AP",
+      "area": "CEO",
+      "proposito": "Recalcular Top 10 prioridades por CEO Attention Score cada lunes.",
+      "owner_humano": "Alejandro",
+      "estado": "propuesto",
+      "impacto_estimado": 4,
+      "dificultad": 2,
+      "prioridad": "P0",
+      "prompt_base": "Ordena tareas y proyectos por impacto_caja, urgencia y riesgo; entrega 10 prioridades con owner y fecha.",
+      "confianza": "Inferido",
+      "fuente": "seeds.py (catálogo de agentes)"
+    },
+    {
+      "id": "agt-ap-decision-register-agent",
+      "nombre": "Decision Register Agent",
+      "empresa": "AP",
+      "area": "CEO",
+      "proposito": "Capturar y dar seguimiento a decisiones CEO con fecha límite y riesgo de no decidir.",
+      "owner_humano": "Alejandro",
+      "estado": "propuesto",
+      "impacto_estimado": 4,
+      "dificultad": 2,
+      "prioridad": "P1",
+      "prompt_base": "Extrae decisiones pendientes del vault, marca fecha límite e información faltante.",
+      "confianza": "Inferido",
+      "fuente": "seeds.py (catálogo de agentes)"
+    },
+    {
+      "id": "agt-ap-risk-radar-agent",
+      "nombre": "Risk Radar Agent",
+      "empresa": "AP",
+      "area": "CEO",
+      "proposito": "Monitorear riesgos P0/P1, detectar nuevos y escalar bloqueos transversales.",
+      "owner_humano": "Alejandro",
+      "estado": "propuesto",
+      "impacto_estimado": 5,
+      "dificultad": 2,
+      "prioridad": "P0",
+      "prompt_base": "Recorre riesgos y bloqueos, recomputa Risk Score y alerta los P0 sin owner o sin fecha.",
+      "confianza": "Inferido",
+      "fuente": "seeds.py (catálogo de agentes)"
+    },
+    {
+      "id": "agt-ap-cash-agent",
+      "nombre": "Cash Agent",
+      "empresa": "AP",
+      "area": "CEO",
+      "proposito": "Seguimiento de caja por cobrar (facturas/EDP) con compromiso fechado.",
+      "owner_humano": "Julie",
+      "estado": "propuesto",
+      "impacto_estimado": 5,
+      "dificultad": 3,
+      "prioridad": "P0",
+      "prompt_base": "Consolida facturas/EDP por cobrar, monto, responsable, fecha compromiso y evidencia.",
+      "confianza": "Inferido",
+      "fuente": "seeds.py (catálogo de agentes)"
+    },
+    {
+      "id": "agt-ap-delta-analysis-agent",
+      "nombre": "Delta Analysis Agent",
+      "empresa": "AP",
+      "area": "CEO",
+      "proposito": "Comparar cada corte contra el baseline anterior y reportar cambios reales.",
+      "owner_humano": "Alejandro",
+      "estado": "propuesto",
+      "impacto_estimado": 4,
+      "dificultad": 3,
+      "prioridad": "P1",
+      "prompt_base": "Diff baseline vs estado actual; reporta entidades nuevas, modificadas y cerradas.",
+      "confianza": "Inferido",
+      "fuente": "seeds.py (catálogo de agentes)"
+    },
+    {
+      "id": "agt-ap-vault-intelligence-agent",
+      "nombre": "Vault Intelligence Agent",
+      "empresa": "AP",
+      "area": "CEO",
+      "proposito": "Normalizar archivos nuevos del vault y detectar duplicados/contradicciones.",
+      "owner_humano": "Alejandro",
+      "estado": "propuesto",
+      "impacto_estimado": 4,
+      "dificultad": 3,
+      "prioridad": "P1",
+      "prompt_base": "Escanea archivos nuevos/modificados, normaliza entidades y marca contradicciones.",
+      "confianza": "Inferido",
+      "fuente": "seeds.py (catálogo de agentes)"
+    },
+    {
+      "id": "agt-ap-meeting-intelligence-agent",
+      "nombre": "Meeting Intelligence Agent",
+      "empresa": "AP",
+      "area": "CEO",
+      "proposito": "Convertir reuniones (Read AI/Calendar) en compromisos con owner y fecha.",
+      "owner_humano": "Alejandro",
+      "estado": "propuesto",
+      "impacto_estimado": 3,
+      "dificultad": 3,
+      "prioridad": "P2",
+      "prompt_base": "Toma minutas/transcripciones y extrae acuerdos accionables al backlog.",
+      "confianza": "Inferido",
+      "fuente": "seeds.py (catálogo de agentes)"
+    },
+    {
+      "id": "agt-gen-delivery-bim-agent",
+      "nombre": "Delivery BIM Agent",
+      "empresa": "GEN+",
+      "area": "Delivery BIM",
+      "proposito": "Estado por proyecto BIM: avance, entregable, validación y evidencia.",
+      "owner_humano": "Fabrizio",
+      "estado": "propuesto",
+      "impacto_estimado": 4,
+      "dificultad": 3,
+      "prioridad": "P1",
+      "prompt_base": "Consolida reportes BIM por proyecto y separa avance real de pendiente de validación.",
+      "confianza": "Inferido",
+      "fuente": "seeds.py (catálogo de agentes)"
+    },
+    {
+      "id": "agt-gen-control-de-alcance-bim-agent",
+      "nombre": "Control de Alcance BIM Agent",
+      "empresa": "GEN+",
+      "area": "Delivery BIM",
+      "proposito": "Clasificar observaciones en alcance base / adicional / reproceso / fuera de alcance.",
+      "owner_humano": "Israel",
+      "estado": "propuesto",
+      "impacto_estimado": 5,
+      "dificultad": 3,
+      "prioridad": "P0",
+      "prompt_base": "Para Cañete/Faucett/Dovelas clasifica cada cambio y marca lo valorizable como adicional.",
+      "confianza": "Inferido",
+      "fuente": "seeds.py (catálogo de agentes)"
+    },
+    {
+      "id": "agt-gen-cobranzas-agent",
+      "nombre": "Cobranzas Agent",
+      "empresa": "GEN+",
+      "area": "Caja / Cobranzas",
+      "proposito": "Tablero diario de cobranza con compromiso de pago y recordatorios.",
+      "owner_humano": "Julie",
+      "estado": "propuesto",
+      "impacto_estimado": 5,
+      "dificultad": 3,
+      "prioridad": "P0",
+      "prompt_base": "Genera tablero caja: factura/EDP, monto, cliente, responsable, fecha, evidencia, estado.",
+      "confianza": "Inferido",
+      "fuente": "seeds.py (catálogo de agentes)"
+    },
+    {
+      "id": "agt-gen-comercial-b2b-agent",
+      "nombre": "Comercial B2B Agent",
+      "empresa": "GEN+",
+      "area": "Comercial B2B",
+      "proposito": "Pipeline B2B (UNCP/OSP/Nestlé/GORE) con siguiente paso y owner.",
+      "owner_humano": "Daniella",
+      "estado": "propuesto",
+      "impacto_estimado": 3,
+      "dificultad": 3,
+      "prioridad": "P2",
+      "prompt_base": "Mantén pipeline B2B con etapa, TDR, próximo paso, fecha y probabilidad.",
+      "confianza": "Inferido",
+      "fuente": "seeds.py (catálogo de agentes)"
+    },
+    {
+      "id": "agt-gen-propuestas-contratos-agent",
+      "nombre": "Propuestas / Contratos Agent",
+      "empresa": "GEN+",
+      "area": "Producto digital",
+      "proposito": "Generar propuestas y contratos a partir de discovery (ESPARQ, VisionPro).",
+      "owner_humano": "Fabrizio",
+      "estado": "propuesto",
+      "impacto_estimado": 4,
+      "dificultad": 3,
+      "prioridad": "P1",
+      "prompt_base": "Desde discovery genera propuesta, alcance, DoD, precio y contrato base.",
+      "confianza": "Inferido",
+      "fuente": "seeds.py (catálogo de agentes)"
+    },
+    {
+      "id": "agt-gen-qa-qc-bim-agent",
+      "nombre": "QA/QC BIM Agent",
+      "empresa": "GEN+",
+      "area": "Delivery BIM",
+      "proposito": "Checklist de calidad por entregable BIM antes de envío al cliente.",
+      "owner_humano": "Kevin",
+      "estado": "propuesto",
+      "impacto_estimado": 3,
+      "dificultad": 3,
+      "prioridad": "P2",
+      "prompt_base": "Aplica checklist QA/QC por disciplina y bloquea entregas sin evidencia.",
+      "confianza": "Inferido",
+      "fuente": "seeds.py (catálogo de agentes)"
+    },
+    {
+      "id": "agt-aecode-training-operations-agent",
+      "nombre": "Training Operations Agent",
+      "empresa": "AECODE",
+      "area": "Training / coordinación académica",
+      "proposito": "Tablero por diplomado: rúbrica, entregable, certificado, sustitutorio, bloqueo.",
+      "owner_humano": "Carolina",
+      "estado": "propuesto",
+      "impacto_estimado": 5,
+      "dificultad": 3,
+      "prioridad": "P0",
+      "prompt_base": "Consolida estado académico por diplomado y marca cierres y reclamos potenciales.",
+      "confianza": "Inferido",
+      "fuente": "seeds.py (catálogo de agentes)"
+    },
+    {
+      "id": "agt-aecode-certificados-agent",
+      "nombre": "Certificados Agent",
+      "empresa": "AECODE",
+      "area": "Training / coordinación académica",
+      "proposito": "Emisión y trazabilidad de certificados (CIP, sustitutorios) con evidencia.",
+      "owner_humano": "Patrick",
+      "estado": "propuesto",
+      "impacto_estimado": 4,
+      "dificultad": 2,
+      "prioridad": "P1",
+      "prompt_base": "Genera y registra certificados con verificación de notas y entregables.",
+      "confianza": "Inferido",
+      "fuente": "seeds.py (catálogo de agentes)"
+    },
+    {
+      "id": "agt-aecode-ventas-b2c-agent",
+      "nombre": "Ventas B2C Agent",
+      "empresa": "AECODE",
+      "area": "Comercial B2C",
+      "proposito": "SLA por lead, seguimiento y corte oficial de ventas (completa vs cuota).",
+      "owner_humano": "Talia",
+      "estado": "propuesto",
+      "impacto_estimado": 5,
+      "dificultad": 3,
+      "prioridad": "P0",
+      "prompt_base": "Aplica SLA por lead, separa venta completa/cuota/registro y entrega cifra oficial.",
+      "confianza": "Inferido",
+      "fuente": "seeds.py (catálogo de agentes)"
+    },
+    {
+      "id": "agt-aecode-marketing-attribution-agent",
+      "nombre": "Marketing Attribution Agent",
+      "empresa": "AECODE",
+      "area": "Marketing / growth",
+      "proposito": "Dashboard pieza→canal→lead→venta para saber qué convierte.",
+      "owner_humano": "Jessica",
+      "estado": "propuesto",
+      "impacto_estimado": 4,
+      "dificultad": 3,
+      "prioridad": "P1",
+      "prompt_base": "Integra GHL y campañas, atribuye leads y ventas por pieza y canal.",
+      "confianza": "Inferido",
+      "fuente": "seeds.py (catálogo de agentes)"
+    },
+    {
+      "id": "agt-aecode-sponsors-agent",
+      "nombre": "Sponsors Agent",
+      "empresa": "AECODE",
+      "area": "Summit / eventos",
+      "proposito": "Cruce sponsor→pago→beneficio→delegación→stand→ponente con corte diario.",
+      "owner_humano": "Paola",
+      "estado": "propuesto",
+      "impacto_estimado": 5,
+      "dificultad": 3,
+      "prioridad": "P0",
+      "prompt_base": "Mantén CRM sponsor vivo y cruza pago, beneficio y delegación; alerta sponsors fríos.",
+      "confianza": "Inferido",
+      "fuente": "seeds.py (catálogo de agentes)"
+    },
+    {
+      "id": "agt-aecode-summit-agent",
+      "nombre": "Summit Agent",
+      "empresa": "AECODE",
+      "area": "Summit / eventos",
+      "proposito": "Coordinar web/app/agenda/proveedores del AI Construction Summit.",
+      "owner_humano": "Marlon",
+      "estado": "propuesto",
+      "impacto_estimado": 4,
+      "dificultad": 3,
+      "prioridad": "P1",
+      "prompt_base": "Sigue QA web, test app, agenda y proveedores con estado y owner.",
+      "confianza": "Inferido",
+      "fuente": "seeds.py (catálogo de agentes)"
+    },
+    {
+      "id": "agt-aecode-producto-digital-testing-agent",
+      "nombre": "Producto Digital / Testing Agent",
+      "empresa": "AECODE",
+      "area": "Producto digital",
+      "proposito": "Separar handoff de diseño de implementación dev y QA.",
+      "owner_humano": "Yary",
+      "estado": "propuesto",
+      "impacto_estimado": 3,
+      "dificultad": 3,
+      "prioridad": "P2",
+      "prompt_base": "Para Fase 2/3 separa diseño listo, dev pendiente y QA pendiente con owner.",
+      "confianza": "Inferido",
+      "fuente": "seeds.py (catálogo de agentes)"
+    },
+    {
+      "id": "agt-aecode-startup-convocatorias-agent",
+      "nombre": "Startup / Convocatorias Agent",
+      "empresa": "AECODE",
+      "area": "Startup / convocatorias",
+      "proposito": "Checklist de convocatorias (deck, métricas, evidencia, ensayo, owner).",
+      "owner_humano": "Daniella",
+      "estado": "propuesto",
+      "impacto_estimado": 3,
+      "dificultad": 2,
+      "prioridad": "P2",
+      "prompt_base": "Aplica checklist startup y agenda hitos de convocatorias (StartUPC, etc.).",
+      "confianza": "Inferido",
+      "fuente": "seeds.py (catálogo de agentes)"
+    },
+    {
+      "id": "agt-visionpro-demo-deployment-agent",
+      "nombre": "Demo / Deployment Agent",
+      "empresa": "VisionPro",
+      "area": "VisionPro / computer vision",
+      "proposito": "Demo web estable + diagnóstico de conectividad obra + fallback edge/offline.",
+      "owner_humano": "Emanuel",
+      "estado": "propuesto",
+      "impacto_estimado": 5,
+      "dificultad": 4,
+      "prioridad": "P0",
+      "prompt_base": "Sigue estado de demo, conectividad y despliegue; prioriza funcionalidades IA P0.",
+      "confianza": "Inferido",
+      "fuente": "seeds.py (catálogo de agentes)"
+    },
+    {
+      "id": "agt-visionpro-computer-vision-product-agent",
+      "nombre": "Computer Vision Product Agent",
+      "empresa": "VisionPro",
+      "area": "VisionPro / computer vision",
+      "proposito": "Roadmap IA PDK Ascent priorizado por caso de uso vendible.",
+      "owner_humano": "Marlon",
+      "estado": "propuesto",
+      "impacto_estimado": 4,
+      "dificultad": 4,
+      "prioridad": "P1",
+      "prompt_base": "Prioriza backlog PDK por valor comercial y corta un MVP vendible.",
+      "confianza": "Inferido",
+      "fuente": "seeds.py (catálogo de agentes)"
+    },
+    {
+      "id": "agt-thesia-research-tesis-agent",
+      "nombre": "Research / Tesis Agent",
+      "empresa": "THESIA",
+      "area": "Startup / convocatorias",
+      "proposito": "Estructura de tesis/papers y traspaso de información con fechas.",
+      "owner_humano": "Fabrizio",
+      "estado": "propuesto",
+      "impacto_estimado": 2,
+      "dificultad": 2,
+      "prioridad": "P3",
+      "prompt_base": "Organiza tesis Juan, presupuesto y traspaso; define solicitud y fecha límite.",
+      "confianza": "Inferido",
+      "fuente": "seeds.py (catálogo de agentes)"
+    },
+    {
+      "id": "agt-agentflow-workflow-migration-agent",
+      "nombre": "Workflow Migration Agent",
+      "empresa": "AgentFlow",
+      "area": "AgentFlow / automatización",
+      "proposito": "Migrar primer flujo con entrada, salida, log y fallback.",
+      "owner_humano": "Emanuel",
+      "estado": "propuesto",
+      "impacto_estimado": 4,
+      "dificultad": 3,
+      "prioridad": "P1",
+      "prompt_base": "Toma un proceso manual y produce flujo migrado con log y evidencia.",
+      "confianza": "Inferido",
+      "fuente": "seeds.py (catálogo de agentes)"
+    },
+    {
+      "id": "agt-agentflow-context-pipeline-agent",
+      "nombre": "Context Pipeline Agent",
+      "empresa": "AgentFlow",
+      "area": "AgentFlow / automatización",
+      "proposito": "WhatsApp/Drive/Gmail → vault normalizado → dashboard.",
+      "owner_humano": "Emanuel",
+      "estado": "propuesto",
+      "impacto_estimado": 5,
+      "dificultad": 4,
+      "prioridad": "P1",
+      "prompt_base": "Construye pipeline de ingesta que normaliza fuentes y alimenta el vault.",
+      "confianza": "Inferido",
+      "fuente": "seeds.py (catálogo de agentes)"
+    }
+  ],
+  "herramientas_ia": [
+    {
+      "id": "tool-claude-code",
+      "nombre": "Claude Code",
+      "categoria": "Agente/Dev",
+      "casos_uso": [
+        "Apps",
+        "ETL",
+        "Automatización",
+        "Dashboards"
+      ],
+      "nivel": "Core",
+      "confianza": "Inferido"
+    },
+    {
+      "id": "tool-codex",
+      "nombre": "Codex",
+      "categoria": "Agente/Contexto",
+      "casos_uso": [
+        "Normalización vault",
+        "Reportes",
+        "Contexto"
+      ],
+      "nivel": "Core",
+      "confianza": "Inferido"
+    },
+    {
+      "id": "tool-grok",
+      "nombre": "Grok",
+      "categoria": "Investigación",
+      "casos_uso": [
+        "Tendencias",
+        "Análisis crítico"
+      ],
+      "nivel": "Apoyo",
+      "confianza": "Inferido"
+    },
+    {
+      "id": "tool-ghl-gohighlevel",
+      "nombre": "GHL (GoHighLevel)",
+      "categoria": "CRM/Marketing",
+      "casos_uso": [
+        "Leads",
+        "Atribución",
+        "Automatización comercial"
+      ],
+      "nivel": "Operativo",
+      "confianza": "Inferido"
+    },
+    {
+      "id": "tool-n8n",
+      "nombre": "n8n",
+      "categoria": "Automatización",
+      "casos_uso": [
+        "Workflows",
+        "Integraciones"
+      ],
+      "nivel": "Operativo",
+      "confianza": "Inferido"
+    },
+    {
+      "id": "tool-read-ai",
+      "nombre": "Read AI",
+      "categoria": "Reuniones",
+      "casos_uso": [
+        "Minutas",
+        "Compromisos"
+      ],
+      "nivel": "Apoyo",
+      "confianza": "Inferido"
+    },
+    {
+      "id": "tool-canva-ia",
+      "nombre": "Canva / IA",
+      "categoria": "Diseño",
+      "casos_uso": [
+        "Materiales comerciales",
+        "Piezas"
+      ],
+      "nivel": "Operativo",
+      "confianza": "Inferido"
+    },
+    {
+      "id": "tool-obsidian",
+      "nombre": "Obsidian",
+      "categoria": "Segundo cerebro",
+      "casos_uso": [
+        "Vault",
+        "Trazabilidad",
+        "Contexto"
+      ],
+      "nivel": "Core",
+      "confianza": "Inferido"
+    },
+    {
+      "id": "tool-google-drive-sheets",
+      "nombre": "Google Drive/Sheets",
+      "categoria": "Datos/Docs",
+      "casos_uso": [
+        "Tableros vivos",
+        "Fuentes"
+      ],
+      "nivel": "Operativo",
+      "confianza": "Inferido"
+    }
+  ],
+  "ai_native": {
+    "overall_score": 50,
+    "clasificacion": "uso superficial",
+    "por_persona": [
+      {
+        "colaborador": "Julie",
+        "ai_native_score": 53,
+        "ai_leverage_score": 50,
+        "herramientas_actuales": [
+          "Excel",
+          "WhatsApp"
+        ],
+        "herramientas_recomendadas": [
+          "Cobranzas Agent",
+          "Sheets IA"
+        ],
+        "agentes_recomendados": [
+          "Cobranzas Agent",
+          "Sponsors Agent"
+        ],
+        "procesos_delegables": [
+          "Tablero de caja diario",
+          "Recordatorios de cobro"
+        ],
+        "confianza": "Inferido"
+      },
+      {
+        "colaborador": "Marlon",
+        "ai_native_score": 60,
+        "ai_leverage_score": 60,
+        "herramientas_actuales": [
+          "Claude Code",
+          "C#",
+          "Canva"
+        ],
+        "herramientas_recomendadas": [
+          "Summit Agent",
+          "QA Agent"
+        ],
+        "agentes_recomendados": [
+          "Summit Agent",
+          "Computer Vision Product Agent"
+        ],
+        "procesos_delegables": [
+          "QA web",
+          "Seguimiento de certificados"
+        ],
+        "confianza": "Inferido"
+      },
+      {
+        "colaborador": "Fabrizio",
+        "ai_native_score": 67,
+        "ai_leverage_score": 66,
+        "herramientas_actuales": [
+          "Claude Code",
+          "Revit",
+          "Codex"
+        ],
+        "herramientas_recomendadas": [
+          "Delivery BIM Agent",
+          "Propuestas Agent"
+        ],
+        "agentes_recomendados": [
+          "Delivery BIM Agent",
+          "Propuestas / Contratos Agent"
+        ],
+        "procesos_delegables": [
+          "Reportes de cierre",
+          "Documentación de entregables"
+        ],
+        "confianza": "Inferido"
+      },
+      {
+        "colaborador": "Yary",
+        "ai_native_score": 58,
+        "ai_leverage_score": 56,
+        "herramientas_actuales": [
+          "Figma",
+          "HTML"
+        ],
+        "herramientas_recomendadas": [
+          "Producto Digital / Testing Agent"
+        ],
+        "agentes_recomendados": [
+          "Producto Digital / Testing Agent"
+        ],
+        "procesos_delegables": [
+          "Handoff dev/QA",
+          "Documentación de componentes"
+        ],
+        "confianza": "Inferido"
+      },
+      {
+        "colaborador": "Carolina",
+        "ai_native_score": 50,
+        "ai_leverage_score": 46,
+        "herramientas_actuales": [
+          "Sheets",
+          "Zoom"
+        ],
+        "herramientas_recomendadas": [
+          "Training Operations Agent"
+        ],
+        "agentes_recomendados": [
+          "Training Operations Agent",
+          "Certificados Agent"
+        ],
+        "procesos_delegables": [
+          "Tablero por diplomado",
+          "Estado de certificados"
+        ],
+        "confianza": "Inferido"
+      },
+      {
+        "colaborador": "Talia",
+        "ai_native_score": 51,
+        "ai_leverage_score": 50,
+        "herramientas_actuales": [
+          "GHL",
+          "WhatsApp"
+        ],
+        "herramientas_recomendadas": [
+          "Ventas B2C Agent"
+        ],
+        "agentes_recomendados": [
+          "Ventas B2C Agent"
+        ],
+        "procesos_delegables": [
+          "SLA por lead",
+          "Reporte de funnel"
+        ],
+        "confianza": "Inferido"
+      },
+      {
+        "colaborador": "Genesis",
+        "ai_native_score": 45,
+        "ai_leverage_score": 44,
+        "herramientas_actuales": [
+          "GHL",
+          "WhatsApp"
+        ],
+        "herramientas_recomendadas": [
+          "Ventas B2C Agent"
+        ],
+        "agentes_recomendados": [
+          "Ventas B2C Agent"
+        ],
+        "procesos_delegables": [
+          "Seguimiento de leads",
+          "Corte de ventas"
+        ],
+        "confianza": "Inferido"
+      },
+      {
+        "colaborador": "Yadira",
+        "ai_native_score": 42,
+        "ai_leverage_score": 40,
+        "herramientas_actuales": [
+          "GHL"
+        ],
+        "herramientas_recomendadas": [
+          "Ventas B2C Agent"
+        ],
+        "agentes_recomendados": [
+          "Ventas B2C Agent"
+        ],
+        "procesos_delegables": [
+          "Separar venta completa/cuota"
+        ],
+        "confianza": "Inferido"
+      },
+      {
+        "colaborador": "Erika",
+        "ai_native_score": 54,
+        "ai_leverage_score": 52,
+        "herramientas_actuales": [
+          "Sheets",
+          "WhatsApp"
+        ],
+        "herramientas_recomendadas": [
+          "Sponsors Agent"
+        ],
+        "agentes_recomendados": [
+          "Sponsors Agent"
+        ],
+        "procesos_delegables": [
+          "CRM sponsors vivo",
+          "Corte sponsor diario"
+        ],
+        "confianza": "Inferido"
+      },
+      {
+        "colaborador": "Paola",
+        "ai_native_score": 56,
+        "ai_leverage_score": 52,
+        "herramientas_actuales": [
+          "Sheets"
+        ],
+        "herramientas_recomendadas": [
+          "Sponsors Agent"
+        ],
+        "agentes_recomendados": [
+          "Sponsors Agent"
+        ],
+        "procesos_delegables": [
+          "Cruce pago-beneficio-delegación"
+        ],
+        "confianza": "Inferido"
+      },
+      {
+        "colaborador": "Arantxa",
+        "ai_native_score": 53,
+        "ai_leverage_score": 54,
+        "herramientas_actuales": [
+          "Meta Ads",
+          "GHL",
+          "Canva"
+        ],
+        "herramientas_recomendadas": [
+          "Marketing Attribution Agent"
+        ],
+        "agentes_recomendados": [
+          "Marketing Attribution Agent"
+        ],
+        "procesos_delegables": [
+          "Sprint de campaña",
+          "Landing"
+        ],
+        "confianza": "Inferido"
+      },
+      {
+        "colaborador": "Jessica",
+        "ai_native_score": 53,
+        "ai_leverage_score": 56,
+        "herramientas_actuales": [
+          "GHL"
+        ],
+        "herramientas_recomendadas": [
+          "Marketing Attribution Agent"
+        ],
+        "agentes_recomendados": [
+          "Marketing Attribution Agent"
+        ],
+        "procesos_delegables": [
+          "Flujos GHL",
+          "Tracking end-to-end"
+        ],
+        "confianza": "Inferido"
+      },
+      {
+        "colaborador": "Enma",
+        "ai_native_score": 49,
+        "ai_leverage_score": 50,
+        "herramientas_actuales": [
+          "Canva",
+          "TikTok"
+        ],
+        "herramientas_recomendadas": [
+          "Marketing Attribution Agent"
+        ],
+        "agentes_recomendados": [
+          "Marketing Attribution Agent"
+        ],
+        "procesos_delegables": [
+          "Piezas",
+          "Brochures versión única"
+        ],
+        "confianza": "Inferido"
+      },
+      {
+        "colaborador": "Anggie",
+        "ai_native_score": 50,
+        "ai_leverage_score": 50,
+        "herramientas_actuales": [
+          "Agentes marketing"
+        ],
+        "herramientas_recomendadas": [
+          "Marketing Attribution Agent"
+        ],
+        "agentes_recomendados": [
+          "Marketing Attribution Agent"
+        ],
+        "procesos_delegables": [
+          "Dashboard de métricas"
+        ],
+        "confianza": "Inferido"
+      },
+      {
+        "colaborador": "Kevin",
+        "ai_native_score": 56,
+        "ai_leverage_score": 56,
+        "herramientas_actuales": [
+          "Revit",
+          "Python",
+          "C#"
+        ],
+        "herramientas_recomendadas": [
+          "QA/QC BIM Agent"
+        ],
+        "agentes_recomendados": [
+          "QA/QC BIM Agent",
+          "Delivery BIM Agent"
+        ],
+        "procesos_delegables": [
+          "Scripts BESCO",
+          "Plataforma"
+        ],
+        "confianza": "Inferido"
+      },
+      {
+        "colaborador": "Israel",
+        "ai_native_score": 46,
+        "ai_leverage_score": 42,
+        "herramientas_actuales": [
+          "Revit",
+          "InfraWorks"
+        ],
+        "herramientas_recomendadas": [
+          "Control de Alcance BIM Agent"
+        ],
+        "agentes_recomendados": [
+          "Control de Alcance BIM Agent"
+        ],
+        "procesos_delegables": [
+          "Matriz de alcance"
+        ],
+        "confianza": "Inferido"
+      },
+      {
+        "colaborador": "Robert Herrera",
+        "ai_native_score": 36,
+        "ai_leverage_score": 32,
+        "herramientas_actuales": [
+          "Revit"
+        ],
+        "herramientas_recomendadas": [
+          "Delivery BIM Agent"
+        ],
+        "agentes_recomendados": [
+          "Delivery BIM Agent"
+        ],
+        "procesos_delegables": [
+          "Reporte de avance estandarizado"
+        ],
+        "confianza": "Inferido"
+      },
+      {
+        "colaborador": "Luis Vergara",
+        "ai_native_score": 36,
+        "ai_leverage_score": 32,
+        "herramientas_actuales": [
+          "Revit",
+          "Rhino"
+        ],
+        "herramientas_recomendadas": [
+          "Delivery BIM Agent"
+        ],
+        "agentes_recomendados": [
+          "Delivery BIM Agent"
+        ],
+        "procesos_delegables": [
+          "Documentar flujos y cambios"
+        ],
+        "confianza": "Inferido"
+      },
+      {
+        "colaborador": "Guisella",
+        "ai_native_score": 36,
+        "ai_leverage_score": 32,
+        "herramientas_actuales": [
+          "Revit"
+        ],
+        "herramientas_recomendadas": [
+          "Control de Alcance BIM Agent"
+        ],
+        "agentes_recomendados": [
+          "Control de Alcance BIM Agent"
+        ],
+        "procesos_delegables": [
+          "Matriz dovela",
+          "Valorización de cambios"
+        ],
+        "confianza": "Inferido"
+      },
+      {
+        "colaborador": "Daniella",
+        "ai_native_score": 60,
+        "ai_leverage_score": 58,
+        "herramientas_actuales": [
+          "Canva",
+          "Claude"
+        ],
+        "herramientas_recomendadas": [
+          "Comercial B2B Agent",
+          "Startup Agent"
+        ],
+        "agentes_recomendados": [
+          "Startup / Convocatorias Agent",
+          "Comercial B2B Agent"
+        ],
+        "procesos_delegables": [
+          "Materiales comerciales",
+          "Postmortems"
+        ],
+        "confianza": "Inferido"
+      },
+      {
+        "colaborador": "Emanuel",
+        "ai_native_score": 60,
+        "ai_leverage_score": 64,
+        "herramientas_actuales": [
+          "Python",
+          "AWS",
+          "n8n"
+        ],
+        "herramientas_recomendadas": [
+          "Workflow Migration Agent"
+        ],
+        "agentes_recomendados": [
+          "Workflow Migration Agent",
+          "Demo / Deployment Agent",
+          "Context Pipeline Agent"
+        ],
+        "procesos_delegables": [
+          "Migración de flujos",
+          "Diagnóstico conectividad"
+        ],
+        "confianza": "Inferido"
+      },
+      {
+        "colaborador": "Anderson",
+        "ai_native_score": 35,
+        "ai_leverage_score": 36,
+        "herramientas_actuales": [
+          "Dev"
+        ],
+        "herramientas_recomendadas": [
+          "Summit Agent"
+        ],
+        "agentes_recomendados": [
+          "Summit Agent"
+        ],
+        "procesos_delegables": [
+          "Testeo App Summit"
+        ],
+        "confianza": "Inferido"
+      },
+      {
+        "colaborador": "Yudely",
+        "ai_native_score": 38,
+        "ai_leverage_score": 36,
+        "herramientas_actuales": [
+          "Sheets"
+        ],
+        "herramientas_recomendadas": [
+          "Producto Digital / Testing Agent"
+        ],
+        "agentes_recomendados": [
+          "Producto Digital / Testing Agent"
+        ],
+        "procesos_delegables": [
+          "Revisión Fase 3"
+        ],
+        "confianza": "Inferido"
+      },
+      {
+        "colaborador": "Patrick",
+        "ai_native_score": 44,
+        "ai_leverage_score": 42,
+        "herramientas_actuales": [
+          "Zoom",
+          "Sheets"
+        ],
+        "herramientas_recomendadas": [
+          "Certificados Agent"
+        ],
+        "agentes_recomendados": [
+          "Certificados Agent"
+        ],
+        "procesos_delegables": [
+          "Matriz certificados/notas/recursos"
+        ],
+        "confianza": "Inferido"
+      }
+    ],
+    "por_empresa": [
+      {
+        "empresa": "GEN+",
+        "ai_native_score": 52,
+        "clasificacion": "uso superficial"
+      },
+      {
+        "empresa": "AECODE",
+        "ai_native_score": 52,
+        "clasificacion": "uso superficial"
+      },
+      {
+        "empresa": "VisionPro",
+        "ai_native_score": 60,
+        "clasificacion": "IA asistida"
+      },
+      {
+        "empresa": "AgentFlow",
+        "ai_native_score": 60,
+        "clasificacion": "IA asistida"
+      },
+      {
+        "empresa": "THESIA",
+        "ai_native_score": 67,
+        "clasificacion": "IA asistida"
+      },
+      {
+        "empresa": "AP",
+        "ai_native_score": 38,
+        "clasificacion": "operación manual vulnerable"
+      }
+    ],
+    "agentes_propuestos": 27,
+    "procesos_automatizables": 12,
+    "backlog_automatizacion": [
+      {
+        "proceso": "Cobranza GEN+",
+        "empresa": "GEN+",
+        "prioridad": "P0",
+        "process_score": 60,
+        "agente": "Cobranzas Agent"
+      },
+      {
+        "proceso": "Gestión de Evento (Summit)",
+        "empresa": "AECODE",
+        "prioridad": "P0",
+        "process_score": 60,
+        "agente": "Sponsors Agent"
+      },
+      {
+        "proceso": "Coordinación Académica + Postventa",
+        "empresa": "AECODE",
+        "prioridad": "P0",
+        "process_score": 54,
+        "agente": "Training Operations Agent"
+      },
+      {
+        "proceso": "Ventas B2C Training",
+        "empresa": "AECODE",
+        "prioridad": "P0",
+        "process_score": 53,
+        "agente": "Ventas B2C Agent"
+      },
+      {
+        "proceso": "Control de Alcance BIM",
+        "empresa": "GEN+",
+        "prioridad": "P0",
+        "process_score": 46,
+        "agente": "Control de Alcance BIM Agent"
+      },
+      {
+        "proceso": "Implementación en Obra",
+        "empresa": "VisionPro",
+        "prioridad": "P0",
+        "process_score": 40,
+        "agente": "Demo / Deployment Agent"
+      },
+      {
+        "proceso": "Knowledge OS / Context Pipeline",
+        "empresa": "AP",
+        "prioridad": "P1",
+        "process_score": 68,
+        "agente": "Vault Intelligence Agent"
+      },
+      {
+        "proceso": "Lanzamiento / Pre Congreso",
+        "empresa": "AECODE",
+        "prioridad": "P1",
+        "process_score": 49,
+        "agente": "Marketing Attribution Agent"
+      },
+      {
+        "proceso": "Migración de Workflows",
+        "empresa": "AgentFlow",
+        "prioridad": "P1",
+        "process_score": 46,
+        "agente": "Workflow Migration Agent"
+      },
+      {
+        "proceso": "Creación de Curso / Producto",
+        "empresa": "AECODE",
+        "prioridad": "P2",
+        "process_score": 55,
+        "agente": "Producto Digital / Testing Agent"
+      },
+      {
+        "proceso": "Ventas B2B",
+        "empresa": "GEN+",
+        "prioridad": "P2",
+        "process_score": 53,
+        "agente": "Comercial B2B Agent"
+      },
+      {
+        "proceso": "Postulación a Startup",
+        "empresa": "AECODE",
+        "prioridad": "P2",
+        "process_score": 40,
+        "agente": "Startup / Convocatorias Agent"
+      }
+    ]
+  },
+  "data_quality": {
+    "data_quality_score": 94,
+    "completitud": 98,
+    "consistencia": 95,
+    "actualidad": 90,
+    "evidencia": 100,
+    "normalizacion": 85,
+    "contradicciones": 1,
+    "gaps": [
+      {
+        "entidad": "THESIA presupuesto / Tesis Juan",
+        "empresa": "THESIA",
+        "faltante": [
+          "proximo_hito"
+        ]
+      },
+      {
+        "entidad": "Migracion flujos",
+        "empresa": "AgentFlow",
+        "faltante": [
+          "proximo_hito"
+        ]
+      }
+    ],
+    "contradicciones_detalle": [
+      "Cifras ventas AECODE inconsistentes"
+    ]
+  },
+  "highlights": [
+    {
+      "id": "hl-julie",
+      "colaborador": "Julie",
+      "aprendizaje": "Caja requiere tablero diario, no lista de pendientes",
+      "decision": "No se tiene claro",
+      "solucion": "Clasificacion pagado/facturado/correo pendiente",
+      "valor": "Protege caja GEN+ y Summit",
+      "proyecto": "Cobranzas / Sponsors / Training",
+      "fuente": "06_Key_Highlights_Equipo.md"
+    },
+    {
+      "id": "hl-marlon",
+      "colaborador": "Marlon",
+      "aprendizaje": "El avance tecnico se pierde si no pasa a QA/produccion",
+      "decision": "No se tiene claro",
+      "solucion": "Web Summit, certificados, BESCO C#, VisionPro seguimiento",
+      "valor": "Desbloquea evento, producto y delivery",
+      "proyecto": "Summit / VisionPro / BESCO",
+      "fuente": "06_Key_Highlights_Equipo.md"
+    },
+    {
+      "id": "hl-fabrizio",
+      "colaborador": "Fabrizio",
+      "aprendizaje": "Los 100% parciales no equivalen a cierre",
+      "decision": "No se tiene claro",
+      "solucion": "Documentacion, ESPARQ, agendas, delivery BIM, agente inmobiliario",
+      "valor": "Convierte investigacion en producto/entrega",
+      "proyecto": "ESPARQ / GEN+ / AECODE",
+      "fuente": "06_Key_Highlights_Equipo.md"
+    },
+    {
+      "id": "hl-yary",
+      "colaborador": "Yary",
+      "aprendizaje": "Handoff visual debe separarse de implementacion dev",
+      "decision": "No se tiene claro",
+      "solucion": "App Summit 95%, Summit Web 97%, dashboard VisionPro",
+      "valor": "Reduce incertidumbre de producto digital",
+      "proyecto": "Summit / VisionPro / Fase 2",
+      "fuente": "06_Key_Highlights_Equipo.md"
+    },
+    {
+      "id": "hl-carolina",
+      "colaborador": "Carolina",
+      "aprendizaje": "Cierre academico requiere matriz por diplomado",
+      "decision": "No se tiene claro",
+      "solucion": "Estado de certificados, rubricas y entregables",
+      "valor": "Reduce reclamos Training",
+      "proyecto": "AECODE Training",
+      "fuente": "06_Key_Highlights_Equipo.md"
+    },
+    {
+      "id": "hl-talia",
+      "colaborador": "Talia",
+      "aprendizaje": "Demanda existe, pero seguimiento y material limitan conversion",
+      "decision": "No se tiene claro",
+      "solucion": "Lectura de 118 ventas junio y funnel por programa",
+      "valor": "Mejora forecast y accion comercial",
+      "proyecto": "AECODE Comercial",
+      "fuente": "06_Key_Highlights_Equipo.md"
+    },
+    {
+      "id": "hl-genesis",
+      "colaborador": "Genesis",
+      "aprendizaje": "Canal y materiales afectan conversion comercial",
+      "decision": "No se tiene claro",
+      "solucion": "Reporte 131 ventas, webinars, problemas Blanquito/GHL",
+      "valor": "Visibiliza inconsistencias de ventas",
+      "proyecto": "AECODE Training",
+      "fuente": "06_Key_Highlights_Equipo.md"
+    },
+    {
+      "id": "hl-yadira",
+      "colaborador": "Yadira",
+      "aprendizaje": "Separar primeras cuotas de ventas completas es critico",
+      "decision": "No se tiene claro",
+      "solucion": "Reporte de 9 operaciones y restriccion brochure IA",
+      "valor": "Evita inflar ventas y mejora seguimiento",
+      "proyecto": "IA / Summit / Vial",
+      "fuente": "06_Key_Highlights_Equipo.md"
+    },
+    {
+      "id": "hl-erika",
+      "colaborador": "Erika",
+      "aprendizaje": "Sponsors necesitan contacto inmediato y CRM vivo",
+      "decision": "No se tiene claro",
+      "solucion": "Prioridad 40 llamadas y sponsors calientes",
+      "valor": "Protege ingresos Summit",
+      "proyecto": "AI Construction Summit",
+      "fuente": "06_Key_Highlights_Equipo.md"
+    },
+    {
+      "id": "hl-paola",
+      "colaborador": "Paola",
+      "aprendizaje": "COSAPI muestra que eventos cerrados no generan leads masivos solos",
+      "decision": "No se tiene claro",
+      "solucion": "Dashboard/control y aprendizaje de evento",
+      "valor": "Mejora playbook de activaciones",
+      "proyecto": "Summit",
+      "fuente": "06_Key_Highlights_Equipo.md"
+    },
+    {
+      "id": "hl-arantxa",
+      "colaborador": "Arantxa",
+      "aprendizaje": "Pre Congreso necesita sprint 24h por fecha",
+      "decision": "No se tiene claro",
+      "solucion": "Calendario, pendientes y restricciones de marketing",
+      "valor": "Acelera captacion y trazabilidad",
+      "proyecto": "Pre Congreso / Summit",
+      "fuente": "06_Key_Highlights_Equipo.md"
+    },
+    {
+      "id": "hl-jessica",
+      "colaborador": "Jessica",
+      "aprendizaje": "GHL debe medirse por trazabilidad, no solo configuracion",
+      "decision": "No se tiene claro",
+      "solucion": "Flujo VIP virtual y wa.links",
+      "valor": "Mejora seguimiento comercial",
+      "proyecto": "Summit / Training",
+      "fuente": "06_Key_Highlights_Equipo.md"
+    },
+    {
+      "id": "hl-kevin",
+      "colaborador": "Kevin",
+      "aprendizaje": "Su mayor valor esta en BIM/automatizacion, no soporte disperso",
+      "decision": "No se tiene claro",
+      "solucion": "PTAR, scripts BESCO, plataforma y Forma",
+      "valor": "Aumenta produccion tecnica reutilizable",
+      "proyecto": "GEN+ BIM / AECODE",
+      "fuente": "06_Key_Highlights_Equipo.md"
+    },
+    {
+      "id": "hl-israel",
+      "colaborador": "Israel",
+      "aprendizaje": "Alcance BIM debe definirse antes de aceptar observaciones",
+      "decision": "No se tiene claro",
+      "solucion": "Lectura Canete/Faucett/San Martin",
+      "valor": "Protege rentabilidad y foco tecnico",
+      "proyecto": "Cañete / Faucett",
+      "fuente": "06_Key_Highlights_Equipo.md"
+    },
+    {
+      "id": "hl-robert-herrera",
+      "colaborador": "Robert Herrera",
+      "aprendizaje": "Cañete puede estar 95% y aun asi reabrirse por cambios",
+      "decision": "No se tiene claro",
+      "solucion": "Modelado, cuantificacion y planimetria de alcantarillas",
+      "valor": "Evidencia avance y riesgo de retrabajo",
+      "proyecto": "Cañete",
+      "fuente": "06_Key_Highlights_Equipo.md"
+    },
+    {
+      "id": "hl-luis-vergara",
+      "colaborador": "Luis Vergara",
+      "aprendizaje": "Parametrizacion y topografia deben documentarse para replicar",
+      "decision": "No se tiene claro",
+      "solucion": "Muro, buzones, metrados, Rhino",
+      "valor": "Mejora capacidad BIM GEN+",
+      "proyecto": "Cañete / PTAR / Tingo",
+      "fuente": "06_Key_Highlights_Equipo.md"
+    },
+    {
+      "id": "hl-guisella",
+      "colaborador": "Guisella",
+      "aprendizaje": "Cambios de nuevos planos deben separarse de alcance base",
+      "decision": "No se tiene claro",
+      "solucion": "Dovelas y The Circle",
+      "valor": "Protege valorizacion de delivery",
+      "proyecto": "Ferralia / The Circle",
+      "fuente": "06_Key_Highlights_Equipo.md"
+    },
+    {
+      "id": "hl-daniella",
+      "colaborador": "Daniella",
+      "aprendizaje": "Material comercial debe conectarse a demo, DoD y decision",
+      "decision": "No se tiene claro",
+      "solucion": "13 entregables Canva y lectura de Kaman/ESPARQ",
+      "valor": "Convierte estrategia en activos comerciales",
+      "proyecto": "ESPARQ / VisionPro / Kaman",
+      "fuente": "06_Key_Highlights_Equipo.md"
+    },
+    {
+      "id": "hl-emanuel",
+      "colaborador": "Emanuel",
+      "aprendizaje": "Reportar metricas/restricciones es paso previo a automatizar",
+      "decision": "No se tiene claro",
+      "solucion": "Formato de reporte y seguimiento AI Ops",
+      "valor": "Ordena proyectos para AgentFlow",
+      "proyecto": "AgentFlow / Summit",
+      "fuente": "06_Key_Highlights_Equipo.md"
+    }
+  ]
+}

@@ -1,0 +1,192 @@
+[
+  {
+    "id": "hl-julie",
+    "colaborador": "Julie",
+    "aprendizaje": "Caja requiere tablero diario, no lista de pendientes",
+    "decision": "No se tiene claro",
+    "solucion": "Clasificacion pagado/facturado/correo pendiente",
+    "valor": "Protege caja GEN+ y Summit",
+    "proyecto": "Cobranzas / Sponsors / Training",
+    "fuente": "06_Key_Highlights_Equipo.md"
+  },
+  {
+    "id": "hl-marlon",
+    "colaborador": "Marlon",
+    "aprendizaje": "El avance tecnico se pierde si no pasa a QA/produccion",
+    "decision": "No se tiene claro",
+    "solucion": "Web Summit, certificados, BESCO C#, VisionPro seguimiento",
+    "valor": "Desbloquea evento, producto y delivery",
+    "proyecto": "Summit / VisionPro / BESCO",
+    "fuente": "06_Key_Highlights_Equipo.md"
+  },
+  {
+    "id": "hl-fabrizio",
+    "colaborador": "Fabrizio",
+    "aprendizaje": "Los 100% parciales no equivalen a cierre",
+    "decision": "No se tiene claro",
+    "solucion": "Documentacion, ESPARQ, agendas, delivery BIM, agente inmobiliario",
+    "valor": "Convierte investigacion en producto/entrega",
+    "proyecto": "ESPARQ / GEN+ / AECODE",
+    "fuente": "06_Key_Highlights_Equipo.md"
+  },
+  {
+    "id": "hl-yary",
+    "colaborador": "Yary",
+    "aprendizaje": "Handoff visual debe separarse de implementacion dev",
+    "decision": "No se tiene claro",
+    "solucion": "App Summit 95%, Summit Web 97%, dashboard VisionPro",
+    "valor": "Reduce incertidumbre de producto digital",
+    "proyecto": "Summit / VisionPro / Fase 2",
+    "fuente": "06_Key_Highlights_Equipo.md"
+  },
+  {
+    "id": "hl-carolina",
+    "colaborador": "Carolina",
+    "aprendizaje": "Cierre academico requiere matriz por diplomado",
+    "decision": "No se tiene claro",
+    "solucion": "Estado de certificados, rubricas y entregables",
+    "valor": "Reduce reclamos Training",
+    "proyecto": "AECODE Training",
+    "fuente": "06_Key_Highlights_Equipo.md"
+  },
+  {
+    "id": "hl-talia",
+    "colaborador": "Talia",
+    "aprendizaje": "Demanda existe, pero seguimiento y material limitan conversion",
+    "decision": "No se tiene claro",
+    "solucion": "Lectura de 118 ventas junio y funnel por programa",
+    "valor": "Mejora forecast y accion comercial",
+    "proyecto": "AECODE Comercial",
+    "fuente": "06_Key_Highlights_Equipo.md"
+  },
+  {
+    "id": "hl-genesis",
+    "colaborador": "Genesis",
+    "aprendizaje": "Canal y materiales afectan conversion comercial",
+    "decision": "No se tiene claro",
+    "solucion": "Reporte 131 ventas, webinars, problemas Blanquito/GHL",
+    "valor": "Visibiliza inconsistencias de ventas",
+    "proyecto": "AECODE Training",
+    "fuente": "06_Key_Highlights_Equipo.md"
+  },
+  {
+    "id": "hl-yadira",
+    "colaborador": "Yadira",
+    "aprendizaje": "Separar primeras cuotas de ventas completas es critico",
+    "decision": "No se tiene claro",
+    "solucion": "Reporte de 9 operaciones y restriccion brochure IA",
+    "valor": "Evita inflar ventas y mejora seguimiento",
+    "proyecto": "IA / Summit / Vial",
+    "fuente": "06_Key_Highlights_Equipo.md"
+  },
+  {
+    "id": "hl-erika",
+    "colaborador": "Erika",
+    "aprendizaje": "Sponsors necesitan contacto inmediato y CRM vivo",
+    "decision": "No se tiene claro",
+    "solucion": "Prioridad 40 llamadas y sponsors calientes",
+    "valor": "Protege ingresos Summit",
+    "proyecto": "AI Construction Summit",
+    "fuente": "06_Key_Highlights_Equipo.md"
+  },
+  {
+    "id": "hl-paola",
+    "colaborador": "Paola",
+    "aprendizaje": "COSAPI muestra que eventos cerrados no generan leads masivos solos",
+    "decision": "No se tiene claro",
+    "solucion": "Dashboard/control y aprendizaje de evento",
+    "valor": "Mejora playbook de activaciones",
+    "proyecto": "Summit",
+    "fuente": "06_Key_Highlights_Equipo.md"
+  },
+  {
+    "id": "hl-arantxa",
+    "colaborador": "Arantxa",
+    "aprendizaje": "Pre Congreso necesita sprint 24h por fecha",
+    "decision": "No se tiene claro",
+    "solucion": "Calendario, pendientes y restricciones de marketing",
+    "valor": "Acelera captacion y trazabilidad",
+    "proyecto": "Pre Congreso / Summit",
+    "fuente": "06_Key_Highlights_Equipo.md"
+  },
+  {
+    "id": "hl-jessica",
+    "colaborador": "Jessica",
+    "aprendizaje": "GHL debe medirse por trazabilidad, no solo configuracion",
+    "decision": "No se tiene claro",
+    "solucion": "Flujo VIP virtual y wa.links",
+    "valor": "Mejora seguimiento comercial",
+    "proyecto": "Summit / Training",
+    "fuente": "06_Key_Highlights_Equipo.md"
+  },
+  {
+    "id": "hl-kevin",
+    "colaborador": "Kevin",
+    "aprendizaje": "Su mayor valor esta en BIM/automatizacion, no soporte disperso",
+    "decision": "No se tiene claro",
+    "solucion": "PTAR, scripts BESCO, plataforma y Forma",
+    "valor": "Aumenta produccion tecnica reutilizable",
+    "proyecto": "GEN+ BIM / AECODE",
+    "fuente": "06_Key_Highlights_Equipo.md"
+  },
+  {
+    "id": "hl-israel",
+    "colaborador": "Israel",
+    "aprendizaje": "Alcance BIM debe definirse antes de aceptar observaciones",
+    "decision": "No se tiene claro",
+    "solucion": "Lectura Canete/Faucett/San Martin",
+    "valor": "Protege rentabilidad y foco tecnico",
+    "proyecto": "Cañete / Faucett",
+    "fuente": "06_Key_Highlights_Equipo.md"
+  },
+  {
+    "id": "hl-robert-herrera",
+    "colaborador": "Robert Herrera",
+    "aprendizaje": "Cañete puede estar 95% y aun asi reabrirse por cambios",
+    "decision": "No se tiene claro",
+    "solucion": "Modelado, cuantificacion y planimetria de alcantarillas",
+    "valor": "Evidencia avance y riesgo de retrabajo",
+    "proyecto": "Cañete",
+    "fuente": "06_Key_Highlights_Equipo.md"
+  },
+  {
+    "id": "hl-luis-vergara",
+    "colaborador": "Luis Vergara",
+    "aprendizaje": "Parametrizacion y topografia deben documentarse para replicar",
+    "decision": "No se tiene claro",
+    "solucion": "Muro, buzones, metrados, Rhino",
+    "valor": "Mejora capacidad BIM GEN+",
+    "proyecto": "Cañete / PTAR / Tingo",
+    "fuente": "06_Key_Highlights_Equipo.md"
+  },
+  {
+    "id": "hl-guisella",
+    "colaborador": "Guisella",
+    "aprendizaje": "Cambios de nuevos planos deben separarse de alcance base",
+    "decision": "No se tiene claro",
+    "solucion": "Dovelas y The Circle",
+    "valor": "Protege valorizacion de delivery",
+    "proyecto": "Ferralia / The Circle",
+    "fuente": "06_Key_Highlights_Equipo.md"
+  },
+  {
+    "id": "hl-daniella",
+    "colaborador": "Daniella",
+    "aprendizaje": "Material comercial debe conectarse a demo, DoD y decision",
+    "decision": "No se tiene claro",
+    "solucion": "13 entregables Canva y lectura de Kaman/ESPARQ",
+    "valor": "Convierte estrategia en activos comerciales",
+    "proyecto": "ESPARQ / VisionPro / Kaman",
+    "fuente": "06_Key_Highlights_Equipo.md"
+  },
+  {
+    "id": "hl-emanuel",
+    "colaborador": "Emanuel",
+    "aprendizaje": "Reportar metricas/restricciones es paso previo a automatizar",
+    "decision": "No se tiene claro",
+    "solucion": "Formato de reporte y seguimiento AI Ops",
+    "valor": "Ordena proyectos para AgentFlow",
+    "proyecto": "AgentFlow / Summit",
+    "fuente": "06_Key_Highlights_Equipo.md"
+  }
+]

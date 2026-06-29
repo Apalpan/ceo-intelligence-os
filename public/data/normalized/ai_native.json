@@ -1,0 +1,606 @@
+{
+  "overall_score": 50,
+  "clasificacion": "uso superficial",
+  "por_persona": [
+    {
+      "colaborador": "Julie",
+      "ai_native_score": 53,
+      "ai_leverage_score": 50,
+      "herramientas_actuales": [
+        "Excel",
+        "WhatsApp"
+      ],
+      "herramientas_recomendadas": [
+        "Cobranzas Agent",
+        "Sheets IA"
+      ],
+      "agentes_recomendados": [
+        "Cobranzas Agent",
+        "Sponsors Agent"
+      ],
+      "procesos_delegables": [
+        "Tablero de caja diario",
+        "Recordatorios de cobro"
+      ],
+      "confianza": "Inferido"
+    },
+    {
+      "colaborador": "Marlon",
+      "ai_native_score": 60,
+      "ai_leverage_score": 60,
+      "herramientas_actuales": [
+        "Claude Code",
+        "C#",
+        "Canva"
+      ],
+      "herramientas_recomendadas": [
+        "Summit Agent",
+        "QA Agent"
+      ],
+      "agentes_recomendados": [
+        "Summit Agent",
+        "Computer Vision Product Agent"
+      ],
+      "procesos_delegables": [
+        "QA web",
+        "Seguimiento de certificados"
+      ],
+      "confianza": "Inferido"
+    },
+    {
+      "colaborador": "Fabrizio",
+      "ai_native_score": 67,
+      "ai_leverage_score": 66,
+      "herramientas_actuales": [
+        "Claude Code",
+        "Revit",
+        "Codex"
+      ],
+      "herramientas_recomendadas": [
+        "Delivery BIM Agent",
+        "Propuestas Agent"
+      ],
+      "agentes_recomendados": [
+        "Delivery BIM Agent",
+        "Propuestas / Contratos Agent"
+      ],
+      "procesos_delegables": [
+        "Reportes de cierre",
+        "Documentación de entregables"
+      ],
+      "confianza": "Inferido"
+    },
+    {
+      "colaborador": "Yary",
+      "ai_native_score": 58,
+      "ai_leverage_score": 56,
+      "herramientas_actuales": [
+        "Figma",
+        "HTML"
+      ],
+      "herramientas_recomendadas": [
+        "Producto Digital / Testing Agent"
+      ],
+      "agentes_recomendados": [
+        "Producto Digital / Testing Agent"
+      ],
+      "procesos_delegables": [
+        "Handoff dev/QA",
+        "Documentación de componentes"
+      ],
+      "confianza": "Inferido"
+    },
+    {
+      "colaborador": "Carolina",
+      "ai_native_score": 50,
+      "ai_leverage_score": 46,
+      "herramientas_actuales": [
+        "Sheets",
+        "Zoom"
+      ],
+      "herramientas_recomendadas": [
+        "Training Operations Agent"
+      ],
+      "agentes_recomendados": [
+        "Training Operations Agent",
+        "Certificados Agent"
+      ],
+      "procesos_delegables": [
+        "Tablero por diplomado",
+        "Estado de certificados"
+      ],
+      "confianza": "Inferido"
+    },
+    {
+      "colaborador": "Talia",
+      "ai_native_score": 51,
+      "ai_leverage_score": 50,
+      "herramientas_actuales": [
+        "GHL",
+        "WhatsApp"
+      ],
+      "herramientas_recomendadas": [
+        "Ventas B2C Agent"
+      ],
+      "agentes_recomendados": [
+        "Ventas B2C Agent"
+      ],
+      "procesos_delegables": [
+        "SLA por lead",
+        "Reporte de funnel"
+      ],
+      "confianza": "Inferido"
+    },
+    {
+      "colaborador": "Genesis",
+      "ai_native_score": 45,
+      "ai_leverage_score": 44,
+      "herramientas_actuales": [
+        "GHL",
+        "WhatsApp"
+      ],
+      "herramientas_recomendadas": [
+        "Ventas B2C Agent"
+      ],
+      "agentes_recomendados": [
+        "Ventas B2C Agent"
+      ],
+      "procesos_delegables": [
+        "Seguimiento de leads",
+        "Corte de ventas"
+      ],
+      "confianza": "Inferido"
+    },
+    {
+      "colaborador": "Yadira",
+      "ai_native_score": 42,
+      "ai_leverage_score": 40,
+      "herramientas_actuales": [
+        "GHL"
+      ],
+      "herramientas_recomendadas": [
+        "Ventas B2C Agent"
+      ],
+      "agentes_recomendados": [
+        "Ventas B2C Agent"
+      ],
+      "procesos_delegables": [
+        "Separar venta completa/cuota"
+      ],
+      "confianza": "Inferido"
+    },
+    {
+      "colaborador": "Erika",
+      "ai_native_score": 54,
+      "ai_leverage_score": 52,
+      "herramientas_actuales": [
+        "Sheets",
+        "WhatsApp"
+      ],
+      "herramientas_recomendadas": [
+        "Sponsors Agent"
+      ],
+      "agentes_recomendados": [
+        "Sponsors Agent"
+      ],
+      "procesos_delegables": [
+        "CRM sponsors vivo",
+        "Corte sponsor diario"
+      ],
+      "confianza": "Inferido"
+    },
+    {
+      "colaborador": "Paola",
+      "ai_native_score": 56,
+      "ai_leverage_score": 52,
+      "herramientas_actuales": [
+        "Sheets"
+      ],
+      "herramientas_recomendadas": [
+        "Sponsors Agent"
+      ],
+      "agentes_recomendados": [
+        "Sponsors Agent"
+      ],
+      "procesos_delegables": [
+        "Cruce pago-beneficio-delegación"
+      ],
+      "confianza": "Inferido"
+    },
+    {
+      "colaborador": "Arantxa",
+      "ai_native_score": 53,
+      "ai_leverage_score": 54,
+      "herramientas_actuales": [
+        "Meta Ads",
+        "GHL",
+        "Canva"
+      ],
+      "herramientas_recomendadas": [
+        "Marketing Attribution Agent"
+      ],
+      "agentes_recomendados": [
+        "Marketing Attribution Agent"
+      ],
+      "procesos_delegables": [
+        "Sprint de campaña",
+        "Landing"
+      ],
+      "confianza": "Inferido"
+    },
+    {
+      "colaborador": "Jessica",
+      "ai_native_score": 53,
+      "ai_leverage_score": 56,
+      "herramientas_actuales": [
+        "GHL"
+      ],
+      "herramientas_recomendadas": [
+        "Marketing Attribution Agent"
+      ],
+      "agentes_recomendados": [
+        "Marketing Attribution Agent"
+      ],
+      "procesos_delegables": [
+        "Flujos GHL",
+        "Tracking end-to-end"
+      ],
+      "confianza": "Inferido"
+    },
+    {
+      "colaborador": "Enma",
+      "ai_native_score": 49,
+      "ai_leverage_score": 50,
+      "herramientas_actuales": [
+        "Canva",
+        "TikTok"
+      ],
+      "herramientas_recomendadas": [
+        "Marketing Attribution Agent"
+      ],
+      "agentes_recomendados": [
+        "Marketing Attribution Agent"
+      ],
+      "procesos_delegables": [
+        "Piezas",
+        "Brochures versión única"
+      ],
+      "confianza": "Inferido"
+    },
+    {
+      "colaborador": "Anggie",
+      "ai_native_score": 50,
+      "ai_leverage_score": 50,
+      "herramientas_actuales": [
+        "Agentes marketing"
+      ],
+      "herramientas_recomendadas": [
+        "Marketing Attribution Agent"
+      ],
+      "agentes_recomendados": [
+        "Marketing Attribution Agent"
+      ],
+      "procesos_delegables": [
+        "Dashboard de métricas"
+      ],
+      "confianza": "Inferido"
+    },
+    {
+      "colaborador": "Kevin",
+      "ai_native_score": 56,
+      "ai_leverage_score": 56,
+      "herramientas_actuales": [
+        "Revit",
+        "Python",
+        "C#"
+      ],
+      "herramientas_recomendadas": [
+        "QA/QC BIM Agent"
+      ],
+      "agentes_recomendados": [
+        "QA/QC BIM Agent",
+        "Delivery BIM Agent"
+      ],
+      "procesos_delegables": [
+        "Scripts BESCO",
+        "Plataforma"
+      ],
+      "confianza": "Inferido"
+    },
+    {
+      "colaborador": "Israel",
+      "ai_native_score": 46,
+      "ai_leverage_score": 42,
+      "herramientas_actuales": [
+        "Revit",
+        "InfraWorks"
+      ],
+      "herramientas_recomendadas": [
+        "Control de Alcance BIM Agent"
+      ],
+      "agentes_recomendados": [
+        "Control de Alcance BIM Agent"
+      ],
+      "procesos_delegables": [
+        "Matriz de alcance"
+      ],
+      "confianza": "Inferido"
+    },
+    {
+      "colaborador": "Robert Herrera",
+      "ai_native_score": 36,
+      "ai_leverage_score": 32,
+      "herramientas_actuales": [
+        "Revit"
+      ],
+      "herramientas_recomendadas": [
+        "Delivery BIM Agent"
+      ],
+      "agentes_recomendados": [
+        "Delivery BIM Agent"
+      ],
+      "procesos_delegables": [
+        "Reporte de avance estandarizado"
+      ],
+      "confianza": "Inferido"
+    },
+    {
+      "colaborador": "Luis Vergara",
+      "ai_native_score": 36,
+      "ai_leverage_score": 32,
+      "herramientas_actuales": [
+        "Revit",
+        "Rhino"
+      ],
+      "herramientas_recomendadas": [
+        "Delivery BIM Agent"
+      ],
+      "agentes_recomendados": [
+        "Delivery BIM Agent"
+      ],
+      "procesos_delegables": [
+        "Documentar flujos y cambios"
+      ],
+      "confianza": "Inferido"
+    },
+    {
+      "colaborador": "Guisella",
+      "ai_native_score": 36,
+      "ai_leverage_score": 32,
+      "herramientas_actuales": [
+        "Revit"
+      ],
+      "herramientas_recomendadas": [
+        "Control de Alcance BIM Agent"
+      ],
+      "agentes_recomendados": [
+        "Control de Alcance BIM Agent"
+      ],
+      "procesos_delegables": [
+        "Matriz dovela",
+        "Valorización de cambios"
+      ],
+      "confianza": "Inferido"
+    },
+    {
+      "colaborador": "Daniella",
+      "ai_native_score": 60,
+      "ai_leverage_score": 58,
+      "herramientas_actuales": [
+        "Canva",
+        "Claude"
+      ],
+      "herramientas_recomendadas": [
+        "Comercial B2B Agent",
+        "Startup Agent"
+      ],
+      "agentes_recomendados": [
+        "Startup / Convocatorias Agent",
+        "Comercial B2B Agent"
+      ],
+      "procesos_delegables": [
+        "Materiales comerciales",
+        "Postmortems"
+      ],
+      "confianza": "Inferido"
+    },
+    {
+      "colaborador": "Emanuel",
+      "ai_native_score": 60,
+      "ai_leverage_score": 64,
+      "herramientas_actuales": [
+        "Python",
+        "AWS",
+        "n8n"
+      ],
+      "herramientas_recomendadas": [
+        "Workflow Migration Agent"
+      ],
+      "agentes_recomendados": [
+        "Workflow Migration Agent",
+        "Demo / Deployment Agent",
+        "Context Pipeline Agent"
+      ],
+      "procesos_delegables": [
+        "Migración de flujos",
+        "Diagnóstico conectividad"
+      ],
+      "confianza": "Inferido"
+    },
+    {
+      "colaborador": "Anderson",
+      "ai_native_score": 35,
+      "ai_leverage_score": 36,
+      "herramientas_actuales": [
+        "Dev"
+      ],
+      "herramientas_recomendadas": [
+        "Summit Agent"
+      ],
+      "agentes_recomendados": [
+        "Summit Agent"
+      ],
+      "procesos_delegables": [
+        "Testeo App Summit"
+      ],
+      "confianza": "Inferido"
+    },
+    {
+      "colaborador": "Yudely",
+      "ai_native_score": 38,
+      "ai_leverage_score": 36,
+      "herramientas_actuales": [
+        "Sheets"
+      ],
+      "herramientas_recomendadas": [
+        "Producto Digital / Testing Agent"
+      ],
+      "agentes_recomendados": [
+        "Producto Digital / Testing Agent"
+      ],
+      "procesos_delegables": [
+        "Revisión Fase 3"
+      ],
+      "confianza": "Inferido"
+    },
+    {
+      "colaborador": "Patrick",
+      "ai_native_score": 44,
+      "ai_leverage_score": 42,
+      "herramientas_actuales": [
+        "Zoom",
+        "Sheets"
+      ],
+      "herramientas_recomendadas": [
+        "Certificados Agent"
+      ],
+      "agentes_recomendados": [
+        "Certificados Agent"
+      ],
+      "procesos_delegables": [
+        "Matriz certificados/notas/recursos"
+      ],
+      "confianza": "Inferido"
+    }
+  ],
+  "por_empresa": [
+    {
+      "empresa": "GEN+",
+      "ai_native_score": 52,
+      "clasificacion": "uso superficial"
+    },
+    {
+      "empresa": "AECODE",
+      "ai_native_score": 52,
+      "clasificacion": "uso superficial"
+    },
+    {
+      "empresa": "VisionPro",
+      "ai_native_score": 60,
+      "clasificacion": "IA asistida"
+    },
+    {
+      "empresa": "AgentFlow",
+      "ai_native_score": 60,
+      "clasificacion": "IA asistida"
+    },
+    {
+      "empresa": "THESIA",
+      "ai_native_score": 67,
+      "clasificacion": "IA asistida"
+    },
+    {
+      "empresa": "AP",
+      "ai_native_score": 38,
+      "clasificacion": "operación manual vulnerable"
+    }
+  ],
+  "agentes_propuestos": 27,
+  "procesos_automatizables": 12,
+  "backlog_automatizacion": [
+    {
+      "proceso": "Cobranza GEN+",
+      "empresa": "GEN+",
+      "prioridad": "P0",
+      "process_score": 60,
+      "agente": "Cobranzas Agent"
+    },
+    {
+      "proceso": "Gestión de Evento (Summit)",
+      "empresa": "AECODE",
+      "prioridad": "P0",
+      "process_score": 60,
+      "agente": "Sponsors Agent"
+    },
+    {
+      "proceso": "Coordinación Académica + Postventa",
+      "empresa": "AECODE",
+      "prioridad": "P0",
+      "process_score": 54,
+      "agente": "Training Operations Agent"
+    },
+    {
+      "proceso": "Ventas B2C Training",
+      "empresa": "AECODE",
+      "prioridad": "P0",
+      "process_score": 53,
+      "agente": "Ventas B2C Agent"
+    },
+    {
+      "proceso": "Control de Alcance BIM",
+      "empresa": "GEN+",
+      "prioridad": "P0",
+      "process_score": 46,
+      "agente": "Control de Alcance BIM Agent"
+    },
+    {
+      "proceso": "Implementación en Obra",
+      "empresa": "VisionPro",
+      "prioridad": "P0",
+      "process_score": 40,
+      "agente": "Demo / Deployment Agent"
+    },
+    {
+      "proceso": "Knowledge OS / Context Pipeline",
+      "empresa": "AP",
+      "prioridad": "P1",
+      "process_score": 68,
+      "agente": "Vault Intelligence Agent"
+    },
+    {
+      "proceso": "Lanzamiento / Pre Congreso",
+      "empresa": "AECODE",
+      "prioridad": "P1",
+      "process_score": 49,
+      "agente": "Marketing Attribution Agent"
+    },
+    {
+      "proceso": "Migración de Workflows",
+      "empresa": "AgentFlow",
+      "prioridad": "P1",
+      "process_score": 46,
+      "agente": "Workflow Migration Agent"
+    },
+    {
+      "proceso": "Creación de Curso / Producto",
+      "empresa": "AECODE",
+      "prioridad": "P2",
+      "process_score": 55,
+      "agente": "Producto Digital / Testing Agent"
+    },
+    {
+      "proceso": "Ventas B2B",
+      "empresa": "GEN+",
+      "prioridad": "P2",
+      "process_score": 53,
+      "agente": "Comercial B2B Agent"
+    },
+    {
+      "proceso": "Postulación a Startup",
+      "empresa": "AECODE",
+      "prioridad": "P2",
+      "process_score": 40,
+      "agente": "Startup / Convocatorias Agent"
+    }
+  ]
+}

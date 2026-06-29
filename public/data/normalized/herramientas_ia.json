@@ -1,0 +1,106 @@
+[
+  {
+    "id": "tool-claude-code",
+    "nombre": "Claude Code",
+    "categoria": "Agente/Dev",
+    "casos_uso": [
+      "Apps",
+      "ETL",
+      "Automatización",
+      "Dashboards"
+    ],
+    "nivel": "Core",
+    "confianza": "Inferido"
+  },
+  {
+    "id": "tool-codex",
+    "nombre": "Codex",
+    "categoria": "Agente/Contexto",
+    "casos_uso": [
+      "Normalización vault",
+      "Reportes",
+      "Contexto"
+    ],
+    "nivel": "Core",
+    "confianza": "Inferido"
+  },
+  {
+    "id": "tool-grok",
+    "nombre": "Grok",
+    "categoria": "Investigación",
+    "casos_uso": [
+      "Tendencias",
+      "Análisis crítico"
+    ],
+    "nivel": "Apoyo",
+    "confianza": "Inferido"
+  },
+  {
+    "id": "tool-ghl-gohighlevel",
+    "nombre": "GHL (GoHighLevel)",
+    "categoria": "CRM/Marketing",
+    "casos_uso": [
+      "Leads",
+      "Atribución",
+      "Automatización comercial"
+    ],
+    "nivel": "Operativo",
+    "confianza": "Inferido"
+  },
+  {
+    "id": "tool-n8n",
+    "nombre": "n8n",
+    "categoria": "Automatización",
+    "casos_uso": [
+      "Workflows",
+      "Integraciones"
+    ],
+    "nivel": "Operativo",
+    "confianza": "Inferido"
+  },
+  {
+    "id": "tool-read-ai",
+    "nombre": "Read AI",
+    "categoria": "Reuniones",
+    "casos_uso": [
+      "Minutas",
+      "Compromisos"
+    ],
+    "nivel": "Apoyo",
+    "confianza": "Inferido"
+  },
+  {
+    "id": "tool-canva-ia",
+    "nombre": "Canva / IA",
+    "categoria": "Diseño",
+    "casos_uso": [
+      "Materiales comerciales",
+      "Piezas"
+    ],
+    "nivel": "Operativo",
+    "confianza": "Inferido"
+  },
+  {
+    "id": "tool-obsidian",
+    "nombre": "Obsidian",
+    "categoria": "Segundo cerebro",
+    "casos_uso": [
+      "Vault",
+      "Trazabilidad",
+      "Contexto"
+    ],
+    "nivel": "Core",
+    "confianza": "Inferido"
+  },
+  {
+    "id": "tool-google-drive-sheets",
+    "nombre": "Google Drive/Sheets",
+    "categoria": "Datos/Docs",
+    "casos_uso": [
+      "Tableros vivos",
+      "Fuentes"
+    ],
+    "nivel": "Operativo",
+    "confianza": "Inferido"
+  }
+]

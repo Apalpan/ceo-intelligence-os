@@ -1,0 +1,300 @@
+[
+  {
+    "id": "proc-gen-cobranza-gen",
+    "empresa": "GEN+",
+    "area": "Caja / Cobranzas",
+    "nombre": "Cobranza GEN+",
+    "input": "Facturas/EDP emitidas",
+    "output": "Pago cobrado + evidencia",
+    "owner": "Julie",
+    "sla": "Diario",
+    "herramientas": [
+      "Excel",
+      "WhatsApp"
+    ],
+    "herramientas_ia": [
+      "Cobranzas Agent"
+    ],
+    "agente_sugerido": "Cobranzas Agent",
+    "estado": "manual",
+    "process_score": 60,
+    "automatizable": true,
+    "prioridad_automatizacion": "P0",
+    "confianza": "Inferido",
+    "fuente": "seeds.py / 05_Mapeo de Procesos"
+  },
+  {
+    "id": "proc-gen-control-de-alcance-bim",
+    "empresa": "GEN+",
+    "area": "Delivery BIM",
+    "nombre": "Control de Alcance BIM",
+    "input": "Observaciones de supervisión",
+    "output": "Matriz base/adicional/reproceso",
+    "owner": "Israel",
+    "sla": "Por proyecto",
+    "herramientas": [
+      "Revit",
+      "Excel"
+    ],
+    "herramientas_ia": [
+      "Control de Alcance BIM Agent"
+    ],
+    "agente_sugerido": "Control de Alcance BIM Agent",
+    "estado": "manual",
+    "process_score": 46,
+    "automatizable": true,
+    "prioridad_automatizacion": "P0",
+    "confianza": "Inferido",
+    "fuente": "seeds.py / 05_Mapeo de Procesos"
+  },
+  {
+    "id": "proc-gen-ventas-b2b",
+    "empresa": "GEN+",
+    "area": "Comercial B2B",
+    "nombre": "Ventas B2B",
+    "input": "Lead / TDR",
+    "output": "Propuesta + contrato",
+    "owner": "Daniella",
+    "sla": "Por oportunidad",
+    "herramientas": [
+      "Drive",
+      "Canva"
+    ],
+    "herramientas_ia": [
+      "Comercial B2B Agent",
+      "Propuestas / Contratos Agent"
+    ],
+    "agente_sugerido": "Comercial B2B Agent",
+    "estado": "funcional",
+    "process_score": 53,
+    "automatizable": true,
+    "prioridad_automatizacion": "P2",
+    "confianza": "Inferido",
+    "fuente": "seeds.py / 05_Mapeo de Procesos"
+  },
+  {
+    "id": "proc-aecode-gesti-n-de-evento-summit",
+    "empresa": "AECODE",
+    "area": "Summit / eventos",
+    "nombre": "Gestión de Evento (Summit)",
+    "input": "Sponsors + agenda + producción",
+    "output": "Evento ejecutado + caja",
+    "owner": "Erika",
+    "sla": "Diario en sprint",
+    "herramientas": [
+      "Sheets",
+      "GHL",
+      "Canva"
+    ],
+    "herramientas_ia": [
+      "Sponsors Agent",
+      "Summit Agent"
+    ],
+    "agente_sugerido": "Sponsors Agent",
+    "estado": "funcional",
+    "process_score": 60,
+    "automatizable": true,
+    "prioridad_automatizacion": "P0",
+    "confianza": "Inferido",
+    "fuente": "seeds.py / 05_Mapeo de Procesos"
+  },
+  {
+    "id": "proc-aecode-coordinaci-n-acad-mica-postventa",
+    "empresa": "AECODE",
+    "area": "Training / coordinación académica",
+    "nombre": "Coordinación Académica + Postventa",
+    "input": "Programa + alumnos",
+    "output": "Certificados + cierre académico",
+    "owner": "Carolina",
+    "sla": "Por diplomado",
+    "herramientas": [
+      "Zoom",
+      "Sheets"
+    ],
+    "herramientas_ia": [
+      "Training Operations Agent",
+      "Certificados Agent"
+    ],
+    "agente_sugerido": "Training Operations Agent",
+    "estado": "manual",
+    "process_score": 54,
+    "automatizable": true,
+    "prioridad_automatizacion": "P0",
+    "confianza": "Inferido",
+    "fuente": "seeds.py / 05_Mapeo de Procesos"
+  },
+  {
+    "id": "proc-aecode-ventas-b2c-training",
+    "empresa": "AECODE",
+    "area": "Comercial B2C",
+    "nombre": "Ventas B2C Training",
+    "input": "Lead marketing",
+    "output": "Venta + matrícula",
+    "owner": "Talia",
+    "sla": "SLA por lead",
+    "herramientas": [
+      "GHL",
+      "WhatsApp"
+    ],
+    "herramientas_ia": [
+      "Ventas B2C Agent"
+    ],
+    "agente_sugerido": "Ventas B2C Agent",
+    "estado": "funcional",
+    "process_score": 53,
+    "automatizable": true,
+    "prioridad_automatizacion": "P0",
+    "confianza": "Inferido",
+    "fuente": "seeds.py / 05_Mapeo de Procesos"
+  },
+  {
+    "id": "proc-aecode-lanzamiento-pre-congreso",
+    "empresa": "AECODE",
+    "area": "Marketing / growth",
+    "nombre": "Lanzamiento / Pre Congreso",
+    "input": "Calendario campaña",
+    "output": "Leads trazables",
+    "owner": "Arantxa",
+    "sla": "Sprint 24-72h",
+    "herramientas": [
+      "Meta Ads",
+      "GHL",
+      "Canva"
+    ],
+    "herramientas_ia": [
+      "Marketing Attribution Agent"
+    ],
+    "agente_sugerido": "Marketing Attribution Agent",
+    "estado": "funcional",
+    "process_score": 49,
+    "automatizable": true,
+    "prioridad_automatizacion": "P1",
+    "confianza": "Inferido",
+    "fuente": "seeds.py / 05_Mapeo de Procesos"
+  },
+  {
+    "id": "proc-aecode-creaci-n-de-curso-producto",
+    "empresa": "AECODE",
+    "area": "Producto digital",
+    "nombre": "Creación de Curso / Producto",
+    "input": "Outline + handoff",
+    "output": "Producto digital operativo",
+    "owner": "Yary",
+    "sla": "Por fase",
+    "herramientas": [
+      "Figma",
+      "HTML",
+      "Claude Code"
+    ],
+    "herramientas_ia": [
+      "Producto Digital / Testing Agent"
+    ],
+    "agente_sugerido": "Producto Digital / Testing Agent",
+    "estado": "funcional",
+    "process_score": 55,
+    "automatizable": true,
+    "prioridad_automatizacion": "P2",
+    "confianza": "Inferido",
+    "fuente": "seeds.py / 05_Mapeo de Procesos"
+  },
+  {
+    "id": "proc-visionpro-implementaci-n-en-obra",
+    "empresa": "VisionPro",
+    "area": "VisionPro / computer vision",
+    "nombre": "Implementación en Obra",
+    "input": "Cámaras + conectividad",
+    "output": "Demo / monitoreo operativo",
+    "owner": "Emanuel",
+    "sla": "Por despliegue",
+    "herramientas": [
+      "AWS",
+      "Jetson",
+      "Python"
+    ],
+    "herramientas_ia": [
+      "Demo / Deployment Agent"
+    ],
+    "agente_sugerido": "Demo / Deployment Agent",
+    "estado": "manual",
+    "process_score": 40,
+    "automatizable": true,
+    "prioridad_automatizacion": "P0",
+    "confianza": "Inferido",
+    "fuente": "seeds.py / 05_Mapeo de Procesos"
+  },
+  {
+    "id": "proc-aecode-postulaci-n-a-startup",
+    "empresa": "AECODE",
+    "area": "Startup / convocatorias",
+    "nombre": "Postulación a Startup",
+    "input": "Convocatoria",
+    "output": "Aplicación + pitch",
+    "owner": "Daniella",
+    "sla": "Por convocatoria",
+    "herramientas": [
+      "Drive",
+      "Canva"
+    ],
+    "herramientas_ia": [
+      "Startup / Convocatorias Agent"
+    ],
+    "agente_sugerido": "Startup / Convocatorias Agent",
+    "estado": "caotico",
+    "process_score": 40,
+    "automatizable": true,
+    "prioridad_automatizacion": "P2",
+    "confianza": "Inferido",
+    "fuente": "seeds.py / 05_Mapeo de Procesos"
+  },
+  {
+    "id": "proc-agentflow-migraci-n-de-workflows",
+    "empresa": "AgentFlow",
+    "area": "AgentFlow / automatización",
+    "nombre": "Migración de Workflows",
+    "input": "Proceso manual",
+    "output": "Flujo automatizado + log",
+    "owner": "Emanuel",
+    "sla": "Por flujo",
+    "herramientas": [
+      "n8n",
+      "Claude Code"
+    ],
+    "herramientas_ia": [
+      "Workflow Migration Agent",
+      "Context Pipeline Agent"
+    ],
+    "agente_sugerido": "Workflow Migration Agent",
+    "estado": "manual",
+    "process_score": 46,
+    "automatizable": true,
+    "prioridad_automatizacion": "P1",
+    "confianza": "Inferido",
+    "fuente": "seeds.py / 05_Mapeo de Procesos"
+  },
+  {
+    "id": "proc-ap-knowledge-os-context-pipeline",
+    "empresa": "AP",
+    "area": "Knowledge OS",
+    "nombre": "Knowledge OS / Context Pipeline",
+    "input": "WhatsApp/Drive/Gmail/notas",
+    "output": "Vault normalizado + dashboard",
+    "owner": "Alejandro",
+    "sla": "Cada 3h / on-demand",
+    "herramientas": [
+      "Codex",
+      "Claude Code",
+      "Obsidian"
+    ],
+    "herramientas_ia": [
+      "Vault Intelligence Agent",
+      "Context Pipeline Agent"
+    ],
+    "agente_sugerido": "Vault Intelligence Agent",
+    "estado": "funcional",
+    "process_score": 68,
+    "automatizable": true,
+    "prioridad_automatizacion": "P1",
+    "confianza": "Inferido",
+    "fuente": "seeds.py / 05_Mapeo de Procesos"
+  }
+]

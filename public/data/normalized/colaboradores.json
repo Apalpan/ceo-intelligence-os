@@ -1,0 +1,927 @@
+[
+  {
+    "id": "col-julie",
+    "nombre": "Julie",
+    "empresa_area": "GEN+ / AECODE / Startup",
+    "empresas": [
+      "GEN+",
+      "AECODE"
+    ],
+    "proyectos": "Caja, sponsors, Training, convocatorias",
+    "n_proyectos": 4,
+    "actividades": "Pagos, facturas, sponsors, licencias, plataforma, startup",
+    "pendientes": "Tablero caja/sponsors/licencias",
+    "carga": "Alta",
+    "carga_val": 0.8,
+    "riesgos": "Caja sin fecha y licencias agotadas",
+    "necesita_feedback": true,
+    "proxima_accion": "Definir apoyo mid time o owner temporal",
+    "wip_score": 83,
+    "bottleneck_score": 76,
+    "context_quality_score": 70,
+    "ai_leverage_score": 50,
+    "ai_native_score": 53,
+    "herramientas_actuales": [
+      "Excel",
+      "WhatsApp"
+    ],
+    "herramientas_recomendadas": [
+      "Cobranzas Agent",
+      "Sheets IA"
+    ],
+    "agentes_recomendados": [
+      "Cobranzas Agent",
+      "Sponsors Agent"
+    ],
+    "procesos_delegables": [
+      "Tablero de caja diario",
+      "Recordatorios de cobro"
+    ],
+    "confianza_ai": "Inferido",
+    "fuente": "02_Matriz_Colaboradores.md"
+  },
+  {
+    "id": "col-marlon",
+    "nombre": "Marlon",
+    "empresa_area": "AECODE / GEN+ / VisionPro",
+    "empresas": [
+      "GEN+",
+      "AECODE",
+      "VisionPro"
+    ],
+    "proyectos": "Summit, Web, certificados, BESCO, VisionPro, Community",
+    "n_proyectos": 6,
+    "actividades": "Implementacion web, certificados, BESCO C#, VisionPro, logística Summit",
+    "pendientes": "QA/deploy, internet, BESCO e2e, produccion formularios",
+    "carga": "Muy alta",
+    "carga_val": 1.0,
+    "riesgos": "WIP excesivo",
+    "necesita_feedback": true,
+    "proxima_accion": "Reducir a 4 frentes maximos",
+    "wip_score": 100,
+    "bottleneck_score": 100,
+    "context_quality_score": 60,
+    "ai_leverage_score": 60,
+    "ai_native_score": 60,
+    "herramientas_actuales": [
+      "Claude Code",
+      "C#",
+      "Canva"
+    ],
+    "herramientas_recomendadas": [
+      "Summit Agent",
+      "QA Agent"
+    ],
+    "agentes_recomendados": [
+      "Summit Agent",
+      "Computer Vision Product Agent"
+    ],
+    "procesos_delegables": [
+      "QA web",
+      "Seguimiento de certificados"
+    ],
+    "confianza_ai": "Inferido",
+    "fuente": "02_Matriz_Colaboradores.md"
+  },
+  {
+    "id": "col-fabrizio",
+    "nombre": "Fabrizio",
+    "empresa_area": "GEN+ / AECODE / THESIA",
+    "empresas": [
+      "GEN+",
+      "AECODE",
+      "THESIA"
+    ],
+    "proyectos": "ESPARQ, BIM, IA, AgentFlow, Summit",
+    "n_proyectos": 5,
+    "actividades": "Muchos cierres parciales al 100%",
+    "pendientes": "Pendientes al 0% que desbloquean valor",
+    "carga": "Muy alta",
+    "carga_val": 1.0,
+    "riesgos": "Avance sin cierre final",
+    "necesita_feedback": true,
+    "proxima_accion": "Tablero 72h por pendiente 0%",
+    "wip_score": 100,
+    "bottleneck_score": 89,
+    "context_quality_score": 70,
+    "ai_leverage_score": 66,
+    "ai_native_score": 67,
+    "herramientas_actuales": [
+      "Claude Code",
+      "Revit",
+      "Codex"
+    ],
+    "herramientas_recomendadas": [
+      "Delivery BIM Agent",
+      "Propuestas Agent"
+    ],
+    "agentes_recomendados": [
+      "Delivery BIM Agent",
+      "Propuestas / Contratos Agent"
+    ],
+    "procesos_delegables": [
+      "Reportes de cierre",
+      "Documentación de entregables"
+    ],
+    "confianza_ai": "Inferido",
+    "fuente": "02_Matriz_Colaboradores.md"
+  },
+  {
+    "id": "col-yary",
+    "nombre": "Yary",
+    "empresa_area": "AECODE / VisionPro / GEN+",
+    "empresas": [
+      "GEN+",
+      "AECODE",
+      "VisionPro"
+    ],
+    "proyectos": "App Summit, Summit Web, Fase 2/3, VisionPro, SPARRQ",
+    "n_proyectos": 6,
+    "actividades": "19/31 items, 76% global, handoffs altos",
+    "pendientes": "Bloqueos de Anderson, Marlon, Emanuel, Yudely",
+    "carga": "Alta",
+    "carga_val": 0.8,
+    "riesgos": "Handoff listo aparece como atraso suyo",
+    "necesita_feedback": true,
+    "proxima_accion": "Tablero de bloqueos por tercero",
+    "wip_score": 92,
+    "bottleneck_score": 84,
+    "context_quality_score": 60,
+    "ai_leverage_score": 56,
+    "ai_native_score": 58,
+    "herramientas_actuales": [
+      "Figma",
+      "HTML"
+    ],
+    "herramientas_recomendadas": [
+      "Producto Digital / Testing Agent"
+    ],
+    "agentes_recomendados": [
+      "Producto Digital / Testing Agent"
+    ],
+    "procesos_delegables": [
+      "Handoff dev/QA",
+      "Documentación de componentes"
+    ],
+    "confianza_ai": "Inferido",
+    "fuente": "02_Matriz_Colaboradores.md"
+  },
+  {
+    "id": "col-carolina",
+    "nombre": "Carolina",
+    "empresa_area": "AECODE Training",
+    "empresas": [
+      "AECODE"
+    ],
+    "proyectos": "Diplomados/certificados",
+    "n_proyectos": 2,
+    "actividades": "Estado academico por diplomado",
+    "pendientes": "CIP, sustitutorios, rubricas, entregables",
+    "carga": "Alta",
+    "carga_val": 0.8,
+    "riesgos": "Reclamos por cierre incompleto",
+    "necesita_feedback": true,
+    "proxima_accion": "Tablero cierre academico",
+    "wip_score": 65,
+    "bottleneck_score": 63,
+    "context_quality_score": 60,
+    "ai_leverage_score": 46,
+    "ai_native_score": 50,
+    "herramientas_actuales": [
+      "Sheets",
+      "Zoom"
+    ],
+    "herramientas_recomendadas": [
+      "Training Operations Agent"
+    ],
+    "agentes_recomendados": [
+      "Training Operations Agent",
+      "Certificados Agent"
+    ],
+    "procesos_delegables": [
+      "Tablero por diplomado",
+      "Estado de certificados"
+    ],
+    "confianza_ai": "Inferido",
+    "fuente": "02_Matriz_Colaboradores.md"
+  },
+  {
+    "id": "col-talia",
+    "nombre": "Talia",
+    "empresa_area": "AECODE Comercial",
+    "empresas": [
+      "AECODE"
+    ],
+    "proyectos": "Training, Summit",
+    "n_proyectos": 2,
+    "actividades": "118 ventas junio, lectura funnel",
+    "pendientes": "Seguimiento masivo, certificados en brochures, Summit manual",
+    "carga": "Alta",
+    "carga_val": 0.8,
+    "riesgos": "Conversion baja por friccion",
+    "necesita_feedback": true,
+    "proxima_accion": "SLA comercial diario",
+    "wip_score": 65,
+    "bottleneck_score": 63,
+    "context_quality_score": 60,
+    "ai_leverage_score": 50,
+    "ai_native_score": 51,
+    "herramientas_actuales": [
+      "GHL",
+      "WhatsApp"
+    ],
+    "herramientas_recomendadas": [
+      "Ventas B2C Agent"
+    ],
+    "agentes_recomendados": [
+      "Ventas B2C Agent"
+    ],
+    "procesos_delegables": [
+      "SLA por lead",
+      "Reporte de funnel"
+    ],
+    "confianza_ai": "Inferido",
+    "fuente": "02_Matriz_Colaboradores.md"
+  },
+  {
+    "id": "col-genesis",
+    "nombre": "Genesis",
+    "empresa_area": "AECODE Comercial",
+    "empresas": [
+      "AECODE"
+    ],
+    "proyectos": "Vial, IA, AutoBIM",
+    "n_proyectos": 3,
+    "actividades": "131 ventas junio reportadas, seguimiento y llamadas",
+    "pendientes": "Validar cifra vs Talia, Blanquito, GHL, webinars",
+    "carga": "Media-alta",
+    "carga_val": 0.65,
+    "riesgos": "Datos comerciales inconsistentes",
+    "necesita_feedback": true,
+    "proxima_accion": "Validar corte oficial 118 vs 131",
+    "wip_score": 68,
+    "bottleneck_score": 65,
+    "context_quality_score": 50,
+    "ai_leverage_score": 44,
+    "ai_native_score": 45,
+    "herramientas_actuales": [
+      "GHL",
+      "WhatsApp"
+    ],
+    "herramientas_recomendadas": [
+      "Ventas B2C Agent"
+    ],
+    "agentes_recomendados": [
+      "Ventas B2C Agent"
+    ],
+    "procesos_delegables": [
+      "Seguimiento de leads",
+      "Corte de ventas"
+    ],
+    "confianza_ai": "Inferido",
+    "fuente": "02_Matriz_Colaboradores.md"
+  },
+  {
+    "id": "col-yadira",
+    "nombre": "Yadira",
+    "empresa_area": "AECODE Comercial",
+    "empresas": [
+      "AECODE"
+    ],
+    "proyectos": "IA, AutoBIM, Summit, Vial",
+    "n_proyectos": 4,
+    "actividades": "9 operaciones 24-26, 4 Summit, 2 IA completas, 2 cuotas IA",
+    "pendientes": "Seguimiento cuotas, brochure IA, leads Vial",
+    "carga": "Media",
+    "carga_val": 0.5,
+    "riesgos": "Ventas parciales mal contadas",
+    "necesita_feedback": true,
+    "proxima_accion": "Separar venta completa vs primera cuota",
+    "wip_score": 71,
+    "bottleneck_score": 68,
+    "context_quality_score": 50,
+    "ai_leverage_score": 40,
+    "ai_native_score": 42,
+    "herramientas_actuales": [
+      "GHL"
+    ],
+    "herramientas_recomendadas": [
+      "Ventas B2C Agent"
+    ],
+    "agentes_recomendados": [
+      "Ventas B2C Agent"
+    ],
+    "procesos_delegables": [
+      "Separar venta completa/cuota"
+    ],
+    "confianza_ai": "Inferido",
+    "fuente": "02_Matriz_Colaboradores.md"
+  },
+  {
+    "id": "col-erika",
+    "nombre": "Erika",
+    "empresa_area": "AECODE Summit",
+    "empresas": [
+      "AECODE"
+    ],
+    "proyectos": "Sponsors / alianzas",
+    "n_proyectos": 2,
+    "actividades": "Ownership CRM sponsors",
+    "pendientes": "40 llamadas, sponsors calientes, pagos",
+    "carga": "Alta",
+    "carga_val": 0.8,
+    "riesgos": "Sponsors se enfrian",
+    "necesita_feedback": true,
+    "proxima_accion": "Corte sponsor con Paola/Julie",
+    "wip_score": 65,
+    "bottleneck_score": 63,
+    "context_quality_score": 70,
+    "ai_leverage_score": 52,
+    "ai_native_score": 54,
+    "herramientas_actuales": [
+      "Sheets",
+      "WhatsApp"
+    ],
+    "herramientas_recomendadas": [
+      "Sponsors Agent"
+    ],
+    "agentes_recomendados": [
+      "Sponsors Agent"
+    ],
+    "procesos_delegables": [
+      "CRM sponsors vivo",
+      "Corte sponsor diario"
+    ],
+    "confianza_ai": "Inferido",
+    "fuente": "02_Matriz_Colaboradores.md"
+  },
+  {
+    "id": "col-paola",
+    "nombre": "Paola",
+    "empresa_area": "AECODE Summit",
+    "empresas": [
+      "AECODE"
+    ],
+    "proyectos": "Control operativo sponsors",
+    "n_proyectos": 1,
+    "actividades": "Dashboard y soporte control",
+    "pendientes": "Cruce pago-beneficio-delegacion",
+    "carga": "Alta",
+    "carga_val": 0.8,
+    "riesgos": "Pipeline depende de memoria individual",
+    "necesita_feedback": true,
+    "proxima_accion": "Tablero diario de cierre",
+    "wip_score": 56,
+    "bottleneck_score": 56,
+    "context_quality_score": 70,
+    "ai_leverage_score": 52,
+    "ai_native_score": 56,
+    "herramientas_actuales": [
+      "Sheets"
+    ],
+    "herramientas_recomendadas": [
+      "Sponsors Agent"
+    ],
+    "agentes_recomendados": [
+      "Sponsors Agent"
+    ],
+    "procesos_delegables": [
+      "Cruce pago-beneficio-delegación"
+    ],
+    "confianza_ai": "Inferido",
+    "fuente": "02_Matriz_Colaboradores.md"
+  },
+  {
+    "id": "col-arantxa",
+    "nombre": "Arantxa",
+    "empresa_area": "AECODE Marketing",
+    "empresas": [
+      "AECODE"
+    ],
+    "proyectos": "Reto IA, Pre Congreso, Summit",
+    "n_proyectos": 3,
+    "actividades": "Calendario, publicaciones, grupos externos",
+    "pendientes": "Sprint Pre Congreso, videos, agenda, speakers",
+    "carga": "Alta",
+    "carga_val": 0.8,
+    "riesgos": "Ventana corta 2026-07-01/02",
+    "necesita_feedback": true,
+    "proxima_accion": "Sprint 24h",
+    "wip_score": 74,
+    "bottleneck_score": 70,
+    "context_quality_score": 60,
+    "ai_leverage_score": 54,
+    "ai_native_score": 53,
+    "herramientas_actuales": [
+      "Meta Ads",
+      "GHL",
+      "Canva"
+    ],
+    "herramientas_recomendadas": [
+      "Marketing Attribution Agent"
+    ],
+    "agentes_recomendados": [
+      "Marketing Attribution Agent"
+    ],
+    "procesos_delegables": [
+      "Sprint de campaña",
+      "Landing"
+    ],
+    "confianza_ai": "Inferido",
+    "fuente": "02_Matriz_Colaboradores.md"
+  },
+  {
+    "id": "col-jessica",
+    "nombre": "Jessica",
+    "empresa_area": "AECODE Marketing/GHL",
+    "empresas": [
+      "AECODE"
+    ],
+    "proyectos": "Summit, VIP virtual, Training",
+    "n_proyectos": 3,
+    "actividades": "Flujo VIP, wa.links, campanas, estrategia Training",
+    "pendientes": "Integracion GHL, owners, tracking",
+    "carga": "Media-alta",
+    "carga_val": 0.65,
+    "riesgos": "GHL sin adopcion comercial",
+    "necesita_feedback": true,
+    "proxima_accion": "Probar flujo end-to-end",
+    "wip_score": 68,
+    "bottleneck_score": 65,
+    "context_quality_score": 50,
+    "ai_leverage_score": 56,
+    "ai_native_score": 53,
+    "herramientas_actuales": [
+      "GHL"
+    ],
+    "herramientas_recomendadas": [
+      "Marketing Attribution Agent"
+    ],
+    "agentes_recomendados": [
+      "Marketing Attribution Agent"
+    ],
+    "procesos_delegables": [
+      "Flujos GHL",
+      "Tracking end-to-end"
+    ],
+    "confianza_ai": "Inferido",
+    "fuente": "02_Matriz_Colaboradores.md"
+  },
+  {
+    "id": "col-enma",
+    "nombre": "Enma",
+    "empresa_area": "AECODE Marketing",
+    "empresas": [
+      "AECODE"
+    ],
+    "proyectos": "Brochures, piezas, TikTok, speakers",
+    "n_proyectos": 4,
+    "actividades": "Piezas y metricas altas de TikTok",
+    "pendientes": "Validacion comercial y certificados",
+    "carga": "Alta",
+    "carga_val": 0.8,
+    "riesgos": "Piezas sin conversion medida",
+    "necesita_feedback": false,
+    "proxima_accion": "Tablero pieza-canal-venta",
+    "wip_score": 74,
+    "bottleneck_score": 65,
+    "context_quality_score": 50,
+    "ai_leverage_score": 50,
+    "ai_native_score": 49,
+    "herramientas_actuales": [
+      "Canva",
+      "TikTok"
+    ],
+    "herramientas_recomendadas": [
+      "Marketing Attribution Agent"
+    ],
+    "agentes_recomendados": [
+      "Marketing Attribution Agent"
+    ],
+    "procesos_delegables": [
+      "Piezas",
+      "Brochures versión única"
+    ],
+    "confianza_ai": "Inferido",
+    "fuente": "02_Matriz_Colaboradores.md"
+  },
+  {
+    "id": "col-anggie",
+    "nombre": "Anggie",
+    "empresa_area": "AECODE Growth",
+    "empresas": [
+      "AECODE"
+    ],
+    "proyectos": "Reto IA, Summit, marketing",
+    "n_proyectos": 3,
+    "actividades": "Sistema parcial de agentes marketing",
+    "pendientes": "Dashboard de metricas",
+    "carga": "Media",
+    "carga_val": 0.5,
+    "riesgos": "Feedback cualitativo sin datos",
+    "necesita_feedback": false,
+    "proxima_accion": "Convertir agente en dashboard",
+    "wip_score": 53,
+    "bottleneck_score": 48,
+    "context_quality_score": 50,
+    "ai_leverage_score": 50,
+    "ai_native_score": 50,
+    "herramientas_actuales": [
+      "Agentes marketing"
+    ],
+    "herramientas_recomendadas": [
+      "Marketing Attribution Agent"
+    ],
+    "agentes_recomendados": [
+      "Marketing Attribution Agent"
+    ],
+    "procesos_delegables": [
+      "Dashboard de métricas"
+    ],
+    "confianza_ai": "Inferido",
+    "fuente": "02_Matriz_Colaboradores.md"
+  },
+  {
+    "id": "col-kevin",
+    "nombre": "Kevin",
+    "empresa_area": "GEN+ / AECODE",
+    "empresas": [
+      "GEN+",
+      "AECODE"
+    ],
+    "proyectos": "PTAR, BESCO, plataforma, Forma",
+    "n_proyectos": 4,
+    "actividades": "12 paquetes, 3 scripts, 4 cursos, 16 excels",
+    "pendientes": "Matriz plataforma y foco BIM",
+    "carga": "Alta",
+    "carga_val": 0.8,
+    "riesgos": "Pierde foco tecnico por soporte",
+    "necesita_feedback": true,
+    "proxima_accion": "Asignacion preferente BIM",
+    "wip_score": 83,
+    "bottleneck_score": 76,
+    "context_quality_score": 60,
+    "ai_leverage_score": 56,
+    "ai_native_score": 56,
+    "herramientas_actuales": [
+      "Revit",
+      "Python",
+      "C#"
+    ],
+    "herramientas_recomendadas": [
+      "QA/QC BIM Agent"
+    ],
+    "agentes_recomendados": [
+      "QA/QC BIM Agent",
+      "Delivery BIM Agent"
+    ],
+    "procesos_delegables": [
+      "Scripts BESCO",
+      "Plataforma"
+    ],
+    "confianza_ai": "Inferido",
+    "fuente": "02_Matriz_Colaboradores.md"
+  },
+  {
+    "id": "col-israel",
+    "nombre": "Israel",
+    "empresa_area": "GEN+ BIM",
+    "empresas": [
+      "GEN+"
+    ],
+    "proyectos": "Cañete, Faucett, San Martin",
+    "n_proyectos": 3,
+    "actividades": "Cañete 90% federado, Faucett InfraWorks 100% posible",
+    "pendientes": "Alcance Cañete, metodologia Faucett",
+    "carga": "Alta",
+    "carga_val": 0.8,
+    "riesgos": "Retrabajo fuera de alcance",
+    "necesita_feedback": true,
+    "proxima_accion": "Matriz observaciones dentro/fuera",
+    "wip_score": 74,
+    "bottleneck_score": 70,
+    "context_quality_score": 60,
+    "ai_leverage_score": 42,
+    "ai_native_score": 46,
+    "herramientas_actuales": [
+      "Revit",
+      "InfraWorks"
+    ],
+    "herramientas_recomendadas": [
+      "Control de Alcance BIM Agent"
+    ],
+    "agentes_recomendados": [
+      "Control de Alcance BIM Agent"
+    ],
+    "procesos_delegables": [
+      "Matriz de alcance"
+    ],
+    "confianza_ai": "Inferido",
+    "fuente": "02_Matriz_Colaboradores.md"
+  },
+  {
+    "id": "col-robert-herrera",
+    "nombre": "Robert Herrera",
+    "empresa_area": "GEN+ BIM",
+    "empresas": [
+      "GEN+"
+    ],
+    "proyectos": "Cañete / Faucett posible",
+    "n_proyectos": 2,
+    "actividades": "Cañete 95%, alcantarillas, metrados, planos",
+    "pendientes": "Congelar posicion y afinar detalles",
+    "carga": "Media-alta",
+    "carga_val": 0.65,
+    "riesgos": "Laminas se rompen por cambios",
+    "necesita_feedback": false,
+    "proxima_accion": "Confirmar con Israel version final",
+    "wip_score": 50,
+    "bottleneck_score": 46,
+    "context_quality_score": 50,
+    "ai_leverage_score": 32,
+    "ai_native_score": 36,
+    "herramientas_actuales": [
+      "Revit"
+    ],
+    "herramientas_recomendadas": [
+      "Delivery BIM Agent"
+    ],
+    "agentes_recomendados": [
+      "Delivery BIM Agent"
+    ],
+    "procesos_delegables": [
+      "Reporte de avance estandarizado"
+    ],
+    "confianza_ai": "Inferido",
+    "fuente": "02_Matriz_Colaboradores.md"
+  },
+  {
+    "id": "col-luis-vergara",
+    "nombre": "Luis Vergara",
+    "empresa_area": "GEN+ BIM",
+    "empresas": [
+      "GEN+"
+    ],
+    "proyectos": "Cañete, PTAR, Puente Tingo",
+    "n_proyectos": 3,
+    "actividades": "150 m muro, 7 buzones, 6 tablas, Rhino",
+    "pendientes": "Evidencia y primer entregable Rhino",
+    "carga": "Media",
+    "carga_val": 0.5,
+    "riesgos": "Reproceso invisible por topografia/cambios",
+    "necesita_feedback": false,
+    "proxima_accion": "Documentar flujos y cambios",
+    "wip_score": 53,
+    "bottleneck_score": 48,
+    "context_quality_score": 50,
+    "ai_leverage_score": 32,
+    "ai_native_score": 36,
+    "herramientas_actuales": [
+      "Revit",
+      "Rhino"
+    ],
+    "herramientas_recomendadas": [
+      "Delivery BIM Agent"
+    ],
+    "agentes_recomendados": [
+      "Delivery BIM Agent"
+    ],
+    "procesos_delegables": [
+      "Documentar flujos y cambios"
+    ],
+    "confianza_ai": "Inferido",
+    "fuente": "02_Matriz_Colaboradores.md"
+  },
+  {
+    "id": "col-guisella",
+    "nombre": "Guisella",
+    "empresa_area": "GEN+ BIM",
+    "empresas": [
+      "GEN+"
+    ],
+    "proyectos": "Dovelas, The Circle",
+    "n_proyectos": 2,
+    "actividades": "13 dovelas, 157.4 tn, correccion nervios",
+    "pendientes": "Programacion Ignacio, planilla The Circle",
+    "carga": "Media",
+    "carga_val": 0.5,
+    "riesgos": "Cambios sin valorizacion",
+    "necesita_feedback": false,
+    "proxima_accion": "Matriz dovela y envio planilla",
+    "wip_score": 44,
+    "bottleneck_score": 42,
+    "context_quality_score": 50,
+    "ai_leverage_score": 32,
+    "ai_native_score": 36,
+    "herramientas_actuales": [
+      "Revit"
+    ],
+    "herramientas_recomendadas": [
+      "Control de Alcance BIM Agent"
+    ],
+    "agentes_recomendados": [
+      "Control de Alcance BIM Agent"
+    ],
+    "procesos_delegables": [
+      "Matriz dovela",
+      "Valorización de cambios"
+    ],
+    "confianza_ai": "Inferido",
+    "fuente": "02_Matriz_Colaboradores.md"
+  },
+  {
+    "id": "col-daniella",
+    "nombre": "Daniella",
+    "empresa_area": "GEN+ / AECODE / VisionPro",
+    "empresas": [
+      "GEN+",
+      "AECODE",
+      "VisionPro"
+    ],
+    "proyectos": "ESPARQ, VisionPro, Summit, Kaman",
+    "n_proyectos": 4,
+    "actividades": "13 materiales Canva y actividades transversales",
+    "pendientes": "P0 ESPARQ, Summit, PDK, Kaman postmortem",
+    "carga": "Muy alta",
+    "carga_val": 1.0,
+    "riesgos": "WIP excede capacidad sana",
+    "necesita_feedback": true,
+    "proxima_accion": "Priorizar ESPARQ/Summit/PDK",
+    "wip_score": 91,
+    "bottleneck_score": 93,
+    "context_quality_score": 70,
+    "ai_leverage_score": 58,
+    "ai_native_score": 60,
+    "herramientas_actuales": [
+      "Canva",
+      "Claude"
+    ],
+    "herramientas_recomendadas": [
+      "Comercial B2B Agent",
+      "Startup Agent"
+    ],
+    "agentes_recomendados": [
+      "Startup / Convocatorias Agent",
+      "Comercial B2B Agent"
+    ],
+    "procesos_delegables": [
+      "Materiales comerciales",
+      "Postmortems"
+    ],
+    "confianza_ai": "Inferido",
+    "fuente": "02_Matriz_Colaboradores.md"
+  },
+  {
+    "id": "col-emanuel",
+    "nombre": "Emanuel",
+    "empresa_area": "AgentFlow / VisionPro / AECODE",
+    "empresas": [
+      "GEN+",
+      "AECODE",
+      "VisionPro",
+      "AgentFlow"
+    ],
+    "proyectos": "AI Ops, reporte proyectos, VisionPro",
+    "n_proyectos": 3,
+    "actividades": "Solicito reporte detallado y formato",
+    "pendientes": "Recibir normalizacion y migrar AgentFlow",
+    "carga": "Media",
+    "carga_val": 0.5,
+    "riesgos": "Actividad sin entregable tecnico cerrado",
+    "necesita_feedback": true,
+    "proxima_accion": "Primer flujo con log y evidencia",
+    "wip_score": 62,
+    "bottleneck_score": 61,
+    "context_quality_score": 50,
+    "ai_leverage_score": 64,
+    "ai_native_score": 60,
+    "herramientas_actuales": [
+      "Python",
+      "AWS",
+      "n8n"
+    ],
+    "herramientas_recomendadas": [
+      "Workflow Migration Agent"
+    ],
+    "agentes_recomendados": [
+      "Workflow Migration Agent",
+      "Demo / Deployment Agent",
+      "Context Pipeline Agent"
+    ],
+    "procesos_delegables": [
+      "Migración de flujos",
+      "Diagnóstico conectividad"
+    ],
+    "confianza_ai": "Inferido",
+    "fuente": "02_Matriz_Colaboradores.md"
+  },
+  {
+    "id": "col-anderson",
+    "nombre": "Anderson",
+    "empresa_area": "AECODE Dev",
+    "empresas": [
+      "AECODE"
+    ],
+    "proyectos": "App Summit / Fase 2",
+    "n_proyectos": 2,
+    "actividades": "No se tiene claro",
+    "pendientes": "Testeo App Summit y aula virtual",
+    "carga": "No se tiene claro",
+    "carga_val": 0.5,
+    "riesgos": "Bloquea QA sin reporte propio",
+    "necesita_feedback": true,
+    "proxima_accion": "Fecha de testeo",
+    "wip_score": 53,
+    "bottleneck_score": 54,
+    "context_quality_score": 30,
+    "ai_leverage_score": 36,
+    "ai_native_score": 35,
+    "herramientas_actuales": [
+      "Dev"
+    ],
+    "herramientas_recomendadas": [
+      "Summit Agent"
+    ],
+    "agentes_recomendados": [
+      "Summit Agent"
+    ],
+    "procesos_delegables": [
+      "Testeo App Summit"
+    ],
+    "confianza_ai": "Inferido",
+    "fuente": "02_Matriz_Colaboradores.md"
+  },
+  {
+    "id": "col-yudely",
+    "nombre": "Yudely",
+    "empresa_area": "Operaciones/producto",
+    "empresas": [
+      "AP"
+    ],
+    "proyectos": "Fase 3 Summit / CONEIC",
+    "n_proyectos": 2,
+    "actividades": "No se tiene claro",
+    "pendientes": "Revision Fase 3 Summit",
+    "carga": "No se tiene claro",
+    "carga_val": 0.5,
+    "riesgos": "Bloqueos por revision pendiente",
+    "necesita_feedback": true,
+    "proxima_accion": "Agendar revision",
+    "wip_score": 53,
+    "bottleneck_score": 54,
+    "context_quality_score": 40,
+    "ai_leverage_score": 36,
+    "ai_native_score": 38,
+    "herramientas_actuales": [
+      "Sheets"
+    ],
+    "herramientas_recomendadas": [
+      "Producto Digital / Testing Agent"
+    ],
+    "agentes_recomendados": [
+      "Producto Digital / Testing Agent"
+    ],
+    "procesos_delegables": [
+      "Revisión Fase 3"
+    ],
+    "confianza_ai": "Inferido",
+    "fuente": "02_Matriz_Colaboradores.md"
+  },
+  {
+    "id": "col-patrick",
+    "nombre": "Patrick",
+    "empresa_area": "AECODE Postventa",
+    "empresas": [
+      "AECODE"
+    ],
+    "proyectos": "Certificados, recursos, Zoom",
+    "n_proyectos": 3,
+    "actividades": "Evidencia historica y soporte",
+    "pendientes": "Matriz certificados/notas/recursos",
+    "carga": "Media",
+    "carga_val": 0.5,
+    "riesgos": "Reclamos por trazabilidad",
+    "necesita_feedback": false,
+    "proxima_accion": "Integrarse al tablero academico",
+    "wip_score": 53,
+    "bottleneck_score": 48,
+    "context_quality_score": 50,
+    "ai_leverage_score": 42,
+    "ai_native_score": 44,
+    "herramientas_actuales": [
+      "Zoom",
+      "Sheets"
+    ],
+    "herramientas_recomendadas": [
+      "Certificados Agent"
+    ],
+    "agentes_recomendados": [
+      "Certificados Agent"
+    ],
+    "procesos_delegables": [
+      "Matriz certificados/notas/recursos"
+    ],
+    "confianza_ai": "Inferido",
+    "fuente": "02_Matriz_Colaboradores.md"
+  }
+]

@@ -1,0 +1,9 @@
+node_modules
+dist
+*.local
+.DS_Store
+.vite
+__pycache__/
+*.pyc
+# generated data is committed so the dashboard works without re-running ETL,
+# but baseline history can grow — keep latest, ignore deep history if desired.

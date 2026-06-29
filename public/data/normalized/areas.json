@@ -1,0 +1,137 @@
+[
+  {
+    "id": "area-gen-caja",
+    "empresa": "GEN+",
+    "nombre": "Caja",
+    "n_proyectos": 1,
+    "health_score": 67,
+    "risk_score": 38,
+    "estado": "amarillo"
+  },
+  {
+    "id": "area-gen-delivery-bim",
+    "empresa": "GEN+",
+    "nombre": "Delivery BIM",
+    "n_proyectos": 6,
+    "health_score": 77,
+    "risk_score": 42,
+    "estado": "verde"
+  },
+  {
+    "id": "area-gen-producto-consultoria",
+    "empresa": "GEN+",
+    "nombre": "Producto/consultoria",
+    "n_proyectos": 1,
+    "health_score": 79,
+    "risk_score": 35,
+    "estado": "verde"
+  },
+  {
+    "id": "area-gen-producto-interno",
+    "empresa": "GEN+",
+    "nombre": "Producto interno",
+    "n_proyectos": 1,
+    "health_score": 90,
+    "risk_score": 20,
+    "estado": "verde"
+  },
+  {
+    "id": "area-gen-comercial",
+    "empresa": "GEN+",
+    "nombre": "Comercial",
+    "n_proyectos": 1,
+    "health_score": 71,
+    "risk_score": 20,
+    "estado": "amarillo"
+  },
+  {
+    "id": "area-aecode-summit",
+    "empresa": "AECODE",
+    "nombre": "Summit",
+    "n_proyectos": 3,
+    "health_score": 74,
+    "risk_score": 47,
+    "estado": "amarillo"
+  },
+  {
+    "id": "area-aecode-training",
+    "empresa": "AECODE",
+    "nombre": "Training",
+    "n_proyectos": 1,
+    "health_score": 67,
+    "risk_score": 53,
+    "estado": "amarillo"
+  },
+  {
+    "id": "area-aecode-comercial-b2c",
+    "empresa": "AECODE",
+    "nombre": "Comercial B2C",
+    "n_proyectos": 1,
+    "health_score": 79,
+    "risk_score": 35,
+    "estado": "verde"
+  },
+  {
+    "id": "area-aecode-marketing",
+    "empresa": "AECODE",
+    "nombre": "Marketing",
+    "n_proyectos": 1,
+    "health_score": 71,
+    "risk_score": 35,
+    "estado": "amarillo"
+  },
+  {
+    "id": "area-aecode-producto-digital",
+    "empresa": "AECODE",
+    "nombre": "Producto digital",
+    "n_proyectos": 1,
+    "health_score": 90,
+    "risk_score": 35,
+    "estado": "verde"
+  },
+  {
+    "id": "area-aecode-startup",
+    "empresa": "AECODE",
+    "nombre": "Startup",
+    "n_proyectos": 1,
+    "health_score": 79,
+    "risk_score": 20,
+    "estado": "verde"
+  },
+  {
+    "id": "area-visionpro-producto-obra",
+    "empresa": "VisionPro",
+    "nombre": "Producto/obra",
+    "n_proyectos": 1,
+    "health_score": 79,
+    "risk_score": 53,
+    "estado": "verde"
+  },
+  {
+    "id": "area-visionpro-comercial",
+    "empresa": "VisionPro",
+    "nombre": "Comercial",
+    "n_proyectos": 1,
+    "health_score": 79,
+    "risk_score": 20,
+    "estado": "verde"
+  },
+  {
+    "id": "area-thesia-startup-documentacion",
+    "empresa": "THESIA",
+    "nombre": "Startup/documentacion",
+    "n_proyectos": 1,
+    "health_score": 56,
+    "risk_score": 35,
+    "estado": "amarillo"
+  },
+  {
+    "id": "area-agentflow-automatizacion",
+    "empresa": "AgentFlow",
+    "nombre": "Automatizacion",
+    "n_proyectos": 1,
+    "health_score": 65,
+    "risk_score": 35,
+    "estado": "amarillo"
+  }
+]

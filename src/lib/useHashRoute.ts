@@ -1,13 +1,16 @@
 import { useEffect, useState, useCallback } from "react";
-import { DEFAULT_VIEW, NAV_BY_ID } from "@/nav";
+import { DEFAULT_VIEW } from "@/nav";
 
-function parse(): string {
+export interface Route { view: string; param: string; }
+
+function parse(): Route {
   const h = window.location.hash.replace(/^#\/?/, "").split("?")[0];
-  return NAV_BY_ID[h] ? h : DEFAULT_VIEW;
+  const [a, b] = h.split("/");
+  return { view: a || DEFAULT_VIEW, param: b ? decodeURIComponent(b) : "" };
 }
 
-export function useHashRoute(): [string, (id: string) => void] {
-  const [route, setRoute] = useState<string>(parse());
+export function useHashRoute(): [Route, (id: string) => void] {
+  const [route, setRoute] = useState<Route>(parse());
   useEffect(() => {
     const on = () => setRoute(parse());
     window.addEventListener("hashchange", on);

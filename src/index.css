@@ -89,6 +89,28 @@
   --c-ap: oklch(0.62 0.13 264);
 }
 
+/* Executive DARK SHELL (sidebar + header) — constante sobre el canvas claro */
+:root {
+  --shell-bg: oklch(0.165 0.028 262);
+  --shell-surface: oklch(0.205 0.030 262);
+  --shell-surface-2: oklch(0.255 0.032 262);
+  --shell-fg: oklch(0.97 0.012 255);
+  --shell-fg-2: oklch(0.76 0.024 255);
+  --shell-muted: oklch(0.60 0.026 256);
+  --shell-border: oklch(0.31 0.030 262);
+  --accent: var(--brand);
+  --accent2: var(--emerald);
+}
+
+/* Theming por empresa: set data-company en un contenedor.
+   Cambia el acento primario (--brand) y un secundario (--accent2). */
+[data-company="GEN+"]     { --brand: oklch(0.56 0.20 263); --blue-light: oklch(0.66 0.16 263); --accent: var(--brand); --accent2: oklch(0.66 0.16 263); }
+[data-company="AECODE"]   { --brand: oklch(0.50 0.19 288); --blue-light: oklch(0.80 0.10 288); --accent: var(--brand); --accent2: oklch(0.62 0.17 152); }
+[data-company="VisionPro"]{ --brand: oklch(0.53 0.24 293); --blue-light: oklch(0.74 0.16 293); --accent: var(--brand); --accent2: oklch(0.66 0.16 263); }
+[data-company="THESIA"]   { --brand: oklch(0.68 0.15 75);  --blue-light: oklch(0.80 0.12 75);  --accent: var(--brand); --accent2: oklch(0.56 0.20 263); }
+[data-company="AgentFlow"]{ --brand: oklch(0.62 0.13 230); --blue-light: oklch(0.74 0.12 230); --accent: var(--brand); --accent2: oklch(0.62 0.17 152); }
+[data-company="AECODE"]   { font-family: "Manrope", "Plus Jakarta Sans", system-ui, sans-serif; }
+
 /* Kill transitions during theme swap to avoid color crossfade flash */
 .theme-transition-stop * {
   transition: none !important;

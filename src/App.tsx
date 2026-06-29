@@ -7,28 +7,41 @@ import { Header } from "@/components/layout/Header";
 import { CommandPalette } from "@/components/layout/CommandPalette";
 import { Drawer } from "@/components/Drawer";
 import { VIEWS } from "@/views";
+import CompanyDashboard from "@/views/CompanyDashboard";
+import ProjectFicha from "@/views/ProjectFicha";
 import { DEFAULT_VIEW, WS_BY_ID, workspaceOf } from "@/nav";
 
+const COMPANIES = ["GEN+", "AECODE", "VisionPro", "THESIA", "AgentFlow"];
+
 export default function App() {
-  const { status, error, load, workspace, setWorkspace } = useStore();
+  const { status, error, load, workspace, setWorkspace, companyFilter, bundle } = useStore();
   const [route, navigate] = useHashRoute();
 
   useEffect(() => { load(); }, [load]);
 
-  // Keep the active workspace in sync with the current section.
   useEffect(() => {
-    if (WS_BY_ID[route]) setWorkspace(route);
-    else if (!WS_BY_ID[workspace]?.sections.includes(route)) setWorkspace(workspaceOf(route));
-  }, [route]); // eslint-disable-line react-hooks/exhaustive-deps
+    if (route.view === "co" || route.view === "ficha") return;
+    if (WS_BY_ID[route.view]) setWorkspace(route.view);
+    else if (!WS_BY_ID[workspace]?.sections.includes(route.view)) setWorkspace(workspaceOf(route.view));
+  }, [route.view]); // eslint-disable-line react-hooks/exhaustive-deps
 
-  const View = VIEWS[route] ?? VIEWS[DEFAULT_VIEW];
+  // active company drives the accent (data-company)
+  let activeCompany = "GEN+";
+  if (route.view === "co" && COMPANIES.includes(route.param)) activeCompany = route.param;
+  else if (route.view === "ficha" && bundle) activeCompany = bundle.proyectos.find((p) => p.id === route.param)?.empresa || "GEN+";
+  else if (companyFilter !== "all" && companyFilter !== "AP") activeCompany = companyFilter;
+
+  let content: React.ReactNode = null;
+  if (route.view === "co") content = <CompanyDashboard empresa={route.param} navigate={navigate} />;
+  else if (route.view === "ficha") content = <ProjectFicha id={route.param} navigate={navigate} />;
+  else { const V = VIEWS[route.view] ?? VIEWS[DEFAULT_VIEW]; content = <V navigate={navigate} />; }
 
   return (
-    <div className="flex h-screen overflow-hidden bg-bg text-fg">
-      <Sidebar route={route} navigate={navigate} />
+    <div data-company={activeCompany} className="flex h-screen overflow-hidden bg-bg text-fg">
+      <Sidebar route={route.view} param={route.param} navigate={navigate} />
 
       <div className="flex-1 flex flex-col min-w-0">
-        <Header route={route} />
+        <Header route={route.view} />
 
         <main className="flex-1 overflow-y-auto scrollbar-thin">
           <div className="mx-auto max-w-[1320px] px-3 sm:px-5 py-5">
@@ -46,17 +59,13 @@ export default function App() {
                 <p className="text-xs text-muted">Genera la capa de datos con <code className="font-mono bg-surface-2 px-1.5 py-0.5 rounded">npm run etl</code> y vuelve a intentar.</p>
               </div>
             )}
-            {status === "ready" && (
-              <div key={route} className="animate-fade-in">
-                <View navigate={navigate} />
-              </div>
-            )}
+            {status === "ready" && <div key={route.view + route.param} className="animate-fade-in">{content}</div>}
           </div>
         </main>
       </div>
 
       <CommandPalette navigate={navigate} />
-      <Drawer />
+      <Drawer navigate={navigate} />
     </div>
   );
 }

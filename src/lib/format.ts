@@ -17,6 +17,19 @@ export const companyVar = (name: string) =>
 export const accentStyle = (name: string): CSSProperties =>
   ({ ["--accent" as never]: companyVar(name) });
 
+/** Remaps content tokens to the dark executive-shell tokens for descendants. */
+export const SHELL_STYLE = {
+  ["--bg" as never]: "var(--shell-bg)",
+  ["--surface" as never]: "var(--shell-surface)",
+  ["--surface-2" as never]: "var(--shell-surface-2)",
+  ["--surface-3" as never]: "color-mix(in oklch, var(--shell-surface-2) 78%, white 10%)",
+  ["--fg" as never]: "var(--shell-fg)",
+  ["--fg-2" as never]: "var(--shell-fg-2)",
+  ["--muted" as never]: "var(--shell-muted)",
+  ["--border" as never]: "var(--shell-border)",
+  ["--border-strong" as never]: "color-mix(in oklch, var(--shell-border) 65%, white 20%)",
+} as CSSProperties;
+
 type Tone = { label: string; text: string; bg: string; dot: string; ring: string };
 
 export function estadoMeta(estado: string): Tone {

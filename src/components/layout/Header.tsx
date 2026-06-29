@@ -3,7 +3,7 @@ import { Menu, Search, Sun, Moon, RefreshCw, ChevronRight } from "lucide-react";
 import { useStore } from "@/store";
 import { NAV_BY_ID, WS_BY_ID } from "@/nav";
 import { realCompanies } from "@/lib/data";
-import { cx } from "@/lib/format";
+import { cx, SHELL_STYLE } from "@/lib/format";
 import { CompanyChip } from "@/components/ui";
 
 export function Header({ route }: { route: string }) {
@@ -16,7 +16,7 @@ export function Header({ route }: { route: string }) {
   const refresh = async () => { setSpin(true); await load(); setTimeout(() => setSpin(false), 500); };
 
   return (
-    <header className="sticky top-0 z-20 glass border-b border-[var(--border)]">
+    <header style={SHELL_STYLE} className="sticky top-0 z-20 glass border-b border-[var(--border)]">
       <div className="flex items-center gap-3 h-14 px-3 sm:px-4">
         <button onClick={() => setMobileNav(true)} aria-label="Abrir menú"
           className="lg:hidden press grid place-items-center h-9 w-9 rounded-lg hover:bg-surface-2 text-fg-2"><Menu size={18} /></button>

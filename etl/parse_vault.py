@@ -1108,6 +1108,153 @@ def gen_reports(bundle):
     with io.open(os.path.join(REPORTS, "automation_backlog.md"), "w", encoding="utf-8") as f:
         f.write("\n".join(ab) + "\n")
 
+def _safe(name):
+    return re.sub(r"[^\w\-]+", "-", name.replace("+", "plus")).strip("-")[:60] or "x"
+
+def _fm(tipo, empresa="AP"):
+    return ("---\ntipo: dashboard-auto\nestado: operativo\nowner: Alejandro Palpan\n"
+            "empresa: %s\norigen: ceo-intelligence-os\nclase: %s\nfecha: %s\n"
+            "---\n\n> Generado automaticamente por CEO Intelligence OS (npm run etl). No editar a mano.\n\n" % (empresa, tipo, STAMP))
+
+def emit_obsidian(bundle):
+    """Fase 1 V2: emite los dashboards Markdown en la estructura 00_Global..07_Logs."""
+    base = VAULT  # 00_CEO_Intelligence
+    dirs = {k: os.path.join(base, k) for k in
+            ["00_Global", "01_Empresas", "02_Areas", "03_Proyectos", "04_Team", "05_Riesgos", "06_Decisiones", "07_Logs"]}
+    for d in dirs.values():
+        os.makedirs(d, exist_ok=True)
+
+    P, R, D, C = bundle["proyectos"], bundle["riesgos"], bundle["decisiones"], bundle["colaboradores"]
+    PR, EMP, FN = bundle["prioridades"], bundle["empresas"], bundle["funciones"]
+    cont = bundle["costos"]
+    EMPRESAS = [e for e in EMP if e.get("presente") and e["nombre"] != "AP"]
+
+    def w(path, lines):
+        with io.open(path, "w", encoding="utf-8") as f:
+            f.write("\n".join(lines) + "\n")
+
+    # 00_Global
+    g = [_fm("global"), "# Dashboard Global · CEO", "",
+         "Periodo: **%s** · Corte: %s" % (bundle["meta"]["periodo"], bundle["meta"]["corte"]), "",
+         "## Estado por empresa", "", "| Empresa | Estado | Salud | Riesgo | AI-Native | Proyectos |",
+         "|---|---|---|---|---|---|"]
+    for e in EMPRESAS:
+        g.append("| [[%s]] | %s | %s | %s | %s | %s |" % (
+            e["nombre"], str(e["estado_global"]).upper(), e["health_score"], e["risk_score"], e["ai_native_score"], e["n_proyectos"]))
+    g += ["", "## Semaforo por funcion (empresa x funcion)", "", "| Empresa | Funcion | Proyectos | Rojos | Salud |", "|---|---|---|---:|---:|"]
+    for f in sorted(FN, key=lambda x: (x["empresa"], x["funcion"])):
+        g.append("| %s | %s | %s | %s | %s |" % (f["empresa"], f["funcion"], f["n_proyectos"], f["reds"], f["health_score"]))
+    g += ["", "## Top decisiones CEO"]
+    for d in sorted(D, key=lambda d: 0 if d["urgencia"] == "P0" else 1)[:10]:
+        g.append("- [%s] **%s** — %s (limite %s)" % (d["urgencia"], d["titulo"], d["recomendacion"][:100], d["fecha_limite"]))
+    g += ["", "## Top riesgos"]
+    for r in sorted(R, key=lambda r: -r["risk_score"])[:10]:
+        g.append("- [%s] %s · %s — %s" % (r["urgencia"], r["empresa"], r["riesgo"][:80], r["accion"][:80]))
+    g += ["", "## Proximas acciones"]
+    for p in PR:
+        g.append("- (%s) %s — owner %s · %s" % (p["nivel"], p["titulo"], p["owner"], p["fecha"]))
+    w(os.path.join(dirs["00_Global"], "00_Dashboard_Global.md"), g)
+
+    # 01_Empresas
+    for e in EMPRESAS:
+        emp = e["nombre"]
+        eps = [p for p in P if p["empresa"] == emp]
+        ers = [r for r in R if r["empresa"] == emp]
+        epp = [c for c in C if emp in c.get("empresas", []) or emp in (c.get("costo_por_empresa") or {})]
+        planilla = cont["planilla_por_empresa"].get(emp)
+        s = [_fm("empresa", emp), "# %s · Dashboard" % emp, "",
+             "Estado **%s** · Salud %s · Riesgo %s · AI-Native %s · %d proyectos (%d en rojo)." % (
+                 str(e["estado_global"]).upper(), e["health_score"], e["risk_score"], e["ai_native_score"],
+                 len(eps), len([p for p in eps if p["estado"] == "rojo"]))]
+        if planilla is not None:
+            s.append("Planilla %s: **S/ %s** (%d personas)." % (cont["periodo"], f"{planilla:,.0f}", len(epp)))
+        s += ["", "## Proyectos", "", "| Proyecto | Area | Owner | Estado | Salud | Avance |", "|---|---|---|---|---:|---:|"]
+        for p in sorted(eps, key=lambda p: -p["ceo_attention"]):
+            s.append("| [[%s]] | %s | %s | %s | %s | %s%% |" % (p["nombre"], p["area"], p["responsable"], p["estado"].upper(), p["health_score"], p["avance_validado"]))
+        s += ["", "## Riesgos"]
+        for r in sorted(ers, key=lambda r: -r["risk_score"]):
+            s.append("- [%s] %s — %s" % (r["urgencia"], r["riesgo"][:90], r["accion"][:80]))
+        s += ["", "## Equipo"]
+        for c in sorted(epp, key=lambda c: -c["aporte_score"]):
+            s.append("- [[%s]] — %s · aporte %s%s" % (c["nombre"], c.get("funcion", "-"), c["aporte_score"],
+                     (" · costo S/ %s" % f'{c["costo_final"]:,.0f}') if isinstance(c["costo_final"], (int, float)) else ""))
+        w(os.path.join(dirs["01_Empresas"], "%s.md" % _safe(emp)), s)
+
+    # 02_Areas (por funcion)
+    funcs = sorted(set(p["funcion"] for p in P))
+    for fn in funcs:
+        fps = [p for p in P if p["funcion"] == fn]
+        s = [_fm("area"), "# Area · %s" % fn, "", "| Empresa | Proyecto | Owner | Estado | Salud |", "|---|---|---|---|---:|"]
+        for p in sorted(fps, key=lambda p: -p["ceo_attention"]):
+            s.append("| %s | [[%s]] | %s | %s | %s |" % (p["empresa"], p["nombre"], p["responsable"], p["estado"].upper(), p["health_score"]))
+        w(os.path.join(dirs["02_Areas"], "%s.md" % _safe(fn)), s)
+
+    # 03_Proyectos (ficha + contrato)
+    for p in P:
+        s = [_fm("proyecto", p["empresa"]), "# %s" % p["nombre"], "",
+             "%s · %s · %s · Owner: %s" % (p["empresa"], p.get("unidad", p["empresa"]), p["area"], p["responsable"]),
+             "Estado **%s** · Salud %s · Riesgo %s · Atencion CEO %s · Confianza %s" % (
+                 p["estado"].upper(), p["health_score"], p["risk_score"], p["ceo_attention"], p["confianza"]),
+             "", "## Contrato de datos",
+             "- Avance interno: %s%%" % p["avance_validado"],
+             "- Entregable enviado: No se tiene claro",
+             "- Validacion externa: No se tiene claro",
+             "- Estado de cobro: Requiere validacion",
+             "- Alcance contratado vs real: No se tiene claro",
+             "- Adicionales detectados: No se tiene claro",
+             "", "## Operativo",
+             "- Proximo hito: %s" % p["proximo_hito"],
+             "- Pendientes: %s" % p["pendientes"],
+             "- Bloqueos: %s" % p["bloqueos"],
+             "- Riesgos: %s" % p["riesgos"],
+             "- Personas: %s" % ", ".join("[[%s]]" % n for n in p["personas"]),
+             "- Evidencia: %s" % p["evidencia"], "- Fuente: %s" % p["fuente"]]
+        w(os.path.join(dirs["03_Proyectos"], "%s.md" % _safe(p["nombre"])), s)
+
+    # 04_Team
+    idx = [_fm("team"), "# Team · Indice", "", "| Persona | Funcion | Empresas | Aporte | WIP | AI | Costo | Costo/Aporte |",
+           "|---|---|---|---:|---:|---:|---:|---|"]
+    for c in sorted(C, key=lambda c: -c["aporte_score"]):
+        costo = "S/ %s" % f'{c["costo_final"]:,.0f}' if isinstance(c["costo_final"], (int, float)) else "-"
+        idx.append("| [[%s]] | %s | %s | %s | %s | %s | %s | %s |" % (
+            c["nombre"], c.get("funcion", "-"), ", ".join(c.get("empresas", [])), c["aporte_score"],
+            c["wip_score"], c["ai_native_score"], costo, c.get("costo_aporte", "-")))
+    w(os.path.join(dirs["04_Team"], "00_Team-Indice.md"), idx)
+    for c in C:
+        myp = [p for p in P if p["id"] in c.get("proyecto_ids", [])]
+        s = [_fm("colaborador"), "# %s" % c["nombre"], "",
+             "%s · Funcion: %s" % (c["empresa_area"], c.get("funcion", "-")),
+             "Aporte %s · WIP %s · AI-Native %s · Carga %s" % (c["aporte_score"], c["wip_score"], c["ai_native_score"], c["carga"])]
+        if isinstance(c["costo_final"], (int, float)):
+            s.append("Costo %s: S/ %s · Costo/Aporte: %s" % (cont["periodo"], f'{c["costo_final"]:,.0f}', c.get("costo_aporte", "-")))
+        s += ["", "## Proyectos"]
+        for p in myp:
+            s.append("- [[%s]] (%s) — %s" % (p["nombre"], p["empresa"], p["estado"].upper()))
+        s += ["", "## Foco", "- Proxima accion: %s" % c["proxima_accion"], "- Pendientes: %s" % c["pendientes"],
+              "- Agentes sugeridos: %s" % ", ".join(c.get("agentes_recomendados", []) or ["-"])]
+        w(os.path.join(dirs["04_Team"], "%s.md" % _safe(c["nombre"])), s)
+
+    # 05_Riesgos / 06_Decisiones
+    rs = [_fm("riesgos"), "# Riesgos & Bloqueos", "", "| Urg | Empresa | Riesgo | Accion | Dueno | Score |", "|---|---|---|---|---|---:|"]
+    for r in sorted(R, key=lambda r: -r["risk_score"]):
+        rs.append("| %s | %s | %s | %s | %s | %s |" % (r["urgencia"], r["empresa"], r["riesgo"][:70], r["accion"][:70], r["dueno_sugerido"], r["risk_score"]))
+    w(os.path.join(dirs["05_Riesgos"], "Riesgos.md"), rs)
+    ds = [_fm("decisiones"), "# Decisiones CEO", ""]
+    for d in D:
+        ds += ["## [%s] %s" % (d["urgencia"], d["titulo"]),
+               "- Contexto: %s" % d["contexto"], "- Recomendacion: %s" % d["recomendacion"],
+               "- Riesgo de no decidir: %s" % d["riesgo_no_decidir"], "- Fecha limite: %s" % d["fecha_limite"], ""]
+    w(os.path.join(dirs["06_Decisiones"], "Decisiones.md"), ds)
+
+    # 07_Logs
+    lg = [_fm("log"), "# Estado ETL", "", "Generado: %s · Periodo: %s" % (STAMP, bundle["meta"]["periodo"]), "",
+          "## Conteos"] + ["- %s: %s" % (k, v) for k, v in bundle["meta"]["counts"].items()] + \
+         ["", "## Deltas: %d" % len(bundle["deltas"])]
+    w(os.path.join(dirs["07_Logs"], "Estado-ETL.md"), lg)
+
+    n = len(EMPRESAS) + len(funcs) + len(P) + len(C) + 5
+    print("[ETL] Obsidian: %d dashboards .md emitidos en 00_Global..07_Logs" % n)
+
 def append_log(bundle, deltas, first_run):
     lines = ["", "## %s" % STAMP, "",
              "- Corrida ETL parse_vault.py (%s)." % ("baseline inicial" if first_run else "delta"),
@@ -1201,6 +1348,11 @@ def main():
 
     gen_reports(bundle)
     append_log(bundle, deltas, first_run)
+    if os.environ.get("AP_EMIT_OBSIDIAN", "1") != "0":
+        try:
+            emit_obsidian(bundle)
+        except Exception as e:
+            print("[ETL] Obsidian emit skipped:", e)
 
     print("[ETL] OK -> %d projects, %d collaborators, %d risks, %d agents, %d processes" % (
         len(projects), len(collaborators), len(risks), len(agents), len(procesos)))

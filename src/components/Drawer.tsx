@@ -4,7 +4,7 @@ import { useStore } from "@/store";
 import { cx, dash, companyVar } from "@/lib/format";
 import { Badge, Confidence, ScoreRing, Semaforo, KeyVal, Progress, scoreColor, riskColor, estadoColor } from "@/components/ui";
 
-export function Drawer() {
+export function Drawer({ navigate }: { navigate: (id: string) => void }) {
   const { drawer, closeDrawer, bundle } = useStore();
   useEffect(() => {
     const on = (e: KeyboardEvent) => e.key === "Escape" && closeDrawer();
@@ -46,6 +46,9 @@ export function Drawer() {
             <KeyVal k="Impacto caja" v={`${p.impacto_caja}/100`} />
             <KeyVal k="Impacto cliente" v={`${p.impacto_cliente}/100`} />
           </div>
+          <button onClick={() => { navigate(`ficha/${p.id}`); closeDrawer(); }}
+            className="mt-4 w-full press rounded-lg h-9 text-sm font-semibold text-white"
+            style={{ background: "var(--brand)" }}>Ver ficha completa →</button>
           <SourceRow fuente={p.fuente} evidencia={p.evidencia} />
         </>
       );

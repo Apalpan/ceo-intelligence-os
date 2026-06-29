@@ -1,11 +1,12 @@
-import { PanelLeftClose, PanelLeft, Command } from "lucide-react";
+import { PanelLeftClose, PanelLeft, Command, Building2 } from "lucide-react";
 import { WORKSPACES, WS_BY_ID, NAV_BY_ID } from "@/nav";
 import { useStore } from "@/store";
-import { cx } from "@/lib/format";
+import { cx, SHELL_STYLE, companyVar } from "@/lib/format";
 
 const depthColor = { core: "var(--emerald)", live: "var(--brand)", scaffold: "var(--amber)" } as const;
+const COMPANIES = ["GEN+", "AECODE", "VisionPro", "THESIA", "AgentFlow"];
 
-export function Sidebar({ route, navigate }: { route: string; navigate: (id: string) => void }) {
+export function Sidebar({ route, param, navigate }: { route: string; param: string; navigate: (id: string) => void }) {
   const { sidebarCollapsed, toggleSidebar, mobileNavOpen, setMobileNav, setPalette,
     workspace, setWorkspace } = useStore();
   const collapsed = sidebarCollapsed;
@@ -18,7 +19,7 @@ export function Sidebar({ route, navigate }: { route: string; navigate: (id: str
     <>
       {mobileNavOpen && <div className="fixed inset-0 z-30 bg-[color-mix(in_oklch,var(--navy)_40%,transparent)] lg:hidden animate-fade-in" onClick={() => setMobileNav(false)} />}
 
-      <aside className={cx(
+      <aside style={SHELL_STYLE} className={cx(
         "z-40 flex flex-col border-r border-[var(--border)] bg-surface shrink-0",
         "fixed inset-y-0 left-0 lg:static transition-[transform,width] duration-300 ease-out-expo",
         collapsed ? "w-[68px]" : "w-[252px]",
@@ -52,6 +53,26 @@ export function Sidebar({ route, navigate }: { route: string; navigate: (id: str
                   {active && <span className="absolute left-0 top-1.5 bottom-1.5 w-[3px] rounded-full" style={{ background: w.accent }} />}
                   <Icon size={17} className="shrink-0" style={{ color: active ? w.accent : undefined }} />
                   {!collapsed && <span className="flex-1 text-left truncate">{w.short}</span>}
+                </button>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* empresas switcher */}
+        <div className="px-2.5 pt-2.5">
+          {!collapsed && <div className="px-2 mb-1 text-[10px] font-semibold uppercase tracking-wider text-muted/80">Empresas</div>}
+          <div className={cx("gap-0.5", collapsed ? "space-y-0.5" : "grid grid-cols-1")}>
+            {COMPANIES.map((c) => {
+              const active = route === "co" && param === c;
+              return (
+                <button key={c} onClick={() => { navigate(`co/${c}`); setMobileNav(false); }} title={collapsed ? c : undefined}
+                  className={cx("group relative w-full press flex items-center gap-2.5 rounded-lg text-[13px] transition-colors",
+                    collapsed ? "justify-center h-8" : "px-2.5 h-8",
+                    active ? "bg-surface-2 text-fg font-medium" : "text-fg-2 hover:bg-surface-2 hover:text-fg")}>
+                  {collapsed
+                    ? <span className="h-2.5 w-2.5 rounded-[3px]" style={{ background: companyVar(c) }} />
+                    : <><span className="h-2.5 w-2.5 rounded-[3px] shrink-0" style={{ background: companyVar(c) }} /><span className="flex-1 text-left truncate">{c}</span><Building2 size={13} className="opacity-40" /></>}
                 </button>
               );
             })}

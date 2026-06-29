@@ -17,15 +17,35 @@ export default function WorkspaceHome({ id, navigate }: { id: string } & ViewPro
   const inC = (e?: string) => companyFilter === "all" || e === companyFilter;
 
   const { kpis, blocks } = build(id, bundle, inC, navigate, openDrawer);
+  const isGlobal = id === "global";
 
   return (
     <>
-      <ViewHeader id={id} right={
-        <div className="text-right hidden sm:block">
-          <div className="text-[11px] text-muted">Periodo</div>
-          <div className="text-xs font-medium tnum">{bundle.meta.periodo} · corte {bundle.meta.corte.split(" ")[0]}</div>
+      {isGlobal ? (
+        <div className="relative overflow-hidden rounded-2xl mb-4 px-5 py-5 sm:px-7 sm:py-6 text-white shadow-card"
+          style={{ background: "linear-gradient(135deg, var(--navy), var(--brand) 65%, var(--blue-light))" }}>
+          <div className="absolute inset-0 opacity-[0.14] grid-bg" />
+          <div className="relative flex items-center gap-4">
+            <span className="grid place-items-center bg-white/95 font-display font-extrabold rounded-2xl shrink-0 shadow"
+              style={{ width: 54, height: 54, fontSize: 28, color: "var(--brand)" }}>X</span>
+            <div className="min-w-0">
+              <h1 className="font-display font-extrabold leading-none tracking-tight" style={{ fontSize: "clamp(1.6rem,1.1rem+2vw,2.4rem)" }}>
+                X · CEO Intelligence
+              </h1>
+              <p className="text-[13px] sm:text-sm opacity-90 mt-1.5">
+                Ecosistema AP · GEN+ · AECODE · VisionPro · THESIA · AgentFlow — periodo {bundle.meta.periodo} · corte {bundle.meta.corte.split(" ")[0]}
+              </p>
+            </div>
+          </div>
         </div>
-      } />
+      ) : (
+        <ViewHeader id={id} right={
+          <div className="text-right hidden sm:block">
+            <div className="text-[11px] text-muted">Periodo</div>
+            <div className="text-xs font-medium tnum">{bundle.meta.periodo} · corte {bundle.meta.corte.split(" ")[0]}</div>
+          </div>
+        } />
+      )}
       {kpis.length > 0 && <Grid cols={4} className="mb-3">{kpis}</Grid>}
       {blocks}
 

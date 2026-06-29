@@ -30,7 +30,7 @@ export interface Workspace {
 
 /** Los 6 dashboards. Cada uno tiene su link local: #/<id> */
 export const WORKSPACES: Workspace[] = [
-  { id: "global", label: "CEO Global · Ejecutivo Maestro", short: "Global", icon: Crown, accent: "var(--navy)",
+  { id: "global", label: "X · Global Ejecutivo Maestro", short: "X · Global", icon: Crown, accent: "var(--navy)",
     desc: "Vista maestra cross-empresa: salud, decisiones, riesgos y prioridades. Sin montos individuales.",
     sections: ["global", "command-center", "executive", "strategic", "decisions", "risks", "data-quality", "update-log"] },
   { id: "finanzas", label: "Empresa · Admin · Contabilidad · Finanzas", short: "Finanzas", icon: Banknote, accent: "var(--emerald)",
@@ -52,7 +52,7 @@ export const WORKSPACES: Workspace[] = [
 
 export const NAV: NavItem[] = [
   // homes (overview de cada workspace)
-  { id: "global", label: "Resumen Ejecutivo Global", short: "Resumen", icon: Crown, workspace: "global", depth: "core", desc: "Estado maestro de 30 segundos del ecosistema AP." },
+  { id: "global", label: "X · Resumen Ejecutivo Global", short: "Resumen", icon: Crown, workspace: "global", depth: "core", desc: "Estado maestro de 30 segundos del ecosistema AP." },
   { id: "finanzas", label: "Resumen Finanzas", short: "Resumen", icon: Banknote, workspace: "finanzas", depth: "live", desc: "Caja, planilla y salud financiera por empresa." },
   { id: "comercial", label: "Resumen Comercial", short: "Resumen", icon: Handshake, workspace: "comercial", depth: "live", desc: "Pipeline, sponsors y marketing." },
   { id: "proyectos", label: "Resumen Proyectos", short: "Resumen", icon: HardHat, workspace: "proyectos", depth: "core", desc: "Portafolio y operaciones." },

@@ -1,6 +1,38 @@
 import type { ReactNode, CSSProperties } from "react";
 import type { LucideIcon } from "lucide-react";
-import { cx, COMPANY_TOKEN, dash } from "@/lib/format";
+import { cx, COMPANY_TOKEN, dash, companyVar } from "@/lib/format";
+
+const ASSET = import.meta.env.BASE_URL || "/";
+const MONO: Record<string, string> = { "GEN+": "G+", VisionPro: "VP", AgentFlow: "AF", THESIA: "TH", "SP+": "SP", AP: "AP" };
+
+/** Real logo for AECODE; premium gradient monogram for the rest. */
+export function BrandMark({ name, size = 32, radius = 10 }: { name: string; size?: number; radius?: number }) {
+  if (name === "AECODE") {
+    return <img src={`${ASSET}logos/aecode-iso.png`} alt="AECODE" loading="lazy"
+      className="object-contain shrink-0" style={{ width: size, height: size, borderRadius: radius }} />;
+  }
+  const c = companyVar(name);
+  return (
+    <span className="grid place-items-center text-white font-display font-bold shrink-0"
+      style={{ width: size, height: size, fontSize: size * 0.36, borderRadius: radius,
+        background: `linear-gradient(140deg, ${c}, color-mix(in oklch, ${c} 52%, black))` }}>
+      {MONO[name] ?? name.slice(0, 2).toUpperCase()}
+    </span>
+  );
+}
+
+/** Master "X" brand mark for the global dashboard. */
+export function XMark({ size = 32, radius = 10 }: { size?: number; radius?: number }) {
+  return (
+    <span className="grid place-items-center text-white font-display font-extrabold shrink-0 relative overflow-hidden"
+      style={{ width: size, height: size, fontSize: size * 0.5, borderRadius: radius,
+        background: "linear-gradient(140deg, var(--navy), var(--brand) 62%, var(--blue-light))" }}>
+      X
+    </span>
+  );
+}
+
+export const AECODITO = `${ASSET}logos/aecodito.png`;
 
 /* ----------------------------------------------------------------- color */
 export const scoreColor = (v: number | string) =>

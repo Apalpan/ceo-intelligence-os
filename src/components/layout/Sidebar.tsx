@@ -1,7 +1,8 @@
-import { PanelLeftClose, PanelLeft, Command, Building2 } from "lucide-react";
+import { PanelLeftClose, PanelLeft, Command } from "lucide-react";
 import { WORKSPACES, WS_BY_ID, NAV_BY_ID } from "@/nav";
 import { useStore } from "@/store";
-import { cx, SHELL_STYLE, companyVar } from "@/lib/format";
+import { cx, SHELL_STYLE } from "@/lib/format";
+import { XMark, BrandMark } from "@/components/ui";
 
 const depthColor = { core: "var(--emerald)", live: "var(--brand)", scaffold: "var(--amber)" } as const;
 const COMPANIES = ["GEN+", "AECODE", "VisionPro", "THESIA", "AgentFlow"];
@@ -27,12 +28,11 @@ export function Sidebar({ route, param, navigate }: { route: string; param: stri
 
         {/* brand */}
         <div className={cx("flex items-center gap-2.5 h-14 px-3 border-b border-[var(--border)]", collapsed && "justify-center")}>
-          <div className="grid place-items-center h-8 w-8 rounded-lg shrink-0 text-white font-display font-extrabold text-sm"
-            style={{ background: "linear-gradient(140deg, var(--navy), var(--brand) 70%, var(--blue-light))" }}>G+</div>
+          <XMark size={34} radius={11} />
           {!collapsed && (
             <div className="min-w-0">
-              <div className="text-[13px] font-semibold leading-tight tracking-tight">CEO Intelligence</div>
-              <div className="text-[10px] text-muted leading-tight">GEN+ · Operating System</div>
+              <div className="text-[15px] font-display font-extrabold leading-none tracking-tight">X</div>
+              <div className="text-[10px] text-muted leading-tight mt-0.5">CEO Intelligence · GEN+ / AECODE</div>
             </div>
           )}
         </div>
@@ -68,11 +68,11 @@ export function Sidebar({ route, param, navigate }: { route: string; param: stri
               return (
                 <button key={c} onClick={() => { navigate(`co/${c}`); setMobileNav(false); }} title={collapsed ? c : undefined}
                   className={cx("group relative w-full press flex items-center gap-2.5 rounded-lg text-[13px] transition-colors",
-                    collapsed ? "justify-center h-8" : "px-2.5 h-8",
+                    collapsed ? "justify-center h-9" : "px-2 h-9",
                     active ? "bg-surface-2 text-fg font-medium" : "text-fg-2 hover:bg-surface-2 hover:text-fg")}>
-                  {collapsed
-                    ? <span className="h-2.5 w-2.5 rounded-[3px]" style={{ background: companyVar(c) }} />
-                    : <><span className="h-2.5 w-2.5 rounded-[3px] shrink-0" style={{ background: companyVar(c) }} /><span className="flex-1 text-left truncate">{c}</span><Building2 size={13} className="opacity-40" /></>}
+                  {active && <span className="absolute left-0 top-1.5 bottom-1.5 w-[3px] rounded-full" style={{ background: "var(--accent)" }} />}
+                  <BrandMark name={c} size={22} radius={6} />
+                  {!collapsed && <span className="flex-1 text-left truncate">{c}</span>}
                 </button>
               );
             })}

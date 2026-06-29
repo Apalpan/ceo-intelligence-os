@@ -2,9 +2,8 @@ import { useMemo } from "react";
 import { Activity, ShieldAlert, Gavel, Users, FolderKanban, Banknote, Boxes } from "lucide-react";
 import { useStore } from "@/store";
 import { dash, companyVar, cx } from "@/lib/format";
-import { Card, SectionTitle, KPICard, Badge, ScoreRing, Semaforo, BarRow, Confidence, EmptyState, scoreColor, riskColor } from "@/components/ui";
+import { Card, SectionTitle, KPICard, Badge, ScoreRing, Semaforo, EmptyState, scoreColor, riskColor, BrandMark, AECODITO, DepthTag } from "@/components/ui";
 import { Grid, type ViewProps } from "./_shared";
-import { DepthTag } from "@/components/ui";
 
 const soles = (v: number) => "S/ " + v.toLocaleString("es-PE");
 
@@ -40,18 +39,18 @@ export default function CompanyDashboard({ empresa, navigate }: { empresa: strin
   return (
     <>
       {/* hero */}
-      <div className="flex items-start justify-between gap-4 mb-5">
+      <div className="relative flex items-start justify-between gap-4 mb-5 overflow-hidden">
         <div className="flex items-center gap-3 min-w-0">
-          <span className="grid place-items-center h-12 w-12 rounded-2xl text-white font-display font-extrabold text-lg shrink-0"
-            style={{ background: `linear-gradient(140deg, ${companyVar(empresa)}, color-mix(in oklch, ${companyVar(empresa)} 55%, black))` }}>
-            {empresa.replace("+", "").slice(0, 2)}
-          </span>
+          <BrandMark name={empresa} size={52} radius={16} />
           <div className="min-w-0">
             <div className="flex items-center gap-2"><h1 className="text-display">{empresa}</h1><DepthTag depth="live" /></div>
             <p className="text-sm text-muted mt-0.5">Dashboard de empresa · periodo {bundle.meta.periodo}</p>
           </div>
         </div>
-        <Semaforo estado={meta.estado_global} label />
+        <div className="flex items-center gap-3">
+          {empresa === "AECODE" && <img src={AECODITO} alt="" className="h-14 w-14 object-contain hidden sm:block opacity-90" loading="lazy" />}
+          <Semaforo estado={meta.estado_global} label />
+        </div>
       </div>
 
       {/* diagnóstico ejecutivo */}

@@ -41,6 +41,21 @@ export default function TeamCost(_: ViewProps) {
     { key: "proj", header: "Proyectos", align: "right", sortValue: (r) => r.proyecto_ids.length, render: (r) => <span className="tnum">{r.proyecto_ids.length}</span> },
   ];
 
+  const restringido = (cost as unknown as { restringido?: boolean }).restringido;
+
+  if (restringido) {
+    return (
+      <>
+        <ViewHeader id="team-cost" right={<Badge color="var(--amber)">Restringido</Badge>} />
+        <Card className="text-center py-12">
+          <Banknote className="mx-auto mb-3 text-muted" size={28} />
+          <h3 className="text-base font-semibold mb-1">Datos de costo restringidos en la versión pública</h3>
+          <p className="text-sm text-muted max-w-md mx-auto">Sueldos, planilla y costo/aporte solo están disponibles en la versión local. Corre <code className="font-mono bg-surface-2 px-1.5 py-0.5 rounded">npm run dev</code> para verlos.</p>
+        </Card>
+      </>
+    );
+  }
+
   return (
     <>
       <ViewHeader id="team-cost" right={<Badge color="var(--amber)">Sensible · Team/Finanzas</Badge>} />

@@ -1111,85 +1111,252 @@ def gen_reports(bundle):
 def _safe(name):
     return re.sub(r"[^\w\-]+", "-", name.replace("+", "plus")).strip("-")[:60] or "x"
 
-def _fm(tipo, empresa="AP"):
+def _fm(clase, empresa="AP"):
     return ("---\ntipo: dashboard-auto\nestado: operativo\nowner: Alejandro Palpan\n"
-            "empresa: %s\norigen: ceo-intelligence-os\nclase: %s\nfecha: %s\n"
-            "---\n\n> Generado automaticamente por CEO Intelligence OS (npm run etl). No editar a mano.\n\n" % (empresa, tipo, STAMP))
+            "empresa: %s\norigen: ceo-intelligence-os\nclase: %s\nfecha: %s\nultima_actualizacion: %s\n"
+            "---\n\n> Generado automaticamente por CEO Intelligence OS (npm run etl). "
+            "Fuente de verdad: los 8 archivos de 00_CEO_Intelligence (Codex). No editar a mano.\n\n"
+            % (empresa, clase, STAMP, STAMP))
+
+EMP_KPI_SLOTS = {
+    "GEN+": ["Entregables validados", "Alcance contratado vs real", "Adicionales detectados",
+             "EDP / facturas pendientes", "Horas en riesgo", "Estado de cobro"],
+    "AECODE": ["Leads", "Ventas completas", "Primeras cuotas", "Pendiente de cobro", "Conversion por canal",
+               "Skills verificadas con evidencia", "Evidence Upload Rate", "Certificados emitidos", "Reclamos"],
+    "VisionPro": ["Demo estable", "Camaras activas", "Eventos detectados", "Precision IA",
+                  "Conectividad", "Usuarios creados", "Alertas utiles vs ruido", "Oferta piloto"],
+    "THESIA": ["Tesis activas", "Propuestas", "Validacion de mercado", "Fechas comprometidas"],
+    "AgentFlow": ["Flujos activos", "Ejecuciones exitosas", "Fallos", "Tiempo ahorrado",
+                  "Acciones humanas requeridas", "Logs auditables", "Fallback definido"],
+}
+
+
+def _dash(title, diag, metrics, projects, risks, people, decisions, acciones, fuente, confianza, empresa):
+    L = [_fm("dashboard", empresa), "# %s" % title, "",
+         "**Diagnostico ejecutivo:** %s" % diag, "",
+         "## Metricas principales", "", "| Metrica | Valor |", "|---|---|"]
+    for k, v in metrics:
+        L.append("| %s | %s |" % (k, v))
+    L += ["", "## Estado actual / avances verificados", "",
+          "| Proyecto | Owner | Estado | Salud | Avance | Proximo hito | Confianza |",
+          "|---|---|---|---:|---:|---|---|"]
+    for p in sorted(projects, key=lambda p: -p["ceo_attention"]):
+        L.append("| [[%s]] | %s | %s | %s | %s%% | %s | %s |" % (
+            p["nombre"], p["responsable"], p["estado"].upper(), p["health_score"],
+            p["avance_validado"], p["proximo_hito"], p["confianza"]))
+    if not projects:
+        L.append("| _No se tiene claro_ |  |  |  |  |  |  |")
+    L += ["", "## Bloqueos"]
+    blk = [p for p in projects if p["bloqueos"] != UNCLEAR]
+    L += ["- **%s** — %s" % (p["nombre"], p["bloqueos"]) for p in blk] or ["- No se tiene claro"]
+    L += ["", "## Riesgos"]
+    rk = sorted(risks, key=lambda r: -r["risk_score"])[:8]
+    L += ["- [%s] %s — accion: %s (dueno: %s)" % (r["urgencia"], r["riesgo"], r["accion"], r["dueno_sugerido"]) for r in rk] or ["- No se tiene claro"]
+    L += ["", "## Decisiones requeridas"]
+    L += ["- [%s] %s — recomendacion COO: %s (limite %s)" % (d["urgencia"], d["titulo"], d["recomendacion"], d["fecha_limite"]) for d in decisions[:6]] or ["- No se tiene claro"]
+    L += ["", "## Acciones recomendadas (antes del proximo corte)"]
+    L += ["- %s" % a for a in acciones[:6]] or ["- No se tiene claro"]
+    L += ["", "## Owners / equipo"]
+    L += ["- [[%s]] — %s (aporte %s)" % (c["nombre"], c.get("funcion", "-"), c["aporte_score"]) for c in sorted(people, key=lambda c: -c["aporte_score"])[:12]] or ["- No se tiene claro"]
+    L += ["", "---", "_Fuente: %s · Confianza: %s · Ultima actualizacion: %s_" % (fuente, confianza, STAMP)]
+    return L
+
 
 def emit_obsidian(bundle):
-    """Fase 1 V2: emite los dashboards Markdown en la estructura 00_Global..07_Logs."""
+    """Fase 1 (Plan Maestro): emite la capa Markdown operativa por capas en el vault.
+    No sobrescribe los 8 archivos base de Codex (fuente de verdad)."""
     base = VAULT  # 00_CEO_Intelligence
-    dirs = {k: os.path.join(base, k) for k in
-            ["00_Global", "01_Empresas", "02_Areas", "03_Proyectos", "04_Team", "05_Riesgos", "06_Decisiones", "07_Logs"]}
-    for d in dirs.values():
-        os.makedirs(d, exist_ok=True)
-
     P, R, D, C = bundle["proyectos"], bundle["riesgos"], bundle["decisiones"], bundle["colaboradores"]
-    PR, EMP, FN = bundle["prioridades"], bundle["empresas"], bundle["funciones"]
-    cont = bundle["costos"]
+    PR, EMP, FN, cont = bundle["prioridades"], bundle["empresas"], bundle["funciones"], bundle["costos"]
     EMPRESAS = [e for e in EMP if e.get("presente") and e["nombre"] != "AP"]
+    soles = lambda v: "S/ " + format(v, ",.0f")
+
+    # limpiar carpetas numeradas auto-generadas de corridas previas (solo si son nuestras)
+    for old in ["01_Empresas", "02_Areas", "03_Proyectos", "04_Team", "05_Riesgos", "06_Decisiones", "07_Logs"]:
+        dd = os.path.join(base, old)
+        if os.path.isdir(dd):
+            try:
+                fs = [f for f in os.listdir(dd) if f.endswith(".md")]
+                if fs and all("Generado automaticamente" in (read(os.path.join(dd, f)) or "") for f in fs):
+                    for f in os.listdir(dd):
+                        os.remove(os.path.join(dd, f))
+                    os.rmdir(dd)
+            except Exception:
+                pass
+
+    def ensure(*parts):
+        pth = os.path.join(base, *parts)
+        os.makedirs(pth, exist_ok=True)
+        return pth
 
     def w(path, lines):
         with io.open(path, "w", encoding="utf-8") as f:
             f.write("\n".join(lines) + "\n")
 
-    # 00_Global
-    g = [_fm("global"), "# Dashboard Global · CEO", "",
+    GLOBAL = ensure("00_Global"); EMPDIR = ensure("Empresas"); AREADIR = ensure("Areas")
+    AECDIR = ensure("Empresas", "AECODE"); GENDIR = ensure("Empresas", "GEN+")
+    PRJDIR = ensure("Proyectos"); TEAMDIR = ensure("Team"); LOGDIR = ensure("_Log")
+
+    def decisions_for(keys):
+        ks = [k.lower() for k in keys]
+        return [d for d in D if any(k in (d["titulo"] + " " + d["contexto"] + " " + d["recomendacion"]).lower() for k in ks)]
+
+    def acciones_for(keys):
+        ks = [k.lower() for k in keys]
+        out = []
+        for p in PR:
+            if any(k in (p["titulo"] + " " + p["resultado_esperado"] + " " + p["owner"]).lower() for k in ks):
+                out.append("%s — owner %s · %s" % (p["resultado_esperado"], p["owner"], p["fecha"]))
+        return out
+
+    def people_for(emp=None, funcs=None):
+        res = []
+        for c in C:
+            if emp and not (emp in c.get("empresas", []) or emp in (c.get("costo_por_empresa") or {})):
+                continue
+            if funcs and c.get("funcion") not in funcs:
+                continue
+            res.append(c)
+        return res
+
+    # ---- Dashboard Global CEO (X) ----
+    g = [_fm("global"), "# Dashboard Global CEO · X", "",
          "Periodo: **%s** · Corte: %s" % (bundle["meta"]["periodo"], bundle["meta"]["corte"]), "",
-         "## Estado por empresa", "", "| Empresa | Estado | Salud | Riesgo | AI-Native | Proyectos |",
-         "|---|---|---|---|---|---|"]
+         "> El archivo fuente `00_Dashboard_CEO.md` (Codex) NO se sobrescribe; este es el global derivado.", "",
+         "## Resumen ejecutivo · semaforo por empresa", "",
+         "| Empresa | Estado | Salud | Riesgo | AI-Native | Proyectos |", "|---|---|---:|---:|---:|---:|"]
     for e in EMPRESAS:
-        g.append("| [[%s]] | %s | %s | %s | %s | %s |" % (
-            e["nombre"], str(e["estado_global"]).upper(), e["health_score"], e["risk_score"], e["ai_native_score"], e["n_proyectos"]))
-    g += ["", "## Semaforo por funcion (empresa x funcion)", "", "| Empresa | Funcion | Proyectos | Rojos | Salud |", "|---|---|---|---:|---:|"]
+        g.append("| [[%s_Dashboard\\|%s]] | %s | %s | %s | %s | %s |" % (
+            _safe(e["nombre"]), e["nombre"], str(e["estado_global"]).upper(),
+            e["health_score"], e["risk_score"], e["ai_native_score"], e["n_proyectos"]))
+    g += ["", "## Top riesgos P0/P1"]
+    g += ["- [%s] %s · %s — %s" % (r["urgencia"], r["empresa"], r["riesgo"], r["accion"]) for r in sorted(R, key=lambda r: -r["risk_score"])[:10]]
+    g += ["", "## Decisiones pendientes de Alejandro"]
+    g += ["- [%s] %s — %s (limite %s)" % (d["urgencia"], d["titulo"], d["recomendacion"], d["fecha_limite"]) for d in sorted(D, key=lambda d: 0 if d["urgencia"] == "P0" else 1)[:10]]
+    g += ["", "## Proyectos criticos"]
+    g += ["- %s · %s — atencion %s · salud %s · %s" % (p["empresa"], p["nombre"], p["ceo_attention"], p["health_score"], p["estado"].upper()) for p in sorted(P, key=lambda p: -p["ceo_attention"])[:10]]
+    g += ["", "## Prioridades de la semana / acciones antes del proximo corte"]
+    g += ["- (%s) %s — owner %s · %s" % (p["nivel"], p["titulo"], p["owner"], p["fecha"]) for p in PR]
+    g += ["", "## Semaforo por funcion (empresa x funcion)", "", "| Empresa | Funcion | Proyectos | Rojos | Salud |", "|---|---|---:|---:|---:|"]
     for f in sorted(FN, key=lambda x: (x["empresa"], x["funcion"])):
         g.append("| %s | %s | %s | %s | %s |" % (f["empresa"], f["funcion"], f["n_proyectos"], f["reds"], f["health_score"]))
-    g += ["", "## Top decisiones CEO"]
-    for d in sorted(D, key=lambda d: 0 if d["urgencia"] == "P0" else 1)[:10]:
-        g.append("- [%s] **%s** — %s (limite %s)" % (d["urgencia"], d["titulo"], d["recomendacion"][:100], d["fecha_limite"]))
-    g += ["", "## Top riesgos"]
-    for r in sorted(R, key=lambda r: -r["risk_score"])[:10]:
-        g.append("- [%s] %s · %s — %s" % (r["urgencia"], r["empresa"], r["riesgo"][:80], r["accion"][:80]))
-    g += ["", "## Proximas acciones"]
-    for p in PR:
-        g.append("- (%s) %s — owner %s · %s" % (p["nivel"], p["titulo"], p["owner"], p["fecha"]))
-    w(os.path.join(dirs["00_Global"], "00_Dashboard_Global.md"), g)
+    g += ["", "---", "_Generado: %s · Planilla total %s: %s_" % (STAMP, cont["periodo"], soles(cont["planilla_total"]))]
+    w(os.path.join(GLOBAL, "Dashboard-Global-CEO.md"), g)
 
-    # 01_Empresas
+    # ---- Dashboards por empresa ----
     for e in EMPRESAS:
         emp = e["nombre"]
         eps = [p for p in P if p["empresa"] == emp]
         ers = [r for r in R if r["empresa"] == emp]
-        epp = [c for c in C if emp in c.get("empresas", []) or emp in (c.get("costo_por_empresa") or {})]
+        epp = people_for(emp)
         planilla = cont["planilla_por_empresa"].get(emp)
-        s = [_fm("empresa", emp), "# %s · Dashboard" % emp, "",
-             "Estado **%s** · Salud %s · Riesgo %s · AI-Native %s · %d proyectos (%d en rojo)." % (
-                 str(e["estado_global"]).upper(), e["health_score"], e["risk_score"], e["ai_native_score"],
-                 len(eps), len([p for p in eps if p["estado"] == "rojo"]))]
+        diag = "Estado %s. %d proyectos (%d en rojo), %d riesgos (%d P0). Salud media %s, AI-Native %s." % (
+            str(e["estado_global"]).upper(), len(eps), len([p for p in eps if p["estado"] == "rojo"]),
+            len(ers), len([r for r in ers if r["urgencia"] == "P0"]), e["health_score"], e["ai_native_score"])
+        metrics = [("Salud", e["health_score"]), ("Riesgo", e["risk_score"]), ("AI-Native", e["ai_native_score"]),
+                   ("Proyectos", len(eps)), ("En rojo", len([p for p in eps if p["estado"] == "rojo"]))]
         if planilla is not None:
-            s.append("Planilla %s: **S/ %s** (%d personas)." % (cont["periodo"], f"{planilla:,.0f}", len(epp)))
-        s += ["", "## Proyectos", "", "| Proyecto | Area | Owner | Estado | Salud | Avance |", "|---|---|---|---|---:|---:|"]
-        for p in sorted(eps, key=lambda p: -p["ceo_attention"]):
-            s.append("| [[%s]] | %s | %s | %s | %s | %s%% |" % (p["nombre"], p["area"], p["responsable"], p["estado"].upper(), p["health_score"], p["avance_validado"]))
-        s += ["", "## Riesgos"]
-        for r in sorted(ers, key=lambda r: -r["risk_score"]):
-            s.append("- [%s] %s — %s" % (r["urgencia"], r["riesgo"][:90], r["accion"][:80]))
-        s += ["", "## Equipo"]
-        for c in sorted(epp, key=lambda c: -c["aporte_score"]):
-            s.append("- [[%s]] — %s · aporte %s%s" % (c["nombre"], c.get("funcion", "-"), c["aporte_score"],
-                     (" · costo S/ %s" % f'{c["costo_final"]:,.0f}') if isinstance(c["costo_final"], (int, float)) else ""))
-        w(os.path.join(dirs["01_Empresas"], "%s.md" % _safe(emp)), s)
+            metrics.append(("Planilla %s" % cont["periodo"], soles(planilla)))
+            metrics.append(("Personas", len(epp)))
+        if emp == "AECODE":
+            metrics.append(("Norte: Skills verificadas / usuario activo mensual", "No se tiene claro"))
+        for k in EMP_KPI_SLOTS.get(emp, []):
+            metrics.append((k, "No se tiene claro"))
+        dec = decisions_for([emp.replace("+", ""), emp])
+        acc = acciones_for([emp.replace("+", ""), emp]) or [p["proximo_hito"] for p in eps if p["proximo_hito"] != UNCLEAR][:5]
+        w(os.path.join(EMPDIR, "%s_Dashboard.md" % _safe(emp)),
+          _dash("%s · Dashboard" % emp, diag, metrics, eps, ers, epp, dec, acc, "01_Matriz_Proyectos.md + Cierre-RH-Pagos", "Alta", emp))
 
-    # 02_Areas (por funcion)
-    funcs = sorted(set(p["funcion"] for p in P))
-    for fn in funcs:
-        fps = [p for p in P if p["funcion"] == fn]
-        s = [_fm("area"), "# Area · %s" % fn, "", "| Empresa | Proyecto | Owner | Estado | Salud |", "|---|---|---|---|---:|"]
-        for p in sorted(fps, key=lambda p: -p["ceo_attention"]):
-            s.append("| %s | [[%s]] | %s | %s | %s |" % (p["empresa"], p["nombre"], p["responsable"], p["estado"].upper(), p["health_score"]))
-        w(os.path.join(dirs["02_Areas"], "%s.md" % _safe(fn)), s)
+    # ---- AECODE granular ----
+    AEC = [p for p in P if p["empresa"] == "AECODE"]
+    aec_specs = [
+        ("Ventas", lambda p: p["funcion"] == "Comercial", ["ventas", "comercial", "cobro", "cuota", "lead"],
+         ["Leads", "Ventas completas", "Primeras cuotas", "Pendiente de cobro", "Conversion por canal", "Ejecutivo comercial", "Bloqueos de material"]),
+        ("Marketing", lambda p: p["funcion"] == "Marketing", ["marketing", "campana", "ghl", "pieza", "reto"],
+         ["Pieza", "Canal", "Lead", "Venta atribuida"]),
+        ("Training", lambda p: p["unidad"] == "AECODE Live Training", ["training", "diplomado", "certificad", "licencia", "rubrica"],
+         ["Certificados emitidos", "Licencias", "Reclamos"]),
+        ("Summit", lambda p: p["unidad"] == "AECODE AI Construction Summit", ["summit", "sponsor", "congreso"],
+         ["Sponsors cerrados", "Pago/beneficio cruzado", "Agenda"]),
+        ("Producto-Digital", lambda p: p["unidad"] == "AECODE Producto / Plataforma", ["producto", "app", "web", "fase", "aula"],
+         ["Diseno listo", "Implementacion", "QA", "Deploy", "Adopcion"]),
+        ("Comunidad-Growth", lambda p: p["unidad"] == "AECODE Comunidad", ["comunidad", "reto", "embajador"],
+         ["Miembros activos", "Engagement"]),
+        ("Sponsors-Partners", lambda p: "sponsor" in (p["nombre"] + p["area"]).lower(), ["sponsor", "partner"],
+         ["Sponsors", "Monto", "Beneficios entregados"]),
+    ]
+    for name, filt, keys, slots in aec_specs:
+        sp = [p for p in AEC if filt(p)]
+        sr = [r for r in R if r["empresa"] == "AECODE" and any(k in (r["riesgo"] + r["area"] + r["proyecto"]).lower() for k in keys)]
+        metrics = [("Proyectos", len(sp)), ("En rojo", len([p for p in sp if p["estado"] == "rojo"]))] + [(s, "No se tiene claro") for s in slots]
+        w(os.path.join(AECDIR, "%s.md" % name),
+          _dash("AECODE · %s" % name.replace("-", " "), "Unidad AECODE %s: %d frentes." % (name, len(sp)),
+                metrics, sp, sr, people_for("AECODE"), decisions_for(keys), acciones_for(keys),
+                "01_Matriz_Proyectos.md", "Media", "AECODE"))
 
-    # 03_Proyectos (ficha + contrato)
+    # ---- GEN+ granular ----
+    GEN = [p for p in P if p["empresa"] == "GEN+"]
+    gen_specs = [
+        ("Proyectos", lambda p: True, ["proyecto", "delivery", "bim", "modelo"],
+         ["Proyectos activos", "Entregables validados", "Proximas valorizaciones"]),
+        ("Comercial-B2B", lambda p: p["funcion"] == "Comercial", ["comercial", "propuesta", "cotiz", "cliente", "b2b", "tdr"],
+         ["Pipeline", "Propuestas", "Cierres"]),
+        ("Administracion-Caja", lambda p: p["funcion"] in ("Finanzas", "Contabilidad", "Administración"), ["caja", "cobr", "factura", "edp", "admin"],
+         ["EDP / facturas pendientes", "Estado de cobro", "Adicionales detectados"]),
+        ("Delivery-BIM-VDC", lambda p: ("delivery" in p["area"].lower() or "bim" in (p["area"] + p["nombre"]).lower()), ["bim", "delivery", "canete", "faucett", "dovela", "ptar", "circle", "tingo", "vdc"],
+         ["Entregables validados", "Alcance contratado vs real", "Horas en riesgo", "Adicionales"]),
+        ("Automatizaciones", lambda p: p["funcion"] == "Automatización", ["automatiz", "agente", "besco", "flujo"],
+         ["Flujos activos", "Tiempo ahorrado"]),
+        ("Propuestas-Cotizaciones", lambda p: "esparq" in p["nombre"].lower() or p["funcion"] == "Comercial", ["propuesta", "cotiz", "esparq", "tdr"],
+         ["Cotizaciones abiertas", "Monto pipeline"]),
+    ]
+    for name, filt, keys, slots in gen_specs:
+        sp = [p for p in GEN if filt(p)]
+        sr = [r for r in R if r["empresa"] == "GEN+" and any(k in (r["riesgo"] + r["area"] + r["proyecto"]).lower() for k in keys)]
+        metrics = [("Proyectos", len(sp)), ("En rojo", len([p for p in sp if p["estado"] == "rojo"]))] + [(s, "No se tiene claro") for s in slots]
+        w(os.path.join(GENDIR, "%s.md" % name),
+          _dash("GEN+ · %s" % name.replace("-", " "), "Area GEN+ %s: %d frentes." % (name, len(sp)),
+                metrics, sp, sr, people_for("GEN+"), decisions_for(keys), acciones_for(keys),
+                "01_Matriz_Proyectos.md", "Media", "GEN+"))
+    w(os.path.join(GENDIR, "Team-GEN.md"),
+      _dash("GEN+ · Team", "Equipo GEN+.", [("Personas", len(people_for("GEN+")))], [], [], people_for("GEN+"), [], [], "02_Matriz_Colaboradores.md + RH", "Alta", "GEN+"))
+
+    # ---- Dashboards por area (transversal) ----
+    area_specs = [
+        ("Administracion_Finanzas", ["Finanzas", "Contabilidad", "Administración"], None),
+        ("Comercial", ["Comercial"], None),
+        ("Proyectos_Delivery", ["Operaciones / Proyectos"], None),
+        ("Marketing", ["Marketing"], None),
+        ("Producto_Digital", None, ["producto", "app", "web", "visionpro", "pdk", "fase", "aula"]),
+        ("Automation_AI_Ops", ["Automatización"], None),
+    ]
+    for name, funcs, kw in area_specs:
+        if funcs:
+            sp = [p for p in P if p["funcion"] in funcs]
+        else:
+            sp = [p for p in P if any(k in (p["nombre"] + p["area"]).lower() for k in kw)]
+        sr = [r for r in R if r["proyecto"] in [p["nombre"] for p in sp] or any((p["nombre"] in (r["proyecto"] or "")) for p in sp)]
+        ppl = people_for(funcs=funcs) if funcs else []
+        diag = "%d proyectos · %d en rojo · %d riesgos." % (len(sp), len([p for p in sp if p["estado"] == "rojo"]), len(sr))
+        metrics = [("Proyectos", len(sp)), ("En rojo", len([p for p in sp if p["estado"] == "rojo"])), ("Riesgos", len(sr))]
+        w(os.path.join(AREADIR, "%s.md" % name),
+          _dash("Area · %s" % name.replace("_", " / "), diag, metrics, sp, sr, ppl,
+                decisions_for([name.split("_")[0]]), acciones_for([name.split("_")[0]]), "Multi-fuente", "Media", "AP"))
+    # area Team / Riesgos / Decisiones
+    w(os.path.join(AREADIR, "Team.md"),
+      _dash("Area · Team / Colaboradores", "%d personas (%d con feedback CEO)." % (len(C), len([c for c in C if c.get("necesita_feedback")])),
+            [("Personas", len(C)), ("Planilla %s" % cont["periodo"], soles(cont["planilla_total"]))], [], [], C, [], [], "02_Matriz_Colaboradores.md", "Alta", "AP"))
+    rs = [_fm("riesgos"), "# Area · Riesgos & Bloqueos", "", "| Urg | Empresa | Riesgo | Accion | Dueno | Score |", "|---|---|---|---|---|---:|"]
+    rs += ["| %s | %s | %s | %s | %s | %s |" % (r["urgencia"], r["empresa"], r["riesgo"], r["accion"], r["dueno_sugerido"], r["risk_score"]) for r in sorted(R, key=lambda r: -r["risk_score"])]
+    w(os.path.join(AREADIR, "Riesgos.md"), rs)
+    ds = [_fm("decisiones"), "# Area · Decisiones CEO", ""]
+    for d in D:
+        ds += ["## [%s] %s" % (d["urgencia"], d["titulo"]), "- Contexto: %s" % d["contexto"],
+               "- Recomendacion COO: %s" % d["recomendacion"], "- Riesgo de no decidir: %s" % d["riesgo_no_decidir"],
+               "- Fecha limite: %s" % d["fecha_limite"], "- Info faltante: %s" % d["info_faltante"], ""]
+    w(os.path.join(AREADIR, "Decisiones.md"), ds)
+
+    # ---- Fichas por proyecto (contrato) ----
     for p in P:
         s = [_fm("proyecto", p["empresa"]), "# %s" % p["nombre"], "",
              "%s · %s · %s · Owner: %s" % (p["empresa"], p.get("unidad", p["empresa"]), p["area"], p["responsable"]),
@@ -1198,62 +1365,48 @@ def emit_obsidian(bundle):
              "", "## Contrato de datos",
              "- Avance interno: %s%%" % p["avance_validado"],
              "- Entregable enviado: No se tiene claro",
-             "- Validacion externa: No se tiene claro",
-             "- Estado de cobro: Requiere validacion",
+             "- Validacion externa (cliente): No se tiene claro",
+             "- Estado de cobro / EDP: Requiere validacion",
              "- Alcance contratado vs real: No se tiene claro",
              "- Adicionales detectados: No se tiene claro",
              "", "## Operativo",
-             "- Proximo hito: %s" % p["proximo_hito"],
-             "- Pendientes: %s" % p["pendientes"],
-             "- Bloqueos: %s" % p["bloqueos"],
-             "- Riesgos: %s" % p["riesgos"],
+             "- Proximo hito: %s" % p["proximo_hito"], "- Pendientes: %s" % p["pendientes"],
+             "- Bloqueos: %s" % p["bloqueos"], "- Riesgos: %s" % p["riesgos"],
              "- Personas: %s" % ", ".join("[[%s]]" % n for n in p["personas"]),
-             "- Evidencia: %s" % p["evidencia"], "- Fuente: %s" % p["fuente"]]
-        w(os.path.join(dirs["03_Proyectos"], "%s.md" % _safe(p["nombre"])), s)
+             "- Evidencia: %s" % p["evidencia"], "- Fuente: %s · Confianza: %s" % (p["fuente"], p["confianza"])]
+        w(os.path.join(PRJDIR, "%s.md" % _safe(p["nombre"])), s)
 
-    # 04_Team
-    idx = [_fm("team"), "# Team · Indice", "", "| Persona | Funcion | Empresas | Aporte | WIP | AI | Costo | Costo/Aporte |",
-           "|---|---|---|---:|---:|---:|---:|---|"]
+    # ---- Team (indice + fichas) ----
+    idx = [_fm("team"), "# Team · Indice", "",
+           "| Persona | Funcion | Empresas | Aporte | WIP | AI | Costo | Costo/Aporte |", "|---|---|---|---:|---:|---:|---:|---|"]
     for c in sorted(C, key=lambda c: -c["aporte_score"]):
-        costo = "S/ %s" % f'{c["costo_final"]:,.0f}' if isinstance(c["costo_final"], (int, float)) else "-"
+        costo = soles(c["costo_final"]) if isinstance(c["costo_final"], (int, float)) else "-"
         idx.append("| [[%s]] | %s | %s | %s | %s | %s | %s | %s |" % (
             c["nombre"], c.get("funcion", "-"), ", ".join(c.get("empresas", [])), c["aporte_score"],
             c["wip_score"], c["ai_native_score"], costo, c.get("costo_aporte", "-")))
-    w(os.path.join(dirs["04_Team"], "00_Team-Indice.md"), idx)
+    w(os.path.join(TEAMDIR, "00_Team-Indice.md"), idx)
     for c in C:
         myp = [p for p in P if p["id"] in c.get("proyecto_ids", [])]
         s = [_fm("colaborador"), "# %s" % c["nombre"], "",
              "%s · Funcion: %s" % (c["empresa_area"], c.get("funcion", "-")),
              "Aporte %s · WIP %s · AI-Native %s · Carga %s" % (c["aporte_score"], c["wip_score"], c["ai_native_score"], c["carga"])]
         if isinstance(c["costo_final"], (int, float)):
-            s.append("Costo %s: S/ %s · Costo/Aporte: %s" % (cont["periodo"], f'{c["costo_final"]:,.0f}', c.get("costo_aporte", "-")))
-        s += ["", "## Proyectos"]
-        for p in myp:
-            s.append("- [[%s]] (%s) — %s" % (p["nombre"], p["empresa"], p["estado"].upper()))
+            s.append("Costo %s: %s · Costo/Aporte: %s" % (cont["periodo"], soles(c["costo_final"]), c.get("costo_aporte", "-")))
+        s += ["", "## Proyectos"] + (["- [[%s]] (%s) — %s" % (p["nombre"], p["empresa"], p["estado"].upper()) for p in myp] or ["- No se tiene claro"])
         s += ["", "## Foco", "- Proxima accion: %s" % c["proxima_accion"], "- Pendientes: %s" % c["pendientes"],
               "- Agentes sugeridos: %s" % ", ".join(c.get("agentes_recomendados", []) or ["-"])]
-        w(os.path.join(dirs["04_Team"], "%s.md" % _safe(c["nombre"])), s)
+        w(os.path.join(TEAMDIR, "%s.md" % _safe(c["nombre"])), s)
 
-    # 05_Riesgos / 06_Decisiones
-    rs = [_fm("riesgos"), "# Riesgos & Bloqueos", "", "| Urg | Empresa | Riesgo | Accion | Dueno | Score |", "|---|---|---|---|---|---:|"]
-    for r in sorted(R, key=lambda r: -r["risk_score"]):
-        rs.append("| %s | %s | %s | %s | %s | %s |" % (r["urgencia"], r["empresa"], r["riesgo"][:70], r["accion"][:70], r["dueno_sugerido"], r["risk_score"]))
-    w(os.path.join(dirs["05_Riesgos"], "Riesgos.md"), rs)
-    ds = [_fm("decisiones"), "# Decisiones CEO", ""]
-    for d in D:
-        ds += ["## [%s] %s" % (d["urgencia"], d["titulo"]),
-               "- Contexto: %s" % d["contexto"], "- Recomendacion: %s" % d["recomendacion"],
-               "- Riesgo de no decidir: %s" % d["riesgo_no_decidir"], "- Fecha limite: %s" % d["fecha_limite"], ""]
-    w(os.path.join(dirs["06_Decisiones"], "Decisiones.md"), ds)
-
-    # 07_Logs
-    lg = [_fm("log"), "# Estado ETL", "", "Generado: %s · Periodo: %s" % (STAMP, bundle["meta"]["periodo"]), "",
+    # ---- Log ----
+    lg = [_fm("log"), "# Estado ETL / Log de actualizacion", "",
+          "Generado: %s · Periodo: %s · Costos: %s" % (STAMP, bundle["meta"]["periodo"], cont["periodo"]), "",
           "## Conteos"] + ["- %s: %s" % (k, v) for k, v in bundle["meta"]["counts"].items()] + \
-         ["", "## Deltas: %d" % len(bundle["deltas"])]
-    w(os.path.join(dirs["07_Logs"], "Estado-ETL.md"), lg)
+         ["", "## Deltas: %d" % len(bundle["deltas"]),
+          "", "## Fuentes revisadas"] + ["- %s" % f["nombre"] for f in bundle["fuentes"][:30]]
+    w(os.path.join(LOGDIR, "Estado-ETL.md"), lg)
 
-    n = len(EMPRESAS) + len(funcs) + len(P) + len(C) + 5
-    print("[ETL] Obsidian: %d dashboards .md emitidos en 00_Global..07_Logs" % n)
+    n = 1 + len(EMPRESAS) + len(aec_specs) + len(gen_specs) + 1 + len(area_specs) + 3 + len(P) + len(C) + 2
+    print("[ETL] Obsidian: %d dashboards .md emitidos (00_Global, Empresas, Areas, Proyectos, Team, _Log)" % n)
 
 def append_log(bundle, deltas, first_run):
     lines = ["", "## %s" % STAMP, "",

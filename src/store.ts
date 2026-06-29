@@ -16,6 +16,9 @@ interface AppState {
   mobileNavOpen: boolean;
   setMobileNav: (v: boolean) => void;
 
+  workspace: string;
+  setWorkspace: (w: string) => void;
+
   bundle: Bundle | null;
   status: Status;
   error: string | null;
@@ -23,6 +26,12 @@ interface AppState {
 
   companyFilter: string; // "all" | company name
   setCompanyFilter: (c: string) => void;
+
+  functionFilter: string; // "all" | función canónica
+  setFunctionFilter: (f: string) => void;
+
+  personFilter: string; // "all" | nombre colaborador
+  setPersonFilter: (p: string) => void;
 
   query: string;
   setQuery: (q: string) => void;
@@ -61,6 +70,9 @@ export const useStore = create<AppState>((set, get) => ({
   mobileNavOpen: false,
   setMobileNav: (v) => set({ mobileNavOpen: v }),
 
+  workspace: "global",
+  setWorkspace: (w) => set({ workspace: w }),
+
   bundle: null,
   status: "idle",
   error: null,
@@ -76,6 +88,12 @@ export const useStore = create<AppState>((set, get) => ({
 
   companyFilter: "all",
   setCompanyFilter: (c) => set({ companyFilter: c }),
+
+  functionFilter: "all",
+  setFunctionFilter: (f) => set({ functionFilter: f }),
+
+  personFilter: "all",
+  setPersonFilter: (p) => set({ personFilter: p }),
 
   query: "",
   setQuery: (q) => set({ query: q }),

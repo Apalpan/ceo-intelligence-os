@@ -7,13 +7,19 @@ import { Header } from "@/components/layout/Header";
 import { CommandPalette } from "@/components/layout/CommandPalette";
 import { Drawer } from "@/components/Drawer";
 import { VIEWS } from "@/views";
-import { DEFAULT_VIEW } from "@/nav";
+import { DEFAULT_VIEW, WS_BY_ID, workspaceOf } from "@/nav";
 
 export default function App() {
-  const { status, error, load } = useStore();
+  const { status, error, load, workspace, setWorkspace } = useStore();
   const [route, navigate] = useHashRoute();
 
   useEffect(() => { load(); }, [load]);
+
+  // Keep the active workspace in sync with the current section.
+  useEffect(() => {
+    if (WS_BY_ID[route]) setWorkspace(route);
+    else if (!WS_BY_ID[workspace]?.sections.includes(route)) setWorkspace(workspaceOf(route));
+  }, [route]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const View = VIEWS[route] ?? VIEWS[DEFAULT_VIEW];
 

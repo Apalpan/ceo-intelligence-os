@@ -21,6 +21,7 @@ export default {
         navy: "var(--navy)",
         brand: "var(--brand)",
         "brand-soft": "var(--brand-soft)",
+        "blue-light": "var(--blue-light)",
         violet: "var(--violet)",
         cyan: "var(--cyan)",
         emerald: "var(--emerald)",
@@ -34,8 +35,8 @@ export default {
         "info": "var(--info)",
       },
       fontFamily: {
-        sans: ["Inter", "system-ui", "-apple-system", "Segoe UI", "sans-serif"],
-        display: ["'Space Grotesk'", "Inter", "system-ui", "sans-serif"],
+        sans: ["'Plus Jakarta Sans'", "system-ui", "-apple-system", "Segoe UI", "sans-serif"],
+        display: ["'Plus Jakarta Sans'", "system-ui", "sans-serif"],
         mono: ["'JetBrains Mono'", "ui-monospace", "SFMono-Regular", "monospace"],
       },
       borderRadius: {

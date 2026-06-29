@@ -1,4 +1,4 @@
-# Backlog de Automatización — 2026-06-28 19:10
+# Backlog de Automatización — 2026-06-28 20:24
 
 ## Agentes propuestos (por prioridad)
 

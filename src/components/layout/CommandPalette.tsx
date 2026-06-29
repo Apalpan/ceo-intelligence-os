@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Search, CornerDownLeft } from "lucide-react";
 import { useStore, type DrawerTarget } from "@/store";
-import { NAV } from "@/nav";
+import { NAV, WS_BY_ID } from "@/nav";
 import { searchAll, type SearchHit } from "@/lib/search";
 import { cx } from "@/lib/format";
 
@@ -29,8 +29,8 @@ export function CommandPalette({ navigate }: { navigate: (id: string) => void })
 
   const rows: Row[] = useMemo(() => {
     const views = NAV
-      .filter((n) => !q || n.label.toLowerCase().includes(q.toLowerCase()) || n.group.toLowerCase().includes(q.toLowerCase()))
-      .map((n) => ({ kind: "view" as const, id: n.id, label: n.label, sub: n.group }));
+      .filter((n) => !q || n.label.toLowerCase().includes(q.toLowerCase()) || n.workspace.toLowerCase().includes(q.toLowerCase()))
+      .map((n) => ({ kind: "view" as const, id: n.id, label: n.label, sub: (WS_BY_ID[n.workspace]?.short ?? n.workspace) }));
     const ents = searchAll(bundle, q).map((hit) => ({ kind: "entity" as const, hit }));
     return q ? [...views.slice(0, 5), ...ents] : views;
   }, [q, bundle]);

@@ -3,6 +3,7 @@
     "id": "col-julie",
     "nombre": "Julie",
     "empresa_area": "GEN+ / AECODE / Startup",
+    "funcion": "Contabilidad",
     "empresas": [
       "GEN+",
       "AECODE"
@@ -21,6 +22,27 @@
     "context_quality_score": 70,
     "ai_leverage_score": 50,
     "ai_native_score": 53,
+    "proyecto_ids": [
+      "prj-gen-cobranzas-gen",
+      "prj-gen-ptar-atarjea-buzones",
+      "prj-gen-dovelas-panama",
+      "prj-gen-uncp-osp-nestle-gore-otros",
+      "prj-aecode-sponsors-pipeline",
+      "prj-aecode-diplomados-certificados",
+      "prj-aecode-kaman-convocatorias",
+      "prj-visionpro-visionpro-decks",
+      "prj-thesia-thesia-presupuesto-tesis-juan"
+    ],
+    "avg_proj_health": 70,
+    "aporte_score": 76,
+    "costo_final": 3750.0,
+    "costo_base": 4500.0,
+    "costo_por_empresa": {
+      "GEN+": 3750.0
+    },
+    "rol_rh": "Servicios de desarrollo comercial, seguimiento de cartera de clientes y actualizacion de control de cotizaciones y EDP.",
+    "costo_aporte": "Alto valor",
+    "solo_costo": false,
     "herramientas_actuales": [
       "Excel",
       "WhatsApp"
@@ -38,12 +60,14 @@
       "Recordatorios de cobro"
     ],
     "confianza_ai": "Inferido",
-    "fuente": "02_Matriz_Colaboradores.md"
+    "fuente": "02_Matriz_Colaboradores.md",
+    "valor_diff": 0.19
   },
   {
     "id": "col-marlon",
     "nombre": "Marlon",
     "empresa_area": "AECODE / GEN+ / VisionPro",
+    "funcion": "Automatización",
     "empresas": [
       "GEN+",
       "AECODE",
@@ -63,6 +87,23 @@
     "context_quality_score": 60,
     "ai_leverage_score": 60,
     "ai_native_score": 60,
+    "proyecto_ids": [
+      "prj-aecode-web-app-agenda",
+      "prj-aecode-diplomados-certificados",
+      "prj-aecode-fase-2-fase-3-aecode",
+      "prj-visionpro-pdk-ascent",
+      "prj-agentflow-migracion-flujos"
+    ],
+    "avg_proj_health": 78,
+    "aporte_score": 77,
+    "costo_final": 3000.0,
+    "costo_base": 3000.0,
+    "costo_por_empresa": {
+      "AECODE": 3000.0
+    },
+    "rol_rh": "Servicios de investigacion, sintesis de contenido tecnologico y desarrollo de materiales para programas de innovacion.",
+    "costo_aporte": "Alto valor",
+    "solo_costo": false,
     "herramientas_actuales": [
       "Claude Code",
       "C#",
@@ -81,12 +122,14 @@
       "Seguimiento de certificados"
     ],
     "confianza_ai": "Inferido",
-    "fuente": "02_Matriz_Colaboradores.md"
+    "fuente": "02_Matriz_Colaboradores.md",
+    "valor_diff": 0.27
   },
   {
     "id": "col-fabrizio",
     "nombre": "Fabrizio",
     "empresa_area": "GEN+ / AECODE / THESIA",
+    "funcion": "Automatización",
     "empresas": [
       "GEN+",
       "AECODE",
@@ -106,6 +149,30 @@
     "context_quality_score": 70,
     "ai_leverage_score": 66,
     "ai_native_score": 67,
+    "proyecto_ids": [
+      "prj-gen-ca-ete",
+      "prj-gen-faucett",
+      "prj-gen-dovelas-panama",
+      "prj-gen-the-circle",
+      "prj-gen-puente-tingo",
+      "prj-gen-esparq",
+      "prj-gen-agente-inmobiliario-gen",
+      "prj-aecode-web-app-agenda",
+      "prj-aecode-fase-2-fase-3-aecode",
+      "prj-thesia-thesia-presupuesto-tesis-juan",
+      "prj-agentflow-migracion-flujos"
+    ],
+    "avg_proj_health": 78,
+    "aporte_score": 74,
+    "costo_final": 4000.0,
+    "costo_base": 4000.0,
+    "costo_por_empresa": {
+      "GEN+": 2000.0,
+      "AECODE": 2000.0
+    },
+    "rol_rh": "Servicios de investigacion, sintesis de contenido tecnologico y desarrollo de materiales para programas de innovacion.",
+    "costo_aporte": "Equilibrado",
+    "solo_costo": false,
     "herramientas_actuales": [
       "Claude Code",
       "Revit",
@@ -124,12 +191,14 @@
       "Documentación de entregables"
     ],
     "confianza_ai": "Inferido",
-    "fuente": "02_Matriz_Colaboradores.md"
+    "fuente": "02_Matriz_Colaboradores.md",
+    "valor_diff": 0.08
   },
   {
     "id": "col-yary",
     "nombre": "Yary",
     "empresa_area": "AECODE / VisionPro / GEN+",
+    "funcion": "Operaciones / Proyectos",
     "empresas": [
       "GEN+",
       "AECODE",
@@ -149,6 +218,22 @@
     "context_quality_score": 60,
     "ai_leverage_score": 56,
     "ai_native_score": 58,
+    "proyecto_ids": [
+      "prj-gen-esparq",
+      "prj-aecode-web-app-agenda",
+      "prj-aecode-fase-2-fase-3-aecode",
+      "prj-visionpro-pdk-ascent"
+    ],
+    "avg_proj_health": 84,
+    "aporte_score": 68,
+    "costo_final": 2400.0,
+    "costo_base": 2400.0,
+    "costo_por_empresa": {
+      "GEN+": 2400.0
+    },
+    "rol_rh": "Servicios de diseno y desarrollo web, mantenimiento de plataformas digitales y soporte tecnico a sistemas internos.",
+    "costo_aporte": "Alto valor",
+    "solo_costo": false,
     "herramientas_actuales": [
       "Figma",
       "HTML"
@@ -164,12 +249,14 @@
       "Documentación de componentes"
     ],
     "confianza_ai": "Inferido",
-    "fuente": "02_Matriz_Colaboradores.md"
+    "fuente": "02_Matriz_Colaboradores.md",
+    "valor_diff": 0.3
   },
   {
     "id": "col-carolina",
     "nombre": "Carolina",
     "empresa_area": "AECODE Training",
+    "funcion": "Operaciones / Proyectos",
     "empresas": [
       "AECODE"
     ],
@@ -187,6 +274,19 @@
     "context_quality_score": 60,
     "ai_leverage_score": 46,
     "ai_native_score": 50,
+    "proyecto_ids": [
+      "prj-aecode-diplomados-certificados"
+    ],
+    "avg_proj_health": 67,
+    "aporte_score": 56,
+    "costo_final": 2000.0,
+    "costo_base": 2000.0,
+    "costo_por_empresa": {
+      "AECODE": 1000.0
+    },
+    "rol_rh": "Servicios de coordinacion comercial, seguimiento de participantes y soporte operativo de programas educativos.",
+    "costo_aporte": "Alto valor",
+    "solo_costo": false,
     "herramientas_actuales": [
       "Sheets",
       "Zoom"
@@ -203,12 +303,14 @@
       "Estado de certificados"
     ],
     "confianza_ai": "Inferido",
-    "fuente": "02_Matriz_Colaboradores.md"
+    "fuente": "02_Matriz_Colaboradores.md",
+    "valor_diff": 0.24
   },
   {
     "id": "col-talia",
     "nombre": "Talia",
     "empresa_area": "AECODE Comercial",
+    "funcion": "Comercial",
     "empresas": [
       "AECODE"
     ],
@@ -226,6 +328,19 @@
     "context_quality_score": 60,
     "ai_leverage_score": 50,
     "ai_native_score": 51,
+    "proyecto_ids": [
+      "prj-aecode-ventas-training"
+    ],
+    "avg_proj_health": 79,
+    "aporte_score": 36,
+    "costo_final": 2300.0,
+    "costo_base": 1800.0,
+    "costo_por_empresa": {
+      "AECODE": 2300.0
+    },
+    "rol_rh": "Servicios de asesoria comercial, seguimiento de leads y cierre de inscripciones a programas educativos.",
+    "costo_aporte": "Equilibrado",
+    "solo_costo": false,
     "herramientas_actuales": [
       "GHL",
       "WhatsApp"
@@ -241,12 +356,14 @@
       "Reporte de funnel"
     ],
     "confianza_ai": "Inferido",
-    "fuente": "02_Matriz_Colaboradores.md"
+    "fuente": "02_Matriz_Colaboradores.md",
+    "valor_diff": -0.05
   },
   {
     "id": "col-genesis",
     "nombre": "Genesis",
     "empresa_area": "AECODE Comercial",
+    "funcion": "Comercial",
     "empresas": [
       "AECODE"
     ],
@@ -264,6 +381,19 @@
     "context_quality_score": 50,
     "ai_leverage_score": 44,
     "ai_native_score": 45,
+    "proyecto_ids": [
+      "prj-aecode-ventas-training"
+    ],
+    "avg_proj_health": 79,
+    "aporte_score": 36,
+    "costo_final": 3000.0,
+    "costo_base": 2500.0,
+    "costo_por_empresa": {
+      "AECODE": 3000.0
+    },
+    "rol_rh": "Servicios de coordinacion administrativa, gestion documental y actualizacion de informacion operativa de proyectos.",
+    "costo_aporte": "Revisar",
+    "solo_costo": false,
     "herramientas_actuales": [
       "GHL",
       "WhatsApp"
@@ -279,12 +409,14 @@
       "Corte de ventas"
     ],
     "confianza_ai": "Inferido",
-    "fuente": "02_Matriz_Colaboradores.md"
+    "fuente": "02_Matriz_Colaboradores.md",
+    "valor_diff": -0.24
   },
   {
     "id": "col-yadira",
     "nombre": "Yadira",
     "empresa_area": "AECODE Comercial",
+    "funcion": "Comercial",
     "empresas": [
       "AECODE"
     ],
@@ -302,6 +434,17 @@
     "context_quality_score": 50,
     "ai_leverage_score": 40,
     "ai_native_score": 42,
+    "proyecto_ids": [
+      "prj-aecode-ventas-training"
+    ],
+    "avg_proj_health": 79,
+    "aporte_score": 36,
+    "costo_final": 1150.0,
+    "costo_base": 1150.0,
+    "costo_por_empresa": {},
+    "rol_rh": "Servicios de apoyo administrativo, actualizacion documental y seguimiento operativo de proyectos.",
+    "costo_aporte": "Alto valor",
+    "solo_costo": false,
     "herramientas_actuales": [
       "GHL"
     ],
@@ -315,12 +458,14 @@
       "Separar venta completa/cuota"
     ],
     "confianza_ai": "Inferido",
-    "fuente": "02_Matriz_Colaboradores.md"
+    "fuente": "02_Matriz_Colaboradores.md",
+    "valor_diff": 0.22
   },
   {
     "id": "col-erika",
     "nombre": "Erika",
     "empresa_area": "AECODE Summit",
+    "funcion": "Comercial",
     "empresas": [
       "AECODE"
     ],
@@ -338,6 +483,22 @@
     "context_quality_score": 70,
     "ai_leverage_score": 52,
     "ai_native_score": 54,
+    "proyecto_ids": [
+      "prj-aecode-sponsors-pipeline",
+      "prj-visionpro-pdk-ascent",
+      "prj-visionpro-visionpro-decks"
+    ],
+    "avg_proj_health": 75,
+    "aporte_score": 67,
+    "costo_final": 4500.0,
+    "costo_base": 3000.0,
+    "costo_por_empresa": {
+      "THESIA": 3500.0,
+      "GEN+": 1000.0
+    },
+    "rol_rh": "Servicios de coordinacion administrativa, gestion documental y actualizacion de informacion operativa de proyectos.",
+    "costo_aporte": "Equilibrado",
+    "solo_costo": false,
     "herramientas_actuales": [
       "Sheets",
       "WhatsApp"
@@ -353,12 +514,14 @@
       "Corte sponsor diario"
     ],
     "confianza_ai": "Inferido",
-    "fuente": "02_Matriz_Colaboradores.md"
+    "fuente": "02_Matriz_Colaboradores.md",
+    "valor_diff": -0.08
   },
   {
     "id": "col-paola",
     "nombre": "Paola",
     "empresa_area": "AECODE Summit",
+    "funcion": "Comercial",
     "empresas": [
       "AECODE"
     ],
@@ -376,6 +539,19 @@
     "context_quality_score": 70,
     "ai_leverage_score": 52,
     "ai_native_score": 56,
+    "proyecto_ids": [
+      "prj-aecode-sponsors-pipeline"
+    ],
+    "avg_proj_health": 67,
+    "aporte_score": 56,
+    "costo_final": 1000.0,
+    "costo_base": 1000.0,
+    "costo_por_empresa": {
+      "AECODE": 1000.0
+    },
+    "rol_rh": "Servicios de produccion audiovisual, grabacion, edicion y gestion de sesiones en plataformas de videoconferencia.",
+    "costo_aporte": "Alto valor",
+    "solo_costo": false,
     "herramientas_actuales": [
       "Sheets"
     ],
@@ -389,12 +565,14 @@
       "Cruce pago-beneficio-delegación"
     ],
     "confianza_ai": "Inferido",
-    "fuente": "02_Matriz_Colaboradores.md"
+    "fuente": "02_Matriz_Colaboradores.md",
+    "valor_diff": 0.51
   },
   {
     "id": "col-arantxa",
     "nombre": "Arantxa",
     "empresa_area": "AECODE Marketing",
+    "funcion": "Marketing",
     "empresas": [
       "AECODE"
     ],
@@ -412,6 +590,18 @@
     "context_quality_score": 60,
     "ai_leverage_score": 54,
     "ai_native_score": 53,
+    "proyecto_ids": [
+      "prj-aecode-pre-congreso",
+      "prj-aecode-summit-reto-ia-training"
+    ],
+    "avg_proj_health": 69,
+    "aporte_score": 53,
+    "costo_final": "No se tiene claro",
+    "costo_base": "No se tiene claro",
+    "costo_por_empresa": {},
+    "rol_rh": "No se tiene claro",
+    "costo_aporte": "No se tiene claro",
+    "solo_costo": false,
     "herramientas_actuales": [
       "Meta Ads",
       "GHL",
@@ -428,12 +618,14 @@
       "Landing"
     ],
     "confianza_ai": "Inferido",
-    "fuente": "02_Matriz_Colaboradores.md"
+    "fuente": "02_Matriz_Colaboradores.md",
+    "valor_diff": 0
   },
   {
     "id": "col-jessica",
     "nombre": "Jessica",
     "empresa_area": "AECODE Marketing/GHL",
+    "funcion": "Automatización",
     "empresas": [
       "AECODE"
     ],
@@ -451,6 +643,20 @@
     "context_quality_score": 50,
     "ai_leverage_score": 56,
     "ai_native_score": 53,
+    "proyecto_ids": [
+      "prj-aecode-pre-congreso",
+      "prj-aecode-summit-reto-ia-training"
+    ],
+    "avg_proj_health": 69,
+    "aporte_score": 53,
+    "costo_final": 2000.0,
+    "costo_base": 2000.0,
+    "costo_por_empresa": {
+      "AECODE": 2000.0
+    },
+    "rol_rh": "Servicios de marketing digital, gestion de campanas publicitarias y seguimiento de metricas de captacion.",
+    "costo_aporte": "Equilibrado",
+    "solo_costo": false,
     "herramientas_actuales": [
       "GHL"
     ],
@@ -465,12 +671,14 @@
       "Tracking end-to-end"
     ],
     "confianza_ai": "Inferido",
-    "fuente": "02_Matriz_Colaboradores.md"
+    "fuente": "02_Matriz_Colaboradores.md",
+    "valor_diff": 0.08
   },
   {
     "id": "col-enma",
     "nombre": "Enma",
     "empresa_area": "AECODE Marketing",
+    "funcion": "Marketing",
     "empresas": [
       "AECODE"
     ],
@@ -488,6 +696,20 @@
     "context_quality_score": 50,
     "ai_leverage_score": 50,
     "ai_native_score": 49,
+    "proyecto_ids": [
+      "prj-aecode-pre-congreso",
+      "prj-aecode-summit-reto-ia-training"
+    ],
+    "avg_proj_health": 69,
+    "aporte_score": 53,
+    "costo_final": 1400.0,
+    "costo_base": 1400.0,
+    "costo_por_empresa": {
+      "AECODE": 1400.0
+    },
+    "rol_rh": "Servicios de marketing digital, gestion de campanas publicitarias y seguimiento de metricas de captacion.",
+    "costo_aporte": "Alto valor",
+    "solo_costo": false,
     "herramientas_actuales": [
       "Canva",
       "TikTok"
@@ -503,12 +725,14 @@
       "Brochures versión única"
     ],
     "confianza_ai": "Inferido",
-    "fuente": "02_Matriz_Colaboradores.md"
+    "fuente": "02_Matriz_Colaboradores.md",
+    "valor_diff": 0.27
   },
   {
     "id": "col-anggie",
     "nombre": "Anggie",
     "empresa_area": "AECODE Growth",
+    "funcion": "Marketing",
     "empresas": [
       "AECODE"
     ],
@@ -526,6 +750,19 @@
     "context_quality_score": 50,
     "ai_leverage_score": 50,
     "ai_native_score": 50,
+    "proyecto_ids": [
+      "prj-aecode-summit-reto-ia-training"
+    ],
+    "avg_proj_health": 71,
+    "aporte_score": 33,
+    "costo_final": 3250.0,
+    "costo_base": 3250.0,
+    "costo_por_empresa": {
+      "AECODE": 3250.0
+    },
+    "rol_rh": "Servicios de marketing digital, gestion de campanas publicitarias y seguimiento de metricas de captacion.",
+    "costo_aporte": "Revisar",
+    "solo_costo": false,
     "herramientas_actuales": [
       "Agentes marketing"
     ],
@@ -539,12 +776,14 @@
       "Dashboard de métricas"
     ],
     "confianza_ai": "Inferido",
-    "fuente": "02_Matriz_Colaboradores.md"
+    "fuente": "02_Matriz_Colaboradores.md",
+    "valor_diff": -0.35
   },
   {
     "id": "col-kevin",
     "nombre": "Kevin",
     "empresa_area": "GEN+ / AECODE",
+    "funcion": "Automatización",
     "empresas": [
       "GEN+",
       "AECODE"
@@ -563,6 +802,20 @@
     "context_quality_score": 60,
     "ai_leverage_score": 56,
     "ai_native_score": 56,
+    "proyecto_ids": [
+      "prj-gen-ptar-atarjea-buzones",
+      "prj-aecode-diplomados-certificados"
+    ],
+    "avg_proj_health": 73,
+    "aporte_score": 54,
+    "costo_final": 2000.0,
+    "costo_base": 2000.0,
+    "costo_por_empresa": {
+      "AECODE": 2000.0
+    },
+    "rol_rh": "Servicios de modelado BIM, desarrollo de planimetria, elaboracion de entregables tecnicos y soporte a la documentacion de proyectos.",
+    "costo_aporte": "Equilibrado",
+    "solo_costo": false,
     "herramientas_actuales": [
       "Revit",
       "Python",
@@ -580,12 +833,14 @@
       "Plataforma"
     ],
     "confianza_ai": "Inferido",
-    "fuente": "02_Matriz_Colaboradores.md"
+    "fuente": "02_Matriz_Colaboradores.md",
+    "valor_diff": 0.16
   },
   {
     "id": "col-israel",
     "nombre": "Israel",
     "empresa_area": "GEN+ BIM",
+    "funcion": "Operaciones / Proyectos",
     "empresas": [
       "GEN+"
     ],
@@ -603,6 +858,20 @@
     "context_quality_score": 60,
     "ai_leverage_score": 42,
     "ai_native_score": 46,
+    "proyecto_ids": [
+      "prj-gen-ca-ete",
+      "prj-gen-faucett"
+    ],
+    "avg_proj_health": 84,
+    "aporte_score": 70,
+    "costo_final": 2500.0,
+    "costo_base": 2500.0,
+    "costo_por_empresa": {
+      "AECODE": 2500.0
+    },
+    "rol_rh": "Servicios de modelado BIM, elaboracion de entregables tecnicos y control de calidad de modelos.",
+    "costo_aporte": "Alto valor",
+    "solo_costo": false,
     "herramientas_actuales": [
       "Revit",
       "InfraWorks"
@@ -617,12 +886,14 @@
       "Matriz de alcance"
     ],
     "confianza_ai": "Inferido",
-    "fuente": "02_Matriz_Colaboradores.md"
+    "fuente": "02_Matriz_Colaboradores.md",
+    "valor_diff": 0.24
   },
   {
     "id": "col-robert-herrera",
     "nombre": "Robert Herrera",
     "empresa_area": "GEN+ BIM",
+    "funcion": "Operaciones / Proyectos",
     "empresas": [
       "GEN+"
     ],
@@ -640,6 +911,19 @@
     "context_quality_score": 50,
     "ai_leverage_score": 32,
     "ai_native_score": 36,
+    "proyecto_ids": [
+      "prj-gen-ca-ete"
+    ],
+    "avg_proj_health": 83,
+    "aporte_score": 62,
+    "costo_final": 1000.0,
+    "costo_base": 1000.0,
+    "costo_por_empresa": {
+      "AECODE": 1000.0
+    },
+    "rol_rh": "Servicios de soporte operativo, gestion de comunidad educativa y atencion a participantes en plataformas digitales.",
+    "costo_aporte": "Alto valor",
+    "solo_costo": false,
     "herramientas_actuales": [
       "Revit"
     ],
@@ -653,12 +937,14 @@
       "Reporte de avance estandarizado"
     ],
     "confianza_ai": "Inferido",
-    "fuente": "02_Matriz_Colaboradores.md"
+    "fuente": "02_Matriz_Colaboradores.md",
+    "valor_diff": 0.57
   },
   {
     "id": "col-luis-vergara",
     "nombre": "Luis Vergara",
     "empresa_area": "GEN+ BIM",
+    "funcion": "Operaciones / Proyectos",
     "empresas": [
       "GEN+"
     ],
@@ -676,6 +962,21 @@
     "context_quality_score": 50,
     "ai_leverage_score": 32,
     "ai_native_score": 36,
+    "proyecto_ids": [
+      "prj-gen-ptar-atarjea-buzones",
+      "prj-gen-ca-ete",
+      "prj-gen-puente-tingo"
+    ],
+    "avg_proj_health": 78,
+    "aporte_score": 60,
+    "costo_final": 1000.0,
+    "costo_base": 1000.0,
+    "costo_por_empresa": {
+      "AECODE": 1000.0
+    },
+    "rol_rh": "Servicios de soporte operativo, seguimiento de actividades academicas y asistencia en plataformas digitales.",
+    "costo_aporte": "Alto valor",
+    "solo_costo": false,
     "herramientas_actuales": [
       "Revit",
       "Rhino"
@@ -690,12 +991,14 @@
       "Documentar flujos y cambios"
     ],
     "confianza_ai": "Inferido",
-    "fuente": "02_Matriz_Colaboradores.md"
+    "fuente": "02_Matriz_Colaboradores.md",
+    "valor_diff": 0.54
   },
   {
     "id": "col-guisella",
     "nombre": "Guisella",
     "empresa_area": "GEN+ BIM",
+    "funcion": "Operaciones / Proyectos",
     "empresas": [
       "GEN+"
     ],
@@ -713,6 +1016,21 @@
     "context_quality_score": 50,
     "ai_leverage_score": 32,
     "ai_native_score": 36,
+    "proyecto_ids": [
+      "prj-gen-dovelas-panama",
+      "prj-gen-the-circle"
+    ],
+    "avg_proj_health": 73,
+    "aporte_score": 54,
+    "costo_final": 4100.0,
+    "costo_base": 4100.0,
+    "costo_por_empresa": {
+      "GEN+": 1100.0,
+      "AECODE": 3000.0
+    },
+    "rol_rh": "Servicios de gestion de comunidad educativa, moderacion de grupos y soporte a participantes en plataformas digitales.",
+    "costo_aporte": "Revisar",
+    "solo_costo": false,
     "herramientas_actuales": [
       "Revit"
     ],
@@ -727,12 +1045,14 @@
       "Valorización de cambios"
     ],
     "confianza_ai": "Inferido",
-    "fuente": "02_Matriz_Colaboradores.md"
+    "fuente": "02_Matriz_Colaboradores.md",
+    "valor_diff": -0.22
   },
   {
     "id": "col-daniella",
     "nombre": "Daniella",
     "empresa_area": "GEN+ / AECODE / VisionPro",
+    "funcion": "Operaciones / Proyectos",
     "empresas": [
       "GEN+",
       "AECODE",
@@ -752,6 +1072,24 @@
     "context_quality_score": 70,
     "ai_leverage_score": 58,
     "ai_native_score": 60,
+    "proyecto_ids": [
+      "prj-gen-esparq",
+      "prj-gen-uncp-osp-nestle-gore-otros",
+      "prj-aecode-kaman-convocatorias",
+      "prj-visionpro-pdk-ascent",
+      "prj-visionpro-visionpro-decks"
+    ],
+    "avg_proj_health": 77,
+    "aporte_score": 72,
+    "costo_final": 5000.0,
+    "costo_base": 5000.0,
+    "costo_por_empresa": {
+      "GEN+": 2000.0,
+      "AECODE": 3000.0
+    },
+    "rol_rh": "Servicios de levantamiento de informacion tecnica, procesamiento de datos y generacion de reportes de proyecto.",
+    "costo_aporte": "Equilibrado",
+    "solo_costo": false,
     "herramientas_actuales": [
       "Canva",
       "Claude"
@@ -769,12 +1107,14 @@
       "Postmortems"
     ],
     "confianza_ai": "Inferido",
-    "fuente": "02_Matriz_Colaboradores.md"
+    "fuente": "02_Matriz_Colaboradores.md",
+    "valor_diff": -0.05
   },
   {
     "id": "col-emanuel",
     "nombre": "Emanuel",
     "empresa_area": "AgentFlow / VisionPro / AECODE",
+    "funcion": "Automatización",
     "empresas": [
       "GEN+",
       "AECODE",
@@ -795,6 +1135,20 @@
     "context_quality_score": 50,
     "ai_leverage_score": 64,
     "ai_native_score": 60,
+    "proyecto_ids": [
+      "prj-visionpro-pdk-ascent",
+      "prj-agentflow-migracion-flujos"
+    ],
+    "avg_proj_health": 72,
+    "aporte_score": 54,
+    "costo_final": 2500.0,
+    "costo_base": 2500.0,
+    "costo_por_empresa": {
+      "GEN+": 2500.0
+    },
+    "rol_rh": "Servicios de investigacion, sintesis de contenido tecnologico y desarrollo de materiales para programas de innovacion.",
+    "costo_aporte": "Equilibrado",
+    "solo_costo": false,
     "herramientas_actuales": [
       "Python",
       "AWS",
@@ -813,12 +1167,14 @@
       "Diagnóstico conectividad"
     ],
     "confianza_ai": "Inferido",
-    "fuente": "02_Matriz_Colaboradores.md"
+    "fuente": "02_Matriz_Colaboradores.md",
+    "valor_diff": 0.03
   },
   {
     "id": "col-anderson",
     "nombre": "Anderson",
     "empresa_area": "AECODE Dev",
+    "funcion": "Operaciones / Proyectos",
     "empresas": [
       "AECODE"
     ],
@@ -836,6 +1192,20 @@
     "context_quality_score": 30,
     "ai_leverage_score": 36,
     "ai_native_score": 35,
+    "proyecto_ids": [
+      "prj-aecode-web-app-agenda",
+      "prj-aecode-fase-2-fase-3-aecode"
+    ],
+    "avg_proj_health": 90,
+    "aporte_score": 48,
+    "costo_final": 5200.0,
+    "costo_base": 3000.0,
+    "costo_por_empresa": {
+      "THESIA": 5200.0
+    },
+    "rol_rh": "Servicios de desarrollo, actualizacion y mantenimiento de plataforma educativa y herramientas tecnologicas.",
+    "costo_aporte": "Revisar",
+    "solo_costo": false,
     "herramientas_actuales": [
       "Dev"
     ],
@@ -849,12 +1219,14 @@
       "Testeo App Summit"
     ],
     "confianza_ai": "Inferido",
-    "fuente": "02_Matriz_Colaboradores.md"
+    "fuente": "02_Matriz_Colaboradores.md",
+    "valor_diff": -0.46
   },
   {
     "id": "col-yudely",
     "nombre": "Yudely",
     "empresa_area": "Operaciones/producto",
+    "funcion": "Operaciones / Proyectos",
     "empresas": [
       "AP"
     ],
@@ -872,6 +1244,19 @@
     "context_quality_score": 40,
     "ai_leverage_score": 36,
     "ai_native_score": 38,
+    "proyecto_ids": [
+      "prj-aecode-fase-2-fase-3-aecode"
+    ],
+    "avg_proj_health": 90,
+    "aporte_score": 40,
+    "costo_final": 4000.0,
+    "costo_base": 5000.0,
+    "costo_por_empresa": {
+      "AECODE": 1800.0
+    },
+    "rol_rh": "Servicios de gestion de experiencia empresarial, registro de ordenes de servicio y documentacion contractual.",
+    "costo_aporte": "Revisar",
+    "solo_costo": false,
     "herramientas_actuales": [
       "Sheets"
     ],
@@ -885,12 +1270,14 @@
       "Revisión Fase 3"
     ],
     "confianza_ai": "Inferido",
-    "fuente": "02_Matriz_Colaboradores.md"
+    "fuente": "02_Matriz_Colaboradores.md",
+    "valor_diff": -0.35
   },
   {
     "id": "col-patrick",
     "nombre": "Patrick",
     "empresa_area": "AECODE Postventa",
+    "funcion": "Operaciones / Proyectos",
     "empresas": [
       "AECODE"
     ],
@@ -908,6 +1295,19 @@
     "context_quality_score": 50,
     "ai_leverage_score": 42,
     "ai_native_score": 44,
+    "proyecto_ids": [
+      "prj-aecode-diplomados-certificados"
+    ],
+    "avg_proj_health": 67,
+    "aporte_score": 56,
+    "costo_final": 750.0,
+    "costo_base": 750.0,
+    "costo_por_empresa": {
+      "AECODE": 750.0
+    },
+    "rol_rh": "Servicios de coordinacion academica, planificacion de sesiones y seguimiento de avance de programas de formacion.",
+    "costo_aporte": "Alto valor",
+    "solo_costo": false,
     "herramientas_actuales": [
       "Zoom",
       "Sheets"
@@ -922,6 +1322,581 @@
       "Matriz certificados/notas/recursos"
     ],
     "confianza_ai": "Inferido",
-    "fuente": "02_Matriz_Colaboradores.md"
+    "fuente": "02_Matriz_Colaboradores.md",
+    "valor_diff": 0.59
+  },
+  {
+    "id": "col-jordi",
+    "nombre": "Jordi",
+    "empresa_area": "GEN+",
+    "funcion": "Administración",
+    "empresas": [
+      "GEN+"
+    ],
+    "proyectos": "No se tiene claro",
+    "n_proyectos": 0,
+    "actividades": "Servicios de soporte operativo, coordinacion administrativa y seguimiento de actividades internas.",
+    "pendientes": "No se tiene claro",
+    "carga": "No se tiene claro",
+    "carga_val": 0.0,
+    "riesgos": "No se tiene claro",
+    "necesita_feedback": false,
+    "proxima_accion": "No se tiene claro",
+    "wip_score": 0,
+    "bottleneck_score": 0,
+    "context_quality_score": 0,
+    "ai_leverage_score": 0,
+    "ai_native_score": 0,
+    "proyecto_ids": [],
+    "avg_proj_health": 0,
+    "aporte_score": 0,
+    "costo_final": 750.0,
+    "costo_base": 1000.0,
+    "costo_por_empresa": {
+      "GEN+": 750.0
+    },
+    "rol_rh": "Servicios de soporte operativo, coordinacion administrativa y seguimiento de actividades internas.",
+    "costo_aporte": "Alto valor",
+    "solo_costo": true,
+    "herramientas_actuales": [],
+    "herramientas_recomendadas": [],
+    "agentes_recomendados": [],
+    "procesos_delegables": [],
+    "confianza_ai": "No se tiene claro",
+    "fuente": "Cierre-RH-Pagos",
+    "valor_diff": 0.22
+  },
+  {
+    "id": "col-fernando",
+    "nombre": "Fernando",
+    "empresa_area": "AECODE",
+    "funcion": "Operaciones / Proyectos",
+    "empresas": [
+      "AECODE"
+    ],
+    "proyectos": "No se tiene claro",
+    "n_proyectos": 0,
+    "actividades": "Servicios de desarrollo, actualizacion y mantenimiento de plataforma educativa y herramientas tecnologicas.",
+    "pendientes": "No se tiene claro",
+    "carga": "No se tiene claro",
+    "carga_val": 0.0,
+    "riesgos": "No se tiene claro",
+    "necesita_feedback": false,
+    "proxima_accion": "No se tiene claro",
+    "wip_score": 0,
+    "bottleneck_score": 0,
+    "context_quality_score": 0,
+    "ai_leverage_score": 0,
+    "ai_native_score": 0,
+    "proyecto_ids": [],
+    "avg_proj_health": 0,
+    "aporte_score": 0,
+    "costo_final": 3000.0,
+    "costo_base": 3000.0,
+    "costo_por_empresa": {
+      "AECODE": 3000.0
+    },
+    "rol_rh": "Servicios de desarrollo, actualizacion y mantenimiento de plataforma educativa y herramientas tecnologicas.",
+    "costo_aporte": "Revisar",
+    "solo_costo": true,
+    "herramientas_actuales": [],
+    "herramientas_recomendadas": [],
+    "agentes_recomendados": [],
+    "procesos_delegables": [],
+    "confianza_ai": "No se tiene claro",
+    "fuente": "Cierre-RH-Pagos",
+    "valor_diff": -0.35
+  },
+  {
+    "id": "col-alejandro-palpan",
+    "nombre": "Alejandro Palpan",
+    "empresa_area": "GEN+ / AECODE",
+    "funcion": "Administración",
+    "empresas": [
+      "GEN+",
+      "AECODE"
+    ],
+    "proyectos": "No se tiene claro",
+    "n_proyectos": 0,
+    "actividades": "Servicios de gestion de experiencia empresarial, registro de ordenes de servicio y documentacion contractual.",
+    "pendientes": "No se tiene claro",
+    "carga": "No se tiene claro",
+    "carga_val": 0.0,
+    "riesgos": "No se tiene claro",
+    "necesita_feedback": false,
+    "proxima_accion": "No se tiene claro",
+    "wip_score": 0,
+    "bottleneck_score": 0,
+    "context_quality_score": 0,
+    "ai_leverage_score": 0,
+    "ai_native_score": 0,
+    "proyecto_ids": [],
+    "avg_proj_health": 0,
+    "aporte_score": 0,
+    "costo_final": 5000.0,
+    "costo_base": 5000.0,
+    "costo_por_empresa": {
+      "GEN+": 1130.0,
+      "AECODE": 3870.0
+    },
+    "rol_rh": "Servicios de gestion de experiencia empresarial, registro de ordenes de servicio y documentacion contractual.",
+    "costo_aporte": "Revisar",
+    "solo_costo": true,
+    "herramientas_actuales": [],
+    "herramientas_recomendadas": [],
+    "agentes_recomendados": [],
+    "procesos_delegables": [],
+    "confianza_ai": "No se tiene claro",
+    "fuente": "Cierre-RH-Pagos",
+    "valor_diff": -0.59
+  },
+  {
+    "id": "col-ana",
+    "nombre": "Ana",
+    "empresa_area": "AECODE",
+    "funcion": "Administración",
+    "empresas": [
+      "AECODE"
+    ],
+    "proyectos": "No se tiene claro",
+    "n_proyectos": 0,
+    "actividades": "Servicios de apoyo operativo, coordinacion administrativa y seguimiento de actividades educativas.",
+    "pendientes": "No se tiene claro",
+    "carga": "No se tiene claro",
+    "carga_val": 0.0,
+    "riesgos": "No se tiene claro",
+    "necesita_feedback": false,
+    "proxima_accion": "No se tiene claro",
+    "wip_score": 0,
+    "bottleneck_score": 0,
+    "context_quality_score": 0,
+    "ai_leverage_score": 0,
+    "ai_native_score": 0,
+    "proyecto_ids": [],
+    "avg_proj_health": 0,
+    "aporte_score": 0,
+    "costo_final": 500.0,
+    "costo_base": 500.0,
+    "costo_por_empresa": {
+      "AECODE": 500.0
+    },
+    "rol_rh": "Servicios de apoyo operativo, coordinacion administrativa y seguimiento de actividades educativas.",
+    "costo_aporte": "Alto valor",
+    "solo_costo": true,
+    "herramientas_actuales": [],
+    "herramientas_recomendadas": [],
+    "agentes_recomendados": [],
+    "procesos_delegables": [],
+    "confianza_ai": "No se tiene claro",
+    "fuente": "Cierre-RH-Pagos",
+    "valor_diff": 0.3
+  },
+  {
+    "id": "col-paolo",
+    "nombre": "Paolo",
+    "empresa_area": "AECODE",
+    "funcion": "Operaciones / Proyectos",
+    "empresas": [
+      "AECODE"
+    ],
+    "proyectos": "No se tiene claro",
+    "n_proyectos": 0,
+    "actividades": "Servicios de coordinacion operativa, gestion de actividades educativas y soporte a la ejecucion de programas.",
+    "pendientes": "No se tiene claro",
+    "carga": "No se tiene claro",
+    "carga_val": 0.0,
+    "riesgos": "No se tiene claro",
+    "necesita_feedback": false,
+    "proxima_accion": "No se tiene claro",
+    "wip_score": 0,
+    "bottleneck_score": 0,
+    "context_quality_score": 0,
+    "ai_leverage_score": 0,
+    "ai_native_score": 0,
+    "proyecto_ids": [],
+    "avg_proj_health": 0,
+    "aporte_score": 0,
+    "costo_final": 4000.0,
+    "costo_base": 4000.0,
+    "costo_por_empresa": {
+      "AECODE": 4000.0
+    },
+    "rol_rh": "Servicios de coordinacion operativa, gestion de actividades educativas y soporte a la ejecucion de programas.",
+    "costo_aporte": "Revisar",
+    "solo_costo": true,
+    "herramientas_actuales": [],
+    "herramientas_recomendadas": [],
+    "agentes_recomendados": [],
+    "procesos_delegables": [],
+    "confianza_ai": "No se tiene claro",
+    "fuente": "Cierre-RH-Pagos",
+    "valor_diff": -0.49
+  },
+  {
+    "id": "col-aracely",
+    "nombre": "Aracely",
+    "empresa_area": "AECODE",
+    "funcion": "Operaciones / Proyectos",
+    "empresas": [
+      "AECODE"
+    ],
+    "proyectos": "No se tiene claro",
+    "n_proyectos": 0,
+    "actividades": "Servicios de coordinacion academica, planificacion de sesiones y seguimiento de avance de programas de formacion.",
+    "pendientes": "No se tiene claro",
+    "carga": "No se tiene claro",
+    "carga_val": 0.0,
+    "riesgos": "No se tiene claro",
+    "necesita_feedback": false,
+    "proxima_accion": "No se tiene claro",
+    "wip_score": 0,
+    "bottleneck_score": 0,
+    "context_quality_score": 0,
+    "ai_leverage_score": 0,
+    "ai_native_score": 0,
+    "proyecto_ids": [],
+    "avg_proj_health": 0,
+    "aporte_score": 0,
+    "costo_final": 2000.0,
+    "costo_base": 2000.0,
+    "costo_por_empresa": {
+      "AECODE": 2000.0
+    },
+    "rol_rh": "Servicios de coordinacion academica, planificacion de sesiones y seguimiento de avance de programas de formacion.",
+    "costo_aporte": "Equilibrado",
+    "solo_costo": true,
+    "herramientas_actuales": [],
+    "herramientas_recomendadas": [],
+    "agentes_recomendados": [],
+    "procesos_delegables": [],
+    "confianza_ai": "No se tiene claro",
+    "fuente": "Cierre-RH-Pagos",
+    "valor_diff": -0.14
+  },
+  {
+    "id": "col-janet",
+    "nombre": "Janet",
+    "empresa_area": "AECODE",
+    "funcion": "Administración",
+    "empresas": [
+      "AECODE"
+    ],
+    "proyectos": "No se tiene claro",
+    "n_proyectos": 0,
+    "actividades": "Servicios de coordinacion administrativa, gestion documental y seguimiento operativo de actividades educativas.",
+    "pendientes": "No se tiene claro",
+    "carga": "No se tiene claro",
+    "carga_val": 0.0,
+    "riesgos": "No se tiene claro",
+    "necesita_feedback": false,
+    "proxima_accion": "No se tiene claro",
+    "wip_score": 0,
+    "bottleneck_score": 0,
+    "context_quality_score": 0,
+    "ai_leverage_score": 0,
+    "ai_native_score": 0,
+    "proyecto_ids": [],
+    "avg_proj_health": 0,
+    "aporte_score": 0,
+    "costo_final": 1400.0,
+    "costo_base": 1400.0,
+    "costo_por_empresa": {
+      "AECODE": 1400.0
+    },
+    "rol_rh": "Servicios de coordinacion administrativa, gestion documental y seguimiento operativo de actividades educativas.",
+    "costo_aporte": "Equilibrado",
+    "solo_costo": true,
+    "herramientas_actuales": [],
+    "herramientas_recomendadas": [],
+    "agentes_recomendados": [],
+    "procesos_delegables": [],
+    "confianza_ai": "No se tiene claro",
+    "fuente": "Cierre-RH-Pagos",
+    "valor_diff": 0.05
+  },
+  {
+    "id": "col-moises",
+    "nombre": "Moises",
+    "empresa_area": "AECODE",
+    "funcion": "Administración",
+    "empresas": [
+      "AECODE"
+    ],
+    "proyectos": "No se tiene claro",
+    "n_proyectos": 0,
+    "actividades": "Servicios de apoyo operativo, documentacion y seguimiento de actividades internas de programas educativos.",
+    "pendientes": "No se tiene claro",
+    "carga": "No se tiene claro",
+    "carga_val": 0.0,
+    "riesgos": "No se tiene claro",
+    "necesita_feedback": false,
+    "proxima_accion": "No se tiene claro",
+    "wip_score": 0,
+    "bottleneck_score": 0,
+    "context_quality_score": 0,
+    "ai_leverage_score": 0,
+    "ai_native_score": 0,
+    "proyecto_ids": [],
+    "avg_proj_health": 0,
+    "aporte_score": 0,
+    "costo_final": 500.0,
+    "costo_base": 500.0,
+    "costo_por_empresa": {
+      "AECODE": 500.0
+    },
+    "rol_rh": "Servicios de apoyo operativo, documentacion y seguimiento de actividades internas de programas educativos.",
+    "costo_aporte": "Alto valor",
+    "solo_costo": true,
+    "herramientas_actuales": [],
+    "herramientas_recomendadas": [],
+    "agentes_recomendados": [],
+    "procesos_delegables": [],
+    "confianza_ai": "No se tiene claro",
+    "fuente": "Cierre-RH-Pagos",
+    "valor_diff": 0.3
+  },
+  {
+    "id": "col-ivana",
+    "nombre": "Ivana",
+    "empresa_area": "AECODE",
+    "funcion": "Operaciones / Proyectos",
+    "empresas": [
+      "AECODE"
+    ],
+    "proyectos": "No se tiene claro",
+    "n_proyectos": 0,
+    "actividades": "Servicios de coordinacion academica, planificacion de sesiones y seguimiento de avance de programas de formacion.",
+    "pendientes": "No se tiene claro",
+    "carga": "No se tiene claro",
+    "carga_val": 0.0,
+    "riesgos": "No se tiene claro",
+    "necesita_feedback": false,
+    "proxima_accion": "No se tiene claro",
+    "wip_score": 0,
+    "bottleneck_score": 0,
+    "context_quality_score": 0,
+    "ai_leverage_score": 0,
+    "ai_native_score": 0,
+    "proyecto_ids": [],
+    "avg_proj_health": 0,
+    "aporte_score": 0,
+    "costo_final": 1850.0,
+    "costo_base": 1850.0,
+    "costo_por_empresa": {
+      "AECODE": 1850.0
+    },
+    "rol_rh": "Servicios de coordinacion academica, planificacion de sesiones y seguimiento de avance de programas de formacion.",
+    "costo_aporte": "Equilibrado",
+    "solo_costo": true,
+    "herramientas_actuales": [],
+    "herramientas_recomendadas": [],
+    "agentes_recomendados": [],
+    "procesos_delegables": [],
+    "confianza_ai": "No se tiene claro",
+    "fuente": "Cierre-RH-Pagos",
+    "valor_diff": 0.0
+  },
+  {
+    "id": "col-aranzia",
+    "nombre": "Aranzia",
+    "empresa_area": "AECODE",
+    "funcion": "Marketing",
+    "empresas": [
+      "AECODE"
+    ],
+    "proyectos": "No se tiene claro",
+    "n_proyectos": 0,
+    "actividades": "Servicios de marketing digital, gestion de campanas publicitarias y seguimiento de metricas de captacion.",
+    "pendientes": "No se tiene claro",
+    "carga": "No se tiene claro",
+    "carga_val": 0.0,
+    "riesgos": "No se tiene claro",
+    "necesita_feedback": false,
+    "proxima_accion": "No se tiene claro",
+    "wip_score": 0,
+    "bottleneck_score": 0,
+    "context_quality_score": 0,
+    "ai_leverage_score": 0,
+    "ai_native_score": 0,
+    "proyecto_ids": [],
+    "avg_proj_health": 0,
+    "aporte_score": 0,
+    "costo_final": 1500.0,
+    "costo_base": 1500.0,
+    "costo_por_empresa": {
+      "AECODE": 1500.0
+    },
+    "rol_rh": "Servicios de marketing digital, gestion de campanas publicitarias y seguimiento de metricas de captacion.",
+    "costo_aporte": "Equilibrado",
+    "solo_costo": true,
+    "herramientas_actuales": [],
+    "herramientas_recomendadas": [],
+    "agentes_recomendados": [],
+    "procesos_delegables": [],
+    "confianza_ai": "No se tiene claro",
+    "fuente": "Cierre-RH-Pagos",
+    "valor_diff": 0.03
+  },
+  {
+    "id": "col-edith",
+    "nombre": "Edith",
+    "empresa_area": "AECODE",
+    "funcion": "Administración",
+    "empresas": [
+      "AECODE"
+    ],
+    "proyectos": "No se tiene claro",
+    "n_proyectos": 0,
+    "actividades": "Servicios de apoyo administrativo, seguimiento operativo y actualizacion de informacion de programas.",
+    "pendientes": "No se tiene claro",
+    "carga": "No se tiene claro",
+    "carga_val": 0.0,
+    "riesgos": "No se tiene claro",
+    "necesita_feedback": false,
+    "proxima_accion": "No se tiene claro",
+    "wip_score": 0,
+    "bottleneck_score": 0,
+    "context_quality_score": 0,
+    "ai_leverage_score": 0,
+    "ai_native_score": 0,
+    "proyecto_ids": [],
+    "avg_proj_health": 0,
+    "aporte_score": 0,
+    "costo_final": 300.0,
+    "costo_base": 500.0,
+    "costo_por_empresa": {
+      "AECODE": 300.0
+    },
+    "rol_rh": "Servicios de apoyo administrativo, seguimiento operativo y actualizacion de informacion de programas.",
+    "costo_aporte": "Alto valor",
+    "solo_costo": true,
+    "herramientas_actuales": [],
+    "herramientas_recomendadas": [],
+    "agentes_recomendados": [],
+    "procesos_delegables": [],
+    "confianza_ai": "No se tiene claro",
+    "fuente": "Cierre-RH-Pagos",
+    "valor_diff": 0.35
+  },
+  {
+    "id": "col-kenyi",
+    "nombre": "Kenyi",
+    "empresa_area": "AECODE",
+    "funcion": "Operaciones / Proyectos",
+    "empresas": [
+      "AECODE"
+    ],
+    "proyectos": "No se tiene claro",
+    "n_proyectos": 0,
+    "actividades": "Servicios de desarrollo, actualizacion y soporte de herramientas digitales para programas educativos.",
+    "pendientes": "No se tiene claro",
+    "carga": "No se tiene claro",
+    "carga_val": 0.0,
+    "riesgos": "No se tiene claro",
+    "necesita_feedback": false,
+    "proxima_accion": "No se tiene claro",
+    "wip_score": 0,
+    "bottleneck_score": 0,
+    "context_quality_score": 0,
+    "ai_leverage_score": 0,
+    "ai_native_score": 0,
+    "proyecto_ids": [],
+    "avg_proj_health": 0,
+    "aporte_score": 0,
+    "costo_final": 2000.0,
+    "costo_base": 2000.0,
+    "costo_por_empresa": {
+      "AECODE": 2000.0
+    },
+    "rol_rh": "Servicios de desarrollo, actualizacion y soporte de herramientas digitales para programas educativos.",
+    "costo_aporte": "Equilibrado",
+    "solo_costo": true,
+    "herramientas_actuales": [],
+    "herramientas_recomendadas": [],
+    "agentes_recomendados": [],
+    "procesos_delegables": [],
+    "confianza_ai": "No se tiene claro",
+    "fuente": "Cierre-RH-Pagos",
+    "valor_diff": -0.14
+  },
+  {
+    "id": "col-sebastian",
+    "nombre": "Sebastian",
+    "empresa_area": "AECODE",
+    "funcion": "Operaciones / Proyectos",
+    "empresas": [
+      "AECODE"
+    ],
+    "proyectos": "No se tiene claro",
+    "n_proyectos": 0,
+    "actividades": "Servicios de apoyo operativo, seguimiento de actividades y soporte en plataformas digitales.",
+    "pendientes": "No se tiene claro",
+    "carga": "No se tiene claro",
+    "carga_val": 0.0,
+    "riesgos": "No se tiene claro",
+    "necesita_feedback": false,
+    "proxima_accion": "No se tiene claro",
+    "wip_score": 0,
+    "bottleneck_score": 0,
+    "context_quality_score": 0,
+    "ai_leverage_score": 0,
+    "ai_native_score": 0,
+    "proyecto_ids": [],
+    "avg_proj_health": 0,
+    "aporte_score": 0,
+    "costo_final": 750.0,
+    "costo_base": 750.0,
+    "costo_por_empresa": {},
+    "rol_rh": "Servicios de apoyo operativo, seguimiento de actividades y soporte en plataformas digitales.",
+    "costo_aporte": "Alto valor",
+    "solo_costo": true,
+    "herramientas_actuales": [],
+    "herramientas_recomendadas": [],
+    "agentes_recomendados": [],
+    "procesos_delegables": [],
+    "confianza_ai": "No se tiene claro",
+    "fuente": "Cierre-RH-Pagos",
+    "valor_diff": 0.22
+  },
+  {
+    "id": "col-reiner",
+    "nombre": "Reiner",
+    "empresa_area": "AECODE",
+    "funcion": "Operaciones / Proyectos",
+    "empresas": [
+      "AECODE"
+    ],
+    "proyectos": "No se tiene claro",
+    "n_proyectos": 0,
+    "actividades": "Servicios de levantamiento de informacion tecnica, procesamiento de datos y generacion de reportes de proyecto.",
+    "pendientes": "No se tiene claro",
+    "carga": "No se tiene claro",
+    "carga_val": 0.0,
+    "riesgos": "No se tiene claro",
+    "necesita_feedback": false,
+    "proxima_accion": "No se tiene claro",
+    "wip_score": 0,
+    "bottleneck_score": 0,
+    "context_quality_score": 0,
+    "ai_leverage_score": 0,
+    "ai_native_score": 0,
+    "proyecto_ids": [],
+    "avg_proj_health": 0,
+    "aporte_score": 0,
+    "costo_final": 2500.0,
+    "costo_base": 2000.0,
+    "costo_por_empresa": {
+      "AECODE": 2500.0
+    },
+    "rol_rh": "Servicios de levantamiento de informacion tecnica, procesamiento de datos y generacion de reportes de proyecto.",
+    "costo_aporte": "Revisar",
+    "solo_costo": true,
+    "herramientas_actuales": [],
+    "herramientas_recomendadas": [],
+    "agentes_recomendados": [],
+    "procesos_delegables": [],
+    "confianza_ai": "No se tiene claro",
+    "fuente": "Cierre-RH-Pagos",
+    "valor_diff": -0.27
   }
 ]

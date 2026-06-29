@@ -6,66 +6,70 @@
    DESIGN TOKENS — OKLCH, light default, dark aware.
    The whole system is driven by these variables (design-tokens-oklch).
    ========================================================================== */
+/* GEN+ Light — Deep Navy #0E2A6B · Primary Blue #2165FF · Light Blue #4D84FF · Ice Blue #E9F0FF */
 :root,
 [data-theme="light"] {
   color-scheme: light;
 
-  --bg: oklch(0.984 0.003 247);
+  --bg: oklch(0.982 0.008 255);          /* ice-tinted canvas */
   --surface: oklch(1 0 0);
-  --surface-2: oklch(0.972 0.004 247);
-  --surface-3: oklch(0.944 0.007 247);
-  --border: oklch(0.922 0.008 247);
-  --border-strong: oklch(0.862 0.012 247);
+  --surface-2: oklch(0.968 0.012 255);
+  --surface-3: oklch(0.945 0.020 255);   /* Ice Blue */
+  --border: oklch(0.905 0.018 255);
+  --border-strong: oklch(0.835 0.026 255);
 
-  --fg: oklch(0.21 0.04 264);
-  --fg-2: oklch(0.44 0.03 257);
-  --muted: oklch(0.55 0.028 257);
+  --fg: oklch(0.20 0.035 262);           /* Deep Black/Navy text */
+  --fg-2: oklch(0.42 0.052 258);         /* Slate Blue */
+  --muted: oklch(0.55 0.040 258);        /* Storm Gray */
 
-  --navy: oklch(0.32 0.12 264);
-  --brand: oklch(0.55 0.20 263);
-  --brand-soft: oklch(0.55 0.20 263 / 0.14);
+  --navy: oklch(0.32 0.13 264);          /* Deep Navy */
+  --brand: oklch(0.56 0.20 263);         /* Primary Blue #2165FF */
+  --brand-soft: oklch(0.56 0.20 263 / 0.13);
+  --blue-light: oklch(0.66 0.16 263);    /* Light Blue #4D84FF */
   --violet: oklch(0.53 0.24 293);
-  --cyan: oklch(0.69 0.13 219);
-  --emerald: oklch(0.66 0.15 162);
-  --amber: oklch(0.76 0.16 73);
-  --red: oklch(0.61 0.22 26);
-  --slate: oklch(0.37 0.03 257);
+  --cyan: oklch(0.66 0.12 230);
+  --emerald: oklch(0.64 0.15 162);
+  --amber: oklch(0.74 0.16 73);
+  --red: oklch(0.59 0.22 26);
+  --slate: oklch(0.40 0.045 258);
 
   --ok: var(--emerald);
   --warn: var(--amber);
   --crit: var(--red);
   --info: var(--brand);
 
-  --ring: oklch(0.55 0.20 263 / 0.55);
-  --shadow-color: 222 30% 18%;
+  --ring: oklch(0.56 0.20 263 / 0.55);
+  --shadow-color: 224 45% 22%;
 
-  /* brand accent per company (used by chips / accents) */
-  --c-genplus: oklch(0.55 0.20 263);
-  --c-aecode: oklch(0.66 0.15 162);
+  /* brand accent per company (GEN+ = Primary Blue) */
+  --c-genplus: oklch(0.56 0.20 263);
+  --c-aecode: oklch(0.64 0.15 162);
   --c-visionpro: oklch(0.53 0.24 293);
-  --c-agentflow: oklch(0.69 0.13 219);
-  --c-thesia: oklch(0.76 0.16 73);
-  --c-spplus: oklch(0.55 0.03 257);
-  --c-ap: oklch(0.32 0.12 264);
+  --c-agentflow: oklch(0.66 0.12 230);
+  --c-thesia: oklch(0.74 0.16 73);
+  --c-spplus: oklch(0.50 0.045 258);
+  --c-ap: oklch(0.32 0.13 264);
 }
 
+/* GEN+ Dark — Deep Black #040F20 base, Primary/Light Blue accents */
 [data-theme="dark"] {
   color-scheme: dark;
 
-  --bg: oklch(0.165 0.018 264);
-  --surface: oklch(0.205 0.021 264);
-  --surface-2: oklch(0.245 0.023 264);
-  --surface-3: oklch(0.285 0.025 264);
-  --border: oklch(0.305 0.022 264);
-  --border-strong: oklch(0.40 0.024 264);
+  --bg: oklch(0.155 0.022 262);
+  --surface: oklch(0.198 0.025 262);
+  --surface-2: oklch(0.238 0.027 262);
+  --surface-3: oklch(0.280 0.029 262);
+  --border: oklch(0.300 0.026 262);
+  --border-strong: oklch(0.40 0.028 262);
 
-  --fg: oklch(0.96 0.01 247);
-  --fg-2: oklch(0.79 0.02 252);
-  --muted: oklch(0.64 0.022 254);
+  --fg: oklch(0.96 0.012 255);
+  --fg-2: oklch(0.79 0.024 255);
+  --muted: oklch(0.64 0.026 256);
 
-  --navy: oklch(0.62 0.13 264);
+  --navy: oklch(0.62 0.14 264);
   --brand: oklch(0.70 0.17 263);
   --brand-soft: oklch(0.70 0.17 263 / 0.20);
+  --blue-light: oklch(0.74 0.15 263);
   --violet: oklch(0.66 0.22 293);
   --cyan: oklch(0.74 0.13 219);
   --emerald: oklch(0.74 0.15 162);
@@ -77,7 +81,7 @@
   --shadow-color: 222 50% 3%;
 
   --c-genplus: oklch(0.70 0.17 263);
-  --c-aecode: oklch(0.74 0.15 162);
+  --c-aecode: oklch(0.76 0.15 162);
   --c-visionpro: oklch(0.66 0.22 293);
   --c-agentflow: oklch(0.74 0.13 219);
   --c-thesia: oklch(0.81 0.16 76);
@@ -102,17 +106,17 @@
     margin: 0;
     background: var(--bg);
     color: var(--fg);
-    font-family: "Inter", system-ui, sans-serif;
-    font-feature-settings: "cv11", "ss01";
+    font-family: "Plus Jakarta Sans", system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-size: 14px;
     line-height: 1.5;
   }
   h1, h2, h3, h4 {
-    font-family: "Space Grotesk", Inter, sans-serif;
+    font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+    font-weight: 700;
     text-wrap: balance;
-    letter-spacing: -0.012em;
+    letter-spacing: -0.015em;
   }
   ::selection {
     background: var(--brand-soft);

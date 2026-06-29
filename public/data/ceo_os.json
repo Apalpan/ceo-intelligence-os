@@ -1,13 +1,15 @@
 {
   "meta": {
-    "generated_at": "2026-06-28 19:10",
+    "generated_at": "2026-06-28 20:24",
     "vault": "D:\\AP\\AP_Knowledge_OS\\00_CEO_Intelligence",
-    "first_run": true,
+    "first_run": false,
     "corte": "2026-06-28 16:25 PET",
+    "periodo": "2026-06",
+    "periodo_costos": "2026-05",
     "counts": {
       "empresas": 6,
       "proyectos": 22,
-      "colaboradores": 24,
+      "colaboradores": 38,
       "riesgos": 19,
       "bloqueos": 14,
       "decisiones": 8,
@@ -25,7 +27,7 @@
       "n_proyectos": 10,
       "health_score": 77,
       "risk_score": 51,
-      "ai_native_score": 52,
+      "ai_native_score": 44,
       "process_score": 53,
       "estado_global": "amarillo",
       "presente": true,
@@ -38,7 +40,7 @@
       "n_proyectos": 8,
       "health_score": 76,
       "risk_score": 53,
-      "ai_native_score": 52,
+      "ai_native_score": 31,
       "process_score": 52,
       "estado_global": "amarillo",
       "presente": true,
@@ -234,12 +236,161 @@
       "estado": "amarillo"
     }
   ],
+  "funciones": [
+    {
+      "id": "fn-gen-finanzas",
+      "empresa": "GEN+",
+      "funcion": "Finanzas",
+      "icon": "Banknote",
+      "n_proyectos": 1,
+      "reds": 1,
+      "health_score": 67,
+      "risk_score": 38,
+      "proyectos": [
+        "prj-gen-cobranzas-gen"
+      ]
+    },
+    {
+      "id": "fn-gen-operaciones-proyectos",
+      "empresa": "GEN+",
+      "funcion": "Operaciones / Proyectos",
+      "icon": "HardHat",
+      "n_proyectos": 8,
+      "reds": 3,
+      "health_score": 79,
+      "risk_score": 38,
+      "proyectos": [
+        "prj-gen-ptar-atarjea-buzones",
+        "prj-gen-ca-ete",
+        "prj-gen-faucett",
+        "prj-gen-dovelas-panama",
+        "prj-gen-the-circle",
+        "prj-gen-puente-tingo",
+        "prj-gen-esparq",
+        "prj-gen-agente-inmobiliario-gen"
+      ]
+    },
+    {
+      "id": "fn-gen-comercial",
+      "empresa": "GEN+",
+      "funcion": "Comercial",
+      "icon": "Handshake",
+      "n_proyectos": 1,
+      "reds": 0,
+      "health_score": 71,
+      "risk_score": 20,
+      "proyectos": [
+        "prj-gen-uncp-osp-nestle-gore-otros"
+      ]
+    },
+    {
+      "id": "fn-aecode-comercial",
+      "empresa": "AECODE",
+      "funcion": "Comercial",
+      "icon": "Handshake",
+      "n_proyectos": 2,
+      "reds": 1,
+      "health_score": 73,
+      "risk_score": 44,
+      "proyectos": [
+        "prj-aecode-sponsors-pipeline",
+        "prj-aecode-ventas-training"
+      ]
+    },
+    {
+      "id": "fn-aecode-operaciones-proyectos",
+      "empresa": "AECODE",
+      "funcion": "Operaciones / Proyectos",
+      "icon": "HardHat",
+      "n_proyectos": 4,
+      "reds": 1,
+      "health_score": 81,
+      "risk_score": 36,
+      "proyectos": [
+        "prj-aecode-web-app-agenda",
+        "prj-aecode-diplomados-certificados",
+        "prj-aecode-fase-2-fase-3-aecode",
+        "prj-aecode-kaman-convocatorias"
+      ]
+    },
+    {
+      "id": "fn-aecode-marketing",
+      "empresa": "AECODE",
+      "funcion": "Marketing",
+      "icon": "Megaphone",
+      "n_proyectos": 2,
+      "reds": 1,
+      "health_score": 69,
+      "risk_score": 44,
+      "proyectos": [
+        "prj-aecode-pre-congreso",
+        "prj-aecode-summit-reto-ia-training"
+      ]
+    },
+    {
+      "id": "fn-visionpro-operaciones-proyectos",
+      "empresa": "VisionPro",
+      "funcion": "Operaciones / Proyectos",
+      "icon": "HardHat",
+      "n_proyectos": 1,
+      "reds": 1,
+      "health_score": 79,
+      "risk_score": 53,
+      "proyectos": [
+        "prj-visionpro-pdk-ascent"
+      ]
+    },
+    {
+      "id": "fn-visionpro-comercial",
+      "empresa": "VisionPro",
+      "funcion": "Comercial",
+      "icon": "Handshake",
+      "n_proyectos": 1,
+      "reds": 0,
+      "health_score": 79,
+      "risk_score": 20,
+      "proyectos": [
+        "prj-visionpro-visionpro-decks"
+      ]
+    },
+    {
+      "id": "fn-thesia-finanzas",
+      "empresa": "THESIA",
+      "funcion": "Finanzas",
+      "icon": "Banknote",
+      "n_proyectos": 1,
+      "reds": 0,
+      "health_score": 56,
+      "risk_score": 35,
+      "proyectos": [
+        "prj-thesia-thesia-presupuesto-tesis-juan"
+      ]
+    },
+    {
+      "id": "fn-agentflow-automatizaci-n",
+      "empresa": "AgentFlow",
+      "funcion": "Automatización",
+      "icon": "Workflow",
+      "n_proyectos": 1,
+      "reds": 0,
+      "health_score": 65,
+      "risk_score": 35,
+      "proyectos": [
+        "prj-agentflow-migracion-flujos"
+      ]
+    }
+  ],
   "proyectos": [
     {
       "id": "prj-gen-cobranzas-gen",
       "empresa": "GEN+",
       "area": "Caja",
       "nombre": "Cobranzas GEN+",
+      "funcion": "Finanzas",
+      "unidad": "GEN+",
+      "personas": [
+        "Julie"
+      ],
       "responsable": "Julie",
       "avance_reportado": 35,
       "avance_validado": 35,
@@ -262,6 +413,13 @@
       "empresa": "GEN+",
       "area": "Delivery BIM",
       "nombre": "PTAR Atarjea / Buzones",
+      "funcion": "Operaciones / Proyectos",
+      "unidad": "GEN+",
+      "personas": [
+        "Kevin",
+        "Luis",
+        "Julie"
+      ],
       "responsable": "Kevin / Luis / Julie",
       "avance_reportado": 60,
       "avance_validado": 60,
@@ -284,6 +442,14 @@
       "empresa": "GEN+",
       "area": "Delivery BIM",
       "nombre": "Cañete",
+      "funcion": "Operaciones / Proyectos",
+      "unidad": "GEN+",
+      "personas": [
+        "Fabrizio",
+        "Israel",
+        "Robert",
+        "Luis"
+      ],
       "responsable": "Fabrizio / Israel / Robert / Luis",
       "avance_reportado": 95,
       "avance_validado": 95,
@@ -306,6 +472,12 @@
       "empresa": "GEN+",
       "area": "Delivery BIM",
       "nombre": "Faucett",
+      "funcion": "Operaciones / Proyectos",
+      "unidad": "GEN+",
+      "personas": [
+        "Fabrizio",
+        "Israel"
+      ],
       "responsable": "Fabrizio / Israel",
       "avance_reportado": 100,
       "avance_validado": 100,
@@ -328,6 +500,13 @@
       "empresa": "GEN+",
       "area": "Delivery BIM",
       "nombre": "Dovelas Panama",
+      "funcion": "Operaciones / Proyectos",
+      "unidad": "GEN+",
+      "personas": [
+        "Fabrizio",
+        "Guisella",
+        "Julie"
+      ],
       "responsable": "Fabrizio / Guisella / Julie",
       "avance_reportado": 35,
       "avance_validado": 35,
@@ -350,6 +529,12 @@
       "empresa": "GEN+",
       "area": "Delivery BIM",
       "nombre": "The Circle",
+      "funcion": "Operaciones / Proyectos",
+      "unidad": "GEN+",
+      "personas": [
+        "Fabrizio",
+        "Guisella"
+      ],
       "responsable": "Fabrizio / Guisella",
       "avance_reportado": 60,
       "avance_validado": 60,
@@ -372,6 +557,12 @@
       "empresa": "GEN+",
       "area": "Delivery BIM",
       "nombre": "Puente Tingo",
+      "funcion": "Operaciones / Proyectos",
+      "unidad": "GEN+",
+      "personas": [
+        "Fabrizio",
+        "Luis"
+      ],
       "responsable": "Fabrizio / Luis",
       "avance_reportado": 60,
       "avance_validado": 50,
@@ -394,6 +585,14 @@
       "empresa": "GEN+",
       "area": "Producto/consultoria",
       "nombre": "ESPARQ",
+      "funcion": "Operaciones / Proyectos",
+      "unidad": "GEN+",
+      "personas": [
+        "Alejandro",
+        "Daniella",
+        "Fabrizio",
+        "Yary"
+      ],
       "responsable": "Alejandro / Daniella / Fabrizio / Yary",
       "avance_reportado": 60,
       "avance_validado": 60,
@@ -416,6 +615,11 @@
       "empresa": "GEN+",
       "area": "Producto interno",
       "nombre": "Agente Inmobiliario GEN+",
+      "funcion": "Operaciones / Proyectos",
+      "unidad": "GEN+",
+      "personas": [
+        "Fabrizio"
+      ],
       "responsable": "Fabrizio",
       "avance_reportado": 100,
       "avance_validado": 100,
@@ -438,6 +642,12 @@
       "empresa": "GEN+",
       "area": "Comercial",
       "nombre": "UNCP / OSP / Nestle / GORE / otros",
+      "funcion": "Comercial",
+      "unidad": "GEN+",
+      "personas": [
+        "Julie",
+        "Daniella"
+      ],
       "responsable": "Julie / Daniella",
       "avance_reportado": 60,
       "avance_validado": 50,
@@ -460,6 +670,13 @@
       "empresa": "AECODE",
       "area": "Summit",
       "nombre": "Sponsors / pipeline",
+      "funcion": "Comercial",
+      "unidad": "AECODE AI Construction Summit",
+      "personas": [
+        "Erika",
+        "Paola",
+        "Julie"
+      ],
       "responsable": "Erika / Paola / Julie",
       "avance_reportado": 35,
       "avance_validado": 35,
@@ -482,6 +699,14 @@
       "empresa": "AECODE",
       "area": "Summit",
       "nombre": "Web / App / agenda",
+      "funcion": "Operaciones / Proyectos",
+      "unidad": "AECODE AI Construction Summit",
+      "personas": [
+        "Marlon",
+        "Yary",
+        "Anderson",
+        "Fabrizio"
+      ],
       "responsable": "Marlon / Yary / Anderson / Fabrizio",
       "avance_reportado": 97,
       "avance_validado": 97,
@@ -504,6 +729,13 @@
       "empresa": "AECODE",
       "area": "Summit",
       "nombre": "Pre Congreso",
+      "funcion": "Marketing",
+      "unidad": "AECODE AI Construction Summit",
+      "personas": [
+        "Arantxa",
+        "Jessica",
+        "Enma"
+      ],
       "responsable": "Arantxa / Jessica / Enma",
       "avance_reportado": 35,
       "avance_validado": 35,
@@ -526,6 +758,15 @@
       "empresa": "AECODE",
       "area": "Training",
       "nombre": "Diplomados/certificados",
+      "funcion": "Operaciones / Proyectos",
+      "unidad": "AECODE Live Training",
+      "personas": [
+        "Carolina",
+        "Patrick",
+        "Marlon",
+        "Kevin",
+        "Julie"
+      ],
       "responsable": "Carolina / Patrick / Marlon / Kevin / Julie",
       "avance_reportado": 35,
       "avance_validado": 35,
@@ -548,6 +789,14 @@
       "empresa": "AECODE",
       "area": "Comercial B2C",
       "nombre": "Ventas Training",
+      "funcion": "Comercial",
+      "unidad": "AECODE Live Training",
+      "personas": [
+        "Talia",
+        "Genesis",
+        "Yadira",
+        "Reiner"
+      ],
       "responsable": "Talia / Genesis / Yadira / Reiner",
       "avance_reportado": 60,
       "avance_validado": 60,
@@ -570,6 +819,14 @@
       "empresa": "AECODE",
       "area": "Marketing",
       "nombre": "Summit / Reto IA / Training",
+      "funcion": "Marketing",
+      "unidad": "AECODE AI Construction Summit",
+      "personas": [
+        "Arantxa",
+        "Enma",
+        "Jessica",
+        "Anggie"
+      ],
       "responsable": "Arantxa / Enma / Jessica / Anggie",
       "avance_reportado": 60,
       "avance_validado": 50,
@@ -592,6 +849,15 @@
       "empresa": "AECODE",
       "area": "Producto digital",
       "nombre": "Fase 2 / Fase 3 / AECODE",
+      "funcion": "Operaciones / Proyectos",
+      "unidad": "AECODE Producto / Plataforma",
+      "personas": [
+        "Yary",
+        "Marlon",
+        "Anderson",
+        "Yudely",
+        "Fabrizio"
+      ],
       "responsable": "Yary / Marlon / Anderson / Yudely / Fabrizio",
       "avance_reportado": 100,
       "avance_validado": 100,
@@ -614,6 +880,13 @@
       "empresa": "AECODE",
       "area": "Startup",
       "nombre": "Kaman / convocatorias",
+      "funcion": "Operaciones / Proyectos",
+      "unidad": "AECODE Startup",
+      "personas": [
+        "Daniella",
+        "Julie",
+        "Alejandro"
+      ],
       "responsable": "Daniella / Julie / Alejandro",
       "avance_reportado": 60,
       "avance_validado": 60,
@@ -636,6 +909,15 @@
       "empresa": "VisionPro",
       "area": "Producto/obra",
       "nombre": "PDK Ascent",
+      "funcion": "Operaciones / Proyectos",
+      "unidad": "VisionPro",
+      "personas": [
+        "Marlon",
+        "Emanuel",
+        "Yary",
+        "Daniella",
+        "Erika"
+      ],
       "responsable": "Marlon / Emanuel / Yary / Daniella / Erika",
       "avance_reportado": 80,
       "avance_validado": 80,
@@ -658,6 +940,13 @@
       "empresa": "VisionPro",
       "area": "Comercial",
       "nombre": "VisionPro decks",
+      "funcion": "Comercial",
+      "unidad": "VisionPro",
+      "personas": [
+        "Daniella",
+        "Julie",
+        "Erika"
+      ],
       "responsable": "Daniella / Julie / Erika",
       "avance_reportado": 60,
       "avance_validado": 60,
@@ -680,6 +969,12 @@
       "empresa": "THESIA",
       "area": "Startup/documentacion",
       "nombre": "THESIA presupuesto / Tesis Juan",
+      "funcion": "Finanzas",
+      "unidad": "THESIA",
+      "personas": [
+        "Julie",
+        "Fabrizio"
+      ],
       "responsable": "Julie / Fabrizio",
       "avance_reportado": 60,
       "avance_validado": 50,
@@ -702,6 +997,13 @@
       "empresa": "AgentFlow",
       "area": "Automatizacion",
       "nombre": "Migracion flujos",
+      "funcion": "Automatización",
+      "unidad": "AgentFlow",
+      "personas": [
+        "Emanuel",
+        "Fabrizio",
+        "Marlon"
+      ],
       "responsable": "Emanuel / Fabrizio / Marlon",
       "avance_reportado": 100,
       "avance_validado": 84,
@@ -725,6 +1027,7 @@
       "id": "col-julie",
       "nombre": "Julie",
       "empresa_area": "GEN+ / AECODE / Startup",
+      "funcion": "Contabilidad",
       "empresas": [
         "GEN+",
         "AECODE"
@@ -743,6 +1046,27 @@
       "context_quality_score": 70,
       "ai_leverage_score": 50,
       "ai_native_score": 53,
+      "proyecto_ids": [
+        "prj-gen-cobranzas-gen",
+        "prj-gen-ptar-atarjea-buzones",
+        "prj-gen-dovelas-panama",
+        "prj-gen-uncp-osp-nestle-gore-otros",
+        "prj-aecode-sponsors-pipeline",
+        "prj-aecode-diplomados-certificados",
+        "prj-aecode-kaman-convocatorias",
+        "prj-visionpro-visionpro-decks",
+        "prj-thesia-thesia-presupuesto-tesis-juan"
+      ],
+      "avg_proj_health": 70,
+      "aporte_score": 76,
+      "costo_final": 3750.0,
+      "costo_base": 4500.0,
+      "costo_por_empresa": {
+        "GEN+": 3750.0
+      },
+      "rol_rh": "Servicios de desarrollo comercial, seguimiento de cartera de clientes y actualizacion de control de cotizaciones y EDP.",
+      "costo_aporte": "Alto valor",
+      "solo_costo": false,
       "herramientas_actuales": [
         "Excel",
         "WhatsApp"
@@ -760,12 +1084,14 @@
         "Recordatorios de cobro"
       ],
       "confianza_ai": "Inferido",
-      "fuente": "02_Matriz_Colaboradores.md"
+      "fuente": "02_Matriz_Colaboradores.md",
+      "valor_diff": 0.19
     },
     {
       "id": "col-marlon",
       "nombre": "Marlon",
       "empresa_area": "AECODE / GEN+ / VisionPro",
+      "funcion": "Automatización",
       "empresas": [
         "GEN+",
         "AECODE",
@@ -785,6 +1111,23 @@
       "context_quality_score": 60,
       "ai_leverage_score": 60,
       "ai_native_score": 60,
+      "proyecto_ids": [
+        "prj-aecode-web-app-agenda",
+        "prj-aecode-diplomados-certificados",
+        "prj-aecode-fase-2-fase-3-aecode",
+        "prj-visionpro-pdk-ascent",
+        "prj-agentflow-migracion-flujos"
+      ],
+      "avg_proj_health": 78,
+      "aporte_score": 77,
+      "costo_final": 3000.0,
+      "costo_base": 3000.0,
+      "costo_por_empresa": {
+        "AECODE": 3000.0
+      },
+      "rol_rh": "Servicios de investigacion, sintesis de contenido tecnologico y desarrollo de materiales para programas de innovacion.",
+      "costo_aporte": "Alto valor",
+      "solo_costo": false,
       "herramientas_actuales": [
         "Claude Code",
         "C#",
@@ -803,12 +1146,14 @@
         "Seguimiento de certificados"
       ],
       "confianza_ai": "Inferido",
-      "fuente": "02_Matriz_Colaboradores.md"
+      "fuente": "02_Matriz_Colaboradores.md",
+      "valor_diff": 0.27
     },
     {
       "id": "col-fabrizio",
       "nombre": "Fabrizio",
       "empresa_area": "GEN+ / AECODE / THESIA",
+      "funcion": "Automatización",
       "empresas": [
         "GEN+",
         "AECODE",
@@ -828,6 +1173,30 @@
       "context_quality_score": 70,
       "ai_leverage_score": 66,
       "ai_native_score": 67,
+      "proyecto_ids": [
+        "prj-gen-ca-ete",
+        "prj-gen-faucett",
+        "prj-gen-dovelas-panama",
+        "prj-gen-the-circle",
+        "prj-gen-puente-tingo",
+        "prj-gen-esparq",
+        "prj-gen-agente-inmobiliario-gen",
+        "prj-aecode-web-app-agenda",
+        "prj-aecode-fase-2-fase-3-aecode",
+        "prj-thesia-thesia-presupuesto-tesis-juan",
+        "prj-agentflow-migracion-flujos"
+      ],
+      "avg_proj_health": 78,
+      "aporte_score": 74,
+      "costo_final": 4000.0,
+      "costo_base": 4000.0,
+      "costo_por_empresa": {
+        "GEN+": 2000.0,
+        "AECODE": 2000.0
+      },
+      "rol_rh": "Servicios de investigacion, sintesis de contenido tecnologico y desarrollo de materiales para programas de innovacion.",
+      "costo_aporte": "Equilibrado",
+      "solo_costo": false,
       "herramientas_actuales": [
         "Claude Code",
         "Revit",
@@ -846,12 +1215,14 @@
         "Documentación de entregables"
       ],
       "confianza_ai": "Inferido",
-      "fuente": "02_Matriz_Colaboradores.md"
+      "fuente": "02_Matriz_Colaboradores.md",
+      "valor_diff": 0.08
     },
     {
       "id": "col-yary",
       "nombre": "Yary",
       "empresa_area": "AECODE / VisionPro / GEN+",
+      "funcion": "Operaciones / Proyectos",
       "empresas": [
         "GEN+",
         "AECODE",
@@ -871,6 +1242,22 @@
       "context_quality_score": 60,
       "ai_leverage_score": 56,
       "ai_native_score": 58,
+      "proyecto_ids": [
+        "prj-gen-esparq",
+        "prj-aecode-web-app-agenda",
+        "prj-aecode-fase-2-fase-3-aecode",
+        "prj-visionpro-pdk-ascent"
+      ],
+      "avg_proj_health": 84,
+      "aporte_score": 68,
+      "costo_final": 2400.0,
+      "costo_base": 2400.0,
+      "costo_por_empresa": {
+        "GEN+": 2400.0
+      },
+      "rol_rh": "Servicios de diseno y desarrollo web, mantenimiento de plataformas digitales y soporte tecnico a sistemas internos.",
+      "costo_aporte": "Alto valor",
+      "solo_costo": false,
       "herramientas_actuales": [
         "Figma",
         "HTML"
@@ -886,12 +1273,14 @@
         "Documentación de componentes"
       ],
       "confianza_ai": "Inferido",
-      "fuente": "02_Matriz_Colaboradores.md"
+      "fuente": "02_Matriz_Colaboradores.md",
+      "valor_diff": 0.3
     },
     {
       "id": "col-carolina",
       "nombre": "Carolina",
       "empresa_area": "AECODE Training",
+      "funcion": "Operaciones / Proyectos",
       "empresas": [
         "AECODE"
       ],
@@ -909,6 +1298,19 @@
       "context_quality_score": 60,
       "ai_leverage_score": 46,
       "ai_native_score": 50,
+      "proyecto_ids": [
+        "prj-aecode-diplomados-certificados"
+      ],
+      "avg_proj_health": 67,
+      "aporte_score": 56,
+      "costo_final": 2000.0,
+      "costo_base": 2000.0,
+      "costo_por_empresa": {
+        "AECODE": 1000.0
+      },
+      "rol_rh": "Servicios de coordinacion comercial, seguimiento de participantes y soporte operativo de programas educativos.",
+      "costo_aporte": "Alto valor",
+      "solo_costo": false,
       "herramientas_actuales": [
         "Sheets",
         "Zoom"
@@ -925,12 +1327,14 @@
         "Estado de certificados"
       ],
       "confianza_ai": "Inferido",
-      "fuente": "02_Matriz_Colaboradores.md"
+      "fuente": "02_Matriz_Colaboradores.md",
+      "valor_diff": 0.24
     },
     {
       "id": "col-talia",
       "nombre": "Talia",
       "empresa_area": "AECODE Comercial",
+      "funcion": "Comercial",
       "empresas": [
         "AECODE"
       ],
@@ -948,6 +1352,19 @@
       "context_quality_score": 60,
       "ai_leverage_score": 50,
       "ai_native_score": 51,
+      "proyecto_ids": [
+        "prj-aecode-ventas-training"
+      ],
+      "avg_proj_health": 79,
+      "aporte_score": 36,
+      "costo_final": 2300.0,
+      "costo_base": 1800.0,
+      "costo_por_empresa": {
+        "AECODE": 2300.0
+      },
+      "rol_rh": "Servicios de asesoria comercial, seguimiento de leads y cierre de inscripciones a programas educativos.",
+      "costo_aporte": "Equilibrado",
+      "solo_costo": false,
       "herramientas_actuales": [
         "GHL",
         "WhatsApp"
@@ -963,12 +1380,14 @@
         "Reporte de funnel"
       ],
       "confianza_ai": "Inferido",
-      "fuente": "02_Matriz_Colaboradores.md"
+      "fuente": "02_Matriz_Colaboradores.md",
+      "valor_diff": -0.05
     },
     {
       "id": "col-genesis",
       "nombre": "Genesis",
       "empresa_area": "AECODE Comercial",
+      "funcion": "Comercial",
       "empresas": [
         "AECODE"
       ],
@@ -986,6 +1405,19 @@
       "context_quality_score": 50,
       "ai_leverage_score": 44,
       "ai_native_score": 45,
+      "proyecto_ids": [
+        "prj-aecode-ventas-training"
+      ],
+      "avg_proj_health": 79,
+      "aporte_score": 36,
+      "costo_final": 3000.0,
+      "costo_base": 2500.0,
+      "costo_por_empresa": {
+        "AECODE": 3000.0
+      },
+      "rol_rh": "Servicios de coordinacion administrativa, gestion documental y actualizacion de informacion operativa de proyectos.",
+      "costo_aporte": "Revisar",
+      "solo_costo": false,
       "herramientas_actuales": [
         "GHL",
         "WhatsApp"
@@ -1001,12 +1433,14 @@
         "Corte de ventas"
       ],
       "confianza_ai": "Inferido",
-      "fuente": "02_Matriz_Colaboradores.md"
+      "fuente": "02_Matriz_Colaboradores.md",
+      "valor_diff": -0.24
     },
     {
       "id": "col-yadira",
       "nombre": "Yadira",
       "empresa_area": "AECODE Comercial",
+      "funcion": "Comercial",
       "empresas": [
         "AECODE"
       ],
@@ -1024,6 +1458,17 @@
       "context_quality_score": 50,
       "ai_leverage_score": 40,
       "ai_native_score": 42,
+      "proyecto_ids": [
+        "prj-aecode-ventas-training"
+      ],
+      "avg_proj_health": 79,
+      "aporte_score": 36,
+      "costo_final": 1150.0,
+      "costo_base": 1150.0,
+      "costo_por_empresa": {},
+      "rol_rh": "Servicios de apoyo administrativo, actualizacion documental y seguimiento operativo de proyectos.",
+      "costo_aporte": "Alto valor",
+      "solo_costo": false,
       "herramientas_actuales": [
         "GHL"
       ],
@@ -1037,12 +1482,14 @@
         "Separar venta completa/cuota"
       ],
       "confianza_ai": "Inferido",
-      "fuente": "02_Matriz_Colaboradores.md"
+      "fuente": "02_Matriz_Colaboradores.md",
+      "valor_diff": 0.22
     },
     {
       "id": "col-erika",
       "nombre": "Erika",
       "empresa_area": "AECODE Summit",
+      "funcion": "Comercial",
       "empresas": [
         "AECODE"
       ],
@@ -1060,6 +1507,22 @@
       "context_quality_score": 70,
       "ai_leverage_score": 52,
       "ai_native_score": 54,
+      "proyecto_ids": [
+        "prj-aecode-sponsors-pipeline",
+        "prj-visionpro-pdk-ascent",
+        "prj-visionpro-visionpro-decks"
+      ],
+      "avg_proj_health": 75,
+      "aporte_score": 67,
+      "costo_final": 4500.0,
+      "costo_base": 3000.0,
+      "costo_por_empresa": {
+        "THESIA": 3500.0,
+        "GEN+": 1000.0
+      },
+      "rol_rh": "Servicios de coordinacion administrativa, gestion documental y actualizacion de informacion operativa de proyectos.",
+      "costo_aporte": "Equilibrado",
+      "solo_costo": false,
       "herramientas_actuales": [
         "Sheets",
         "WhatsApp"
@@ -1075,12 +1538,14 @@
         "Corte sponsor diario"
       ],
       "confianza_ai": "Inferido",
-      "fuente": "02_Matriz_Colaboradores.md"
+      "fuente": "02_Matriz_Colaboradores.md",
+      "valor_diff": -0.08
     },
     {
       "id": "col-paola",
       "nombre": "Paola",
       "empresa_area": "AECODE Summit",
+      "funcion": "Comercial",
       "empresas": [
         "AECODE"
       ],
@@ -1098,6 +1563,19 @@
       "context_quality_score": 70,
       "ai_leverage_score": 52,
       "ai_native_score": 56,
+      "proyecto_ids": [
+        "prj-aecode-sponsors-pipeline"
+      ],
+      "avg_proj_health": 67,
+      "aporte_score": 56,
+      "costo_final": 1000.0,
+      "costo_base": 1000.0,
+      "costo_por_empresa": {
+        "AECODE": 1000.0
+      },
+      "rol_rh": "Servicios de produccion audiovisual, grabacion, edicion y gestion de sesiones en plataformas de videoconferencia.",
+      "costo_aporte": "Alto valor",
+      "solo_costo": false,
       "herramientas_actuales": [
         "Sheets"
       ],
@@ -1111,12 +1589,14 @@
         "Cruce pago-beneficio-delegación"
       ],
       "confianza_ai": "Inferido",
-      "fuente": "02_Matriz_Colaboradores.md"
+      "fuente": "02_Matriz_Colaboradores.md",
+      "valor_diff": 0.51
     },
     {
       "id": "col-arantxa",
       "nombre": "Arantxa",
       "empresa_area": "AECODE Marketing",
+      "funcion": "Marketing",
       "empresas": [
         "AECODE"
       ],
@@ -1134,6 +1614,18 @@
       "context_quality_score": 60,
       "ai_leverage_score": 54,
       "ai_native_score": 53,
+      "proyecto_ids": [
+        "prj-aecode-pre-congreso",
+        "prj-aecode-summit-reto-ia-training"
+      ],
+      "avg_proj_health": 69,
+      "aporte_score": 53,
+      "costo_final": "No se tiene claro",
+      "costo_base": "No se tiene claro",
+      "costo_por_empresa": {},
+      "rol_rh": "No se tiene claro",
+      "costo_aporte": "No se tiene claro",
+      "solo_costo": false,
       "herramientas_actuales": [
         "Meta Ads",
         "GHL",
@@ -1150,12 +1642,14 @@
         "Landing"
       ],
       "confianza_ai": "Inferido",
-      "fuente": "02_Matriz_Colaboradores.md"
+      "fuente": "02_Matriz_Colaboradores.md",
+      "valor_diff": 0
     },
     {
       "id": "col-jessica",
       "nombre": "Jessica",
       "empresa_area": "AECODE Marketing/GHL",
+      "funcion": "Automatización",
       "empresas": [
         "AECODE"
       ],
@@ -1173,6 +1667,20 @@
       "context_quality_score": 50,
       "ai_leverage_score": 56,
       "ai_native_score": 53,
+      "proyecto_ids": [
+        "prj-aecode-pre-congreso",
+        "prj-aecode-summit-reto-ia-training"
+      ],
+      "avg_proj_health": 69,
+      "aporte_score": 53,
+      "costo_final": 2000.0,
+      "costo_base": 2000.0,
+      "costo_por_empresa": {
+        "AECODE": 2000.0
+      },
+      "rol_rh": "Servicios de marketing digital, gestion de campanas publicitarias y seguimiento de metricas de captacion.",
+      "costo_aporte": "Equilibrado",
+      "solo_costo": false,
       "herramientas_actuales": [
         "GHL"
       ],
@@ -1187,12 +1695,14 @@
         "Tracking end-to-end"
       ],
       "confianza_ai": "Inferido",
-      "fuente": "02_Matriz_Colaboradores.md"
+      "fuente": "02_Matriz_Colaboradores.md",
+      "valor_diff": 0.08
     },
     {
       "id": "col-enma",
       "nombre": "Enma",
       "empresa_area": "AECODE Marketing",
+      "funcion": "Marketing",
       "empresas": [
         "AECODE"
       ],
@@ -1210,6 +1720,20 @@
       "context_quality_score": 50,
       "ai_leverage_score": 50,
       "ai_native_score": 49,
+      "proyecto_ids": [
+        "prj-aecode-pre-congreso",
+        "prj-aecode-summit-reto-ia-training"
+      ],
+      "avg_proj_health": 69,
+      "aporte_score": 53,
+      "costo_final": 1400.0,
+      "costo_base": 1400.0,
+      "costo_por_empresa": {
+        "AECODE": 1400.0
+      },
+      "rol_rh": "Servicios de marketing digital, gestion de campanas publicitarias y seguimiento de metricas de captacion.",
+      "costo_aporte": "Alto valor",
+      "solo_costo": false,
       "herramientas_actuales": [
         "Canva",
         "TikTok"
@@ -1225,12 +1749,14 @@
         "Brochures versión única"
       ],
       "confianza_ai": "Inferido",
-      "fuente": "02_Matriz_Colaboradores.md"
+      "fuente": "02_Matriz_Colaboradores.md",
+      "valor_diff": 0.27
     },
     {
       "id": "col-anggie",
       "nombre": "Anggie",
       "empresa_area": "AECODE Growth",
+      "funcion": "Marketing",
       "empresas": [
         "AECODE"
       ],
@@ -1248,6 +1774,19 @@
       "context_quality_score": 50,
       "ai_leverage_score": 50,
       "ai_native_score": 50,
+      "proyecto_ids": [
+        "prj-aecode-summit-reto-ia-training"
+      ],
+      "avg_proj_health": 71,
+      "aporte_score": 33,
+      "costo_final": 3250.0,
+      "costo_base": 3250.0,
+      "costo_por_empresa": {
+        "AECODE": 3250.0
+      },
+      "rol_rh": "Servicios de marketing digital, gestion de campanas publicitarias y seguimiento de metricas de captacion.",
+      "costo_aporte": "Revisar",
+      "solo_costo": false,
       "herramientas_actuales": [
         "Agentes marketing"
       ],
@@ -1261,12 +1800,14 @@
         "Dashboard de métricas"
       ],
       "confianza_ai": "Inferido",
-      "fuente": "02_Matriz_Colaboradores.md"
+      "fuente": "02_Matriz_Colaboradores.md",
+      "valor_diff": -0.35
     },
     {
       "id": "col-kevin",
       "nombre": "Kevin",
       "empresa_area": "GEN+ / AECODE",
+      "funcion": "Automatización",
       "empresas": [
         "GEN+",
         "AECODE"
@@ -1285,6 +1826,20 @@
       "context_quality_score": 60,
       "ai_leverage_score": 56,
       "ai_native_score": 56,
+      "proyecto_ids": [
+        "prj-gen-ptar-atarjea-buzones",
+        "prj-aecode-diplomados-certificados"
+      ],
+      "avg_proj_health": 73,
+      "aporte_score": 54,
+      "costo_final": 2000.0,
+      "costo_base": 2000.0,
+      "costo_por_empresa": {
+        "AECODE": 2000.0
+      },
+      "rol_rh": "Servicios de modelado BIM, desarrollo de planimetria, elaboracion de entregables tecnicos y soporte a la documentacion de proyectos.",
+      "costo_aporte": "Equilibrado",
+      "solo_costo": false,
       "herramientas_actuales": [
         "Revit",
         "Python",
@@ -1302,12 +1857,14 @@
         "Plataforma"
       ],
       "confianza_ai": "Inferido",
-      "fuente": "02_Matriz_Colaboradores.md"
+      "fuente": "02_Matriz_Colaboradores.md",
+      "valor_diff": 0.16
     },
     {
       "id": "col-israel",
       "nombre": "Israel",
       "empresa_area": "GEN+ BIM",
+      "funcion": "Operaciones / Proyectos",
       "empresas": [
         "GEN+"
       ],
@@ -1325,6 +1882,20 @@
       "context_quality_score": 60,
       "ai_leverage_score": 42,
       "ai_native_score": 46,
+      "proyecto_ids": [
+        "prj-gen-ca-ete",
+        "prj-gen-faucett"
+      ],
+      "avg_proj_health": 84,
+      "aporte_score": 70,
+      "costo_final": 2500.0,
+      "costo_base": 2500.0,
+      "costo_por_empresa": {
+        "AECODE": 2500.0
+      },
+      "rol_rh": "Servicios de modelado BIM, elaboracion de entregables tecnicos y control de calidad de modelos.",
+      "costo_aporte": "Alto valor",
+      "solo_costo": false,
       "herramientas_actuales": [
         "Revit",
         "InfraWorks"
@@ -1339,12 +1910,14 @@
         "Matriz de alcance"
       ],
       "confianza_ai": "Inferido",
-      "fuente": "02_Matriz_Colaboradores.md"
+      "fuente": "02_Matriz_Colaboradores.md",
+      "valor_diff": 0.24
     },
     {
       "id": "col-robert-herrera",
       "nombre": "Robert Herrera",
       "empresa_area": "GEN+ BIM",
+      "funcion": "Operaciones / Proyectos",
       "empresas": [
         "GEN+"
       ],
@@ -1362,6 +1935,19 @@
       "context_quality_score": 50,
       "ai_leverage_score": 32,
       "ai_native_score": 36,
+      "proyecto_ids": [
+        "prj-gen-ca-ete"
+      ],
+      "avg_proj_health": 83,
+      "aporte_score": 62,
+      "costo_final": 1000.0,
+      "costo_base": 1000.0,
+      "costo_por_empresa": {
+        "AECODE": 1000.0
+      },
+      "rol_rh": "Servicios de soporte operativo, gestion de comunidad educativa y atencion a participantes en plataformas digitales.",
+      "costo_aporte": "Alto valor",
+      "solo_costo": false,
       "herramientas_actuales": [
         "Revit"
       ],
@@ -1375,12 +1961,14 @@
         "Reporte de avance estandarizado"
       ],
       "confianza_ai": "Inferido",
-      "fuente": "02_Matriz_Colaboradores.md"
+      "fuente": "02_Matriz_Colaboradores.md",
+      "valor_diff": 0.57
     },
     {
       "id": "col-luis-vergara",
       "nombre": "Luis Vergara",
       "empresa_area": "GEN+ BIM",
+      "funcion": "Operaciones / Proyectos",
       "empresas": [
         "GEN+"
       ],
@@ -1398,6 +1986,21 @@
       "context_quality_score": 50,
       "ai_leverage_score": 32,
       "ai_native_score": 36,
+      "proyecto_ids": [
+        "prj-gen-ptar-atarjea-buzones",
+        "prj-gen-ca-ete",
+        "prj-gen-puente-tingo"
+      ],
+      "avg_proj_health": 78,
+      "aporte_score": 60,
+      "costo_final": 1000.0,
+      "costo_base": 1000.0,
+      "costo_por_empresa": {
+        "AECODE": 1000.0
+      },
+      "rol_rh": "Servicios de soporte operativo, seguimiento de actividades academicas y asistencia en plataformas digitales.",
+      "costo_aporte": "Alto valor",
+      "solo_costo": false,
       "herramientas_actuales": [
         "Revit",
         "Rhino"
@@ -1412,12 +2015,14 @@
         "Documentar flujos y cambios"
       ],
       "confianza_ai": "Inferido",
-      "fuente": "02_Matriz_Colaboradores.md"
+      "fuente": "02_Matriz_Colaboradores.md",
+      "valor_diff": 0.54
     },
     {
       "id": "col-guisella",
       "nombre": "Guisella",
       "empresa_area": "GEN+ BIM",
+      "funcion": "Operaciones / Proyectos",
       "empresas": [
         "GEN+"
       ],
@@ -1435,6 +2040,21 @@
       "context_quality_score": 50,
       "ai_leverage_score": 32,
       "ai_native_score": 36,
+      "proyecto_ids": [
+        "prj-gen-dovelas-panama",
+        "prj-gen-the-circle"
+      ],
+      "avg_proj_health": 73,
+      "aporte_score": 54,
+      "costo_final": 4100.0,
+      "costo_base": 4100.0,
+      "costo_por_empresa": {
+        "GEN+": 1100.0,
+        "AECODE": 3000.0
+      },
+      "rol_rh": "Servicios de gestion de comunidad educativa, moderacion de grupos y soporte a participantes en plataformas digitales.",
+      "costo_aporte": "Revisar",
+      "solo_costo": false,
       "herramientas_actuales": [
         "Revit"
       ],
@@ -1449,12 +2069,14 @@
         "Valorización de cambios"
       ],
       "confianza_ai": "Inferido",
-      "fuente": "02_Matriz_Colaboradores.md"
+      "fuente": "02_Matriz_Colaboradores.md",
+      "valor_diff": -0.22
     },
     {
       "id": "col-daniella",
       "nombre": "Daniella",
       "empresa_area": "GEN+ / AECODE / VisionPro",
+      "funcion": "Operaciones / Proyectos",
       "empresas": [
         "GEN+",
         "AECODE",
@@ -1474,6 +2096,24 @@
       "context_quality_score": 70,
       "ai_leverage_score": 58,
       "ai_native_score": 60,
+      "proyecto_ids": [
+        "prj-gen-esparq",
+        "prj-gen-uncp-osp-nestle-gore-otros",
+        "prj-aecode-kaman-convocatorias",
+        "prj-visionpro-pdk-ascent",
+        "prj-visionpro-visionpro-decks"
+      ],
+      "avg_proj_health": 77,
+      "aporte_score": 72,
+      "costo_final": 5000.0,
+      "costo_base": 5000.0,
+      "costo_por_empresa": {
+        "GEN+": 2000.0,
+        "AECODE": 3000.0
+      },
+      "rol_rh": "Servicios de levantamiento de informacion tecnica, procesamiento de datos y generacion de reportes de proyecto.",
+      "costo_aporte": "Equilibrado",
+      "solo_costo": false,
       "herramientas_actuales": [
         "Canva",
         "Claude"
@@ -1491,12 +2131,14 @@
         "Postmortems"
       ],
       "confianza_ai": "Inferido",
-      "fuente": "02_Matriz_Colaboradores.md"
+      "fuente": "02_Matriz_Colaboradores.md",
+      "valor_diff": -0.05
     },
     {
       "id": "col-emanuel",
       "nombre": "Emanuel",
       "empresa_area": "AgentFlow / VisionPro / AECODE",
+      "funcion": "Automatización",
       "empresas": [
         "GEN+",
         "AECODE",
@@ -1517,6 +2159,20 @@
       "context_quality_score": 50,
       "ai_leverage_score": 64,
       "ai_native_score": 60,
+      "proyecto_ids": [
+        "prj-visionpro-pdk-ascent",
+        "prj-agentflow-migracion-flujos"
+      ],
+      "avg_proj_health": 72,
+      "aporte_score": 54,
+      "costo_final": 2500.0,
+      "costo_base": 2500.0,
+      "costo_por_empresa": {
+        "GEN+": 2500.0
+      },
+      "rol_rh": "Servicios de investigacion, sintesis de contenido tecnologico y desarrollo de materiales para programas de innovacion.",
+      "costo_aporte": "Equilibrado",
+      "solo_costo": false,
       "herramientas_actuales": [
         "Python",
         "AWS",
@@ -1535,12 +2191,14 @@
         "Diagnóstico conectividad"
       ],
       "confianza_ai": "Inferido",
-      "fuente": "02_Matriz_Colaboradores.md"
+      "fuente": "02_Matriz_Colaboradores.md",
+      "valor_diff": 0.03
     },
     {
       "id": "col-anderson",
       "nombre": "Anderson",
       "empresa_area": "AECODE Dev",
+      "funcion": "Operaciones / Proyectos",
       "empresas": [
         "AECODE"
       ],
@@ -1558,6 +2216,20 @@
       "context_quality_score": 30,
       "ai_leverage_score": 36,
       "ai_native_score": 35,
+      "proyecto_ids": [
+        "prj-aecode-web-app-agenda",
+        "prj-aecode-fase-2-fase-3-aecode"
+      ],
+      "avg_proj_health": 90,
+      "aporte_score": 48,
+      "costo_final": 5200.0,
+      "costo_base": 3000.0,
+      "costo_por_empresa": {
+        "THESIA": 5200.0
+      },
+      "rol_rh": "Servicios de desarrollo, actualizacion y mantenimiento de plataforma educativa y herramientas tecnologicas.",
+      "costo_aporte": "Revisar",
+      "solo_costo": false,
       "herramientas_actuales": [
         "Dev"
       ],
@@ -1571,12 +2243,14 @@
         "Testeo App Summit"
       ],
       "confianza_ai": "Inferido",
-      "fuente": "02_Matriz_Colaboradores.md"
+      "fuente": "02_Matriz_Colaboradores.md",
+      "valor_diff": -0.46
     },
     {
       "id": "col-yudely",
       "nombre": "Yudely",
       "empresa_area": "Operaciones/producto",
+      "funcion": "Operaciones / Proyectos",
       "empresas": [
         "AP"
       ],
@@ -1594,6 +2268,19 @@
       "context_quality_score": 40,
       "ai_leverage_score": 36,
       "ai_native_score": 38,
+      "proyecto_ids": [
+        "prj-aecode-fase-2-fase-3-aecode"
+      ],
+      "avg_proj_health": 90,
+      "aporte_score": 40,
+      "costo_final": 4000.0,
+      "costo_base": 5000.0,
+      "costo_por_empresa": {
+        "AECODE": 1800.0
+      },
+      "rol_rh": "Servicios de gestion de experiencia empresarial, registro de ordenes de servicio y documentacion contractual.",
+      "costo_aporte": "Revisar",
+      "solo_costo": false,
       "herramientas_actuales": [
         "Sheets"
       ],
@@ -1607,12 +2294,14 @@
         "Revisión Fase 3"
       ],
       "confianza_ai": "Inferido",
-      "fuente": "02_Matriz_Colaboradores.md"
+      "fuente": "02_Matriz_Colaboradores.md",
+      "valor_diff": -0.35
     },
     {
       "id": "col-patrick",
       "nombre": "Patrick",
       "empresa_area": "AECODE Postventa",
+      "funcion": "Operaciones / Proyectos",
       "empresas": [
         "AECODE"
       ],
@@ -1630,6 +2319,19 @@
       "context_quality_score": 50,
       "ai_leverage_score": 42,
       "ai_native_score": 44,
+      "proyecto_ids": [
+        "prj-aecode-diplomados-certificados"
+      ],
+      "avg_proj_health": 67,
+      "aporte_score": 56,
+      "costo_final": 750.0,
+      "costo_base": 750.0,
+      "costo_por_empresa": {
+        "AECODE": 750.0
+      },
+      "rol_rh": "Servicios de coordinacion academica, planificacion de sesiones y seguimiento de avance de programas de formacion.",
+      "costo_aporte": "Alto valor",
+      "solo_costo": false,
       "herramientas_actuales": [
         "Zoom",
         "Sheets"
@@ -1644,7 +2346,582 @@
         "Matriz certificados/notas/recursos"
       ],
       "confianza_ai": "Inferido",
-      "fuente": "02_Matriz_Colaboradores.md"
+      "fuente": "02_Matriz_Colaboradores.md",
+      "valor_diff": 0.59
+    },
+    {
+      "id": "col-jordi",
+      "nombre": "Jordi",
+      "empresa_area": "GEN+",
+      "funcion": "Administración",
+      "empresas": [
+        "GEN+"
+      ],
+      "proyectos": "No se tiene claro",
+      "n_proyectos": 0,
+      "actividades": "Servicios de soporte operativo, coordinacion administrativa y seguimiento de actividades internas.",
+      "pendientes": "No se tiene claro",
+      "carga": "No se tiene claro",
+      "carga_val": 0.0,
+      "riesgos": "No se tiene claro",
+      "necesita_feedback": false,
+      "proxima_accion": "No se tiene claro",
+      "wip_score": 0,
+      "bottleneck_score": 0,
+      "context_quality_score": 0,
+      "ai_leverage_score": 0,
+      "ai_native_score": 0,
+      "proyecto_ids": [],
+      "avg_proj_health": 0,
+      "aporte_score": 0,
+      "costo_final": 750.0,
+      "costo_base": 1000.0,
+      "costo_por_empresa": {
+        "GEN+": 750.0
+      },
+      "rol_rh": "Servicios de soporte operativo, coordinacion administrativa y seguimiento de actividades internas.",
+      "costo_aporte": "Alto valor",
+      "solo_costo": true,
+      "herramientas_actuales": [],
+      "herramientas_recomendadas": [],
+      "agentes_recomendados": [],
+      "procesos_delegables": [],
+      "confianza_ai": "No se tiene claro",
+      "fuente": "Cierre-RH-Pagos",
+      "valor_diff": 0.22
+    },
+    {
+      "id": "col-fernando",
+      "nombre": "Fernando",
+      "empresa_area": "AECODE",
+      "funcion": "Operaciones / Proyectos",
+      "empresas": [
+        "AECODE"
+      ],
+      "proyectos": "No se tiene claro",
+      "n_proyectos": 0,
+      "actividades": "Servicios de desarrollo, actualizacion y mantenimiento de plataforma educativa y herramientas tecnologicas.",
+      "pendientes": "No se tiene claro",
+      "carga": "No se tiene claro",
+      "carga_val": 0.0,
+      "riesgos": "No se tiene claro",
+      "necesita_feedback": false,
+      "proxima_accion": "No se tiene claro",
+      "wip_score": 0,
+      "bottleneck_score": 0,
+      "context_quality_score": 0,
+      "ai_leverage_score": 0,
+      "ai_native_score": 0,
+      "proyecto_ids": [],
+      "avg_proj_health": 0,
+      "aporte_score": 0,
+      "costo_final": 3000.0,
+      "costo_base": 3000.0,
+      "costo_por_empresa": {
+        "AECODE": 3000.0
+      },
+      "rol_rh": "Servicios de desarrollo, actualizacion y mantenimiento de plataforma educativa y herramientas tecnologicas.",
+      "costo_aporte": "Revisar",
+      "solo_costo": true,
+      "herramientas_actuales": [],
+      "herramientas_recomendadas": [],
+      "agentes_recomendados": [],
+      "procesos_delegables": [],
+      "confianza_ai": "No se tiene claro",
+      "fuente": "Cierre-RH-Pagos",
+      "valor_diff": -0.35
+    },
+    {
+      "id": "col-alejandro-palpan",
+      "nombre": "Alejandro Palpan",
+      "empresa_area": "GEN+ / AECODE",
+      "funcion": "Administración",
+      "empresas": [
+        "GEN+",
+        "AECODE"
+      ],
+      "proyectos": "No se tiene claro",
+      "n_proyectos": 0,
+      "actividades": "Servicios de gestion de experiencia empresarial, registro de ordenes de servicio y documentacion contractual.",
+      "pendientes": "No se tiene claro",
+      "carga": "No se tiene claro",
+      "carga_val": 0.0,
+      "riesgos": "No se tiene claro",
+      "necesita_feedback": false,
+      "proxima_accion": "No se tiene claro",
+      "wip_score": 0,
+      "bottleneck_score": 0,
+      "context_quality_score": 0,
+      "ai_leverage_score": 0,
+      "ai_native_score": 0,
+      "proyecto_ids": [],
+      "avg_proj_health": 0,
+      "aporte_score": 0,
+      "costo_final": 5000.0,
+      "costo_base": 5000.0,
+      "costo_por_empresa": {
+        "GEN+": 1130.0,
+        "AECODE": 3870.0
+      },
+      "rol_rh": "Servicios de gestion de experiencia empresarial, registro de ordenes de servicio y documentacion contractual.",
+      "costo_aporte": "Revisar",
+      "solo_costo": true,
+      "herramientas_actuales": [],
+      "herramientas_recomendadas": [],
+      "agentes_recomendados": [],
+      "procesos_delegables": [],
+      "confianza_ai": "No se tiene claro",
+      "fuente": "Cierre-RH-Pagos",
+      "valor_diff": -0.59
+    },
+    {
+      "id": "col-ana",
+      "nombre": "Ana",
+      "empresa_area": "AECODE",
+      "funcion": "Administración",
+      "empresas": [
+        "AECODE"
+      ],
+      "proyectos": "No se tiene claro",
+      "n_proyectos": 0,
+      "actividades": "Servicios de apoyo operativo, coordinacion administrativa y seguimiento de actividades educativas.",
+      "pendientes": "No se tiene claro",
+      "carga": "No se tiene claro",
+      "carga_val": 0.0,
+      "riesgos": "No se tiene claro",
+      "necesita_feedback": false,
+      "proxima_accion": "No se tiene claro",
+      "wip_score": 0,
+      "bottleneck_score": 0,
+      "context_quality_score": 0,
+      "ai_leverage_score": 0,
+      "ai_native_score": 0,
+      "proyecto_ids": [],
+      "avg_proj_health": 0,
+      "aporte_score": 0,
+      "costo_final": 500.0,
+      "costo_base": 500.0,
+      "costo_por_empresa": {
+        "AECODE": 500.0
+      },
+      "rol_rh": "Servicios de apoyo operativo, coordinacion administrativa y seguimiento de actividades educativas.",
+      "costo_aporte": "Alto valor",
+      "solo_costo": true,
+      "herramientas_actuales": [],
+      "herramientas_recomendadas": [],
+      "agentes_recomendados": [],
+      "procesos_delegables": [],
+      "confianza_ai": "No se tiene claro",
+      "fuente": "Cierre-RH-Pagos",
+      "valor_diff": 0.3
+    },
+    {
+      "id": "col-paolo",
+      "nombre": "Paolo",
+      "empresa_area": "AECODE",
+      "funcion": "Operaciones / Proyectos",
+      "empresas": [
+        "AECODE"
+      ],
+      "proyectos": "No se tiene claro",
+      "n_proyectos": 0,
+      "actividades": "Servicios de coordinacion operativa, gestion de actividades educativas y soporte a la ejecucion de programas.",
+      "pendientes": "No se tiene claro",
+      "carga": "No se tiene claro",
+      "carga_val": 0.0,
+      "riesgos": "No se tiene claro",
+      "necesita_feedback": false,
+      "proxima_accion": "No se tiene claro",
+      "wip_score": 0,
+      "bottleneck_score": 0,
+      "context_quality_score": 0,
+      "ai_leverage_score": 0,
+      "ai_native_score": 0,
+      "proyecto_ids": [],
+      "avg_proj_health": 0,
+      "aporte_score": 0,
+      "costo_final": 4000.0,
+      "costo_base": 4000.0,
+      "costo_por_empresa": {
+        "AECODE": 4000.0
+      },
+      "rol_rh": "Servicios de coordinacion operativa, gestion de actividades educativas y soporte a la ejecucion de programas.",
+      "costo_aporte": "Revisar",
+      "solo_costo": true,
+      "herramientas_actuales": [],
+      "herramientas_recomendadas": [],
+      "agentes_recomendados": [],
+      "procesos_delegables": [],
+      "confianza_ai": "No se tiene claro",
+      "fuente": "Cierre-RH-Pagos",
+      "valor_diff": -0.49
+    },
+    {
+      "id": "col-aracely",
+      "nombre": "Aracely",
+      "empresa_area": "AECODE",
+      "funcion": "Operaciones / Proyectos",
+      "empresas": [
+        "AECODE"
+      ],
+      "proyectos": "No se tiene claro",
+      "n_proyectos": 0,
+      "actividades": "Servicios de coordinacion academica, planificacion de sesiones y seguimiento de avance de programas de formacion.",
+      "pendientes": "No se tiene claro",
+      "carga": "No se tiene claro",
+      "carga_val": 0.0,
+      "riesgos": "No se tiene claro",
+      "necesita_feedback": false,
+      "proxima_accion": "No se tiene claro",
+      "wip_score": 0,
+      "bottleneck_score": 0,
+      "context_quality_score": 0,
+      "ai_leverage_score": 0,
+      "ai_native_score": 0,
+      "proyecto_ids": [],
+      "avg_proj_health": 0,
+      "aporte_score": 0,
+      "costo_final": 2000.0,
+      "costo_base": 2000.0,
+      "costo_por_empresa": {
+        "AECODE": 2000.0
+      },
+      "rol_rh": "Servicios de coordinacion academica, planificacion de sesiones y seguimiento de avance de programas de formacion.",
+      "costo_aporte": "Equilibrado",
+      "solo_costo": true,
+      "herramientas_actuales": [],
+      "herramientas_recomendadas": [],
+      "agentes_recomendados": [],
+      "procesos_delegables": [],
+      "confianza_ai": "No se tiene claro",
+      "fuente": "Cierre-RH-Pagos",
+      "valor_diff": -0.14
+    },
+    {
+      "id": "col-janet",
+      "nombre": "Janet",
+      "empresa_area": "AECODE",
+      "funcion": "Administración",
+      "empresas": [
+        "AECODE"
+      ],
+      "proyectos": "No se tiene claro",
+      "n_proyectos": 0,
+      "actividades": "Servicios de coordinacion administrativa, gestion documental y seguimiento operativo de actividades educativas.",
+      "pendientes": "No se tiene claro",
+      "carga": "No se tiene claro",
+      "carga_val": 0.0,
+      "riesgos": "No se tiene claro",
+      "necesita_feedback": false,
+      "proxima_accion": "No se tiene claro",
+      "wip_score": 0,
+      "bottleneck_score": 0,
+      "context_quality_score": 0,
+      "ai_leverage_score": 0,
+      "ai_native_score": 0,
+      "proyecto_ids": [],
+      "avg_proj_health": 0,
+      "aporte_score": 0,
+      "costo_final": 1400.0,
+      "costo_base": 1400.0,
+      "costo_por_empresa": {
+        "AECODE": 1400.0
+      },
+      "rol_rh": "Servicios de coordinacion administrativa, gestion documental y seguimiento operativo de actividades educativas.",
+      "costo_aporte": "Equilibrado",
+      "solo_costo": true,
+      "herramientas_actuales": [],
+      "herramientas_recomendadas": [],
+      "agentes_recomendados": [],
+      "procesos_delegables": [],
+      "confianza_ai": "No se tiene claro",
+      "fuente": "Cierre-RH-Pagos",
+      "valor_diff": 0.05
+    },
+    {
+      "id": "col-moises",
+      "nombre": "Moises",
+      "empresa_area": "AECODE",
+      "funcion": "Administración",
+      "empresas": [
+        "AECODE"
+      ],
+      "proyectos": "No se tiene claro",
+      "n_proyectos": 0,
+      "actividades": "Servicios de apoyo operativo, documentacion y seguimiento de actividades internas de programas educativos.",
+      "pendientes": "No se tiene claro",
+      "carga": "No se tiene claro",
+      "carga_val": 0.0,
+      "riesgos": "No se tiene claro",
+      "necesita_feedback": false,
+      "proxima_accion": "No se tiene claro",
+      "wip_score": 0,
+      "bottleneck_score": 0,
+      "context_quality_score": 0,
+      "ai_leverage_score": 0,
+      "ai_native_score": 0,
+      "proyecto_ids": [],
+      "avg_proj_health": 0,
+      "aporte_score": 0,
+      "costo_final": 500.0,
+      "costo_base": 500.0,
+      "costo_por_empresa": {
+        "AECODE": 500.0
+      },
+      "rol_rh": "Servicios de apoyo operativo, documentacion y seguimiento de actividades internas de programas educativos.",
+      "costo_aporte": "Alto valor",
+      "solo_costo": true,
+      "herramientas_actuales": [],
+      "herramientas_recomendadas": [],
+      "agentes_recomendados": [],
+      "procesos_delegables": [],
+      "confianza_ai": "No se tiene claro",
+      "fuente": "Cierre-RH-Pagos",
+      "valor_diff": 0.3
+    },
+    {
+      "id": "col-ivana",
+      "nombre": "Ivana",
+      "empresa_area": "AECODE",
+      "funcion": "Operaciones / Proyectos",
+      "empresas": [
+        "AECODE"
+      ],
+      "proyectos": "No se tiene claro",
+      "n_proyectos": 0,
+      "actividades": "Servicios de coordinacion academica, planificacion de sesiones y seguimiento de avance de programas de formacion.",
+      "pendientes": "No se tiene claro",
+      "carga": "No se tiene claro",
+      "carga_val": 0.0,
+      "riesgos": "No se tiene claro",
+      "necesita_feedback": false,
+      "proxima_accion": "No se tiene claro",
+      "wip_score": 0,
+      "bottleneck_score": 0,
+      "context_quality_score": 0,
+      "ai_leverage_score": 0,
+      "ai_native_score": 0,
+      "proyecto_ids": [],
+      "avg_proj_health": 0,
+      "aporte_score": 0,
+      "costo_final": 1850.0,
+      "costo_base": 1850.0,
+      "costo_por_empresa": {
+        "AECODE": 1850.0
+      },
+      "rol_rh": "Servicios de coordinacion academica, planificacion de sesiones y seguimiento de avance de programas de formacion.",
+      "costo_aporte": "Equilibrado",
+      "solo_costo": true,
+      "herramientas_actuales": [],
+      "herramientas_recomendadas": [],
+      "agentes_recomendados": [],
+      "procesos_delegables": [],
+      "confianza_ai": "No se tiene claro",
+      "fuente": "Cierre-RH-Pagos",
+      "valor_diff": 0.0
+    },
+    {
+      "id": "col-aranzia",
+      "nombre": "Aranzia",
+      "empresa_area": "AECODE",
+      "funcion": "Marketing",
+      "empresas": [
+        "AECODE"
+      ],
+      "proyectos": "No se tiene claro",
+      "n_proyectos": 0,
+      "actividades": "Servicios de marketing digital, gestion de campanas publicitarias y seguimiento de metricas de captacion.",
+      "pendientes": "No se tiene claro",
+      "carga": "No se tiene claro",
+      "carga_val": 0.0,
+      "riesgos": "No se tiene claro",
+      "necesita_feedback": false,
+      "proxima_accion": "No se tiene claro",
+      "wip_score": 0,
+      "bottleneck_score": 0,
+      "context_quality_score": 0,
+      "ai_leverage_score": 0,
+      "ai_native_score": 0,
+      "proyecto_ids": [],
+      "avg_proj_health": 0,
+      "aporte_score": 0,
+      "costo_final": 1500.0,
+      "costo_base": 1500.0,
+      "costo_por_empresa": {
+        "AECODE": 1500.0
+      },
+      "rol_rh": "Servicios de marketing digital, gestion de campanas publicitarias y seguimiento de metricas de captacion.",
+      "costo_aporte": "Equilibrado",
+      "solo_costo": true,
+      "herramientas_actuales": [],
+      "herramientas_recomendadas": [],
+      "agentes_recomendados": [],
+      "procesos_delegables": [],
+      "confianza_ai": "No se tiene claro",
+      "fuente": "Cierre-RH-Pagos",
+      "valor_diff": 0.03
+    },
+    {
+      "id": "col-edith",
+      "nombre": "Edith",
+      "empresa_area": "AECODE",
+      "funcion": "Administración",
+      "empresas": [
+        "AECODE"
+      ],
+      "proyectos": "No se tiene claro",
+      "n_proyectos": 0,
+      "actividades": "Servicios de apoyo administrativo, seguimiento operativo y actualizacion de informacion de programas.",
+      "pendientes": "No se tiene claro",
+      "carga": "No se tiene claro",
+      "carga_val": 0.0,
+      "riesgos": "No se tiene claro",
+      "necesita_feedback": false,
+      "proxima_accion": "No se tiene claro",
+      "wip_score": 0,
+      "bottleneck_score": 0,
+      "context_quality_score": 0,
+      "ai_leverage_score": 0,
+      "ai_native_score": 0,
+      "proyecto_ids": [],
+      "avg_proj_health": 0,
+      "aporte_score": 0,
+      "costo_final": 300.0,
+      "costo_base": 500.0,
+      "costo_por_empresa": {
+        "AECODE": 300.0
+      },
+      "rol_rh": "Servicios de apoyo administrativo, seguimiento operativo y actualizacion de informacion de programas.",
+      "costo_aporte": "Alto valor",
+      "solo_costo": true,
+      "herramientas_actuales": [],
+      "herramientas_recomendadas": [],
+      "agentes_recomendados": [],
+      "procesos_delegables": [],
+      "confianza_ai": "No se tiene claro",
+      "fuente": "Cierre-RH-Pagos",
+      "valor_diff": 0.35
+    },
+    {
+      "id": "col-kenyi",
+      "nombre": "Kenyi",
+      "empresa_area": "AECODE",
+      "funcion": "Operaciones / Proyectos",
+      "empresas": [
+        "AECODE"
+      ],
+      "proyectos": "No se tiene claro",
+      "n_proyectos": 0,
+      "actividades": "Servicios de desarrollo, actualizacion y soporte de herramientas digitales para programas educativos.",
+      "pendientes": "No se tiene claro",
+      "carga": "No se tiene claro",
+      "carga_val": 0.0,
+      "riesgos": "No se tiene claro",
+      "necesita_feedback": false,
+      "proxima_accion": "No se tiene claro",
+      "wip_score": 0,
+      "bottleneck_score": 0,
+      "context_quality_score": 0,
+      "ai_leverage_score": 0,
+      "ai_native_score": 0,
+      "proyecto_ids": [],
+      "avg_proj_health": 0,
+      "aporte_score": 0,
+      "costo_final": 2000.0,
+      "costo_base": 2000.0,
+      "costo_por_empresa": {
+        "AECODE": 2000.0
+      },
+      "rol_rh": "Servicios de desarrollo, actualizacion y soporte de herramientas digitales para programas educativos.",
+      "costo_aporte": "Equilibrado",
+      "solo_costo": true,
+      "herramientas_actuales": [],
+      "herramientas_recomendadas": [],
+      "agentes_recomendados": [],
+      "procesos_delegables": [],
+      "confianza_ai": "No se tiene claro",
+      "fuente": "Cierre-RH-Pagos",
+      "valor_diff": -0.14
+    },
+    {
+      "id": "col-sebastian",
+      "nombre": "Sebastian",
+      "empresa_area": "AECODE",
+      "funcion": "Operaciones / Proyectos",
+      "empresas": [
+        "AECODE"
+      ],
+      "proyectos": "No se tiene claro",
+      "n_proyectos": 0,
+      "actividades": "Servicios de apoyo operativo, seguimiento de actividades y soporte en plataformas digitales.",
+      "pendientes": "No se tiene claro",
+      "carga": "No se tiene claro",
+      "carga_val": 0.0,
+      "riesgos": "No se tiene claro",
+      "necesita_feedback": false,
+      "proxima_accion": "No se tiene claro",
+      "wip_score": 0,
+      "bottleneck_score": 0,
+      "context_quality_score": 0,
+      "ai_leverage_score": 0,
+      "ai_native_score": 0,
+      "proyecto_ids": [],
+      "avg_proj_health": 0,
+      "aporte_score": 0,
+      "costo_final": 750.0,
+      "costo_base": 750.0,
+      "costo_por_empresa": {},
+      "rol_rh": "Servicios de apoyo operativo, seguimiento de actividades y soporte en plataformas digitales.",
+      "costo_aporte": "Alto valor",
+      "solo_costo": true,
+      "herramientas_actuales": [],
+      "herramientas_recomendadas": [],
+      "agentes_recomendados": [],
+      "procesos_delegables": [],
+      "confianza_ai": "No se tiene claro",
+      "fuente": "Cierre-RH-Pagos",
+      "valor_diff": 0.22
+    },
+    {
+      "id": "col-reiner",
+      "nombre": "Reiner",
+      "empresa_area": "AECODE",
+      "funcion": "Operaciones / Proyectos",
+      "empresas": [
+        "AECODE"
+      ],
+      "proyectos": "No se tiene claro",
+      "n_proyectos": 0,
+      "actividades": "Servicios de levantamiento de informacion tecnica, procesamiento de datos y generacion de reportes de proyecto.",
+      "pendientes": "No se tiene claro",
+      "carga": "No se tiene claro",
+      "carga_val": 0.0,
+      "riesgos": "No se tiene claro",
+      "necesita_feedback": false,
+      "proxima_accion": "No se tiene claro",
+      "wip_score": 0,
+      "bottleneck_score": 0,
+      "context_quality_score": 0,
+      "ai_leverage_score": 0,
+      "ai_native_score": 0,
+      "proyecto_ids": [],
+      "avg_proj_health": 0,
+      "aporte_score": 0,
+      "costo_final": 2500.0,
+      "costo_base": 2000.0,
+      "costo_por_empresa": {
+        "AECODE": 2500.0
+      },
+      "rol_rh": "Servicios de levantamiento de informacion tecnica, procesamiento de datos y generacion de reportes de proyecto.",
+      "costo_aporte": "Revisar",
+      "solo_costo": true,
+      "herramientas_actuales": [],
+      "herramientas_recomendadas": [],
+      "agentes_recomendados": [],
+      "procesos_delegables": [],
+      "confianza_ai": "No se tiene claro",
+      "fuente": "Cierre-RH-Pagos",
+      "valor_diff": -0.27
     }
   ],
   "riesgos": [
@@ -2475,6 +3752,9 @@
       "empresa": "No se tiene claro",
       "area": "No se tiene claro",
       "proyecto": "Caja GEN+ y sponsors Summit",
+      "funcion": "Finanzas",
+      "altitud": "Táctico",
+      "modo": "Gestión",
       "colaborador": "Julie / Paola / Erika.",
       "descripcion": "tablero con monto, sponsor/proyecto, estado, responsable, fecha y evidencia.",
       "estado": "pendiente",
@@ -2490,6 +3770,9 @@
       "empresa": "No se tiene claro",
       "area": "No se tiene claro",
       "proyecto": "AECODE Training - certificados, licencias y cierres",
+      "funcion": "Operaciones / Proyectos",
+      "altitud": "Estratégico",
+      "modo": "Gestión",
       "colaborador": "Carolina / Patrick / Julie / Kevin / Marlon.",
       "descripcion": "matriz por diplomado con rubrica, entregable, certificado CIP, sustitutorio y bloqueo.",
       "estado": "pendiente",
@@ -2505,6 +3788,9 @@
       "empresa": "No se tiene claro",
       "area": "No se tiene claro",
       "proyecto": "Summit - sprint comercial/logistico",
+      "funcion": "Marketing",
+      "altitud": "Táctico",
+      "modo": "Ejecución",
       "colaborador": "Erika / Paola / Marlon / Arantxa / Fabrizio / Yary.",
       "descripcion": "40 llamadas sponsors, QA web, agenda version final, proveedores y piezas clave.",
       "estado": "pendiente",
@@ -2520,6 +3806,9 @@
       "empresa": "No se tiene claro",
       "area": "No se tiene claro",
       "proyecto": "Pre Congreso",
+      "funcion": "Marketing",
+      "altitud": "Operativo",
+      "modo": "Ejecución",
       "colaborador": "Arantxa / Jessica / Enma.",
       "descripcion": "pieza ads, landing, grupos WhatsApp, GHL, correo automatico y pauta.",
       "estado": "pendiente",
@@ -2535,6 +3824,9 @@
       "empresa": "No se tiene claro",
       "area": "No se tiene claro",
       "proyecto": "Cañete y delivery BIM - alcance",
+      "funcion": "Finanzas",
+      "altitud": "Estratégico",
+      "modo": "Gestión",
       "colaborador": "Israel / Fabrizio / Robert / Luis / Julie.",
       "descripcion": "matriz dentro de alcance, fuera de alcance, requiere decision, valorizable.",
       "estado": "pendiente",
@@ -2550,6 +3842,9 @@
       "empresa": "No se tiene claro",
       "area": "No se tiene claro",
       "proyecto": "VisionPro PDK",
+      "funcion": "Operaciones / Proyectos",
+      "altitud": "Estratégico",
+      "modo": "Ejecución",
       "colaborador": "Emanuel / Marlon / Yary / Daniella.",
       "descripcion": "demo web estable, diagnostico conectividad, funcionalidades IA P0, oferta piloto.",
       "estado": "pendiente",
@@ -2565,6 +3860,9 @@
       "empresa": "No se tiene claro",
       "area": "No se tiene claro",
       "proyecto": "ESPARQ Discovery",
+      "funcion": "Operaciones / Proyectos",
+      "altitud": "Estratégico",
+      "modo": "Ejecución",
       "colaborador": "Daniella / Fabrizio / Yary / Alejandro.",
       "descripcion": "11 casos, demo, roles, datos, paneles y DoD.",
       "estado": "pendiente",
@@ -2580,6 +3878,9 @@
       "empresa": "No se tiene claro",
       "area": "No se tiene claro",
       "proyecto": "AECODE Comercial - cifra oficial y SLA",
+      "funcion": "Comercial",
+      "altitud": "Táctico",
+      "modo": "Gestión",
       "colaborador": "Talia / Genesis / Yadira / Jessica.",
       "descripcion": "ventas completas vs primeras cuotas vs acumuladas, SLA por lead.",
       "estado": "pendiente",
@@ -2595,6 +3896,9 @@
       "empresa": "No se tiene claro",
       "area": "No se tiene claro",
       "proyecto": "BESCO",
+      "funcion": "Automatización",
+      "altitud": "Estratégico",
+      "modo": "Ejecución",
       "colaborador": "Marlon / Kevin.",
       "descripcion": "checklist por Muros, Columnas, Vigas, Losas con pruebas end-to-end.",
       "estado": "pendiente",
@@ -2610,6 +3914,9 @@
       "empresa": "No se tiene claro",
       "area": "No se tiene claro",
       "proyecto": "GHL / marketing dashboard",
+      "funcion": "Marketing",
+      "altitud": "Táctico",
+      "modo": "Gestión",
       "colaborador": "Jessica / Anggie / Enma / Arantxa.",
       "descripcion": "pieza, canal, lead, conversion, venta y owner.",
       "estado": "pendiente",
@@ -2625,6 +3932,9 @@
       "empresa": "No se tiene claro",
       "area": "No se tiene claro",
       "proyecto": "Kaman postmortem",
+      "funcion": "Operaciones / Proyectos",
+      "altitud": "Estratégico",
+      "modo": "Ejecución",
       "colaborador": "Daniella / Alejandro.",
       "descripcion": "checklist para convocatorias y pitch startup.",
       "estado": "pendiente",
@@ -2640,6 +3950,9 @@
       "empresa": "No se tiene claro",
       "area": "No se tiene claro",
       "proyecto": "THESIA / Tesis Juan",
+      "funcion": "Finanzas",
+      "altitud": "Estratégico",
+      "modo": "Ejecución",
       "colaborador": "Fabrizio / Julie.",
       "descripcion": "informacion traspasada y solicitud de presupuesto/fechas.",
       "estado": "pendiente",
@@ -2655,6 +3968,9 @@
       "empresa": "No se tiene claro",
       "area": "No se tiene claro",
       "proyecto": "San Martin",
+      "funcion": "Operaciones / Proyectos",
+      "altitud": "Estratégico",
+      "modo": "Gestión",
       "colaborador": "Israel.",
       "descripcion": "decision reactivar/no reactivar y bloque de cierre de 0.5 a 1 dia.",
       "estado": "pendiente",
@@ -2670,6 +3986,9 @@
       "empresa": "GEN+",
       "area": "Caja",
       "proyecto": "Cobranzas GEN+",
+      "funcion": "Finanzas",
+      "altitud": "Operativo",
+      "modo": "Ejecución",
       "colaborador": "Julie",
       "descripcion": "Compromisos de pago por fila",
       "estado": "pendiente",
@@ -2685,6 +4004,9 @@
       "empresa": "GEN+",
       "area": "Delivery BIM",
       "proyecto": "PTAR Atarjea / Buzones",
+      "funcion": "Operaciones / Proyectos",
+      "altitud": "Operativo",
+      "modo": "Ejecución",
       "colaborador": "Kevin / Luis / Julie",
       "descripcion": "Validacion Ricardo, pago, evidencia final",
       "estado": "pendiente",
@@ -2700,6 +4022,9 @@
       "empresa": "GEN+",
       "area": "Delivery BIM",
       "proyecto": "Cañete",
+      "funcion": "Operaciones / Proyectos",
+      "altitud": "Estratégico",
+      "modo": "Gestión",
       "colaborador": "Fabrizio / Israel / Robert / Luis",
       "descripcion": "Matriz alcance, congelar version, reportes/informes",
       "estado": "pendiente",
@@ -2715,6 +4040,9 @@
       "empresa": "GEN+",
       "area": "Delivery BIM",
       "proyecto": "Faucett",
+      "funcion": "Operaciones / Proyectos",
+      "altitud": "Operativo",
+      "modo": "Ejecución",
       "colaborador": "Fabrizio / Israel",
       "descripcion": "Metodologia puentes, info HH, cotizacion adicional",
       "estado": "pendiente",
@@ -2730,6 +4058,9 @@
       "empresa": "GEN+",
       "area": "Delivery BIM",
       "proyecto": "Dovelas Panama",
+      "funcion": "Operaciones / Proyectos",
+      "altitud": "Operativo",
+      "modo": "Ejecución",
       "colaborador": "Fabrizio / Guisella / Julie",
       "descripcion": "Programacion Ignacio, cambios por dovela, valorizacion",
       "estado": "pendiente",
@@ -2745,6 +4076,9 @@
       "empresa": "GEN+",
       "area": "Delivery BIM",
       "proyecto": "The Circle",
+      "funcion": "Operaciones / Proyectos",
+      "altitud": "Táctico",
+      "modo": "Ejecución",
       "colaborador": "Fabrizio / Guisella",
       "descripcion": "Planilla corregida y envio",
       "estado": "pendiente",
@@ -2760,6 +4094,9 @@
       "empresa": "GEN+",
       "area": "Delivery BIM",
       "proyecto": "Puente Tingo",
+      "funcion": "Operaciones / Proyectos",
+      "altitud": "Operativo",
+      "modo": "Ejecución",
       "colaborador": "Fabrizio / Luis",
       "descripcion": "Acceso 02 / entregable Rhino",
       "estado": "pendiente",
@@ -2775,6 +4112,9 @@
       "empresa": "GEN+",
       "area": "Producto/consultoria",
       "proyecto": "ESPARQ",
+      "funcion": "Operaciones / Proyectos",
+      "altitud": "Estratégico",
+      "modo": "Ejecución",
       "colaborador": "Alejandro / Daniella / Fabrizio / Yary",
       "descripcion": "11 casos, demo, roles, datos, paneles, DoD",
       "estado": "pendiente",
@@ -2790,6 +4130,9 @@
       "empresa": "GEN+",
       "area": "Producto interno",
       "proyecto": "Agente Inmobiliario GEN+",
+      "funcion": "Operaciones / Proyectos",
+      "altitud": "Operativo",
+      "modo": "Desarrollo / Automatización",
       "colaborador": "Fabrizio",
       "descripcion": "One Page nocturno y ficha guia",
       "estado": "pendiente",
@@ -2805,6 +4148,9 @@
       "empresa": "GEN+",
       "area": "Comercial",
       "proyecto": "UNCP / OSP / Nestle / GORE / otros",
+      "funcion": "Comercial",
+      "altitud": "Operativo",
+      "modo": "Ejecución",
       "colaborador": "Julie / Daniella",
       "descripcion": "TDR, siguiente paso, cotizaciones",
       "estado": "pendiente",
@@ -2820,6 +4166,9 @@
       "empresa": "AECODE",
       "area": "Summit",
       "proyecto": "Sponsors / pipeline",
+      "funcion": "Comercial",
+      "altitud": "Operativo",
+      "modo": "Ejecución",
       "colaborador": "Erika / Paola / Julie",
       "descripcion": "40 llamadas, beneficios, delegaciones, pagos",
       "estado": "pendiente",
@@ -2835,6 +4184,9 @@
       "empresa": "AECODE",
       "area": "Summit",
       "proyecto": "Web / App / agenda",
+      "funcion": "Operaciones / Proyectos",
+      "altitud": "Táctico",
+      "modo": "Desarrollo / Automatización",
       "colaborador": "Marlon / Yary / Anderson / Fabrizio",
       "descripcion": "QA, deploy agenda, sponsors dinamicos, test App",
       "estado": "pendiente",
@@ -2850,6 +4202,9 @@
       "empresa": "AECODE",
       "area": "Summit",
       "proyecto": "Pre Congreso",
+      "funcion": "Marketing",
+      "altitud": "Operativo",
+      "modo": "Ejecución",
       "colaborador": "Arantxa / Jessica / Enma",
       "descripcion": "Pieza, landing, grupos, GHL, correo, pauta",
       "estado": "pendiente",
@@ -2865,6 +4220,9 @@
       "empresa": "AECODE",
       "area": "Training",
       "proyecto": "Diplomados/certificados",
+      "funcion": "Operaciones / Proyectos",
+      "altitud": "Operativo",
+      "modo": "Ejecución",
       "colaborador": "Carolina / Patrick / Marlon / Kevin / Julie",
       "descripcion": "CIP, sustitutorios, rubricas, entregables, licencias",
       "estado": "pendiente",
@@ -2880,6 +4238,9 @@
       "empresa": "AECODE",
       "area": "Comercial B2C",
       "proyecto": "Ventas Training",
+      "funcion": "Comercial",
+      "altitud": "Táctico",
+      "modo": "Gestión",
       "colaborador": "Talia / Genesis / Yadira / Reiner",
       "descripcion": "Validar cifra oficial, SLA, webinar Vial, brochure IA",
       "estado": "pendiente",
@@ -2895,6 +4256,9 @@
       "empresa": "AECODE",
       "area": "Marketing",
       "proyecto": "Summit / Reto IA / Training",
+      "funcion": "Marketing",
+      "altitud": "Táctico",
+      "modo": "Desarrollo / Automatización",
       "colaborador": "Arantxa / Enma / Jessica / Anggie",
       "descripcion": "Integracion GHL, videos, agenda, dashboard metricas",
       "estado": "pendiente",
@@ -2910,6 +4274,9 @@
       "empresa": "AECODE",
       "area": "Producto digital",
       "proyecto": "Fase 2 / Fase 3 / AECODE",
+      "funcion": "Operaciones / Proyectos",
+      "altitud": "Operativo",
+      "modo": "Desarrollo / Automatización",
       "colaborador": "Yary / Marlon / Anderson / Yudely / Fabrizio",
       "descripcion": "Implementacion dev, aula virtual, algoritmo con Emanuel",
       "estado": "pendiente",
@@ -2925,6 +4292,9 @@
       "empresa": "AECODE",
       "area": "Startup",
       "proyecto": "Kaman / convocatorias",
+      "funcion": "Operaciones / Proyectos",
+      "altitud": "Estratégico",
+      "modo": "Ejecución",
       "colaborador": "Daniella / Julie / Alejandro",
       "descripcion": "Postmortem, StartUPC, THESIA fechas",
       "estado": "pendiente",
@@ -2940,6 +4310,9 @@
       "empresa": "VisionPro",
       "area": "Producto/obra",
       "proyecto": "PDK Ascent",
+      "funcion": "Operaciones / Proyectos",
+      "altitud": "Operativo",
+      "modo": "Ejecución",
       "colaborador": "Marlon / Emanuel / Yary / Daniella / Erika",
       "descripcion": "Demo web, usuarios, UX, AWS, internet, funcionalidades IA",
       "estado": "pendiente",
@@ -2955,6 +4328,9 @@
       "empresa": "VisionPro",
       "area": "Comercial",
       "proyecto": "VisionPro decks",
+      "funcion": "Comercial",
+      "altitud": "Estratégico",
+      "modo": "Gestión",
       "colaborador": "Daniella / Julie / Erika",
       "descripcion": "Conectar deck con evidencia, precio, alcance y SLA",
       "estado": "pendiente",
@@ -2970,6 +4346,9 @@
       "empresa": "THESIA",
       "area": "Startup/documentacion",
       "proyecto": "THESIA presupuesto / Tesis Juan",
+      "funcion": "Finanzas",
+      "altitud": "Estratégico",
+      "modo": "Ejecución",
       "colaborador": "Julie / Fabrizio",
       "descripcion": "Solicitud formal y traspaso de informacion",
       "estado": "pendiente",
@@ -2985,6 +4364,9 @@
       "empresa": "AgentFlow",
       "area": "Automatizacion",
       "proyecto": "Migracion flujos",
+      "funcion": "Automatización",
+      "altitud": "Operativo",
+      "modo": "Desarrollo / Automatización",
       "colaborador": "Emanuel / Fabrizio / Marlon",
       "descripcion": "Migracion con Emanuel 0%; primer flujo probado",
       "estado": "pendiente",
@@ -4237,8 +5619,8 @@
     }
   ],
   "ai_native": {
-    "overall_score": 50,
-    "clasificacion": "uso superficial",
+    "overall_score": 31,
+    "clasificacion": "operación manual vulnerable",
     "por_persona": [
       {
         "colaborador": "Julie",
@@ -4719,18 +6101,158 @@
           "Matriz certificados/notas/recursos"
         ],
         "confianza": "Inferido"
+      },
+      {
+        "colaborador": "Jordi",
+        "ai_native_score": 0,
+        "ai_leverage_score": 0,
+        "herramientas_actuales": [],
+        "herramientas_recomendadas": [],
+        "agentes_recomendados": [],
+        "procesos_delegables": [],
+        "confianza": "No se tiene claro"
+      },
+      {
+        "colaborador": "Fernando",
+        "ai_native_score": 0,
+        "ai_leverage_score": 0,
+        "herramientas_actuales": [],
+        "herramientas_recomendadas": [],
+        "agentes_recomendados": [],
+        "procesos_delegables": [],
+        "confianza": "No se tiene claro"
+      },
+      {
+        "colaborador": "Alejandro Palpan",
+        "ai_native_score": 0,
+        "ai_leverage_score": 0,
+        "herramientas_actuales": [],
+        "herramientas_recomendadas": [],
+        "agentes_recomendados": [],
+        "procesos_delegables": [],
+        "confianza": "No se tiene claro"
+      },
+      {
+        "colaborador": "Ana",
+        "ai_native_score": 0,
+        "ai_leverage_score": 0,
+        "herramientas_actuales": [],
+        "herramientas_recomendadas": [],
+        "agentes_recomendados": [],
+        "procesos_delegables": [],
+        "confianza": "No se tiene claro"
+      },
+      {
+        "colaborador": "Paolo",
+        "ai_native_score": 0,
+        "ai_leverage_score": 0,
+        "herramientas_actuales": [],
+        "herramientas_recomendadas": [],
+        "agentes_recomendados": [],
+        "procesos_delegables": [],
+        "confianza": "No se tiene claro"
+      },
+      {
+        "colaborador": "Aracely",
+        "ai_native_score": 0,
+        "ai_leverage_score": 0,
+        "herramientas_actuales": [],
+        "herramientas_recomendadas": [],
+        "agentes_recomendados": [],
+        "procesos_delegables": [],
+        "confianza": "No se tiene claro"
+      },
+      {
+        "colaborador": "Janet",
+        "ai_native_score": 0,
+        "ai_leverage_score": 0,
+        "herramientas_actuales": [],
+        "herramientas_recomendadas": [],
+        "agentes_recomendados": [],
+        "procesos_delegables": [],
+        "confianza": "No se tiene claro"
+      },
+      {
+        "colaborador": "Moises",
+        "ai_native_score": 0,
+        "ai_leverage_score": 0,
+        "herramientas_actuales": [],
+        "herramientas_recomendadas": [],
+        "agentes_recomendados": [],
+        "procesos_delegables": [],
+        "confianza": "No se tiene claro"
+      },
+      {
+        "colaborador": "Ivana",
+        "ai_native_score": 0,
+        "ai_leverage_score": 0,
+        "herramientas_actuales": [],
+        "herramientas_recomendadas": [],
+        "agentes_recomendados": [],
+        "procesos_delegables": [],
+        "confianza": "No se tiene claro"
+      },
+      {
+        "colaborador": "Aranzia",
+        "ai_native_score": 0,
+        "ai_leverage_score": 0,
+        "herramientas_actuales": [],
+        "herramientas_recomendadas": [],
+        "agentes_recomendados": [],
+        "procesos_delegables": [],
+        "confianza": "No se tiene claro"
+      },
+      {
+        "colaborador": "Edith",
+        "ai_native_score": 0,
+        "ai_leverage_score": 0,
+        "herramientas_actuales": [],
+        "herramientas_recomendadas": [],
+        "agentes_recomendados": [],
+        "procesos_delegables": [],
+        "confianza": "No se tiene claro"
+      },
+      {
+        "colaborador": "Kenyi",
+        "ai_native_score": 0,
+        "ai_leverage_score": 0,
+        "herramientas_actuales": [],
+        "herramientas_recomendadas": [],
+        "agentes_recomendados": [],
+        "procesos_delegables": [],
+        "confianza": "No se tiene claro"
+      },
+      {
+        "colaborador": "Sebastian",
+        "ai_native_score": 0,
+        "ai_leverage_score": 0,
+        "herramientas_actuales": [],
+        "herramientas_recomendadas": [],
+        "agentes_recomendados": [],
+        "procesos_delegables": [],
+        "confianza": "No se tiene claro"
+      },
+      {
+        "colaborador": "Reiner",
+        "ai_native_score": 0,
+        "ai_leverage_score": 0,
+        "herramientas_actuales": [],
+        "herramientas_recomendadas": [],
+        "agentes_recomendados": [],
+        "procesos_delegables": [],
+        "confianza": "No se tiene claro"
       }
     ],
     "por_empresa": [
       {
         "empresa": "GEN+",
-        "ai_native_score": 52,
+        "ai_native_score": 44,
         "clasificacion": "uso superficial"
       },
       {
         "empresa": "AECODE",
-        "ai_native_score": 52,
-        "clasificacion": "uso superficial"
+        "ai_native_score": 31,
+        "clasificacion": "operación manual vulnerable"
       },
       {
         "empresa": "VisionPro",
@@ -5061,5 +6583,563 @@
       "proyecto": "AgentFlow / Summit",
       "fuente": "06_Key_Highlights_Equipo.md"
     }
-  ]
+  ],
+  "participaciones": [
+    {
+      "persona": "Julie",
+      "proyecto_id": "prj-gen-cobranzas-gen",
+      "proyecto": "Cobranzas GEN+",
+      "empresa": "GEN+",
+      "unidad": "GEN+",
+      "rol": "responsable"
+    },
+    {
+      "persona": "Kevin",
+      "proyecto_id": "prj-gen-ptar-atarjea-buzones",
+      "proyecto": "PTAR Atarjea / Buzones",
+      "empresa": "GEN+",
+      "unidad": "GEN+",
+      "rol": "responsable"
+    },
+    {
+      "persona": "Luis Vergara",
+      "proyecto_id": "prj-gen-ptar-atarjea-buzones",
+      "proyecto": "PTAR Atarjea / Buzones",
+      "empresa": "GEN+",
+      "unidad": "GEN+",
+      "rol": "responsable"
+    },
+    {
+      "persona": "Julie",
+      "proyecto_id": "prj-gen-ptar-atarjea-buzones",
+      "proyecto": "PTAR Atarjea / Buzones",
+      "empresa": "GEN+",
+      "unidad": "GEN+",
+      "rol": "responsable"
+    },
+    {
+      "persona": "Fabrizio",
+      "proyecto_id": "prj-gen-ca-ete",
+      "proyecto": "Cañete",
+      "empresa": "GEN+",
+      "unidad": "GEN+",
+      "rol": "responsable"
+    },
+    {
+      "persona": "Israel",
+      "proyecto_id": "prj-gen-ca-ete",
+      "proyecto": "Cañete",
+      "empresa": "GEN+",
+      "unidad": "GEN+",
+      "rol": "responsable"
+    },
+    {
+      "persona": "Robert Herrera",
+      "proyecto_id": "prj-gen-ca-ete",
+      "proyecto": "Cañete",
+      "empresa": "GEN+",
+      "unidad": "GEN+",
+      "rol": "responsable"
+    },
+    {
+      "persona": "Luis Vergara",
+      "proyecto_id": "prj-gen-ca-ete",
+      "proyecto": "Cañete",
+      "empresa": "GEN+",
+      "unidad": "GEN+",
+      "rol": "responsable"
+    },
+    {
+      "persona": "Fabrizio",
+      "proyecto_id": "prj-gen-faucett",
+      "proyecto": "Faucett",
+      "empresa": "GEN+",
+      "unidad": "GEN+",
+      "rol": "responsable"
+    },
+    {
+      "persona": "Israel",
+      "proyecto_id": "prj-gen-faucett",
+      "proyecto": "Faucett",
+      "empresa": "GEN+",
+      "unidad": "GEN+",
+      "rol": "responsable"
+    },
+    {
+      "persona": "Fabrizio",
+      "proyecto_id": "prj-gen-dovelas-panama",
+      "proyecto": "Dovelas Panama",
+      "empresa": "GEN+",
+      "unidad": "GEN+",
+      "rol": "responsable"
+    },
+    {
+      "persona": "Guisella",
+      "proyecto_id": "prj-gen-dovelas-panama",
+      "proyecto": "Dovelas Panama",
+      "empresa": "GEN+",
+      "unidad": "GEN+",
+      "rol": "responsable"
+    },
+    {
+      "persona": "Julie",
+      "proyecto_id": "prj-gen-dovelas-panama",
+      "proyecto": "Dovelas Panama",
+      "empresa": "GEN+",
+      "unidad": "GEN+",
+      "rol": "responsable"
+    },
+    {
+      "persona": "Fabrizio",
+      "proyecto_id": "prj-gen-the-circle",
+      "proyecto": "The Circle",
+      "empresa": "GEN+",
+      "unidad": "GEN+",
+      "rol": "responsable"
+    },
+    {
+      "persona": "Guisella",
+      "proyecto_id": "prj-gen-the-circle",
+      "proyecto": "The Circle",
+      "empresa": "GEN+",
+      "unidad": "GEN+",
+      "rol": "responsable"
+    },
+    {
+      "persona": "Fabrizio",
+      "proyecto_id": "prj-gen-puente-tingo",
+      "proyecto": "Puente Tingo",
+      "empresa": "GEN+",
+      "unidad": "GEN+",
+      "rol": "responsable"
+    },
+    {
+      "persona": "Luis Vergara",
+      "proyecto_id": "prj-gen-puente-tingo",
+      "proyecto": "Puente Tingo",
+      "empresa": "GEN+",
+      "unidad": "GEN+",
+      "rol": "responsable"
+    },
+    {
+      "persona": "Alejandro Palpan",
+      "proyecto_id": "prj-gen-esparq",
+      "proyecto": "ESPARQ",
+      "empresa": "GEN+",
+      "unidad": "GEN+",
+      "rol": "responsable"
+    },
+    {
+      "persona": "Daniella",
+      "proyecto_id": "prj-gen-esparq",
+      "proyecto": "ESPARQ",
+      "empresa": "GEN+",
+      "unidad": "GEN+",
+      "rol": "responsable"
+    },
+    {
+      "persona": "Fabrizio",
+      "proyecto_id": "prj-gen-esparq",
+      "proyecto": "ESPARQ",
+      "empresa": "GEN+",
+      "unidad": "GEN+",
+      "rol": "responsable"
+    },
+    {
+      "persona": "Yary",
+      "proyecto_id": "prj-gen-esparq",
+      "proyecto": "ESPARQ",
+      "empresa": "GEN+",
+      "unidad": "GEN+",
+      "rol": "responsable"
+    },
+    {
+      "persona": "Fabrizio",
+      "proyecto_id": "prj-gen-agente-inmobiliario-gen",
+      "proyecto": "Agente Inmobiliario GEN+",
+      "empresa": "GEN+",
+      "unidad": "GEN+",
+      "rol": "responsable"
+    },
+    {
+      "persona": "Julie",
+      "proyecto_id": "prj-gen-uncp-osp-nestle-gore-otros",
+      "proyecto": "UNCP / OSP / Nestle / GORE / otros",
+      "empresa": "GEN+",
+      "unidad": "GEN+",
+      "rol": "responsable"
+    },
+    {
+      "persona": "Daniella",
+      "proyecto_id": "prj-gen-uncp-osp-nestle-gore-otros",
+      "proyecto": "UNCP / OSP / Nestle / GORE / otros",
+      "empresa": "GEN+",
+      "unidad": "GEN+",
+      "rol": "responsable"
+    },
+    {
+      "persona": "Erika",
+      "proyecto_id": "prj-aecode-sponsors-pipeline",
+      "proyecto": "Sponsors / pipeline",
+      "empresa": "AECODE",
+      "unidad": "AECODE AI Construction Summit",
+      "rol": "responsable"
+    },
+    {
+      "persona": "Paola",
+      "proyecto_id": "prj-aecode-sponsors-pipeline",
+      "proyecto": "Sponsors / pipeline",
+      "empresa": "AECODE",
+      "unidad": "AECODE AI Construction Summit",
+      "rol": "responsable"
+    },
+    {
+      "persona": "Julie",
+      "proyecto_id": "prj-aecode-sponsors-pipeline",
+      "proyecto": "Sponsors / pipeline",
+      "empresa": "AECODE",
+      "unidad": "AECODE AI Construction Summit",
+      "rol": "responsable"
+    },
+    {
+      "persona": "Marlon",
+      "proyecto_id": "prj-aecode-web-app-agenda",
+      "proyecto": "Web / App / agenda",
+      "empresa": "AECODE",
+      "unidad": "AECODE AI Construction Summit",
+      "rol": "responsable"
+    },
+    {
+      "persona": "Yary",
+      "proyecto_id": "prj-aecode-web-app-agenda",
+      "proyecto": "Web / App / agenda",
+      "empresa": "AECODE",
+      "unidad": "AECODE AI Construction Summit",
+      "rol": "responsable"
+    },
+    {
+      "persona": "Anderson",
+      "proyecto_id": "prj-aecode-web-app-agenda",
+      "proyecto": "Web / App / agenda",
+      "empresa": "AECODE",
+      "unidad": "AECODE AI Construction Summit",
+      "rol": "responsable"
+    },
+    {
+      "persona": "Fabrizio",
+      "proyecto_id": "prj-aecode-web-app-agenda",
+      "proyecto": "Web / App / agenda",
+      "empresa": "AECODE",
+      "unidad": "AECODE AI Construction Summit",
+      "rol": "responsable"
+    },
+    {
+      "persona": "Arantxa",
+      "proyecto_id": "prj-aecode-pre-congreso",
+      "proyecto": "Pre Congreso",
+      "empresa": "AECODE",
+      "unidad": "AECODE AI Construction Summit",
+      "rol": "responsable"
+    },
+    {
+      "persona": "Jessica",
+      "proyecto_id": "prj-aecode-pre-congreso",
+      "proyecto": "Pre Congreso",
+      "empresa": "AECODE",
+      "unidad": "AECODE AI Construction Summit",
+      "rol": "responsable"
+    },
+    {
+      "persona": "Enma",
+      "proyecto_id": "prj-aecode-pre-congreso",
+      "proyecto": "Pre Congreso",
+      "empresa": "AECODE",
+      "unidad": "AECODE AI Construction Summit",
+      "rol": "responsable"
+    },
+    {
+      "persona": "Carolina",
+      "proyecto_id": "prj-aecode-diplomados-certificados",
+      "proyecto": "Diplomados/certificados",
+      "empresa": "AECODE",
+      "unidad": "AECODE Live Training",
+      "rol": "responsable"
+    },
+    {
+      "persona": "Patrick",
+      "proyecto_id": "prj-aecode-diplomados-certificados",
+      "proyecto": "Diplomados/certificados",
+      "empresa": "AECODE",
+      "unidad": "AECODE Live Training",
+      "rol": "responsable"
+    },
+    {
+      "persona": "Marlon",
+      "proyecto_id": "prj-aecode-diplomados-certificados",
+      "proyecto": "Diplomados/certificados",
+      "empresa": "AECODE",
+      "unidad": "AECODE Live Training",
+      "rol": "responsable"
+    },
+    {
+      "persona": "Kevin",
+      "proyecto_id": "prj-aecode-diplomados-certificados",
+      "proyecto": "Diplomados/certificados",
+      "empresa": "AECODE",
+      "unidad": "AECODE Live Training",
+      "rol": "responsable"
+    },
+    {
+      "persona": "Julie",
+      "proyecto_id": "prj-aecode-diplomados-certificados",
+      "proyecto": "Diplomados/certificados",
+      "empresa": "AECODE",
+      "unidad": "AECODE Live Training",
+      "rol": "responsable"
+    },
+    {
+      "persona": "Talia",
+      "proyecto_id": "prj-aecode-ventas-training",
+      "proyecto": "Ventas Training",
+      "empresa": "AECODE",
+      "unidad": "AECODE Live Training",
+      "rol": "responsable"
+    },
+    {
+      "persona": "Genesis",
+      "proyecto_id": "prj-aecode-ventas-training",
+      "proyecto": "Ventas Training",
+      "empresa": "AECODE",
+      "unidad": "AECODE Live Training",
+      "rol": "responsable"
+    },
+    {
+      "persona": "Yadira",
+      "proyecto_id": "prj-aecode-ventas-training",
+      "proyecto": "Ventas Training",
+      "empresa": "AECODE",
+      "unidad": "AECODE Live Training",
+      "rol": "responsable"
+    },
+    {
+      "persona": "Reiner",
+      "proyecto_id": "prj-aecode-ventas-training",
+      "proyecto": "Ventas Training",
+      "empresa": "AECODE",
+      "unidad": "AECODE Live Training",
+      "rol": "responsable"
+    },
+    {
+      "persona": "Arantxa",
+      "proyecto_id": "prj-aecode-summit-reto-ia-training",
+      "proyecto": "Summit / Reto IA / Training",
+      "empresa": "AECODE",
+      "unidad": "AECODE AI Construction Summit",
+      "rol": "responsable"
+    },
+    {
+      "persona": "Enma",
+      "proyecto_id": "prj-aecode-summit-reto-ia-training",
+      "proyecto": "Summit / Reto IA / Training",
+      "empresa": "AECODE",
+      "unidad": "AECODE AI Construction Summit",
+      "rol": "responsable"
+    },
+    {
+      "persona": "Jessica",
+      "proyecto_id": "prj-aecode-summit-reto-ia-training",
+      "proyecto": "Summit / Reto IA / Training",
+      "empresa": "AECODE",
+      "unidad": "AECODE AI Construction Summit",
+      "rol": "responsable"
+    },
+    {
+      "persona": "Anggie",
+      "proyecto_id": "prj-aecode-summit-reto-ia-training",
+      "proyecto": "Summit / Reto IA / Training",
+      "empresa": "AECODE",
+      "unidad": "AECODE AI Construction Summit",
+      "rol": "responsable"
+    },
+    {
+      "persona": "Yary",
+      "proyecto_id": "prj-aecode-fase-2-fase-3-aecode",
+      "proyecto": "Fase 2 / Fase 3 / AECODE",
+      "empresa": "AECODE",
+      "unidad": "AECODE Producto / Plataforma",
+      "rol": "responsable"
+    },
+    {
+      "persona": "Marlon",
+      "proyecto_id": "prj-aecode-fase-2-fase-3-aecode",
+      "proyecto": "Fase 2 / Fase 3 / AECODE",
+      "empresa": "AECODE",
+      "unidad": "AECODE Producto / Plataforma",
+      "rol": "responsable"
+    },
+    {
+      "persona": "Anderson",
+      "proyecto_id": "prj-aecode-fase-2-fase-3-aecode",
+      "proyecto": "Fase 2 / Fase 3 / AECODE",
+      "empresa": "AECODE",
+      "unidad": "AECODE Producto / Plataforma",
+      "rol": "responsable"
+    },
+    {
+      "persona": "Yudely",
+      "proyecto_id": "prj-aecode-fase-2-fase-3-aecode",
+      "proyecto": "Fase 2 / Fase 3 / AECODE",
+      "empresa": "AECODE",
+      "unidad": "AECODE Producto / Plataforma",
+      "rol": "responsable"
+    },
+    {
+      "persona": "Fabrizio",
+      "proyecto_id": "prj-aecode-fase-2-fase-3-aecode",
+      "proyecto": "Fase 2 / Fase 3 / AECODE",
+      "empresa": "AECODE",
+      "unidad": "AECODE Producto / Plataforma",
+      "rol": "responsable"
+    },
+    {
+      "persona": "Daniella",
+      "proyecto_id": "prj-aecode-kaman-convocatorias",
+      "proyecto": "Kaman / convocatorias",
+      "empresa": "AECODE",
+      "unidad": "AECODE Startup",
+      "rol": "responsable"
+    },
+    {
+      "persona": "Julie",
+      "proyecto_id": "prj-aecode-kaman-convocatorias",
+      "proyecto": "Kaman / convocatorias",
+      "empresa": "AECODE",
+      "unidad": "AECODE Startup",
+      "rol": "responsable"
+    },
+    {
+      "persona": "Alejandro Palpan",
+      "proyecto_id": "prj-aecode-kaman-convocatorias",
+      "proyecto": "Kaman / convocatorias",
+      "empresa": "AECODE",
+      "unidad": "AECODE Startup",
+      "rol": "responsable"
+    },
+    {
+      "persona": "Marlon",
+      "proyecto_id": "prj-visionpro-pdk-ascent",
+      "proyecto": "PDK Ascent",
+      "empresa": "VisionPro",
+      "unidad": "VisionPro",
+      "rol": "responsable"
+    },
+    {
+      "persona": "Emanuel",
+      "proyecto_id": "prj-visionpro-pdk-ascent",
+      "proyecto": "PDK Ascent",
+      "empresa": "VisionPro",
+      "unidad": "VisionPro",
+      "rol": "responsable"
+    },
+    {
+      "persona": "Yary",
+      "proyecto_id": "prj-visionpro-pdk-ascent",
+      "proyecto": "PDK Ascent",
+      "empresa": "VisionPro",
+      "unidad": "VisionPro",
+      "rol": "responsable"
+    },
+    {
+      "persona": "Daniella",
+      "proyecto_id": "prj-visionpro-pdk-ascent",
+      "proyecto": "PDK Ascent",
+      "empresa": "VisionPro",
+      "unidad": "VisionPro",
+      "rol": "responsable"
+    },
+    {
+      "persona": "Erika",
+      "proyecto_id": "prj-visionpro-pdk-ascent",
+      "proyecto": "PDK Ascent",
+      "empresa": "VisionPro",
+      "unidad": "VisionPro",
+      "rol": "responsable"
+    },
+    {
+      "persona": "Daniella",
+      "proyecto_id": "prj-visionpro-visionpro-decks",
+      "proyecto": "VisionPro decks",
+      "empresa": "VisionPro",
+      "unidad": "VisionPro",
+      "rol": "responsable"
+    },
+    {
+      "persona": "Julie",
+      "proyecto_id": "prj-visionpro-visionpro-decks",
+      "proyecto": "VisionPro decks",
+      "empresa": "VisionPro",
+      "unidad": "VisionPro",
+      "rol": "responsable"
+    },
+    {
+      "persona": "Erika",
+      "proyecto_id": "prj-visionpro-visionpro-decks",
+      "proyecto": "VisionPro decks",
+      "empresa": "VisionPro",
+      "unidad": "VisionPro",
+      "rol": "responsable"
+    },
+    {
+      "persona": "Julie",
+      "proyecto_id": "prj-thesia-thesia-presupuesto-tesis-juan",
+      "proyecto": "THESIA presupuesto / Tesis Juan",
+      "empresa": "THESIA",
+      "unidad": "THESIA",
+      "rol": "responsable"
+    },
+    {
+      "persona": "Fabrizio",
+      "proyecto_id": "prj-thesia-thesia-presupuesto-tesis-juan",
+      "proyecto": "THESIA presupuesto / Tesis Juan",
+      "empresa": "THESIA",
+      "unidad": "THESIA",
+      "rol": "responsable"
+    },
+    {
+      "persona": "Emanuel",
+      "proyecto_id": "prj-agentflow-migracion-flujos",
+      "proyecto": "Migracion flujos",
+      "empresa": "AgentFlow",
+      "unidad": "AgentFlow",
+      "rol": "responsable"
+    },
+    {
+      "persona": "Fabrizio",
+      "proyecto_id": "prj-agentflow-migracion-flujos",
+      "proyecto": "Migracion flujos",
+      "empresa": "AgentFlow",
+      "unidad": "AgentFlow",
+      "rol": "responsable"
+    },
+    {
+      "persona": "Marlon",
+      "proyecto_id": "prj-agentflow-migracion-flujos",
+      "proyecto": "Migracion flujos",
+      "empresa": "AgentFlow",
+      "unidad": "AgentFlow",
+      "rol": "responsable"
+    }
+  ],
+  "costos": {
+    "periodo": "2026-05",
+    "planilla_por_empresa": {
+      "GEN+": 16630.0,
+      "AECODE": 57420.0,
+      "THESIA": 8700.0
+    },
+    "planilla_total": 82750.0,
+    "n_personas_costo": 37,
+    "moneda": "PEN",
+    "fuente": "Cierre-RH-Pagos (04_Team GEN+)"
+  }
 }

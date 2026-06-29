@@ -32,6 +32,9 @@ VAULT = os.environ.get(
     "AP_VAULT",
     r"D:\AP\AP_Knowledge_OS\00_CEO_Intelligence",
 )
+# Vault root (one level up) to read team/finance/commercial sources outside CEO_Intelligence.
+VAULT_ROOT = os.environ.get("AP_VAULT_ROOT", os.path.dirname(VAULT))
+PERIODO = os.environ.get("AP_PERIODO", "2026-06")
 OUT = os.path.join(ROOT, "public", "data")
 NORM = os.path.join(OUT, "normalized")
 BASE = os.path.join(OUT, "baselines")
@@ -160,6 +163,144 @@ def norm_company(s):
     return "AP"
 
 # --------------------------------------------------------------------------- #
+# Funciones canónicas (áreas funcionales por empresa) — punto 2.
+# Orden = precedencia de clasificación (más específico primero).
+# --------------------------------------------------------------------------- #
+FUNCIONES = ["Administración", "Contabilidad", "Finanzas", "Comercial", "Marketing",
+             "Operaciones / Proyectos", "Automatización", "Talento / Team"]
+FUNC_ICON = {
+    "Administración": "Building2", "Contabilidad": "Calculator", "Finanzas": "Banknote",
+    "Comercial": "Handshake", "Marketing": "Megaphone", "Operaciones / Proyectos": "HardHat",
+    "Automatización": "Workflow", "Talento / Team": "Users",
+}
+_FUNC_KW = [
+    ("Contabilidad", ["contab", "tribut", "sunat", "impuesto", "planilla", "factur"]),
+    ("Finanzas", ["caja", "cobr", "edp", "finanz", "pago", "presupuesto", "valoriza", "rentab", "margen"]),
+    ("Administración", ["admin", "legal", "contrato", "documenta", "gerencia", "coordinacion general", "coordinación general"]),
+    ("Automatización", ["automatiz", "agentflow", "agent flow", "flujo", "n8n", "script", "besco", "rpa", "integracion", "integración", "migracion", "migración"]),
+    ("Marketing", ["marketing", "growth", "campaña", "campana", "pieza", "ghl", "reto", "tiktok", "congreso", "brochure", "pauta", "ads", "comunidad", "embajador"]),
+    ("Comercial", ["comercial", "ventas", "sponsor", "propuesta", "cotiz", "b2b", "b2c", "lead", "pipeline", "cliente", "oportunidad", "deck"]),
+    ("Talento / Team", ["talento", "team", "equipo", "rrhh", "cultura", "capacit", "onboarding", "contrata"]),
+    ("Operaciones / Proyectos", ["delivery", "bim", "proyecto", "obra", "training", "diplomado", "academ", "producto", "app", "web", "visionpro", "pdk", "esparq", "summit", "dev", "qa", "certificad", "postventa", "startup", "modelo", "plano", "cañete", "canete", "faucett", "dovela", "circle", "ptar", "tingo"]),
+]
+
+def classify_funcion(*texts):
+    s = " ".join(t for t in texts if t).lower()
+    for fn, kws in _FUNC_KW:
+        if any(k in s for k in kws):
+            return fn
+    return "Operaciones / Proyectos"
+
+# Altitud (estratégico/táctico/operativo) y Modo (gestión/ejecución/desarrollo) — punto 3.
+def classify_altitud(*texts):
+    s = " ".join(t for t in texts if t).lower()
+    if any(k in s for k in ["dod", "decision", "decisión", "estrategia", "roadmap", "alcance", "modelo de", "vision", "visión", "postmortem", "checklist", "matriz", "forecast", "presupuesto", "regla", "definir", "priorizar"]):
+        return "Estratégico"
+    if any(k in s for k in ["tablero", "sprint", "sla", "seguimiento", "coordina", "validar", "revisar", "plan", "agenda", "corte", "owner", "cruce", "control"]):
+        return "Táctico"
+    return "Operativo"
+
+def classify_modo(*texts):
+    s = " ".join(t for t in texts if t).lower()
+    if any(k in s for k in ["automatiz", "flujo", "n8n", "script", "agente", "dev", "código", "codigo", "deploy", "backend", "api", "integracion", "integración", "rpa"]):
+        return "Desarrollo / Automatización"
+    if any(k in s for k in ["tablero", "decision", "decisión", "priorizar", "coordina", "owner", "sla", "estrategia", "definir", "validar cifra", "control", "matriz"]):
+        return "Gestión"
+    return "Ejecución"
+
+# Sub-unidades AECODE — punto solicitado (Automation y Summit separados).
+AECODE_UNITS = ["AECODE Live Training", "AECODE B2B", "AECODE Comunidad",
+                "AECODE Automation", "AECODE AI Construction Summit",
+                "AECODE Producto / Plataforma", "AECODE Startup"]
+_AECODE_KW = [
+    ("AECODE AI Construction Summit", ["summit", "congreso", "sponsor", "ponente", "pre congreso"]),
+    ("AECODE Automation", ["automation", "automatiz", "agente", "agentflow", "n8n", "flujo"]),
+    ("AECODE B2B", ["b2b", "empresa", "corporativo", "in-company", "in company", "utec", "coneic"]),
+    ("AECODE Comunidad", ["comunidad", "community", "embajador", "reto", "free"]),
+    ("AECODE Startup", ["startup", "kaman", "convocatoria", "demo day", "pitch"]),
+    ("AECODE Live Training", ["training", "diplomado", "curso", "academ", "live", "certificad", "postventa", "rubrica", "licencia", "ventas"]),
+    ("AECODE Producto / Plataforma", ["producto", "plataforma", "app", "web", "fase", "aula", "aecodito", "algoritmo"]),
+]
+def classify_aecode_unidad(area, nombre):
+    s = (area + " " + nombre).lower()
+    for u, kws in _AECODE_KW:
+        if any(k in s for k in kws):
+            return u
+    return "AECODE Live Training"
+
+# --------------------------------------------------------------------------- #
+# Costos / RH (Cierre-RH-Pagos-*) — punto: cuánto gana cada uno + costo/aporte.
+# --------------------------------------------------------------------------- #
+def _money(s):
+    if not s:
+        return None
+    m = re.search(r"S/\.?\s*([\d.,]+)", s)
+    if not m:
+        return None
+    raw = m.group(1).replace(",", "")
+    try:
+        return float(raw)
+    except ValueError:
+        return None
+
+def parse_rh_costs():
+    """Lee el último Cierre-RH-Pagos-*.md y devuelve {nombre_canon: {...costo}}."""
+    folder = os.path.join(VAULT_ROOT, "04_Team GEN+", "Cultura-Operativa")
+    out, periodo = {}, None
+    if not os.path.isdir(folder):
+        return out, periodo
+    files = sorted([f for f in os.listdir(folder) if re.match(r"Cierre-RH-Pagos.*\.md$", f, re.I)])
+    if not files:
+        return out, periodo
+    path = os.path.join(folder, files[-1])
+    text = read(path) or ""
+    fm = re.search(r"periodo:\s*([\d-]+)", text)
+    periodo = fm.group(1) if fm else None
+    for _, tables in parse_sections(text):
+        for table in tables:
+            for row in table:
+                persona = clean(col(row, "persona"))
+                base = _money(col(row, "remuneracion base", "remuneración base", "base"))
+                final = _money(col(row, "monto final", "monto"))
+                rh_emp = col(row, "rh / empresa", "rh/empresa", "rh")
+                desc = clean(col(row, "descripcion", "descripción"))
+                if persona == UNCLEAR or base is None and final is None:
+                    continue
+                por_empresa = {}
+                for part in re.split(r"[;]", rh_emp or ""):
+                    em = norm_company(part.split(":")[0])
+                    amt = _money(part)
+                    if amt and em in COMPANY_ORDER:
+                        por_empresa[em] = por_empresa.get(em, 0) + amt
+                out[persona] = {
+                    "persona": persona, "costo_base": base, "costo_final": final or base,
+                    "costo_por_empresa": por_empresa, "rol_rh": desc, "fuente": files[-1],
+                }
+    return out, periodo
+
+def split_people(s):
+    """Divide un campo 'responsable' en nombres individuales."""
+    if not s or s == UNCLEAR:
+        return []
+    parts = re.split(r"[/,]|\s+y\s+", s)
+    out = []
+    for p in parts:
+        n = p.strip()
+        if n and n.lower() not in ("equipo", "team", "varios", "n/a"):
+            out.append(n)
+    return out
+
+def match_cost(nombre, costs):
+    """Empareja colaborador con su fila RH por nombre o primer token (Inferido)."""
+    if nombre in costs:
+        return costs[nombre]
+    first = nombre.split()[0].lower()
+    for k, v in costs.items():
+        if k.split()[0].lower() == first:
+            return v
+    return None
+
+# --------------------------------------------------------------------------- #
 # Scoring primitives (deterministic)
 # --------------------------------------------------------------------------- #
 ESTADO_RISK = {"rojo": 0.85, "amarillo": 0.45, "verde": 0.15}
@@ -274,6 +415,9 @@ def build_projects():
                 out.append({
                     "id": slug("prj", empresa, nombre),
                     "empresa": empresa, "area": area, "nombre": nombre,
+                    "funcion": classify_funcion(area, nombre),
+                    "unidad": classify_aecode_unidad(area, nombre) if empresa == "AECODE" else empresa,
+                    "personas": split_people(resp),
                     "responsable": resp,
                     "avance_reportado": avance_pct,
                     "avance_validado": r100(avance_validado),
@@ -286,9 +430,10 @@ def build_projects():
                 })
     return out
 
-def build_collaborators():
+def build_collaborators(projects, costs):
     text = read(vfile("02_Matriz_Colaboradores.md"))
     out = []
+    matched_cost_keys = set()
     for heading, tables in parse_sections(text):
         for table in tables:
             for row in table:
@@ -332,9 +477,27 @@ def build_collaborators():
                     0.35 * min(n_proj / 5.0, 1.0) + 0.30 * cargav
                     + 0.20 * needs_fb + 0.15 * (1.0 if "wip" in riesgos.lower() or "sobrecarga" in riesgos.lower() else 0.3)
                 )
+                # Grafo persona -> proyectos (responsable contiene su nombre, o lo menciona)
+                first = nombre.split()[0].lower()
+                my_projs = [p for p in projects
+                            if any(first == n.split()[0].lower() for n in p["personas"])
+                            or nombre.lower() in (proyectos or "").lower()]
+                proyecto_ids = [p["id"] for p in my_projs]
+                avg_h = int(round(sum(p["health_score"] for p in my_projs) / len(my_projs))) if my_projs else 0
+                crit_share = (len([p for p in my_projs if p["estado"] == "rojo"]) / len(my_projs)) if my_projs else 0
+                aporte = r100(0.40 * min(len(my_projs) / 5.0, 1.0) + 0.35 * (avg_h / 100.0) + 0.25 * crit_share)
+                # Costo (RH)
+                c = match_cost(nombre, costs)
+                if c:
+                    matched_cost_keys.add(c["persona"])
+                costo_final = c["costo_final"] if c else UNCLEAR
+                costo_base = c["costo_base"] if c else UNCLEAR
+                costo_emp = c["costo_por_empresa"] if c else {}
+                rol_rh = c["rol_rh"] if c else UNCLEAR
                 out.append({
                     "id": slug("col", nombre),
                     "nombre": nombre, "empresa_area": empresa_area,
+                    "funcion": classify_funcion(empresa_area, proyectos, hechas),
                     "empresas": [c for c in COMPANY_ORDER if c.lower().replace("+", "") in empresa_area.lower().replace("+", "")] or [norm_company(empresa_area)],
                     "proyectos": proyectos, "n_proyectos": n_proj,
                     "actividades": hechas, "pendientes": pend,
@@ -344,12 +507,70 @@ def build_collaborators():
                     "wip_score": wip, "bottleneck_score": bottleneck,
                     "context_quality_score": context_q, "ai_leverage_score": ai_leverage,
                     "ai_native_score": ai_native,
+                    "proyecto_ids": proyecto_ids, "avg_proj_health": avg_h, "aporte_score": aporte,
+                    "costo_final": costo_final, "costo_base": costo_base, "costo_por_empresa": costo_emp,
+                    "rol_rh": rol_rh, "costo_aporte": "", "solo_costo": False,
                     "herramientas_actuales": tools, "herramientas_recomendadas": tools_rec,
                     "agentes_recomendados": agentes, "procesos_delegables": delegables,
                     "confianza_ai": ai_conf,
                     "fuente": "02_Matriz_Colaboradores.md",
                 })
+
+    # Personas presentes en RH pero no en la matriz de actividad (solo costo).
+    for key, c in costs.items():
+        if key in matched_cost_keys:
+            continue
+        empresas = list(c["costo_por_empresa"].keys()) or ["AECODE"]
+        out.append({
+            "id": slug("col", key), "nombre": key, "empresa_area": " / ".join(empresas),
+            "funcion": classify_funcion(c.get("rol_rh", "")), "empresas": empresas,
+            "proyectos": UNCLEAR, "n_proyectos": 0, "actividades": c.get("rol_rh", UNCLEAR),
+            "pendientes": UNCLEAR, "carga": UNCLEAR, "carga_val": 0.0, "riesgos": UNCLEAR,
+            "necesita_feedback": False, "proxima_accion": UNCLEAR,
+            "wip_score": 0, "bottleneck_score": 0, "context_quality_score": 0,
+            "ai_leverage_score": 0, "ai_native_score": 0,
+            "proyecto_ids": [], "avg_proj_health": 0, "aporte_score": 0,
+            "costo_final": c["costo_final"], "costo_base": c["costo_base"],
+            "costo_por_empresa": c["costo_por_empresa"], "rol_rh": c.get("rol_rh", UNCLEAR),
+            "costo_aporte": "", "solo_costo": True,
+            "herramientas_actuales": [], "herramientas_recomendadas": [],
+            "agentes_recomendados": [], "procesos_delegables": [],
+            "confianza_ai": UNCLEAR, "fuente": "Cierre-RH-Pagos",
+        })
+
+    # Etiqueta costo/aporte por percentiles (solo quienes tienen costo numérico).
+    withcost = [c for c in out if isinstance(c["costo_final"], (int, float))]
+    if withcost:
+        costs_sorted = sorted(c["costo_final"] for c in withcost)
+        apt_sorted = sorted(c["aporte_score"] for c in withcost)
+        def pctl(val, arr):
+            return sum(1 for x in arr if x <= val) / len(arr)
+        for c in withcost:
+            cp = pctl(c["costo_final"], costs_sorted)
+            ap = pctl(c["aporte_score"], apt_sorted)
+            diff = ap - cp
+            c["costo_aporte"] = ("Alto valor" if diff >= 0.18 else
+                                 "Revisar" if diff <= -0.18 else "Equilibrado")
+            c["valor_diff"] = round(diff, 2)
+    for c in out:
+        c.setdefault("valor_diff", 0)
+        if not c["costo_aporte"]:
+            c["costo_aporte"] = UNCLEAR
     return out
+
+def build_participaciones(projects, collaborators):
+    """Edge list persona <-> proyecto con rol (responsable / colaborador)."""
+    edges = []
+    name_by_first = {}
+    for c in collaborators:
+        name_by_first.setdefault(c["nombre"].split()[0].lower(), c["nombre"])
+    for p in projects:
+        for n in p["personas"]:
+            canon = name_by_first.get(n.split()[0].lower(), n)
+            edges.append({"persona": canon, "proyecto_id": p["id"], "proyecto": p["nombre"],
+                          "empresa": p["empresa"], "unidad": p.get("unidad", p["empresa"]),
+                          "rol": "responsable"})
+    return edges
 
 def build_risks():
     text = read(vfile("03_Bloqueos_Riesgos.md"))
@@ -501,6 +722,9 @@ def build_tasks(projects, priorities):
         out.append({
             "id": slug("task", p["titulo"])[:60],
             "empresa": UNCLEAR, "area": UNCLEAR, "proyecto": p["titulo"],
+            "funcion": classify_funcion(p["titulo"], p["resultado_esperado"]),
+            "altitud": classify_altitud(p["titulo"], p["resultado_esperado"]),
+            "modo": classify_modo(p["titulo"], p["resultado_esperado"]),
             "colaborador": p["owner"], "descripcion": p["resultado_esperado"],
             "estado": "pendiente", "prioridad": p["nivel"],
             "fecha_objetivo": p["fecha"], "resultado_esperado": p["resultado_esperado"],
@@ -511,12 +735,39 @@ def build_tasks(projects, priorities):
             out.append({
                 "id": slug("task", p["empresa"], p["nombre"])[:60],
                 "empresa": p["empresa"], "area": p["area"], "proyecto": p["nombre"],
+                "funcion": p.get("funcion", classify_funcion(p["area"], p["nombre"])),
+                "altitud": classify_altitud(p["nombre"], p["pendientes"]),
+                "modo": classify_modo(p["nombre"], p["pendientes"]),
                 "colaborador": p["responsable"], "descripcion": p["pendientes"],
                 "estado": "pendiente", "prioridad": "alta" if p["estado"] == "rojo" else "media",
                 "fecha_objetivo": p["proximo_hito"], "resultado_esperado": p["proximo_hito"],
                 "evidencia": p["evidencia"], "confianza": p["confianza"],
                 "fuente": "01_Matriz_Proyectos.md",
             })
+    return out
+
+def aggregate_functions(projects):
+    """Matriz Empresa × Función — punto 2."""
+    cells = {}
+    for p in projects:
+        key = (p["empresa"], p["funcion"])
+        c = cells.setdefault(key, {"empresa": p["empresa"], "funcion": p["funcion"],
+                                   "n": 0, "health": [], "risk": [], "reds": 0, "proyectos": []})
+        c["n"] += 1
+        c["health"].append(p["health_score"])
+        c["risk"].append(p["risk_score"])
+        c["proyectos"].append(p["id"])
+        if p["estado"] == "rojo":
+            c["reds"] += 1
+    out = []
+    for (emp, fn), c in cells.items():
+        out.append({
+            "id": slug("fn", emp, fn), "empresa": emp, "funcion": fn, "icon": FUNC_ICON.get(fn, "Box"),
+            "n_proyectos": c["n"], "reds": c["reds"],
+            "health_score": int(round(sum(c["health"]) / len(c["health"]))),
+            "risk_score": int(round(sum(c["risk"]) / len(c["risk"]))),
+            "proyectos": c["proyectos"],
+        })
     return out
 
 def build_evidence(projects):
@@ -881,8 +1132,11 @@ def main():
     if not os.path.isdir(VAULT):
         print("[ETL] WARNING: vault path not found. Outputs will be empty.")
 
+    rh_costs, rh_periodo = parse_rh_costs()
+    print("[ETL] RH costos:", len(rh_costs), "personas · periodo", rh_periodo)
     projects = build_projects()
-    collaborators = build_collaborators()
+    collaborators = build_collaborators(projects, rh_costs)
+    participaciones = build_participaciones(projects, collaborators)
     risks = build_risks()
     blockers = build_blockers(projects)
     decisions = build_decisions()
@@ -896,6 +1150,20 @@ def main():
     tools = build_tools()
     companies = aggregate_companies(projects, collaborators, risks, procesos)
     areas = aggregate_areas(projects)
+    funciones = aggregate_functions(projects)
+    # Resumen de costos / planilla (solo para Team + Finanzas).
+    planilla_emp = {}
+    for c in collaborators:
+        for emp, amt in (c.get("costo_por_empresa") or {}).items():
+            planilla_emp[emp] = round(planilla_emp.get(emp, 0) + amt, 2)
+    costos = {
+        "periodo": rh_periodo or "2026-05",
+        "planilla_por_empresa": planilla_emp,
+        "planilla_total": round(sum(planilla_emp.values()), 2),
+        "n_personas_costo": len([c for c in collaborators if isinstance(c["costo_final"], (int, float))]),
+        "moneda": "PEN",
+        "fuente": "Cierre-RH-Pagos (04_Team GEN+)",
+    }
     ai_native = build_ai_native(collaborators, companies, agents, procesos)
     data_quality = build_data_quality(projects, collaborators, risks)
     deltas, first_run = compute_deltas(projects, risks)
@@ -904,6 +1172,7 @@ def main():
         "meta": {
             "generated_at": STAMP, "vault": VAULT, "first_run": first_run,
             "corte": "2026-06-28 16:25 PET",
+            "periodo": PERIODO, "periodo_costos": costos["periodo"],
             "counts": {
                 "empresas": len([c for c in companies if c.get("presente")]),
                 "proyectos": len(projects), "colaboradores": len(collaborators),
@@ -913,19 +1182,20 @@ def main():
                 "deltas": len(deltas),
             },
         },
-        "empresas": companies, "areas": areas, "proyectos": projects,
+        "empresas": companies, "areas": areas, "funciones": funciones, "proyectos": projects,
         "colaboradores": collaborators, "riesgos": risks, "bloqueos": blockers,
         "decisiones": decisions, "prioridades": priorities, "tareas": tasks,
         "evidencias": evidence, "fuentes": sources, "deltas": deltas,
         "procesos": procesos, "agentes": agents, "herramientas_ia": tools,
         "ai_native": ai_native, "data_quality": data_quality, "highlights": highlights,
+        "participaciones": participaciones, "costos": costos,
     }
 
     # individual files
-    for key in ("empresas", "areas", "proyectos", "colaboradores", "riesgos",
+    for key in ("empresas", "areas", "funciones", "proyectos", "colaboradores", "riesgos",
                 "bloqueos", "decisiones", "prioridades", "tareas", "evidencias",
                 "fuentes", "deltas", "procesos", "agentes", "herramientas_ia",
-                "ai_native", "data_quality", "highlights"):
+                "ai_native", "data_quality", "highlights", "participaciones", "costos"):
         write_json(os.path.join(NORM, "%s.json" % key), bundle[key])
     write_json(os.path.join(OUT, "ceo_os.json"), bundle)
 

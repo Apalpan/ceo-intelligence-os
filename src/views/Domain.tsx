@@ -14,6 +14,7 @@ const CFG: Record<string, Cfg> = {
   product: { keywords: ["producto", "app", "web", "visionpro", "pdk", "dev", "fase", "esparq", "inmobiliario", "besco", "digital", "agente"], next: "Roadmap de producto, separación diseño/dev/QA y estado de releases por fase." },
   training: { keywords: ["training", "diplomado", "certificad", "academ", "comunidad", "postventa", "curso", "licencia", "rubrica"], next: "Tablero por diplomado: rúbrica, entregable, certificado CIP, sustitutorio y bloqueos de licencia." },
   summit: { keywords: ["summit", "sponsor", "agenda", "evento", "congreso", "ponente"], next: "Cruce sponsor→pago→beneficio→delegación→stand→ponente y checklist de producción del evento." },
+  contabilidad: { keywords: ["contab", "tribut", "sunat", "admin", "legal", "contrato", "planilla", "factur", "documenta", "gerencia"], next: "Calendario tributario (SIRE/621), expediente SUNAT/SUNAFIL, contratos y RH por mes." },
 };
 
 export default function Domain({ id }: { id: string }) {

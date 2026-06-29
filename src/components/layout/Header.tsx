@@ -1,15 +1,16 @@
 import { useState } from "react";
 import { Menu, Search, Sun, Moon, RefreshCw, ChevronRight } from "lucide-react";
 import { useStore } from "@/store";
-import { NAV_BY_ID } from "@/nav";
+import { NAV_BY_ID, WS_BY_ID } from "@/nav";
 import { realCompanies } from "@/lib/data";
 import { cx } from "@/lib/format";
 import { CompanyChip } from "@/components/ui";
 
 export function Header({ route }: { route: string }) {
   const { theme, toggleTheme, setMobileNav, setPalette, bundle, status, load,
-    companyFilter, setCompanyFilter } = useStore();
+    companyFilter, setCompanyFilter, workspace } = useStore();
   const meta = NAV_BY_ID[route];
+  const ws = WS_BY_ID[workspace];
   const [spin, setSpin] = useState(false);
 
   const refresh = async () => { setSpin(true); await load(); setTimeout(() => setSpin(false), 500); };
@@ -22,7 +23,8 @@ export function Header({ route }: { route: string }) {
 
         {/* breadcrumb */}
         <div className="flex items-center gap-1.5 min-w-0">
-          <span className="text-xs text-muted hidden sm:inline">{meta?.group}</span>
+          {ws?.icon && <ws.icon size={15} className="shrink-0" style={{ color: ws.accent }} />}
+          <span className="text-xs text-muted hidden sm:inline truncate max-w-[180px]">{ws?.short}</span>
           <ChevronRight size={13} className="text-muted hidden sm:inline" />
           <span className="text-sm font-semibold tracking-tight truncate">{meta?.label}</span>
         </div>

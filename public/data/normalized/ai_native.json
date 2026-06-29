@@ -1,6 +1,6 @@
 {
-  "overall_score": 50,
-  "clasificacion": "uso superficial",
+  "overall_score": 31,
+  "clasificacion": "operación manual vulnerable",
   "por_persona": [
     {
       "colaborador": "Julie",
@@ -481,18 +481,158 @@
         "Matriz certificados/notas/recursos"
       ],
       "confianza": "Inferido"
+    },
+    {
+      "colaborador": "Jordi",
+      "ai_native_score": 0,
+      "ai_leverage_score": 0,
+      "herramientas_actuales": [],
+      "herramientas_recomendadas": [],
+      "agentes_recomendados": [],
+      "procesos_delegables": [],
+      "confianza": "No se tiene claro"
+    },
+    {
+      "colaborador": "Fernando",
+      "ai_native_score": 0,
+      "ai_leverage_score": 0,
+      "herramientas_actuales": [],
+      "herramientas_recomendadas": [],
+      "agentes_recomendados": [],
+      "procesos_delegables": [],
+      "confianza": "No se tiene claro"
+    },
+    {
+      "colaborador": "Alejandro Palpan",
+      "ai_native_score": 0,
+      "ai_leverage_score": 0,
+      "herramientas_actuales": [],
+      "herramientas_recomendadas": [],
+      "agentes_recomendados": [],
+      "procesos_delegables": [],
+      "confianza": "No se tiene claro"
+    },
+    {
+      "colaborador": "Ana",
+      "ai_native_score": 0,
+      "ai_leverage_score": 0,
+      "herramientas_actuales": [],
+      "herramientas_recomendadas": [],
+      "agentes_recomendados": [],
+      "procesos_delegables": [],
+      "confianza": "No se tiene claro"
+    },
+    {
+      "colaborador": "Paolo",
+      "ai_native_score": 0,
+      "ai_leverage_score": 0,
+      "herramientas_actuales": [],
+      "herramientas_recomendadas": [],
+      "agentes_recomendados": [],
+      "procesos_delegables": [],
+      "confianza": "No se tiene claro"
+    },
+    {
+      "colaborador": "Aracely",
+      "ai_native_score": 0,
+      "ai_leverage_score": 0,
+      "herramientas_actuales": [],
+      "herramientas_recomendadas": [],
+      "agentes_recomendados": [],
+      "procesos_delegables": [],
+      "confianza": "No se tiene claro"
+    },
+    {
+      "colaborador": "Janet",
+      "ai_native_score": 0,
+      "ai_leverage_score": 0,
+      "herramientas_actuales": [],
+      "herramientas_recomendadas": [],
+      "agentes_recomendados": [],
+      "procesos_delegables": [],
+      "confianza": "No se tiene claro"
+    },
+    {
+      "colaborador": "Moises",
+      "ai_native_score": 0,
+      "ai_leverage_score": 0,
+      "herramientas_actuales": [],
+      "herramientas_recomendadas": [],
+      "agentes_recomendados": [],
+      "procesos_delegables": [],
+      "confianza": "No se tiene claro"
+    },
+    {
+      "colaborador": "Ivana",
+      "ai_native_score": 0,
+      "ai_leverage_score": 0,
+      "herramientas_actuales": [],
+      "herramientas_recomendadas": [],
+      "agentes_recomendados": [],
+      "procesos_delegables": [],
+      "confianza": "No se tiene claro"
+    },
+    {
+      "colaborador": "Aranzia",
+      "ai_native_score": 0,
+      "ai_leverage_score": 0,
+      "herramientas_actuales": [],
+      "herramientas_recomendadas": [],
+      "agentes_recomendados": [],
+      "procesos_delegables": [],
+      "confianza": "No se tiene claro"
+    },
+    {
+      "colaborador": "Edith",
+      "ai_native_score": 0,
+      "ai_leverage_score": 0,
+      "herramientas_actuales": [],
+      "herramientas_recomendadas": [],
+      "agentes_recomendados": [],
+      "procesos_delegables": [],
+      "confianza": "No se tiene claro"
+    },
+    {
+      "colaborador": "Kenyi",
+      "ai_native_score": 0,
+      "ai_leverage_score": 0,
+      "herramientas_actuales": [],
+      "herramientas_recomendadas": [],
+      "agentes_recomendados": [],
+      "procesos_delegables": [],
+      "confianza": "No se tiene claro"
+    },
+    {
+      "colaborador": "Sebastian",
+      "ai_native_score": 0,
+      "ai_leverage_score": 0,
+      "herramientas_actuales": [],
+      "herramientas_recomendadas": [],
+      "agentes_recomendados": [],
+      "procesos_delegables": [],
+      "confianza": "No se tiene claro"
+    },
+    {
+      "colaborador": "Reiner",
+      "ai_native_score": 0,
+      "ai_leverage_score": 0,
+      "herramientas_actuales": [],
+      "herramientas_recomendadas": [],
+      "agentes_recomendados": [],
+      "procesos_delegables": [],
+      "confianza": "No se tiene claro"
     }
   ],
   "por_empresa": [
     {
       "empresa": "GEN+",
-      "ai_native_score": 52,
+      "ai_native_score": 44,
       "clasificacion": "uso superficial"
     },
     {
       "empresa": "AECODE",
-      "ai_native_score": 52,
-      "clasificacion": "uso superficial"
+      "ai_native_score": 31,
+      "clasificacion": "operación manual vulnerable"
     },
     {
       "empresa": "VisionPro",

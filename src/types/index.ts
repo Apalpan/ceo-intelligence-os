@@ -24,8 +24,23 @@ export interface Area {
   health_score: number; risk_score: number; estado: Estado;
 }
 
+export interface Funcion {
+  id: string; empresa: string; funcion: string; icon: string;
+  n_proyectos: number; reds: number; health_score: number; risk_score: number; proyectos: string[];
+}
+
+export interface Participacion {
+  persona: string; proyecto_id: string; proyecto: string; empresa: string; unidad: string; rol: string;
+}
+
+export interface Costos {
+  periodo: string; planilla_por_empresa: Record<string, number>; planilla_total: number;
+  n_personas_costo: number; moneda: string; fuente: string;
+}
+
 export interface Proyecto {
-  id: string; empresa: string; area: string; nombre: string; responsable: string;
+  id: string; empresa: string; area: string; nombre: string; funcion: string;
+  unidad: string; personas: string[]; responsable: string;
   avance_reportado: number; avance_validado: number; estado: Estado;
   pendientes: string; bloqueos: string; riesgos: string; proximo_hito: string;
   evidencia: string; confianza: string;
@@ -34,12 +49,15 @@ export interface Proyecto {
 }
 
 export interface Colaborador {
-  id: string; nombre: string; empresa_area: string; empresas: string[];
+  id: string; nombre: string; empresa_area: string; funcion: string; empresas: string[];
   proyectos: string; n_proyectos: number; actividades: string; pendientes: string;
   carga: string; carga_val: number; riesgos: string; necesita_feedback: boolean;
   proxima_accion: string;
   wip_score: number; bottleneck_score: number; context_quality_score: number;
   ai_leverage_score: number; ai_native_score: number;
+  proyecto_ids: string[]; avg_proj_health: number; aporte_score: number;
+  costo_final: Num; costo_base: Num; costo_por_empresa: Record<string, number>;
+  rol_rh: string; costo_aporte: string; valor_diff: number; solo_costo: boolean;
   herramientas_actuales: string[]; herramientas_recomendadas: string[];
   agentes_recomendados: string[]; procesos_delegables: string[];
   confianza_ai: string; fuente: string;
@@ -70,7 +88,8 @@ export interface Prioridad {
 }
 
 export interface Tarea {
-  id: string; empresa: string; area: string; proyecto: string; colaborador: string;
+  id: string; empresa: string; area: string; proyecto: string; funcion: string;
+  altitud: string; modo: string; colaborador: string;
   descripcion: string; estado: string; prioridad: string; fecha_objetivo: string;
   resultado_esperado: string; evidencia: string; confianza: string; fuente: string;
 }
@@ -114,11 +133,13 @@ export interface DataQuality {
 export interface Bundle {
   meta: {
     generated_at: string; vault: string; first_run: boolean; corte: string;
+    periodo: string; periodo_costos: string;
     counts: Record<string, number>;
   };
-  empresas: Empresa[]; areas: Area[]; proyectos: Proyecto[]; colaboradores: Colaborador[];
+  empresas: Empresa[]; areas: Area[]; funciones: Funcion[]; proyectos: Proyecto[]; colaboradores: Colaborador[];
   riesgos: Riesgo[]; bloqueos: Bloqueo[]; decisiones: Decision[]; prioridades: Prioridad[];
   tareas: Tarea[]; evidencias: Evidencia[]; fuentes: Fuente[]; deltas: Delta[];
   procesos: Proceso[]; agentes: Agente[]; herramientas_ia: Herramienta[];
   ai_native: AiNative; data_quality: DataQuality; highlights: Highlight[];
+  participaciones: Participacion[]; costos: Costos;
 }

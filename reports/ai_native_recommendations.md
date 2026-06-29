@@ -1,9 +1,23 @@
-# Recomendaciones AI-Native — 2026-06-28 19:10
+# Recomendaciones AI-Native — 2026-06-28 20:24
 
-AI-Native Score global: **50** (uso superficial)
+AI-Native Score global: **31** (operación manual vulnerable)
 
 ## Por colaborador
 
+- **Jordi** — AI-native 0 · agentes: —
+- **Fernando** — AI-native 0 · agentes: —
+- **Alejandro Palpan** — AI-native 0 · agentes: —
+- **Ana** — AI-native 0 · agentes: —
+- **Paolo** — AI-native 0 · agentes: —
+- **Aracely** — AI-native 0 · agentes: —
+- **Janet** — AI-native 0 · agentes: —
+- **Moises** — AI-native 0 · agentes: —
+- **Ivana** — AI-native 0 · agentes: —
+- **Aranzia** — AI-native 0 · agentes: —
+- **Edith** — AI-native 0 · agentes: —
+- **Kenyi** — AI-native 0 · agentes: —
+- **Sebastian** — AI-native 0 · agentes: —
+- **Reiner** — AI-native 0 · agentes: —
 - **Anderson** — AI-native 35 · agentes: Summit Agent
 - **Robert Herrera** — AI-native 36 · agentes: Delivery BIM Agent
 - **Luis Vergara** — AI-native 36 · agentes: Delivery BIM Agent

@@ -4,6 +4,11 @@
     "empresa": "GEN+",
     "area": "Caja",
     "nombre": "Cobranzas GEN+",
+    "funcion": "Finanzas",
+    "unidad": "GEN+",
+    "personas": [
+      "Julie"
+    ],
     "responsable": "Julie",
     "avance_reportado": 35,
     "avance_validado": 35,
@@ -26,6 +31,13 @@
     "empresa": "GEN+",
     "area": "Delivery BIM",
     "nombre": "PTAR Atarjea / Buzones",
+    "funcion": "Operaciones / Proyectos",
+    "unidad": "GEN+",
+    "personas": [
+      "Kevin",
+      "Luis",
+      "Julie"
+    ],
     "responsable": "Kevin / Luis / Julie",
     "avance_reportado": 60,
     "avance_validado": 60,
@@ -48,6 +60,14 @@
     "empresa": "GEN+",
     "area": "Delivery BIM",
     "nombre": "Cañete",
+    "funcion": "Operaciones / Proyectos",
+    "unidad": "GEN+",
+    "personas": [
+      "Fabrizio",
+      "Israel",
+      "Robert",
+      "Luis"
+    ],
     "responsable": "Fabrizio / Israel / Robert / Luis",
     "avance_reportado": 95,
     "avance_validado": 95,
@@ -70,6 +90,12 @@
     "empresa": "GEN+",
     "area": "Delivery BIM",
     "nombre": "Faucett",
+    "funcion": "Operaciones / Proyectos",
+    "unidad": "GEN+",
+    "personas": [
+      "Fabrizio",
+      "Israel"
+    ],
     "responsable": "Fabrizio / Israel",
     "avance_reportado": 100,
     "avance_validado": 100,
@@ -92,6 +118,13 @@
     "empresa": "GEN+",
     "area": "Delivery BIM",
     "nombre": "Dovelas Panama",
+    "funcion": "Operaciones / Proyectos",
+    "unidad": "GEN+",
+    "personas": [
+      "Fabrizio",
+      "Guisella",
+      "Julie"
+    ],
     "responsable": "Fabrizio / Guisella / Julie",
     "avance_reportado": 35,
     "avance_validado": 35,
@@ -114,6 +147,12 @@
     "empresa": "GEN+",
     "area": "Delivery BIM",
     "nombre": "The Circle",
+    "funcion": "Operaciones / Proyectos",
+    "unidad": "GEN+",
+    "personas": [
+      "Fabrizio",
+      "Guisella"
+    ],
     "responsable": "Fabrizio / Guisella",
     "avance_reportado": 60,
     "avance_validado": 60,
@@ -136,6 +175,12 @@
     "empresa": "GEN+",
     "area": "Delivery BIM",
     "nombre": "Puente Tingo",
+    "funcion": "Operaciones / Proyectos",
+    "unidad": "GEN+",
+    "personas": [
+      "Fabrizio",
+      "Luis"
+    ],
     "responsable": "Fabrizio / Luis",
     "avance_reportado": 60,
     "avance_validado": 50,
@@ -158,6 +203,14 @@
     "empresa": "GEN+",
     "area": "Producto/consultoria",
     "nombre": "ESPARQ",
+    "funcion": "Operaciones / Proyectos",
+    "unidad": "GEN+",
+    "personas": [
+      "Alejandro",
+      "Daniella",
+      "Fabrizio",
+      "Yary"
+    ],
     "responsable": "Alejandro / Daniella / Fabrizio / Yary",
     "avance_reportado": 60,
     "avance_validado": 60,
@@ -180,6 +233,11 @@
     "empresa": "GEN+",
     "area": "Producto interno",
     "nombre": "Agente Inmobiliario GEN+",
+    "funcion": "Operaciones / Proyectos",
+    "unidad": "GEN+",
+    "personas": [
+      "Fabrizio"
+    ],
     "responsable": "Fabrizio",
     "avance_reportado": 100,
     "avance_validado": 100,
@@ -202,6 +260,12 @@
     "empresa": "GEN+",
     "area": "Comercial",
     "nombre": "UNCP / OSP / Nestle / GORE / otros",
+    "funcion": "Comercial",
+    "unidad": "GEN+",
+    "personas": [
+      "Julie",
+      "Daniella"
+    ],
     "responsable": "Julie / Daniella",
     "avance_reportado": 60,
     "avance_validado": 50,
@@ -224,6 +288,13 @@
     "empresa": "AECODE",
     "area": "Summit",
     "nombre": "Sponsors / pipeline",
+    "funcion": "Comercial",
+    "unidad": "AECODE AI Construction Summit",
+    "personas": [
+      "Erika",
+      "Paola",
+      "Julie"
+    ],
     "responsable": "Erika / Paola / Julie",
     "avance_reportado": 35,
     "avance_validado": 35,
@@ -246,6 +317,14 @@
     "empresa": "AECODE",
     "area": "Summit",
     "nombre": "Web / App / agenda",
+    "funcion": "Operaciones / Proyectos",
+    "unidad": "AECODE AI Construction Summit",
+    "personas": [
+      "Marlon",
+      "Yary",
+      "Anderson",
+      "Fabrizio"
+    ],
     "responsable": "Marlon / Yary / Anderson / Fabrizio",
     "avance_reportado": 97,
     "avance_validado": 97,
@@ -268,6 +347,13 @@
     "empresa": "AECODE",
     "area": "Summit",
     "nombre": "Pre Congreso",
+    "funcion": "Marketing",
+    "unidad": "AECODE AI Construction Summit",
+    "personas": [
+      "Arantxa",
+      "Jessica",
+      "Enma"
+    ],
     "responsable": "Arantxa / Jessica / Enma",
     "avance_reportado": 35,
     "avance_validado": 35,
@@ -290,6 +376,15 @@
     "empresa": "AECODE",
     "area": "Training",
     "nombre": "Diplomados/certificados",
+    "funcion": "Operaciones / Proyectos",
+    "unidad": "AECODE Live Training",
+    "personas": [
+      "Carolina",
+      "Patrick",
+      "Marlon",
+      "Kevin",
+      "Julie"
+    ],
     "responsable": "Carolina / Patrick / Marlon / Kevin / Julie",
     "avance_reportado": 35,
     "avance_validado": 35,
@@ -312,6 +407,14 @@
     "empresa": "AECODE",
     "area": "Comercial B2C",
     "nombre": "Ventas Training",
+    "funcion": "Comercial",
+    "unidad": "AECODE Live Training",
+    "personas": [
+      "Talia",
+      "Genesis",
+      "Yadira",
+      "Reiner"
+    ],
     "responsable": "Talia / Genesis / Yadira / Reiner",
     "avance_reportado": 60,
     "avance_validado": 60,
@@ -334,6 +437,14 @@
     "empresa": "AECODE",
     "area": "Marketing",
     "nombre": "Summit / Reto IA / Training",
+    "funcion": "Marketing",
+    "unidad": "AECODE AI Construction Summit",
+    "personas": [
+      "Arantxa",
+      "Enma",
+      "Jessica",
+      "Anggie"
+    ],
     "responsable": "Arantxa / Enma / Jessica / Anggie",
     "avance_reportado": 60,
     "avance_validado": 50,
@@ -356,6 +467,15 @@
     "empresa": "AECODE",
     "area": "Producto digital",
     "nombre": "Fase 2 / Fase 3 / AECODE",
+    "funcion": "Operaciones / Proyectos",
+    "unidad": "AECODE Producto / Plataforma",
+    "personas": [
+      "Yary",
+      "Marlon",
+      "Anderson",
+      "Yudely",
+      "Fabrizio"
+    ],
     "responsable": "Yary / Marlon / Anderson / Yudely / Fabrizio",
     "avance_reportado": 100,
     "avance_validado": 100,
@@ -378,6 +498,13 @@
     "empresa": "AECODE",
     "area": "Startup",
     "nombre": "Kaman / convocatorias",
+    "funcion": "Operaciones / Proyectos",
+    "unidad": "AECODE Startup",
+    "personas": [
+      "Daniella",
+      "Julie",
+      "Alejandro"
+    ],
     "responsable": "Daniella / Julie / Alejandro",
     "avance_reportado": 60,
     "avance_validado": 60,
@@ -400,6 +527,15 @@
     "empresa": "VisionPro",
     "area": "Producto/obra",
     "nombre": "PDK Ascent",
+    "funcion": "Operaciones / Proyectos",
+    "unidad": "VisionPro",
+    "personas": [
+      "Marlon",
+      "Emanuel",
+      "Yary",
+      "Daniella",
+      "Erika"
+    ],
     "responsable": "Marlon / Emanuel / Yary / Daniella / Erika",
     "avance_reportado": 80,
     "avance_validado": 80,
@@ -422,6 +558,13 @@
     "empresa": "VisionPro",
     "area": "Comercial",
     "nombre": "VisionPro decks",
+    "funcion": "Comercial",
+    "unidad": "VisionPro",
+    "personas": [
+      "Daniella",
+      "Julie",
+      "Erika"
+    ],
     "responsable": "Daniella / Julie / Erika",
     "avance_reportado": 60,
     "avance_validado": 60,
@@ -444,6 +587,12 @@
     "empresa": "THESIA",
     "area": "Startup/documentacion",
     "nombre": "THESIA presupuesto / Tesis Juan",
+    "funcion": "Finanzas",
+    "unidad": "THESIA",
+    "personas": [
+      "Julie",
+      "Fabrizio"
+    ],
     "responsable": "Julie / Fabrizio",
     "avance_reportado": 60,
     "avance_validado": 50,
@@ -466,6 +615,13 @@
     "empresa": "AgentFlow",
     "area": "Automatizacion",
     "nombre": "Migracion flujos",
+    "funcion": "Automatización",
+    "unidad": "AgentFlow",
+    "personas": [
+      "Emanuel",
+      "Fabrizio",
+      "Marlon"
+    ],
     "responsable": "Emanuel / Fabrizio / Marlon",
     "avance_reportado": 100,
     "avance_validado": 84,

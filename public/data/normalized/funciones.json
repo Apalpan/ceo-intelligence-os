@@ -1,0 +1,144 @@
+[
+  {
+    "id": "fn-gen-finanzas",
+    "empresa": "GEN+",
+    "funcion": "Finanzas",
+    "icon": "Banknote",
+    "n_proyectos": 1,
+    "reds": 1,
+    "health_score": 67,
+    "risk_score": 38,
+    "proyectos": [
+      "prj-gen-cobranzas-gen"
+    ]
+  },
+  {
+    "id": "fn-gen-operaciones-proyectos",
+    "empresa": "GEN+",
+    "funcion": "Operaciones / Proyectos",
+    "icon": "HardHat",
+    "n_proyectos": 8,
+    "reds": 3,
+    "health_score": 79,
+    "risk_score": 38,
+    "proyectos": [
+      "prj-gen-ptar-atarjea-buzones",
+      "prj-gen-ca-ete",
+      "prj-gen-faucett",
+      "prj-gen-dovelas-panama",
+      "prj-gen-the-circle",
+      "prj-gen-puente-tingo",
+      "prj-gen-esparq",
+      "prj-gen-agente-inmobiliario-gen"
+    ]
+  },
+  {
+    "id": "fn-gen-comercial",
+    "empresa": "GEN+",
+    "funcion": "Comercial",
+    "icon": "Handshake",
+    "n_proyectos": 1,
+    "reds": 0,
+    "health_score": 71,
+    "risk_score": 20,
+    "proyectos": [
+      "prj-gen-uncp-osp-nestle-gore-otros"
+    ]
+  },
+  {
+    "id": "fn-aecode-comercial",
+    "empresa": "AECODE",
+    "funcion": "Comercial",
+    "icon": "Handshake",
+    "n_proyectos": 2,
+    "reds": 1,
+    "health_score": 73,
+    "risk_score": 44,
+    "proyectos": [
+      "prj-aecode-sponsors-pipeline",
+      "prj-aecode-ventas-training"
+    ]
+  },
+  {
+    "id": "fn-aecode-operaciones-proyectos",
+    "empresa": "AECODE",
+    "funcion": "Operaciones / Proyectos",
+    "icon": "HardHat",
+    "n_proyectos": 4,
+    "reds": 1,
+    "health_score": 81,
+    "risk_score": 36,
+    "proyectos": [
+      "prj-aecode-web-app-agenda",
+      "prj-aecode-diplomados-certificados",
+      "prj-aecode-fase-2-fase-3-aecode",
+      "prj-aecode-kaman-convocatorias"
+    ]
+  },
+  {
+    "id": "fn-aecode-marketing",
+    "empresa": "AECODE",
+    "funcion": "Marketing",
+    "icon": "Megaphone",
+    "n_proyectos": 2,
+    "reds": 1,
+    "health_score": 69,
+    "risk_score": 44,
+    "proyectos": [
+      "prj-aecode-pre-congreso",
+      "prj-aecode-summit-reto-ia-training"
+    ]
+  },
+  {
+    "id": "fn-visionpro-operaciones-proyectos",
+    "empresa": "VisionPro",
+    "funcion": "Operaciones / Proyectos",
+    "icon": "HardHat",
+    "n_proyectos": 1,
+    "reds": 1,
+    "health_score": 79,
+    "risk_score": 53,
+    "proyectos": [
+      "prj-visionpro-pdk-ascent"
+    ]
+  },
+  {
+    "id": "fn-visionpro-comercial",
+    "empresa": "VisionPro",
+    "funcion": "Comercial",
+    "icon": "Handshake",
+    "n_proyectos": 1,
+    "reds": 0,
+    "health_score": 79,
+    "risk_score": 20,
+    "proyectos": [
+      "prj-visionpro-visionpro-decks"
+    ]
+  },
+  {
+    "id": "fn-thesia-finanzas",
+    "empresa": "THESIA",
+    "funcion": "Finanzas",
+    "icon": "Banknote",
+    "n_proyectos": 1,
+    "reds": 0,
+    "health_score": 56,
+    "risk_score": 35,
+    "proyectos": [
+      "prj-thesia-thesia-presupuesto-tesis-juan"
+    ]
+  },
+  {
+    "id": "fn-agentflow-automatizaci-n",
+    "empresa": "AgentFlow",
+    "funcion": "Automatización",
+    "icon": "Workflow",
+    "n_proyectos": 1,
+    "reds": 0,
+    "health_score": 65,
+    "risk_score": 35,
+    "proyectos": [
+      "prj-agentflow-migracion-flujos"
+    ]
+  }
+]

@@ -1,5 +1,6 @@
 import type { FC } from "react";
 import type { ViewProps } from "./_shared";
+import WorkspaceHome from "./WorkspaceHome";
 import CommandCenter from "./CommandCenter";
 import ExecutiveHealth from "./ExecutiveHealth";
 import Strategic from "./Strategic";
@@ -15,10 +16,23 @@ import DataQuality from "./DataQuality";
 import Evidence from "./Evidence";
 import UpdateLog from "./UpdateLog";
 import Domain from "./Domain";
+import Functions from "./Functions";
+import TeamCost from "./TeamCost";
+import PersonFocus from "./PersonFocus";
 
-const D = (id: string): FC<ViewProps> => () => <Domain id={id} />;
+const D = (id: string): FC<ViewProps> => (p) => <Domain id={id} />;
+const H = (id: string): FC<ViewProps> => (p) => <WorkspaceHome id={id} navigate={p.navigate} />;
 
 export const VIEWS: Record<string, FC<ViewProps>> = {
+  // workspace homes
+  global: H("global"),
+  finanzas: H("finanzas"),
+  comercial: H("comercial"),
+  proyectos: H("proyectos"),
+  automation: H("automation"),
+  team: H("team"),
+
+  // sections
   "command-center": CommandCenter,
   executive: ExecutiveHealth,
   strategic: Strategic,
@@ -33,10 +47,15 @@ export const VIEWS: Record<string, FC<ViewProps>> = {
   "data-quality": DataQuality,
   evidence: Evidence,
   "update-log": UpdateLog,
+  functions: Functions,
+  "team-cost": TeamCost,
+  "person-focus": PersonFocus,
+
+  // domain (keyword-filtered) sections
   cash: D("cash"),
+  contabilidad: D("contabilidad"),
   sales: D("sales"),
+  summit: D("summit"),
   delivery: D("delivery"),
   product: D("product"),
-  training: D("training"),
-  summit: D("summit"),
 };

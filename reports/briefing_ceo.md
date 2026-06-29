@@ -1,9 +1,9 @@
-# Briefing CEO — 2026-06-28 19:10
+# Briefing CEO — 2026-06-28 20:24
 
 ## Estado de 30 segundos
 
-- **GEN+** — salud 77 · riesgo 51 · AI-native 52 · estado AMARILLO
-- **AECODE** — salud 76 · riesgo 53 · AI-native 52 · estado AMARILLO
+- **GEN+** — salud 77 · riesgo 51 · AI-native 44 · estado AMARILLO
+- **AECODE** — salud 76 · riesgo 53 · AI-native 31 · estado AMARILLO
 - **VisionPro** — salud 79 · riesgo 51 · AI-native 60 · estado AMARILLO
 - **AgentFlow** — salud 65 · riesgo 38 · AI-native 60 · estado AMARILLO
 - **THESIA** — salud 56 · riesgo 35 · AI-native 67 · estado AMARILLO

@@ -34,13 +34,19 @@ export interface Participacion {
 }
 
 export interface Costos {
-  periodo: string; planilla_por_empresa: Record<string, number>; planilla_total: number;
-  n_personas_costo: number; moneda: string; fuente: string;
+  periodo: string; planilla_por_empresa: Record<string, Num>; planilla_total: Num;
+  n_personas_costo: number; moneda: string; fuente: string; enmascarado?: boolean;
 }
+
+export interface ActividadClave {
+  act: string; area: string; actividad: string; prioridad: string; sla: string; evidencia: string; metrica: string;
+}
+export interface AvanceDetalle { seccion: string; texto: string; }
 
 export interface Proyecto {
   id: string; empresa: string; area: string; nombre: string; funcion: string;
   unidad: string; personas: string[]; responsable: string;
+  evaluacion: number; eval_dims: Record<string, number>;
   avance_reportado: number; avance_validado: number; estado: Estado;
   pendientes: string; bloqueos: string; riesgos: string; proximo_hito: string;
   evidencia: string; confianza: string;
@@ -50,6 +56,8 @@ export interface Proyecto {
 
 export interface Colaborador {
   id: string; nombre: string; empresa_area: string; funcion: string; empresas: string[];
+  rol: string; enfoque: string[]; actividades_clave: ActividadClave[]; avances_detalle: AvanceDetalle[];
+  metricas: string[]; restricciones: string[]; evaluacion: number; eval_dims: Record<string, number>;
   proyectos: string; n_proyectos: number; actividades: string; pendientes: string;
   carga: string; carga_val: number; riesgos: string; necesita_feedback: boolean;
   proxima_accion: string;

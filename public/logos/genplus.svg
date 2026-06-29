@@ -1,0 +1,12 @@
+<svg width="148" height="40" viewBox="0 0 148 40" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="GEN+">
+  <defs>
+    <linearGradient id="gpw" x1="0" y1="0" x2="148" y2="40" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0E2A6B"/>
+      <stop offset="0.7" stop-color="#2165FF"/>
+      <stop offset="1" stop-color="#4D84FF"/>
+    </linearGradient>
+  </defs>
+  <text x="0" y="20" dominant-baseline="central"
+    font-family="'Plus Jakarta Sans', Inter, system-ui, sans-serif" font-weight="800"
+    font-size="30" letter-spacing="-1.5" fill="url(#gpw)">GEN+</text>
+</svg>

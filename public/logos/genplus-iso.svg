@@ -1,0 +1,13 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="GEN+">
+  <defs>
+    <linearGradient id="gp" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0E2A6B"/>
+      <stop offset="0.62" stop-color="#2165FF"/>
+      <stop offset="1" stop-color="#4D84FF"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="url(#gp)"/>
+  <text x="32" y="33" text-anchor="middle" dominant-baseline="central"
+    font-family="'Plus Jakarta Sans', Inter, system-ui, sans-serif" font-weight="800"
+    font-size="26" letter-spacing="-1" fill="#ffffff">G+</text>
+</svg>

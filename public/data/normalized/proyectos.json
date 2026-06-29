@@ -24,6 +24,14 @@
     "ceo_attention": 75,
     "impacto_caja": 100,
     "impacto_cliente": 50,
+    "evaluacion": 70,
+    "eval_dims": {
+      "Salud": 67,
+      "Avance": 35,
+      "Bajo riesgo": 62,
+      "Evidencia": 100,
+      "Claridad": 100
+    },
     "fuente": "01_Matriz_Proyectos.md"
   },
   {
@@ -53,6 +61,14 @@
     "ceo_attention": 58,
     "impacto_caja": 50,
     "impacto_cliente": 100,
+    "evaluacion": 79,
+    "eval_dims": {
+      "Salud": 79,
+      "Avance": 60,
+      "Bajo riesgo": 65,
+      "Evidencia": 100,
+      "Claridad": 100
+    },
     "fuente": "01_Matriz_Proyectos.md"
   },
   {
@@ -83,6 +99,14 @@
     "ceo_attention": 82,
     "impacto_caja": 50,
     "impacto_cliente": 100,
+    "evaluacion": 83,
+    "eval_dims": {
+      "Salud": 83,
+      "Avance": 95,
+      "Bajo riesgo": 47,
+      "Evidencia": 100,
+      "Claridad": 100
+    },
     "fuente": "01_Matriz_Proyectos.md"
   },
   {
@@ -111,6 +135,14 @@
     "ceo_attention": 82,
     "impacto_caja": 50,
     "impacto_cliente": 100,
+    "evaluacion": 85,
+    "eval_dims": {
+      "Salud": 84,
+      "Avance": 100,
+      "Bajo riesgo": 47,
+      "Evidencia": 100,
+      "Claridad": 100
+    },
     "fuente": "01_Matriz_Proyectos.md"
   },
   {
@@ -140,6 +172,14 @@
     "ceo_attention": 82,
     "impacto_caja": 50,
     "impacto_cliente": 100,
+    "evaluacion": 66,
+    "eval_dims": {
+      "Salud": 67,
+      "Avance": 35,
+      "Bajo riesgo": 47,
+      "Evidencia": 100,
+      "Claridad": 100
+    },
     "fuente": "01_Matriz_Proyectos.md"
   },
   {
@@ -168,6 +208,14 @@
     "ceo_attention": 58,
     "impacto_caja": 50,
     "impacto_cliente": 100,
+    "evaluacion": 79,
+    "eval_dims": {
+      "Salud": 79,
+      "Avance": 60,
+      "Bajo riesgo": 65,
+      "Evidencia": 100,
+      "Claridad": 100
+    },
     "fuente": "01_Matriz_Proyectos.md"
   },
   {
@@ -196,6 +244,14 @@
     "ceo_attention": 48,
     "impacto_caja": 50,
     "impacto_cliente": 100,
+    "evaluacion": 71,
+    "eval_dims": {
+      "Salud": 71,
+      "Avance": 50,
+      "Bajo riesgo": 80,
+      "Evidencia": 60,
+      "Claridad": 100
+    },
     "fuente": "01_Matriz_Proyectos.md"
   },
   {
@@ -226,6 +282,14 @@
     "ceo_attention": 58,
     "impacto_caja": 50,
     "impacto_cliente": 100,
+    "evaluacion": 79,
+    "eval_dims": {
+      "Salud": 79,
+      "Avance": 60,
+      "Bajo riesgo": 65,
+      "Evidencia": 100,
+      "Claridad": 100
+    },
     "fuente": "01_Matriz_Proyectos.md"
   },
   {
@@ -253,6 +317,14 @@
     "ceo_attention": 38,
     "impacto_caja": 50,
     "impacto_cliente": 50,
+    "evaluacion": 93,
+    "eval_dims": {
+      "Salud": 90,
+      "Avance": 100,
+      "Bajo riesgo": 80,
+      "Evidencia": 100,
+      "Claridad": 100
+    },
     "fuente": "01_Matriz_Proyectos.md"
   },
   {
@@ -281,6 +353,14 @@
     "ceo_attention": 51,
     "impacto_caja": 100,
     "impacto_cliente": 50,
+    "evaluacion": 71,
+    "eval_dims": {
+      "Salud": 71,
+      "Avance": 50,
+      "Bajo riesgo": 80,
+      "Evidencia": 60,
+      "Claridad": 100
+    },
     "fuente": "01_Matriz_Proyectos.md"
   },
   {
@@ -310,6 +390,14 @@
     "ceo_attention": 95,
     "impacto_caja": 100,
     "impacto_cliente": 100,
+    "evaluacion": 66,
+    "eval_dims": {
+      "Salud": 67,
+      "Avance": 35,
+      "Bajo riesgo": 47,
+      "Evidencia": 100,
+      "Claridad": 100
+    },
     "fuente": "01_Matriz_Proyectos.md"
   },
   {
@@ -340,6 +428,14 @@
     "ceo_attention": 58,
     "impacto_caja": 50,
     "impacto_cliente": 100,
+    "evaluacion": 89,
+    "eval_dims": {
+      "Salud": 89,
+      "Avance": 97,
+      "Bajo riesgo": 65,
+      "Evidencia": 100,
+      "Claridad": 100
+    },
     "fuente": "01_Matriz_Proyectos.md"
   },
   {
@@ -369,6 +465,14 @@
     "ceo_attention": 82,
     "impacto_caja": 50,
     "impacto_cliente": 100,
+    "evaluacion": 66,
+    "eval_dims": {
+      "Salud": 67,
+      "Avance": 35,
+      "Bajo riesgo": 47,
+      "Evidencia": 100,
+      "Claridad": 100
+    },
     "fuente": "01_Matriz_Proyectos.md"
   },
   {
@@ -400,6 +504,14 @@
     "ceo_attention": 72,
     "impacto_caja": 50,
     "impacto_cliente": 50,
+    "evaluacion": 66,
+    "eval_dims": {
+      "Salud": 67,
+      "Avance": 35,
+      "Bajo riesgo": 47,
+      "Evidencia": 100,
+      "Claridad": 100
+    },
     "fuente": "01_Matriz_Proyectos.md"
   },
   {
@@ -430,6 +542,14 @@
     "ceo_attention": 61,
     "impacto_caja": 100,
     "impacto_cliente": 50,
+    "evaluacion": 79,
+    "eval_dims": {
+      "Salud": 79,
+      "Avance": 60,
+      "Bajo riesgo": 65,
+      "Evidencia": 100,
+      "Claridad": 100
+    },
     "fuente": "01_Matriz_Proyectos.md"
   },
   {
@@ -460,6 +580,14 @@
     "ceo_attention": 58,
     "impacto_caja": 50,
     "impacto_cliente": 100,
+    "evaluacion": 68,
+    "eval_dims": {
+      "Salud": 71,
+      "Avance": 50,
+      "Bajo riesgo": 65,
+      "Evidencia": 60,
+      "Claridad": 100
+    },
     "fuente": "01_Matriz_Proyectos.md"
   },
   {
@@ -491,6 +619,14 @@
     "ceo_attention": 48,
     "impacto_caja": 50,
     "impacto_cliente": 50,
+    "evaluacion": 90,
+    "eval_dims": {
+      "Salud": 90,
+      "Avance": 100,
+      "Bajo riesgo": 65,
+      "Evidencia": 100,
+      "Claridad": 100
+    },
     "fuente": "01_Matriz_Proyectos.md"
   },
   {
@@ -520,6 +656,14 @@
     "ceo_attention": 38,
     "impacto_caja": 50,
     "impacto_cliente": 50,
+    "evaluacion": 82,
+    "eval_dims": {
+      "Salud": 79,
+      "Avance": 60,
+      "Bajo riesgo": 80,
+      "Evidencia": 100,
+      "Claridad": 100
+    },
     "fuente": "01_Matriz_Proyectos.md"
   },
   {
@@ -551,6 +695,14 @@
     "ceo_attention": 82,
     "impacto_caja": 50,
     "impacto_cliente": 100,
+    "evaluacion": 79,
+    "eval_dims": {
+      "Salud": 79,
+      "Avance": 80,
+      "Bajo riesgo": 47,
+      "Evidencia": 100,
+      "Claridad": 100
+    },
     "fuente": "01_Matriz_Proyectos.md"
   },
   {
@@ -580,6 +732,14 @@
     "ceo_attention": 51,
     "impacto_caja": 100,
     "impacto_cliente": 50,
+    "evaluacion": 82,
+    "eval_dims": {
+      "Salud": 79,
+      "Avance": 60,
+      "Bajo riesgo": 80,
+      "Evidencia": 100,
+      "Claridad": 100
+    },
     "fuente": "01_Matriz_Proyectos.md"
   },
   {
@@ -608,6 +768,14 @@
     "ceo_attention": 38,
     "impacto_caja": 50,
     "impacto_cliente": 50,
+    "evaluacion": 56,
+    "eval_dims": {
+      "Salud": 56,
+      "Avance": 50,
+      "Bajo riesgo": 65,
+      "Evidencia": 60,
+      "Claridad": 50
+    },
     "fuente": "01_Matriz_Proyectos.md"
   },
   {
@@ -637,6 +805,14 @@
     "ceo_attention": 38,
     "impacto_caja": 50,
     "impacto_cliente": 50,
+    "evaluacion": 66,
+    "eval_dims": {
+      "Salud": 65,
+      "Avance": 84,
+      "Bajo riesgo": 65,
+      "Evidencia": 60,
+      "Claridad": 50
+    },
     "fuente": "01_Matriz_Proyectos.md"
   }
 ]

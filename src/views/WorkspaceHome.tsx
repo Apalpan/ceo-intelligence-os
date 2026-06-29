@@ -8,7 +8,7 @@ import { Card, KPICard, Badge, ScoreRing, Semaforo, BarRow, scoreColor, riskColo
 import { ViewHeader, Grid, type ViewProps } from "./_shared";
 import type { Bundle } from "@/types";
 
-const soles = (v: number) => "S/ " + v.toLocaleString("es-PE");
+const soles = (v: number | string) => (typeof v === "number" ? "S/ " + v.toLocaleString("es-PE") : "X");
 
 export default function WorkspaceHome({ id, navigate }: { id: string } & ViewProps) {
   const { bundle, companyFilter, openDrawer } = useStore();
@@ -143,8 +143,16 @@ function build(id: string, b: Bundle, inC: (e?: string) => boolean, navigate: (s
         <Grid cols={2}>
           <Card>
             <Head title="Planilla por empresa" onMore={() => navigate("team-cost")} />
-            <div className="mt-2">{Object.entries(cost.planilla_por_empresa).map(([e, v]) =>
-              <BarRow key={e} label={e} value={v} max={cost.planilla_total} color={companyVar(e)} right={soles(v).replace("S/ ", "")} />)}</div>
+            <div className="mt-2">
+              {cost.enmascarado
+                ? Object.keys(cost.planilla_por_empresa).map((e) => (
+                    <div key={e} className="flex items-center justify-between py-1.5 text-sm border-b border-[var(--border)] last:border-0">
+                      <span className="inline-flex items-center gap-1.5"><span className="h-2.5 w-2.5 rounded-[3px]" style={{ background: companyVar(e) }} />{e}</span>
+                      <span className="tnum text-muted">X</span></div>))
+                : Object.entries(cost.planilla_por_empresa).map(([e, v]) =>
+                    <BarRow key={e} label={e} value={typeof v === "number" ? v : 0} max={typeof cost.planilla_total === "number" ? cost.planilla_total : 1} color={companyVar(e)} right={soles(v).replace("S/ ", "")} />)}
+            </div>
+            {cost.enmascarado && <p className="text-[10px] text-muted mt-2">Montos enmascarados («X»). Real solo en local.</p>}
           </Card>
           <Card>
             <Head title="Caja & cobranzas" onMore={() => navigate("cash")} />

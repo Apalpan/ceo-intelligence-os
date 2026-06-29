@@ -1,12 +1,13 @@
 {
   "periodo": "2026-05",
   "planilla_por_empresa": {
-    "GEN+": 16630.0,
-    "AECODE": 57420.0,
-    "THESIA": 8700.0
+    "GEN+": "X",
+    "AECODE": "X",
+    "THESIA": "X"
   },
-  "planilla_total": 82750.0,
+  "planilla_total": "X",
   "n_personas_costo": 37,
   "moneda": "PEN",
-  "fuente": "Cierre-RH-Pagos (04_Team GEN+)"
+  "fuente": "Cierre-RH-Pagos (04_Team GEN+)",
+  "enmascarado": true
 }

@@ -11,6 +11,10 @@ export function BrandMark({ name, size = 32, radius = 10 }: { name: string; size
     return <img src={`${ASSET}logos/aecode-iso.png`} alt="AECODE" loading="lazy"
       className="object-contain shrink-0" style={{ width: size, height: size, borderRadius: radius }} />;
   }
+  if (name === "GEN+") {
+    return <img src={`${ASSET}logos/genplus-iso.svg`} alt="GEN+"
+      className="shrink-0" style={{ width: size, height: size, borderRadius: radius }} />;
+  }
   const c = companyVar(name);
   return (
     <span className="grid place-items-center text-white font-display font-bold shrink-0"
@@ -218,6 +222,41 @@ export function Donut({ segments, size = 92, stroke = 14 }:
           style={{ transition: "stroke-dasharray .6s ease" }} />;
         acc += len;
         return seg;
+      })}
+    </svg>
+  );
+}
+
+/* ---------------------------------------------------------------- Radar */
+export function Radar({ data, size = 190, color = "var(--brand)" }:
+  { data: { label: string; value: number }[]; size?: number; color?: string }) {
+  const n = data.length || 1;
+  const cx = size / 2, cy = size / 2, r = size / 2 - 34;
+  const pt = (i: number, val: number) => {
+    const a = (Math.PI * 2 * i) / n - Math.PI / 2;
+    const rr = r * Math.max(0, Math.min(100, val)) / 100;
+    return [cx + rr * Math.cos(a), cy + rr * Math.sin(a)];
+  };
+  const axis = (i: number) => {
+    const a = (Math.PI * 2 * i) / n - Math.PI / 2;
+    return [cx + r * Math.cos(a), cy + r * Math.sin(a)];
+  };
+  const poly = data.map((d, i) => pt(i, d.value).join(",")).join(" ");
+  return (
+    <svg width={size} height={size} className="overflow-visible">
+      {[33, 66, 100].map((ring) => (
+        <polygon key={ring} points={data.map((_, i) => pt(i, ring).join(",")).join(" ")}
+          fill="none" stroke="var(--border)" strokeWidth="1" />
+      ))}
+      {data.map((_, i) => { const [x, y] = axis(i); return <line key={i} x1={cx} y1={cy} x2={x} y2={y} stroke="var(--border)" strokeWidth="1" />; })}
+      <polygon points={poly} fill={`color-mix(in oklch, ${color} 22%, transparent)`} stroke={color} strokeWidth="2"
+        style={{ transition: "all .5s cubic-bezier(.16,1,.3,1)" }} />
+      {data.map((d, i) => pt(i, d.value)).map(([x, y], i) => <circle key={i} cx={x} cy={y} r="3" fill={color} />)}
+      {data.map((d, i) => {
+        const [x, y] = axis(i);
+        const lx = cx + (x - cx) * 1.2, ly = cy + (y - cy) * 1.2;
+        return <text key={i} x={lx} y={ly} textAnchor="middle" dominantBaseline="middle"
+          className="fill-[var(--muted)]" style={{ fontSize: 9 }}>{d.label}</text>;
       })}
     </svg>
   );

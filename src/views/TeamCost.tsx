@@ -1,15 +1,13 @@
 import { useMemo } from "react";
-import { Banknote, Users, Scale } from "lucide-react";
+import { Banknote, Users, Star, ShieldCheck } from "lucide-react";
 import { useStore } from "@/store";
-import { dash, companyVar } from "@/lib/format";
-import { Card, SectionTitle, KPICard, Badge, Donut, BarRow, riskColor, scoreColor } from "@/components/ui";
+import { dash, companyVar, cx } from "@/lib/format";
+import { Card, SectionTitle, KPICard, Badge, BarRow, scoreColor, riskColor } from "@/components/ui";
 import { DataTable, type Column } from "@/components/DataTable";
 import { ViewHeader, Grid, type ViewProps } from "./_shared";
 import type { Colaborador } from "@/types";
 
-const soles = (v: number | string) =>
-  typeof v === "number" ? "S/ " + v.toLocaleString("es-PE", { minimumFractionDigits: 0 }) : "—";
-
+const money = (v: number | string) => (typeof v === "number" ? "S/ " + v.toLocaleString("es-PE") : "X");
 const tagColor = (t: string) =>
   t === "Alto valor" ? "var(--emerald)" : t === "Revisar" ? "var(--red)" : t === "Equilibrado" ? "var(--amber)" : "var(--muted)";
 
@@ -17,83 +15,64 @@ export default function TeamCost(_: ViewProps) {
   const { bundle, companyFilter, openDrawer } = useStore();
   if (!bundle) return null;
   const cost = bundle.costos;
+  const masked = !!cost.enmascarado;
 
   const rows = useMemo(() => bundle.colaboradores.filter((c) =>
-    typeof c.costo_final === "number" &&
-    (companyFilter === "all" || c.empresas.includes(companyFilter) || (c.costo_por_empresa && companyFilter in c.costo_por_empresa))),
+    !c.solo_costo &&
+    (companyFilter === "all" || c.empresas.includes(companyFilter))),
     [bundle, companyFilter]);
 
-  const donut = Object.entries(cost.planilla_por_empresa).map(([emp, v]) => ({ value: v, color: companyVar(emp), label: emp }));
+  const evalAvg = rows.length ? Math.round(rows.reduce((a, c) => a + c.evaluacion, 0) / rows.length) : 0;
+  const feedback = rows.filter((c) => c.necesita_feedback).length;
+  const headByCo = bundle.empresas.filter((e) => e.presente && e.nombre !== "AP")
+    .map((e) => ({ label: e.nombre, value: bundle.colaboradores.filter((c) => c.empresas.includes(e.nombre)).length, color: companyVar(e.nombre) }));
 
   const cols: Column<Colaborador>[] = [
-    { key: "nombre", header: "Persona", sortValue: (r) => r.nombre, width: "20%", render: (r) => (
-      <div><div className="font-medium">{r.nombre}{r.solo_costo && <span className="ml-1 text-[10px] text-muted">(solo costo)</span>}</div>
-        <div className="text-[11px] text-muted truncate">{dash(r.empresa_area)}</div></div>) },
-    { key: "costo", header: "Costo/mes", align: "right", sortValue: (r) => (typeof r.costo_final === "number" ? r.costo_final : 0),
-      render: (r) => <span className="tnum font-semibold">{soles(r.costo_final)}</span> },
-    { key: "split", header: "Por empresa", render: (r) => (
-      <div className="flex flex-wrap gap-1">{Object.entries(r.costo_por_empresa || {}).map(([e, v]) =>
-        <Badge key={e} color={companyVar(e)}>{e} {soles(v).replace("S/ ", "")}</Badge>)}</div>) },
-    { key: "aporte", header: "Aporte", align: "right", sortValue: (r) => r.aporte_score,
-      render: (r) => r.solo_costo ? <span className="text-muted text-xs">s/ matriz</span> : <span className="tnum font-semibold" style={{ color: scoreColor(r.aporte_score) }}>{r.aporte_score}</span> },
-    { key: "ratio", header: "Costo/Aporte", align: "center", sortValue: (r) => r.valor_diff,
-      render: (r) => r.solo_costo ? <span className="text-muted text-xs">—</span> : <Badge color={tagColor(r.costo_aporte)}>{r.costo_aporte}</Badge> },
-    { key: "proj", header: "Proyectos", align: "right", sortValue: (r) => r.proyecto_ids.length, render: (r) => <span className="tnum">{r.proyecto_ids.length}</span> },
+    { key: "nombre", header: "Persona", sortValue: (r) => r.nombre, width: "22%", render: (r) => (
+      <div><div className="font-medium">{r.nombre}</div><div className="text-[11px] text-muted truncate">{dash(r.rol)}</div></div>) },
+    { key: "empresa", header: "Empresa", render: (r) => <div className="flex flex-wrap gap-1">{r.empresas.slice(0, 2).map((e) => <Badge key={e} color={companyVar(e)}>{e}</Badge>)}</div> },
+    { key: "eval", header: "Evaluación", align: "right", sortValue: (r) => r.evaluacion, render: (r) => <span className="tnum font-semibold" style={{ color: scoreColor(r.evaluacion) }}>{r.evaluacion}</span> },
+    { key: "aporte", header: "Aporte", align: "right", sortValue: (r) => r.aporte_score, render: (r) => <span className="tnum" style={{ color: scoreColor(r.aporte_score) }}>{r.aporte_score}</span> },
+    { key: "wip", header: "WIP", align: "right", sortValue: (r) => r.wip_score, render: (r) => <span className="tnum" style={{ color: riskColor(r.wip_score) }}>{r.wip_score}</span> },
+    { key: "ai", header: "AI", align: "right", sortValue: (r) => r.ai_native_score, render: (r) => <span className="tnum">{r.ai_native_score}</span> },
+    { key: "acts", header: "Actividades", align: "right", sortValue: (r) => r.actividades_clave.length, render: (r) => <span className="tnum text-muted">{r.actividades_clave.length}</span> },
+    { key: "costo", header: "Costo/mes", align: "right", sortValue: (r) => (typeof r.costo_final === "number" ? r.costo_final : 0), render: (r) => <span className="tnum font-medium">{money(r.costo_final)}</span> },
+    { key: "ratio", header: "Costo/Aporte", align: "center", render: (r) => <Badge color={tagColor(r.costo_aporte)}>{dash(r.costo_aporte)}</Badge> },
   ];
-
-  const restringido = (cost as unknown as { restringido?: boolean }).restringido;
-
-  if (restringido) {
-    return (
-      <>
-        <ViewHeader id="team-cost" right={<Badge color="var(--amber)">Restringido</Badge>} />
-        <Card className="text-center py-12">
-          <Banknote className="mx-auto mb-3 text-muted" size={28} />
-          <h3 className="text-base font-semibold mb-1">Datos de costo restringidos en la versión pública</h3>
-          <p className="text-sm text-muted max-w-md mx-auto">Sueldos, planilla y costo/aporte solo están disponibles en la versión local. Corre <code className="font-mono bg-surface-2 px-1.5 py-0.5 rounded">npm run dev</code> para verlos.</p>
-        </Card>
-      </>
-    );
-  }
 
   return (
     <>
-      <ViewHeader id="team-cost" right={<Badge color="var(--amber)">Sensible · Team/Finanzas</Badge>} />
+      <ViewHeader id="team-cost" right={<Badge color={masked ? "var(--muted)" : "var(--amber)"}>{masked ? "Sueldos: X (enmascarado)" : "Sensible"}</Badge>} />
 
       <Grid cols={4} className="mb-3">
-        <KPICard label={`Planilla total · ${cost.periodo}`} value={soles(cost.planilla_total)} accent="var(--emerald)" icon={Banknote} sub={`${cost.moneda} · ${cost.n_personas_costo} personas`} />
-        {Object.entries(cost.planilla_por_empresa).slice(0, 3).map(([emp, v]) => (
-          <KPICard key={emp} label={`Planilla ${emp}`} value={soles(v)} accent={companyVar(emp)} />
-        ))}
+        <KPICard label="Personas" value={rows.length} accent="var(--cyan)" icon={Users} />
+        <KPICard label="Evaluación promedio" value={evalAvg} accent={scoreColor(evalAvg)} icon={Star} />
+        <KPICard label={`Planilla · ${cost.periodo}`} value={money(cost.planilla_total)} accent="var(--emerald)" icon={Banknote} sub={masked ? "enmascarado" : cost.moneda} />
+        <KPICard label="Requieren feedback" value={feedback} accent="var(--violet)" icon={ShieldCheck} />
       </Grid>
 
       <Grid cols={2} className="mb-3">
-        <Card className="flex items-center gap-5">
-          <Donut segments={donut} size={108} stroke={16} />
-          <div className="flex-1 space-y-1.5">
-            {donut.map((d) => (
-              <div key={d.label} className="flex items-center gap-2 text-xs">
-                <span className="h-2.5 w-2.5 rounded-[3px]" style={{ background: d.color }} />
-                <span className="flex-1 text-fg-2">{d.label}</span>
-                <span className="tnum font-medium">{soles(d.value)}</span>
-              </div>
-            ))}
-          </div>
+        <Card>
+          <SectionTitle title="Mejores evaluaciones" subtitle="Top aporte/evaluación" />
+          {[...rows].sort((a, b) => b.evaluacion - a.evaluacion).slice(0, 7).map((c) =>
+            <BarRow key={c.id} label={c.nombre} value={c.evaluacion} color={scoreColor(c.evaluacion)} />)}
         </Card>
         <Card>
-          <SectionTitle icon={Scale} title="Mayor costo vs aporte" subtitle="Top costo · revisar equilibrio" />
-          {[...rows].sort((a, b) => (b.costo_final as number) - (a.costo_final as number)).slice(0, 6).map((c) => (
-            <BarRow key={c.id} label={c.nombre} value={typeof c.costo_final === "number" ? c.costo_final : 0} max={6000}
-              color={c.solo_costo ? "var(--muted)" : tagColor(c.costo_aporte)} right={soles(c.costo_final).replace("S/ ", "")} />
-          ))}
+          <SectionTitle title="Equipo por empresa" subtitle="Headcount" />
+          {headByCo.map((h) => <BarRow key={h.label} label={h.label} value={h.value} max={Math.max(...headByCo.map((x) => x.value), 1)} color={h.color} right={h.value} />)}
         </Card>
       </Grid>
 
       <Card className="!p-2">
         <DataTable columns={cols} rows={rows} getKey={(r) => r.id}
-          onRowClick={(r) => openDrawer({ type: "person", id: r.id })} initialSort={{ key: "costo", dir: "desc" }} />
+          onRowClick={(r) => { useStore.getState().setPersonFilter(r.nombre); window.location.hash = "/person-focus"; }}
+          initialSort={{ key: "eval", dir: "desc" }} />
       </Card>
-      <p className="text-[11px] text-muted mt-3 flex items-center gap-1.5"><Users size={12} /> Costo: {cost.fuente} ({cost.periodo}). Aporte: proxy determinístico (nº proyectos · salud · criticidad) — confianza Inferido. CEO y personas sin matriz de actividad se muestran como "solo costo".</p>
+      <p className={cx("text-[11px] text-muted mt-3")}>
+        {masked
+          ? "Sueldos enmascarados con «X» (sin PII, apto para publicar). Para ver montos reales en local: AP_SHOW_COSTS=1 python etl/parse_vault.py."
+          : `Costo: ${cost.fuente} (${cost.periodo}).`} Evaluación = rol·actividades·trazabilidad·aporte·AI·balance de carga (determinística). Click en una fila → Persona 360.
+      </p>
     </>
   );
 }

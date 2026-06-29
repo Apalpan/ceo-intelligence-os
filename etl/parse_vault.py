@@ -426,9 +426,91 @@ def build_projects():
                     "proximo_hito": hito, "evidencia": evidencia, "confianza": conf,
                     "health_score": health, "risk_score": risk, "ceo_attention": ceo_attn,
                     "impacto_caja": r100(impacto_caja), "impacto_cliente": r100(impacto_cliente),
+                    "evaluacion": r100(health / 100 * 0.30 + (100 - risk) / 100 * 0.20
+                                       + avance_validado * 0.20 + (cv if evidencia != UNCLEAR else 0.3) * 0.15
+                                       + (has(resp) + has(hito)) / 2 * 0.15),
+                    "eval_dims": {"Salud": health, "Avance": r100(avance_validado), "Bajo riesgo": 100 - risk,
+                                  "Evidencia": r100(cv if evidencia != UNCLEAR else 0.3),
+                                  "Claridad": r100((has(resp) + has(hito)) / 2)},
                     "fuente": "01_Matriz_Proyectos.md",
                 })
     return out
+
+def parse_person_detail(nombre):
+    """Lee 09_Actividades Team/Actividades_TEAM/<persona>/ y extrae rol, enfoque,
+    actividades clave (tabla ACT), avances por proyecto y metricas. Detalle profundo."""
+    folder = os.path.join(VAULT_ROOT, "09_Actividades Team", "Actividades_TEAM", nombre)
+    out = {"rol": UNCLEAR, "enfoque": [], "actividades_clave": [], "avances": [],
+           "metricas": [], "carga_txt": UNCLEAR}
+    if not os.path.isdir(folder):
+        return out
+
+    def rd(fn):
+        return read(os.path.join(folder, fn)) or ""
+
+    perfil = rd("Perfil.md")
+    if perfil:
+        m = re.search(r"^rol:\s*(.+)$", perfil, re.M)
+        if m:
+            out["rol"] = m.group(1).strip()
+        m = re.search(r"\*\*Rol actual:\*\*\s*(.+)", perfil)
+        if m:
+            out["rol"] = m.group(1).strip()
+        m = re.search(r"\*\*Carga:\*\*\s*(.+)", perfil)
+        if m:
+            out["carga_txt"] = m.group(1).strip()
+        cap = False
+        for line in perfil.splitlines():
+            if line.startswith("## "):
+                cap = "enfoque" in line.lower()
+                continue
+            mm = re.match(r"^\s*[-*]\s+(.+)$", line)
+            if cap and mm:
+                out["enfoque"].append(mm.group(1).strip())
+
+    acts_txt = rd("Actividades-Clave.md")
+    for _, tables in parse_sections(acts_txt):
+        for table in tables:
+            if not table:
+                continue
+            hdr = " ".join(table[0].keys()).lower()
+            if "act" in hdr and "actividad" in hdr:
+                for row in table:
+                    actividad = clean(col(row, "actividad"))
+                    if actividad == UNCLEAR or actividad.lower() == "actividad":
+                        continue
+                    out["actividades_clave"].append({
+                        "act": clean(col(row, "act")), "area": clean(col(row, "area", "área")),
+                        "actividad": actividad, "prioridad": clean(col(row, "prioridad")),
+                        "sla": clean(col(row, "sla")), "evidencia": clean(col(row, "evidencia")),
+                        "metrica": clean(col(row, "metrica", "métrica")),
+                    })
+
+    av_txt = rd("Avances-Proyectos.md")
+    cur, skip = "", False
+    for line in av_txt.splitlines():
+        h = re.match(r"^#{2,4}\s+(.+)$", line)
+        if h:
+            cur = h.group(1).strip()
+            skip = any(k in cur.lower() for k in ["que es esta nota", "como editar", "resumen operativo"])
+            continue
+        mm = re.match(r"^\s*[-*]\s+(.+)$", line)
+        if mm and not skip and not line.lower().startswith("- ##"):
+            txt = mm.group(1).strip()
+            if len(txt) > 4 and not txt.startswith("**Evidencia"):
+                out["avances"].append({"seccion": cur, "texto": txt})
+    out["avances"] = out["avances"][:30]
+
+    res_txt = rd("Resultados.md")
+    for _, tables in parse_sections(res_txt):
+        for table in tables:
+            for row in table:
+                mname = clean(col(row, "metrica", "métrica"))
+                if mname != UNCLEAR and mname.lower() not in ("metrica", "métrica"):
+                    out["metricas"].append(mname)
+    out["metricas"] = out["metricas"][:8]
+    return out
+
 
 def build_collaborators(projects, costs):
     text = read(vfile("02_Matriz_Colaboradores.md"))
@@ -494,9 +576,35 @@ def build_collaborators(projects, costs):
                 costo_base = c["costo_base"] if c else UNCLEAR
                 costo_emp = c["costo_por_empresa"] if c else {}
                 rol_rh = c["rol_rh"] if c else UNCLEAR
+
+                # Detalle profundo + evaluacion
+                det = parse_person_detail(nombre)
+                n_acts = len(det["actividades_clave"])
+                acts_con_ev = len([a for a in det["actividades_clave"] if a["evidencia"] != UNCLEAR])
+                restricciones = []
+                if riesgos != UNCLEAR:
+                    restricciones += [r.strip() for r in re.split(r"[;.]", riesgos) if len(r.strip()) > 6][:3]
+                if cargav >= 0.9:
+                    restricciones.append("Carga critica por exceso de WIP")
+                if pend != UNCLEAR:
+                    restricciones += [pp.strip() for pp in re.split(r"[;,]", pend) if len(pp.strip()) > 6][:2]
+                ev_dims = {
+                    "Rol claro": 100 if det["rol"] != UNCLEAR else 40,
+                    "Volumen actividades": r100(min(n_acts / 10.0, 1.0)),
+                    "Trazabilidad": r100(acts_con_ev / n_acts) if n_acts else 40,
+                    "Aporte": aporte,
+                    "AI-native": ai_native,
+                    "Balance carga": r100(max(0.0, 1.0 - max(0.0, cargav - 0.5) * 1.2)),
+                }
+                evaluacion = int(round(sum(ev_dims.values()) / len(ev_dims)))
+
                 out.append({
                     "id": slug("col", nombre),
                     "nombre": nombre, "empresa_area": empresa_area,
+                    "rol": det["rol"], "enfoque": det["enfoque"],
+                    "actividades_clave": det["actividades_clave"], "avances_detalle": det["avances"],
+                    "metricas": det["metricas"], "restricciones": restricciones,
+                    "evaluacion": evaluacion, "eval_dims": ev_dims,
                     "funcion": classify_funcion(empresa_area, proyectos, hechas),
                     "empresas": [c for c in COMPANY_ORDER if c.lower().replace("+", "") in empresa_area.lower().replace("+", "")] or [norm_company(empresa_area)],
                     "proyectos": proyectos, "n_proyectos": n_proj,
@@ -523,6 +631,9 @@ def build_collaborators(projects, costs):
         empresas = list(c["costo_por_empresa"].keys()) or ["AECODE"]
         out.append({
             "id": slug("col", key), "nombre": key, "empresa_area": " / ".join(empresas),
+            "rol": c.get("rol_rh", UNCLEAR), "enfoque": [], "actividades_clave": [],
+            "avances_detalle": [], "metricas": [], "restricciones": [],
+            "evaluacion": 0, "eval_dims": {},
             "funcion": classify_funcion(c.get("rol_rh", "")), "empresas": empresas,
             "proyectos": UNCLEAR, "n_proyectos": 0, "actividades": c.get("rol_rh", UNCLEAR),
             "pendientes": UNCLEAR, "carga": UNCLEAR, "carga_val": 0.0, "riesgos": UNCLEAR,
@@ -1169,7 +1280,7 @@ def emit_obsidian(bundle):
     P, R, D, C = bundle["proyectos"], bundle["riesgos"], bundle["decisiones"], bundle["colaboradores"]
     PR, EMP, FN, cont = bundle["prioridades"], bundle["empresas"], bundle["funciones"], bundle["costos"]
     EMPRESAS = [e for e in EMP if e.get("presente") and e["nombre"] != "AP"]
-    soles = lambda v: "S/ " + format(v, ",.0f")
+    soles = lambda v: ("S/ " + format(v, ",.0f")) if isinstance(v, (int, float)) else "X"
 
     # limpiar carpetas numeradas auto-generadas de corridas previas (solo si son nuestras)
     for old in ["01_Empresas", "02_Areas", "03_Proyectos", "04_Team", "05_Riesgos", "06_Decisiones", "07_Logs"]:
@@ -1456,14 +1567,29 @@ def main():
     for c in collaborators:
         for emp, amt in (c.get("costo_por_empresa") or {}).items():
             planilla_emp[emp] = round(planilla_emp.get(emp, 0) + amt, 2)
+    n_costo = len([c for c in collaborators if isinstance(c["costo_final"], (int, float))])
     costos = {
         "periodo": rh_periodo or "2026-05",
         "planilla_por_empresa": planilla_emp,
         "planilla_total": round(sum(planilla_emp.values()), 2),
-        "n_personas_costo": len([c for c in collaborators if isinstance(c["costo_final"], (int, float))]),
+        "n_personas_costo": n_costo,
         "moneda": "PEN",
         "fuente": "Cierre-RH-Pagos (04_Team GEN+)",
     }
+
+    # Enmascarar sueldos con "X" por defecto (sin PII -> apto para publico).
+    # Para ver montos reales en local: AP_SHOW_COSTS=1 python etl/parse_vault.py
+    if os.environ.get("AP_SHOW_COSTS", "0") != "1":
+        for c in collaborators:
+            if isinstance(c["costo_final"], (int, float)):
+                c["costo_final"] = "X"
+            if isinstance(c["costo_base"], (int, float)):
+                c["costo_base"] = "X"
+            c["costo_por_empresa"] = {k: "X" for k in (c.get("costo_por_empresa") or {})}
+        costos["planilla_por_empresa"] = {k: "X" for k in planilla_emp}
+        costos["planilla_total"] = "X"
+        costos["enmascarado"] = True
+
     ai_native = build_ai_native(collaborators, companies, agents, procesos)
     data_quality = build_data_quality(projects, collaborators, risks)
     deltas, first_run = compute_deltas(projects, risks)

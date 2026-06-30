@@ -1,11 +1,9 @@
-# Reporte de Calidad de Datos — 2026-06-29 04:11
+# Reporte de Calidad de Datos — 2026-06-29 20:37
 
-Data Quality Score: **94**
+Data Quality Score: **99**
 
-- Completitud: 98 · Consistencia: 95 · Actualidad: 90 · Evidencia: 100 · Normalización: 85
-- Contradicciones: 1
+- Completitud: 100 · Consistencia: 100 · Actualidad: 96 · Evidencia: 100 · Normalización: 100
+- Contradicciones: 0
 
 ## Gaps (información faltante)
 
-- THESIA presupuesto / Tesis Juan (THESIA): falta proximo_hito
-- Migracion flujos (AgentFlow): falta proximo_hito

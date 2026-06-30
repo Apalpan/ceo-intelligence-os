@@ -77,6 +77,30 @@ def slug(*parts):
 def vfile(name):
     return os.path.join(VAULT, name)
 
+def vault_freshness():
+    """Frescura REAL del dato: mtime más reciente entre los archivos fuente que
+    edita un humano/Codex (los .md de primer nivel en VAULT). NO escanea las
+    subcarpetas que emit_obsidian regenera en cada corrida, para que la lectura
+    refleje cuándo cambió la realidad, no cuándo corrió el ETL.
+    Devuelve (datetime_más_reciente, antigüedad_en_horas) o (None, None)."""
+    newest = 0.0
+    try:
+        for fn in os.listdir(VAULT):
+            if fn.lower().endswith(".md"):
+                p = os.path.join(VAULT, fn)
+                if os.path.isfile(p):
+                    try:
+                        newest = max(newest, os.path.getmtime(p))
+                    except OSError:
+                        pass
+    except OSError:
+        pass
+    if newest <= 0:
+        return None, None
+    newest_dt = dt.datetime.fromtimestamp(newest)
+    age_h = (NOW - newest_dt).total_seconds() / 3600.0
+    return newest_dt, age_h
+
 # --------------------------------------------------------------------------- #
 # Markdown parsing
 # --------------------------------------------------------------------------- #
@@ -1067,7 +1091,7 @@ def build_ai_native(collaborators, companies, agents, procesos):
             for p in autom_backlog],
     }
 
-def build_data_quality(projects, collaborators, risks):
+def build_data_quality(projects, collaborators, risks, actualidad=0.9):
     total_fields, filled = 0, 0
     for p in projects:
         for k in ("responsable", "proximo_hito", "evidencia", "pendientes"):
@@ -1079,9 +1103,13 @@ def build_data_quality(projects, collaborators, risks):
     consistencia = max(0.0, 1 - contradictions / max(len(risks), 1))
     with_ev = len([p for p in projects if p["evidencia"] != UNCLEAR])
     evidencia = with_ev / max(len(projects), 1)
-    # actualidad: vs corte date
-    actualidad = 0.9
-    normalizacion = 0.85
+    # actualidad: REAL, derivada del mtime del vault (la pasa main()); fallback 0.9.
+    # normalizacion: REAL, share de proyectos+riesgos con `fuente` trazable
+    # (antes era un literal 0.85 cosmético).
+    norm_total = len(projects) + len(risks)
+    norm_ok = (len([p for p in projects if p.get("fuente") and p["fuente"] != UNCLEAR])
+               + len([r for r in risks if r.get("fuente") and r["fuente"] != UNCLEAR]))
+    normalizacion = (norm_ok / norm_total) if norm_total else 0.85
     dq = r100(completitud * 0.25 + consistencia * 0.20 + actualidad * 0.20
               + evidencia * 0.20 + normalizacion * 0.15)
     gaps = []
@@ -1127,10 +1155,28 @@ def compute_deltas(projects, risks):
             if pid not in cur_proj:
                 deltas.append({"entidad": "proyecto", "id": pid, "tipo": "cerrado",
                                "antes": pp[pid], "despues": None})
-    snapshot = {"generated_at": STAMP, "projects": cur_proj, "risks": cur_risk}
-    write_json(latest, snapshot)
-    write_json(os.path.join(HIST, "baseline-%s.json" % TS), snapshot)
+        # riesgos (antes no se diffeaban: bug — el motor de cambio ignoraba el riesgo)
+        pr = prev.get("risks", {})
+        for rid, s in cur_risk.items():
+            if rid not in pr:
+                deltas.append({"entidad": "riesgo", "id": rid, "tipo": "nuevo",
+                               "antes": None, "despues": s})
+            elif pr[rid] != s:
+                deltas.append({"entidad": "riesgo", "id": rid, "tipo": "cambio",
+                               "antes": pr[rid], "despues": s})
+        for rid in pr:
+            if rid not in cur_risk:
+                deltas.append({"entidad": "riesgo", "id": rid, "tipo": "cerrado",
+                               "antes": pr[rid], "despues": None})
     first_run = prev is None
+    snapshot = {"generated_at": STAMP, "projects": cur_proj, "risks": cur_risk}
+    # Solo movemos el baseline cuando el estado CAMBIÓ (o en la primera corrida).
+    # Antes se reescribía en cada corrida: re-ejecutar el ETL sin cambios comparaba
+    # el estado contra sí mismo y borraba el último delta visible. Ahora `latest.json`
+    # conserva el último estado DISTINTO hasta que algo cambie de verdad.
+    if first_run or deltas:
+        write_json(latest, snapshot)
+        write_json(os.path.join(HIST, "baseline-%s.json" % TS), snapshot)
     return deltas, first_run
 
 # --------------------------------------------------------------------------- #
@@ -1591,13 +1637,23 @@ def main():
         costos["enmascarado"] = True
 
     ai_native = build_ai_native(collaborators, companies, agents, procesos)
-    data_quality = build_data_quality(projects, collaborators, risks)
+    # Frescura real: deriva actualidad y `corte` del mtime de las fuentes del vault.
+    vfresh_dt, vault_age_h = vault_freshness()
+    if vault_age_h is None:
+        actualidad = 0.9
+        corte_str = STAMP + " PET"
+    else:
+        # decae linealmente: recién editado = 1.0 → ~0.0 a los 14 días (336 h) sin tocar
+        actualidad = max(0.0, min(1.0, 1.0 - vault_age_h / 336.0))
+        corte_str = vfresh_dt.strftime("%Y-%m-%d %H:%M") + " PET"
+    data_quality = build_data_quality(projects, collaborators, risks, actualidad)
     deltas, first_run = compute_deltas(projects, risks)
 
     bundle = {
         "meta": {
             "generated_at": STAMP, "vault": VAULT, "first_run": first_run,
-            "corte": "2026-06-28 16:25 PET",
+            "corte": corte_str,
+            "vault_age_hours": (round(vault_age_h, 1) if vault_age_h is not None else None),
             "periodo": PERIODO, "periodo_costos": costos["periodo"],
             "counts": {
                 "empresas": len([c for c in companies if c.get("presente")]),
@@ -1637,6 +1693,9 @@ def main():
         len(projects), len(collaborators), len(risks), len(agents), len(procesos)))
     print("[ETL] Data Quality:", data_quality["data_quality_score"],
           "AI-Native:", ai_native["overall_score"], "Deltas:", len(deltas))
+    print("[ETL] Frescura vault:", bundle["meta"]["corte"],
+          "(hace %sh) · actualidad=%s" % (bundle["meta"]["vault_age_hours"],
+                                          data_quality["actualidad"]))
     print("[ETL] Wrote bundle to", os.path.join(OUT, "ceo_os.json"))
 
 

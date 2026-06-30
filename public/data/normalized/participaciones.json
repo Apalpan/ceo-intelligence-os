@@ -8,129 +8,17 @@
     "rol": "responsable"
   },
   {
-    "persona": "Kevin",
-    "proyecto_id": "prj-gen-ptar-atarjea-buzones",
-    "proyecto": "PTAR Atarjea / Buzones",
+    "persona": "Emanuel",
+    "proyecto_id": "prj-gen-gen-flows",
+    "proyecto": "GEN+ Flows",
     "empresa": "GEN+",
     "unidad": "GEN+",
     "rol": "responsable"
   },
   {
-    "persona": "Luis Vergara",
-    "proyecto_id": "prj-gen-ptar-atarjea-buzones",
-    "proyecto": "PTAR Atarjea / Buzones",
-    "empresa": "GEN+",
-    "unidad": "GEN+",
-    "rol": "responsable"
-  },
-  {
-    "persona": "Julie",
-    "proyecto_id": "prj-gen-ptar-atarjea-buzones",
-    "proyecto": "PTAR Atarjea / Buzones",
-    "empresa": "GEN+",
-    "unidad": "GEN+",
-    "rol": "responsable"
-  },
-  {
-    "persona": "Fabrizio",
-    "proyecto_id": "prj-gen-ca-ete",
-    "proyecto": "Cañete",
-    "empresa": "GEN+",
-    "unidad": "GEN+",
-    "rol": "responsable"
-  },
-  {
-    "persona": "Israel",
-    "proyecto_id": "prj-gen-ca-ete",
-    "proyecto": "Cañete",
-    "empresa": "GEN+",
-    "unidad": "GEN+",
-    "rol": "responsable"
-  },
-  {
-    "persona": "Robert Herrera",
-    "proyecto_id": "prj-gen-ca-ete",
-    "proyecto": "Cañete",
-    "empresa": "GEN+",
-    "unidad": "GEN+",
-    "rol": "responsable"
-  },
-  {
-    "persona": "Luis Vergara",
-    "proyecto_id": "prj-gen-ca-ete",
-    "proyecto": "Cañete",
-    "empresa": "GEN+",
-    "unidad": "GEN+",
-    "rol": "responsable"
-  },
-  {
-    "persona": "Fabrizio",
-    "proyecto_id": "prj-gen-faucett",
-    "proyecto": "Faucett",
-    "empresa": "GEN+",
-    "unidad": "GEN+",
-    "rol": "responsable"
-  },
-  {
-    "persona": "Israel",
-    "proyecto_id": "prj-gen-faucett",
-    "proyecto": "Faucett",
-    "empresa": "GEN+",
-    "unidad": "GEN+",
-    "rol": "responsable"
-  },
-  {
-    "persona": "Fabrizio",
-    "proyecto_id": "prj-gen-dovelas-panama",
-    "proyecto": "Dovelas Panama",
-    "empresa": "GEN+",
-    "unidad": "GEN+",
-    "rol": "responsable"
-  },
-  {
-    "persona": "Guisella",
-    "proyecto_id": "prj-gen-dovelas-panama",
-    "proyecto": "Dovelas Panama",
-    "empresa": "GEN+",
-    "unidad": "GEN+",
-    "rol": "responsable"
-  },
-  {
-    "persona": "Julie",
-    "proyecto_id": "prj-gen-dovelas-panama",
-    "proyecto": "Dovelas Panama",
-    "empresa": "GEN+",
-    "unidad": "GEN+",
-    "rol": "responsable"
-  },
-  {
-    "persona": "Fabrizio",
-    "proyecto_id": "prj-gen-the-circle",
-    "proyecto": "The Circle",
-    "empresa": "GEN+",
-    "unidad": "GEN+",
-    "rol": "responsable"
-  },
-  {
-    "persona": "Guisella",
-    "proyecto_id": "prj-gen-the-circle",
-    "proyecto": "The Circle",
-    "empresa": "GEN+",
-    "unidad": "GEN+",
-    "rol": "responsable"
-  },
-  {
-    "persona": "Fabrizio",
-    "proyecto_id": "prj-gen-puente-tingo",
-    "proyecto": "Puente Tingo",
-    "empresa": "GEN+",
-    "unidad": "GEN+",
-    "rol": "responsable"
-  },
-  {
-    "persona": "Luis Vergara",
-    "proyecto_id": "prj-gen-puente-tingo",
-    "proyecto": "Puente Tingo",
+    "persona": "Emanuel",
+    "proyecto_id": "prj-gen-seace-radar",
+    "proyecto": "SEACE Radar",
     "empresa": "GEN+",
     "unidad": "GEN+",
     "rol": "responsable"
@@ -168,377 +56,273 @@
     "rol": "responsable"
   },
   {
+    "persona": "Anderson",
+    "proyecto_id": "prj-gen-esparq",
+    "proyecto": "ESPARQ",
+    "empresa": "GEN+",
+    "unidad": "GEN+",
+    "rol": "responsable"
+  },
+  {
+    "persona": "Emanuel",
+    "proyecto_id": "prj-gen-esparq",
+    "proyecto": "ESPARQ",
+    "empresa": "GEN+",
+    "unidad": "GEN+",
+    "rol": "responsable"
+  },
+  {
+    "persona": "Emanuel",
+    "proyecto_id": "prj-gen-pdk-obra",
+    "proyecto": "PDK / obra",
+    "empresa": "GEN+",
+    "unidad": "GEN+",
+    "rol": "responsable"
+  },
+  {
+    "persona": "Marlon",
+    "proyecto_id": "prj-gen-pdk-obra",
+    "proyecto": "PDK / obra",
+    "empresa": "GEN+",
+    "unidad": "GEN+",
+    "rol": "responsable"
+  },
+  {
+    "persona": "Yary",
+    "proyecto_id": "prj-gen-pdk-obra",
+    "proyecto": "PDK / obra",
+    "empresa": "GEN+",
+    "unidad": "GEN+",
+    "rol": "responsable"
+  },
+  {
     "persona": "Fabrizio",
-    "proyecto_id": "prj-gen-agente-inmobiliario-gen",
-    "proyecto": "Agente Inmobiliario GEN+",
+    "proyecto_id": "prj-gen-ca-ete-ptar-dovelas-the-circle",
+    "proyecto": "CaÃ±ete / PTAR / Dovelas / The Circle",
     "empresa": "GEN+",
     "unidad": "GEN+",
     "rol": "responsable"
   },
   {
-    "persona": "Julie",
-    "proyecto_id": "prj-gen-uncp-osp-nestle-gore-otros",
-    "proyecto": "UNCP / OSP / Nestle / GORE / otros",
+    "persona": "Israel",
+    "proyecto_id": "prj-gen-ca-ete-ptar-dovelas-the-circle",
+    "proyecto": "CaÃ±ete / PTAR / Dovelas / The Circle",
     "empresa": "GEN+",
     "unidad": "GEN+",
     "rol": "responsable"
   },
   {
-    "persona": "Daniella",
-    "proyecto_id": "prj-gen-uncp-osp-nestle-gore-otros",
-    "proyecto": "UNCP / OSP / Nestle / GORE / otros",
+    "persona": "Robert",
+    "proyecto_id": "prj-gen-ca-ete-ptar-dovelas-the-circle",
+    "proyecto": "CaÃ±ete / PTAR / Dovelas / The Circle",
+    "empresa": "GEN+",
+    "unidad": "GEN+",
+    "rol": "responsable"
+  },
+  {
+    "persona": "Luis",
+    "proyecto_id": "prj-gen-ca-ete-ptar-dovelas-the-circle",
+    "proyecto": "CaÃ±ete / PTAR / Dovelas / The Circle",
+    "empresa": "GEN+",
+    "unidad": "GEN+",
+    "rol": "responsable"
+  },
+  {
+    "persona": "Guisella",
+    "proyecto_id": "prj-gen-ca-ete-ptar-dovelas-the-circle",
+    "proyecto": "CaÃ±ete / PTAR / Dovelas / The Circle",
+    "empresa": "GEN+",
+    "unidad": "GEN+",
+    "rol": "responsable"
+  },
+  {
+    "persona": "Kevin",
+    "proyecto_id": "prj-gen-ca-ete-ptar-dovelas-the-circle",
+    "proyecto": "CaÃ±ete / PTAR / Dovelas / The Circle",
     "empresa": "GEN+",
     "unidad": "GEN+",
     "rol": "responsable"
   },
   {
     "persona": "Erika",
-    "proyecto_id": "prj-aecode-sponsors-pipeline",
-    "proyecto": "Sponsors / pipeline",
+    "proyecto_id": "prj-aecode-logistica-y-experiencia",
+    "proyecto": "Logistica y experiencia",
+    "empresa": "AECODE",
+    "unidad": "AECODE AI Construction Summit",
+    "rol": "responsable"
+  },
+  {
+    "persona": "Erika",
+    "proyecto_id": "prj-aecode-sponsors-y-base-comercial",
+    "proyecto": "Sponsors y base comercial",
     "empresa": "AECODE",
     "unidad": "AECODE AI Construction Summit",
     "rol": "responsable"
   },
   {
     "persona": "Paola",
-    "proyecto_id": "prj-aecode-sponsors-pipeline",
-    "proyecto": "Sponsors / pipeline",
+    "proyecto_id": "prj-aecode-sponsors-y-base-comercial",
+    "proyecto": "Sponsors y base comercial",
     "empresa": "AECODE",
     "unidad": "AECODE AI Construction Summit",
     "rol": "responsable"
   },
   {
     "persona": "Julie",
-    "proyecto_id": "prj-aecode-sponsors-pipeline",
-    "proyecto": "Sponsors / pipeline",
+    "proyecto_id": "prj-aecode-sponsors-y-base-comercial",
+    "proyecto": "Sponsors y base comercial",
     "empresa": "AECODE",
     "unidad": "AECODE AI Construction Summit",
     "rol": "responsable"
   },
   {
-    "persona": "Marlon",
-    "proyecto_id": "prj-aecode-web-app-agenda",
-    "proyecto": "Web / App / agenda",
-    "empresa": "AECODE",
-    "unidad": "AECODE AI Construction Summit",
-    "rol": "responsable"
-  },
-  {
-    "persona": "Yary",
-    "proyecto_id": "prj-aecode-web-app-agenda",
-    "proyecto": "Web / App / agenda",
-    "empresa": "AECODE",
-    "unidad": "AECODE AI Construction Summit",
-    "rol": "responsable"
-  },
-  {
-    "persona": "Anderson",
-    "proyecto_id": "prj-aecode-web-app-agenda",
-    "proyecto": "Web / App / agenda",
-    "empresa": "AECODE",
-    "unidad": "AECODE AI Construction Summit",
-    "rol": "responsable"
-  },
-  {
-    "persona": "Fabrizio",
-    "proyecto_id": "prj-aecode-web-app-agenda",
-    "proyecto": "Web / App / agenda",
-    "empresa": "AECODE",
-    "unidad": "AECODE AI Construction Summit",
-    "rol": "responsable"
-  },
-  {
-    "persona": "Arantxa",
-    "proyecto_id": "prj-aecode-pre-congreso",
-    "proyecto": "Pre Congreso",
-    "empresa": "AECODE",
-    "unidad": "AECODE AI Construction Summit",
-    "rol": "responsable"
-  },
-  {
-    "persona": "Jessica",
-    "proyecto_id": "prj-aecode-pre-congreso",
-    "proyecto": "Pre Congreso",
-    "empresa": "AECODE",
-    "unidad": "AECODE AI Construction Summit",
-    "rol": "responsable"
-  },
-  {
-    "persona": "Enma",
-    "proyecto_id": "prj-aecode-pre-congreso",
-    "proyecto": "Pre Congreso",
+    "persona": "AgentFlow",
+    "proyecto_id": "prj-aecode-sponsors-y-base-comercial",
+    "proyecto": "Sponsors y base comercial",
     "empresa": "AECODE",
     "unidad": "AECODE AI Construction Summit",
     "rol": "responsable"
   },
   {
     "persona": "Carolina",
-    "proyecto_id": "prj-aecode-diplomados-certificados",
-    "proyecto": "Diplomados/certificados",
+    "proyecto_id": "prj-aecode-coordinacion-academica",
+    "proyecto": "Coordinacion academica",
     "empresa": "AECODE",
     "unidad": "AECODE Live Training",
     "rol": "responsable"
   },
   {
     "persona": "Patrick",
-    "proyecto_id": "prj-aecode-diplomados-certificados",
-    "proyecto": "Diplomados/certificados",
-    "empresa": "AECODE",
-    "unidad": "AECODE Live Training",
-    "rol": "responsable"
-  },
-  {
-    "persona": "Marlon",
-    "proyecto_id": "prj-aecode-diplomados-certificados",
-    "proyecto": "Diplomados/certificados",
+    "proyecto_id": "prj-aecode-coordinacion-academica",
+    "proyecto": "Coordinacion academica",
     "empresa": "AECODE",
     "unidad": "AECODE Live Training",
     "rol": "responsable"
   },
   {
     "persona": "Kevin",
-    "proyecto_id": "prj-aecode-diplomados-certificados",
-    "proyecto": "Diplomados/certificados",
-    "empresa": "AECODE",
-    "unidad": "AECODE Live Training",
-    "rol": "responsable"
-  },
-  {
-    "persona": "Julie",
-    "proyecto_id": "prj-aecode-diplomados-certificados",
-    "proyecto": "Diplomados/certificados",
-    "empresa": "AECODE",
-    "unidad": "AECODE Live Training",
-    "rol": "responsable"
-  },
-  {
-    "persona": "Talia",
-    "proyecto_id": "prj-aecode-ventas-training",
-    "proyecto": "Ventas Training",
+    "proyecto_id": "prj-aecode-coordinacion-academica",
+    "proyecto": "Coordinacion academica",
     "empresa": "AECODE",
     "unidad": "AECODE Live Training",
     "rol": "responsable"
   },
   {
     "persona": "Genesis",
-    "proyecto_id": "prj-aecode-ventas-training",
-    "proyecto": "Ventas Training",
+    "proyecto_id": "prj-aecode-live-training-genesis",
+    "proyecto": "Live Training / Genesis",
     "empresa": "AECODE",
     "unidad": "AECODE Live Training",
     "rol": "responsable"
   },
   {
-    "persona": "Yadira",
-    "proyecto_id": "prj-aecode-ventas-training",
-    "proyecto": "Ventas Training",
+    "persona": "Talia",
+    "proyecto_id": "prj-aecode-live-training-genesis",
+    "proyecto": "Live Training / Genesis",
     "empresa": "AECODE",
     "unidad": "AECODE Live Training",
     "rol": "responsable"
   },
   {
     "persona": "Reiner",
-    "proyecto_id": "prj-aecode-ventas-training",
-    "proyecto": "Ventas Training",
+    "proyecto_id": "prj-aecode-live-training-genesis",
+    "proyecto": "Live Training / Genesis",
     "empresa": "AECODE",
     "unidad": "AECODE Live Training",
     "rol": "responsable"
   },
   {
-    "persona": "Arantxa",
-    "proyecto_id": "prj-aecode-summit-reto-ia-training",
-    "proyecto": "Summit / Reto IA / Training",
-    "empresa": "AECODE",
-    "unidad": "AECODE AI Construction Summit",
-    "rol": "responsable"
-  },
-  {
-    "persona": "Enma",
-    "proyecto_id": "prj-aecode-summit-reto-ia-training",
-    "proyecto": "Summit / Reto IA / Training",
+    "persona": "Anggie",
+    "proyecto_id": "prj-aecode-summit-bim-vial-ia-3-autobim",
+    "proyecto": "Summit, BIM Vial, IA 3, AutoBIM",
     "empresa": "AECODE",
     "unidad": "AECODE AI Construction Summit",
     "rol": "responsable"
   },
   {
     "persona": "Jessica",
-    "proyecto_id": "prj-aecode-summit-reto-ia-training",
-    "proyecto": "Summit / Reto IA / Training",
+    "proyecto_id": "prj-aecode-summit-bim-vial-ia-3-autobim",
+    "proyecto": "Summit, BIM Vial, IA 3, AutoBIM",
     "empresa": "AECODE",
     "unidad": "AECODE AI Construction Summit",
     "rol": "responsable"
   },
   {
-    "persona": "Anggie",
-    "proyecto_id": "prj-aecode-summit-reto-ia-training",
-    "proyecto": "Summit / Reto IA / Training",
+    "persona": "Enma",
+    "proyecto_id": "prj-aecode-summit-bim-vial-ia-3-autobim",
+    "proyecto": "Summit, BIM Vial, IA 3, AutoBIM",
     "empresa": "AECODE",
     "unidad": "AECODE AI Construction Summit",
     "rol": "responsable"
   },
   {
-    "persona": "Yary",
-    "proyecto_id": "prj-aecode-fase-2-fase-3-aecode",
-    "proyecto": "Fase 2 / Fase 3 / AECODE",
+    "persona": "Arantxa",
+    "proyecto_id": "prj-aecode-summit-bim-vial-ia-3-autobim",
+    "proyecto": "Summit, BIM Vial, IA 3, AutoBIM",
     "empresa": "AECODE",
-    "unidad": "AECODE Producto / Plataforma",
-    "rol": "responsable"
-  },
-  {
-    "persona": "Marlon",
-    "proyecto_id": "prj-aecode-fase-2-fase-3-aecode",
-    "proyecto": "Fase 2 / Fase 3 / AECODE",
-    "empresa": "AECODE",
-    "unidad": "AECODE Producto / Plataforma",
-    "rol": "responsable"
-  },
-  {
-    "persona": "Anderson",
-    "proyecto_id": "prj-aecode-fase-2-fase-3-aecode",
-    "proyecto": "Fase 2 / Fase 3 / AECODE",
-    "empresa": "AECODE",
-    "unidad": "AECODE Producto / Plataforma",
-    "rol": "responsable"
-  },
-  {
-    "persona": "Yudely",
-    "proyecto_id": "prj-aecode-fase-2-fase-3-aecode",
-    "proyecto": "Fase 2 / Fase 3 / AECODE",
-    "empresa": "AECODE",
-    "unidad": "AECODE Producto / Plataforma",
-    "rol": "responsable"
-  },
-  {
-    "persona": "Fabrizio",
-    "proyecto_id": "prj-aecode-fase-2-fase-3-aecode",
-    "proyecto": "Fase 2 / Fase 3 / AECODE",
-    "empresa": "AECODE",
-    "unidad": "AECODE Producto / Plataforma",
-    "rol": "responsable"
-  },
-  {
-    "persona": "Daniella",
-    "proyecto_id": "prj-aecode-kaman-convocatorias",
-    "proyecto": "Kaman / convocatorias",
-    "empresa": "AECODE",
-    "unidad": "AECODE Startup",
-    "rol": "responsable"
-  },
-  {
-    "persona": "Julie",
-    "proyecto_id": "prj-aecode-kaman-convocatorias",
-    "proyecto": "Kaman / convocatorias",
-    "empresa": "AECODE",
-    "unidad": "AECODE Startup",
+    "unidad": "AECODE AI Construction Summit",
     "rol": "responsable"
   },
   {
     "persona": "Alejandro Palpan",
-    "proyecto_id": "prj-aecode-kaman-convocatorias",
-    "proyecto": "Kaman / convocatorias",
+    "proyecto_id": "prj-aecode-coneic-app-2026",
+    "proyecto": "CONEIC App 2026",
     "empresa": "AECODE",
-    "unidad": "AECODE Startup",
+    "unidad": "AECODE B2B",
     "rol": "responsable"
   },
   {
     "persona": "Marlon",
-    "proyecto_id": "prj-visionpro-pdk-ascent",
-    "proyecto": "PDK Ascent",
-    "empresa": "VisionPro",
-    "unidad": "VisionPro",
+    "proyecto_id": "prj-aecode-coneic-app-2026",
+    "proyecto": "CONEIC App 2026",
+    "empresa": "AECODE",
+    "unidad": "AECODE B2B",
+    "rol": "responsable"
+  },
+  {
+    "persona": "Anderson",
+    "proyecto_id": "prj-aecode-coneic-app-2026",
+    "proyecto": "CONEIC App 2026",
+    "empresa": "AECODE",
+    "unidad": "AECODE B2B",
     "rol": "responsable"
   },
   {
     "persona": "Emanuel",
-    "proyecto_id": "prj-visionpro-pdk-ascent",
-    "proyecto": "PDK Ascent",
-    "empresa": "VisionPro",
-    "unidad": "VisionPro",
+    "proyecto_id": "prj-aecode-coneic-app-2026",
+    "proyecto": "CONEIC App 2026",
+    "empresa": "AECODE",
+    "unidad": "AECODE B2B",
     "rol": "responsable"
   },
   {
-    "persona": "Yary",
-    "proyecto_id": "prj-visionpro-pdk-ascent",
-    "proyecto": "PDK Ascent",
-    "empresa": "VisionPro",
-    "unidad": "VisionPro",
-    "rol": "responsable"
-  },
-  {
-    "persona": "Daniella",
-    "proyecto_id": "prj-visionpro-pdk-ascent",
-    "proyecto": "PDK Ascent",
-    "empresa": "VisionPro",
-    "unidad": "VisionPro",
-    "rol": "responsable"
-  },
-  {
-    "persona": "Erika",
-    "proyecto_id": "prj-visionpro-pdk-ascent",
-    "proyecto": "PDK Ascent",
-    "empresa": "VisionPro",
-    "unidad": "VisionPro",
-    "rol": "responsable"
-  },
-  {
-    "persona": "Daniella",
-    "proyecto_id": "prj-visionpro-visionpro-decks",
-    "proyecto": "VisionPro decks",
-    "empresa": "VisionPro",
-    "unidad": "VisionPro",
-    "rol": "responsable"
-  },
-  {
-    "persona": "Julie",
-    "proyecto_id": "prj-visionpro-visionpro-decks",
-    "proyecto": "VisionPro decks",
-    "empresa": "VisionPro",
-    "unidad": "VisionPro",
-    "rol": "responsable"
-  },
-  {
-    "persona": "Erika",
-    "proyecto_id": "prj-visionpro-visionpro-decks",
-    "proyecto": "VisionPro decks",
-    "empresa": "VisionPro",
-    "unidad": "VisionPro",
-    "rol": "responsable"
-  },
-  {
-    "persona": "Julie",
-    "proyecto_id": "prj-thesia-thesia-presupuesto-tesis-juan",
-    "proyecto": "THESIA presupuesto / Tesis Juan",
-    "empresa": "THESIA",
-    "unidad": "THESIA",
-    "rol": "responsable"
-  },
-  {
-    "persona": "Fabrizio",
-    "proyecto_id": "prj-thesia-thesia-presupuesto-tesis-juan",
-    "proyecto": "THESIA presupuesto / Tesis Juan",
-    "empresa": "THESIA",
-    "unidad": "THESIA",
+    "persona": "Jordi",
+    "proyecto_id": "prj-aecode-coneic-app-2026",
+    "proyecto": "CONEIC App 2026",
+    "empresa": "AECODE",
+    "unidad": "AECODE B2B",
     "rol": "responsable"
   },
   {
     "persona": "Emanuel",
-    "proyecto_id": "prj-agentflow-migracion-flujos",
-    "proyecto": "Migracion flujos",
+    "proyecto_id": "prj-agentflow-aecodito-agente-sponsor-summit",
+    "proyecto": "Aecodito / Agente Sponsor Summit",
     "empresa": "AgentFlow",
     "unidad": "AgentFlow",
     "rol": "responsable"
   },
   {
-    "persona": "Fabrizio",
-    "proyecto_id": "prj-agentflow-migracion-flujos",
-    "proyecto": "Migracion flujos",
+    "persona": "Paola",
+    "proyecto_id": "prj-agentflow-aecodito-agente-sponsor-summit",
+    "proyecto": "Aecodito / Agente Sponsor Summit",
     "empresa": "AgentFlow",
     "unidad": "AgentFlow",
     "rol": "responsable"
   },
   {
-    "persona": "Marlon",
-    "proyecto_id": "prj-agentflow-migracion-flujos",
-    "proyecto": "Migracion flujos",
+    "persona": "Alejandro Palpan",
+    "proyecto_id": "prj-agentflow-aecodito-agente-sponsor-summit",
+    "proyecto": "Aecodito / Agente Sponsor Summit",
     "empresa": "AgentFlow",
     "unidad": "AgentFlow",
     "rol": "responsable"

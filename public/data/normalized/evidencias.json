@@ -2,199 +2,118 @@
   {
     "id": "ev-gen-cobranzas-gen",
     "tipo": "reporte",
-    "fuente": "Reporte Julie 2026-06-28",
+    "fuente": "Dashboard 2026-06-29 y baseline Julie",
     "relacionado_con": "Cobranzas GEN+",
-    "empresa": "GEN+",
-    "fecha": "2026-06-28",
-    "confiabilidad": "Alta"
-  },
-  {
-    "id": "ev-gen-ptar-atarjea-buzones",
-    "tipo": "reporte",
-    "fuente": "Reportes Kevin, Luis, Julie",
-    "relacionado_con": "PTAR Atarjea / Buzones",
-    "empresa": "GEN+",
-    "fecha": "2026-06-28",
-    "confiabilidad": "Alta"
-  },
-  {
-    "id": "ev-gen-ca-ete",
-    "tipo": "reporte",
-    "fuente": "Reportes Israel, Robert, Luis",
-    "relacionado_con": "Cañete",
-    "empresa": "GEN+",
-    "fecha": "2026-06-28",
-    "confiabilidad": "Alta"
-  },
-  {
-    "id": "ev-gen-faucett",
-    "tipo": "reporte",
-    "fuente": "Reporte Israel / Fabrizio",
-    "relacionado_con": "Faucett",
-    "empresa": "GEN+",
-    "fecha": "2026-06-28",
-    "confiabilidad": "Alta"
-  },
-  {
-    "id": "ev-gen-dovelas-panama",
-    "tipo": "reporte",
-    "fuente": "Reporte Guisella / Fabrizio",
-    "relacionado_con": "Dovelas Panama",
-    "empresa": "GEN+",
-    "fecha": "2026-06-28",
-    "confiabilidad": "Alta"
-  },
-  {
-    "id": "ev-gen-the-circle",
-    "tipo": "reporte",
-    "fuente": "Reporte Guisella / Fabrizio",
-    "relacionado_con": "The Circle",
-    "empresa": "GEN+",
-    "fecha": "2026-06-28",
-    "confiabilidad": "Alta"
-  },
-  {
-    "id": "ev-gen-puente-tingo",
-    "tipo": "reporte",
-    "fuente": "Reportes Fabrizio, Luis",
-    "relacionado_con": "Puente Tingo",
     "empresa": "GEN+",
     "fecha": "2026-06-28",
     "confiabilidad": "Media"
   },
   {
+    "id": "ev-gen-gen-flows",
+    "tipo": "reporte",
+    "fuente": "Reporte Q05 Emanuel 2026-06-29",
+    "relacionado_con": "GEN+ Flows",
+    "empresa": "GEN+",
+    "fecha": "2026-06-28",
+    "confiabilidad": "Alta"
+  },
+  {
+    "id": "ev-gen-seace-radar",
+    "tipo": "reporte",
+    "fuente": "Reporte Q05 Emanuel",
+    "relacionado_con": "SEACE Radar",
+    "empresa": "GEN+",
+    "fecha": "2026-06-28",
+    "confiabilidad": "Alta"
+  },
+  {
     "id": "ev-gen-esparq",
     "tipo": "reporte",
-    "fuente": "ESPARQ Hub / Fabrizio / Daniella",
+    "fuente": "ESPARQ-Hub e ingesta 2026-06-29",
     "relacionado_con": "ESPARQ",
     "empresa": "GEN+",
     "fecha": "2026-06-28",
     "confiabilidad": "Alta"
   },
   {
-    "id": "ev-gen-agente-inmobiliario-gen",
+    "id": "ev-gen-pdk-obra",
     "tipo": "reporte",
-    "fuente": "Reporte Fabrizio",
-    "relacionado_con": "Agente Inmobiliario GEN+",
+    "fuente": "Reporte Q05 Emanuel",
+    "relacionado_con": "PDK / obra",
     "empresa": "GEN+",
     "fecha": "2026-06-28",
     "confiabilidad": "Alta"
   },
   {
-    "id": "ev-gen-uncp-osp-nestle-gore-otros",
+    "id": "ev-gen-ca-ete-ptar-dovelas-the-circle",
     "tipo": "reporte",
-    "fuente": "Reportes Julie / Daniella",
-    "relacionado_con": "UNCP / OSP / Nestle / GORE / otros",
+    "fuente": "Baseline 2026-06-28",
+    "relacionado_con": "CaÃ±ete / PTAR / Dovelas / The Circle",
     "empresa": "GEN+",
     "fecha": "2026-06-28",
     "confiabilidad": "Media"
   },
   {
-    "id": "ev-aecode-sponsors-pipeline",
+    "id": "ev-aecode-logistica-y-experiencia",
     "tipo": "reporte",
-    "fuente": "Reporte Erika/Paola, Julie",
-    "relacionado_con": "Sponsors / pipeline",
+    "fuente": "Reporte Erika 2026-06-29",
+    "relacionado_con": "Logistica y experiencia",
     "empresa": "AECODE",
     "fecha": "2026-06-28",
     "confiabilidad": "Alta"
   },
   {
-    "id": "ev-aecode-web-app-agenda",
+    "id": "ev-aecode-sponsors-y-base-comercial",
     "tipo": "reporte",
-    "fuente": "Reportes Marlon, Yary, Fabrizio",
-    "relacionado_con": "Web / App / agenda",
+    "fuente": "Ingesta WhatsApp 2026-06-29",
+    "relacionado_con": "Sponsors y base comercial",
     "empresa": "AECODE",
     "fecha": "2026-06-28",
     "confiabilidad": "Alta"
   },
   {
-    "id": "ev-aecode-pre-congreso",
+    "id": "ev-aecode-coordinacion-academica",
     "tipo": "reporte",
-    "fuente": "Reporte Arantxa",
-    "relacionado_con": "Pre Congreso",
+    "fuente": "Avances 2026-06-29",
+    "relacionado_con": "Coordinacion academica",
     "empresa": "AECODE",
     "fecha": "2026-06-28",
     "confiabilidad": "Alta"
   },
   {
-    "id": "ev-aecode-diplomados-certificados",
+    "id": "ev-aecode-live-training-genesis",
     "tipo": "reporte",
-    "fuente": "Reportes Carolina, Marlon, Julie, Kevin",
-    "relacionado_con": "Diplomados/certificados",
+    "fuente": "Genesis 2026-06-29",
+    "relacionado_con": "Live Training / Genesis",
     "empresa": "AECODE",
     "fecha": "2026-06-28",
     "confiabilidad": "Alta"
   },
   {
-    "id": "ev-aecode-ventas-training",
+    "id": "ev-aecode-summit-bim-vial-ia-3-autobim",
     "tipo": "reporte",
-    "fuente": "Reportes Talia, Genesis, Yadira",
-    "relacionado_con": "Ventas Training",
+    "fuente": "Anggie e ingesta WhatsApp",
+    "relacionado_con": "Summit, BIM Vial, IA 3, AutoBIM",
     "empresa": "AECODE",
     "fecha": "2026-06-28",
     "confiabilidad": "Alta"
   },
   {
-    "id": "ev-aecode-summit-reto-ia-training",
+    "id": "ev-aecode-coneic-app-2026",
     "tipo": "reporte",
-    "fuente": "Reportes Arantxa, Jessica, Enma",
-    "relacionado_con": "Summit / Reto IA / Training",
-    "empresa": "AECODE",
-    "fecha": "2026-06-28",
-    "confiabilidad": "Media"
-  },
-  {
-    "id": "ev-aecode-fase-2-fase-3-aecode",
-    "tipo": "reporte",
-    "fuente": "Reportes Yary, Marlon, Fabrizio",
-    "relacionado_con": "Fase 2 / Fase 3 / AECODE",
+    "fuente": "CONEIC App Estructura Maestra",
+    "relacionado_con": "CONEIC App 2026",
     "empresa": "AECODE",
     "fecha": "2026-06-28",
     "confiabilidad": "Alta"
   },
   {
-    "id": "ev-aecode-kaman-convocatorias",
+    "id": "ev-agentflow-aecodito-agente-sponsor-summit",
     "tipo": "reporte",
-    "fuente": "Reportes Daniella, Julie, Kaman",
-    "relacionado_con": "Kaman / convocatorias",
-    "empresa": "AECODE",
-    "fecha": "2026-06-28",
-    "confiabilidad": "Alta"
-  },
-  {
-    "id": "ev-visionpro-pdk-ascent",
-    "tipo": "reporte",
-    "fuente": "Backlog PDK / Marlon / Yary / Daniella",
-    "relacionado_con": "PDK Ascent",
-    "empresa": "VisionPro",
-    "fecha": "2026-06-28",
-    "confiabilidad": "Alta"
-  },
-  {
-    "id": "ev-visionpro-visionpro-decks",
-    "tipo": "reporte",
-    "fuente": "Reporte Daniella / Backlog PDK",
-    "relacionado_con": "VisionPro decks",
-    "empresa": "VisionPro",
-    "fecha": "2026-06-28",
-    "confiabilidad": "Alta"
-  },
-  {
-    "id": "ev-thesia-thesia-presupuesto-tesis-juan",
-    "tipo": "reporte",
-    "fuente": "Reportes Julie / Fabrizio",
-    "relacionado_con": "THESIA presupuesto / Tesis Juan",
-    "empresa": "THESIA",
-    "fecha": "2026-06-28",
-    "confiabilidad": "Media"
-  },
-  {
-    "id": "ev-agentflow-migracion-flujos",
-    "tipo": "reporte",
-    "fuente": "Reportes Emanuel / Fabrizio",
-    "relacionado_con": "Migracion flujos",
+    "fuente": "Ingesta WhatsApp 2026-06-29",
+    "relacionado_con": "Aecodito / Agente Sponsor Summit",
     "empresa": "AgentFlow",
     "fecha": "2026-06-28",
-    "confiabilidad": "Media"
+    "confiabilidad": "Alta"
   }
 ]

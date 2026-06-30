@@ -1,46 +1,45 @@
-# Recomendaciones AI-Native — 2026-06-29 04:11
+# Recomendaciones AI-Native — 2026-06-29 20:37
 
-AI-Native Score global: **31** (operación manual vulnerable)
+AI-Native Score global: **19** (operación manual vulnerable)
 
 ## Por colaborador
 
+- **Yudely** — AI-native 0 · agentes: —
 - **Jordi** — AI-native 0 · agentes: —
 - **Fernando** — AI-native 0 · agentes: —
 - **Alejandro Palpan** — AI-native 0 · agentes: —
 - **Ana** — AI-native 0 · agentes: —
+- **Paola** — AI-native 0 · agentes: —
 - **Paolo** — AI-native 0 · agentes: —
 - **Aracely** — AI-native 0 · agentes: —
+- **Luis** — AI-native 0 · agentes: —
 - **Janet** — AI-native 0 · agentes: —
+- **Robert** — AI-native 0 · agentes: —
 - **Moises** — AI-native 0 · agentes: —
+- **Israel** — AI-native 0 · agentes: —
+- **Guisella** — AI-native 0 · agentes: —
 - **Ivana** — AI-native 0 · agentes: —
+- **Jessica** — AI-native 0 · agentes: —
+- **Enma** — AI-native 0 · agentes: —
 - **Aranzia** — AI-native 0 · agentes: —
 - **Edith** — AI-native 0 · agentes: —
 - **Kenyi** — AI-native 0 · agentes: —
 - **Sebastian** — AI-native 0 · agentes: —
+- **Talia** — AI-native 0 · agentes: —
 - **Reiner** — AI-native 0 · agentes: —
+- **Yadira** — AI-native 0 · agentes: —
 - **Anderson** — AI-native 35 · agentes: Summit Agent
-- **Robert Herrera** — AI-native 36 · agentes: Delivery BIM Agent
-- **Luis Vergara** — AI-native 36 · agentes: Delivery BIM Agent
-- **Guisella** — AI-native 36 · agentes: Control de Alcance BIM Agent
-- **Yudely** — AI-native 38 · agentes: Producto Digital / Testing Agent
-- **Yadira** — AI-native 42 · agentes: Ventas B2C Agent
 - **Patrick** — AI-native 44 · agentes: Certificados Agent
 - **Genesis** — AI-native 45 · agentes: Ventas B2C Agent
-- **Israel** — AI-native 46 · agentes: Control de Alcance BIM Agent
-- **Enma** — AI-native 49 · agentes: Marketing Attribution Agent
-- **Carolina** — AI-native 50 · agentes: Training Operations Agent, Certificados Agent
 - **Anggie** — AI-native 50 · agentes: Marketing Attribution Agent
-- **Talia** — AI-native 51 · agentes: Ventas B2C Agent
+- **Carolina** — AI-native 50 · agentes: Training Operations Agent, Certificados Agent
 - **Julie** — AI-native 53 · agentes: Cobranzas Agent, Sponsors Agent
-- **Arantxa** — AI-native 53 · agentes: Marketing Attribution Agent
-- **Jessica** — AI-native 53 · agentes: Marketing Attribution Agent
 - **Erika** — AI-native 54 · agentes: Sponsors Agent
-- **Paola** — AI-native 56 · agentes: Sponsors Agent
 - **Kevin** — AI-native 56 · agentes: QA/QC BIM Agent, Delivery BIM Agent
 - **Yary** — AI-native 58 · agentes: Producto Digital / Testing Agent
-- **Marlon** — AI-native 60 · agentes: Summit Agent, Computer Vision Product Agent
-- **Daniella** — AI-native 60 · agentes: Startup / Convocatorias Agent, Comercial B2B Agent
 - **Emanuel** — AI-native 60 · agentes: Workflow Migration Agent, Demo / Deployment Agent, Context Pipeline Agent
+- **Daniella** — AI-native 60 · agentes: Startup / Convocatorias Agent, Comercial B2B Agent
+- **Marlon** — AI-native 60 · agentes: Summit Agent, Computer Vision Product Agent
 - **Fabrizio** — AI-native 67 · agentes: Delivery BIM Agent, Propuestas / Contratos Agent
 
 ## Backlog de automatización

@@ -1,56 +1,65 @@
 [
   {
-    "id": "area-gen-caja",
+    "id": "area-gen-administracion-caja",
     "empresa": "GEN+",
-    "nombre": "Caja",
+    "nombre": "Administracion/caja",
     "n_proyectos": 1,
-    "health_score": 67,
+    "health_score": 59,
     "risk_score": 38,
     "estado": "amarillo"
   },
   {
-    "id": "area-gen-delivery-bim",
+    "id": "area-gen-tecnologia",
     "empresa": "GEN+",
-    "nombre": "Delivery BIM",
-    "n_proyectos": 6,
-    "health_score": 77,
-    "risk_score": 42,
+    "nombre": "Tecnologia",
+    "n_proyectos": 1,
+    "health_score": 90,
+    "risk_score": 35,
     "estado": "verde"
   },
   {
-    "id": "area-gen-producto-consultoria",
+    "id": "area-gen-tecnologia-comercial",
     "empresa": "GEN+",
-    "nombre": "Producto/consultoria",
+    "nombre": "Tecnologia/comercial",
     "n_proyectos": 1,
     "health_score": 79,
     "risk_score": 35,
     "estado": "verde"
   },
   {
-    "id": "area-gen-producto-interno",
+    "id": "area-gen-consultoria-producto",
     "empresa": "GEN+",
-    "nombre": "Producto interno",
+    "nombre": "Consultoria/producto",
     "n_proyectos": 1,
-    "health_score": 90,
-    "risk_score": 20,
+    "health_score": 79,
+    "risk_score": 35,
     "estado": "verde"
   },
   {
-    "id": "area-gen-comercial",
+    "id": "area-gen-visionpro",
     "empresa": "GEN+",
-    "nombre": "Comercial",
+    "nombre": "VisionPro",
     "n_proyectos": 1,
-    "health_score": 71,
-    "risk_score": 20,
+    "health_score": 79,
+    "risk_score": 35,
+    "estado": "verde"
+  },
+  {
+    "id": "area-gen-delivery-bim",
+    "empresa": "GEN+",
+    "nombre": "Delivery BIM",
+    "n_proyectos": 1,
+    "health_score": 59,
+    "risk_score": 53,
     "estado": "amarillo"
   },
   {
     "id": "area-aecode-summit",
     "empresa": "AECODE",
     "nombre": "Summit",
-    "n_proyectos": 3,
-    "health_score": 74,
-    "risk_score": 47,
+    "n_proyectos": 2,
+    "health_score": 67,
+    "risk_score": 53,
     "estado": "amarillo"
   },
   {
@@ -67,71 +76,35 @@
     "empresa": "AECODE",
     "nombre": "Comercial B2C",
     "n_proyectos": 1,
-    "health_score": 79,
-    "risk_score": 35,
-    "estado": "verde"
-  },
-  {
-    "id": "area-aecode-marketing",
-    "empresa": "AECODE",
-    "nombre": "Marketing",
-    "n_proyectos": 1,
-    "health_score": 71,
-    "risk_score": 35,
-    "estado": "amarillo"
-  },
-  {
-    "id": "area-aecode-producto-digital",
-    "empresa": "AECODE",
-    "nombre": "Producto digital",
-    "n_proyectos": 1,
-    "health_score": 90,
-    "risk_score": 35,
-    "estado": "verde"
-  },
-  {
-    "id": "area-aecode-startup",
-    "empresa": "AECODE",
-    "nombre": "Startup",
-    "n_proyectos": 1,
-    "health_score": 79,
-    "risk_score": 20,
-    "estado": "verde"
-  },
-  {
-    "id": "area-visionpro-producto-obra",
-    "empresa": "VisionPro",
-    "nombre": "Producto/obra",
-    "n_proyectos": 1,
-    "health_score": 79,
+    "health_score": 67,
     "risk_score": 53,
-    "estado": "verde"
+    "estado": "amarillo"
   },
   {
-    "id": "area-visionpro-comercial",
-    "empresa": "VisionPro",
-    "nombre": "Comercial",
+    "id": "area-aecode-marketing-growth",
+    "empresa": "AECODE",
+    "nombre": "Marketing/growth",
+    "n_proyectos": 1,
+    "health_score": 67,
+    "risk_score": 53,
+    "estado": "amarillo"
+  },
+  {
+    "id": "area-aecode-producto-evento",
+    "empresa": "AECODE",
+    "nombre": "Producto/evento",
     "n_proyectos": 1,
     "health_score": 79,
-    "risk_score": 20,
-    "estado": "verde"
-  },
-  {
-    "id": "area-thesia-startup-documentacion",
-    "empresa": "THESIA",
-    "nombre": "Startup/documentacion",
-    "n_proyectos": 1,
-    "health_score": 56,
     "risk_score": 35,
-    "estado": "amarillo"
+    "estado": "verde"
   },
   {
     "id": "area-agentflow-automatizacion",
     "empresa": "AgentFlow",
     "nombre": "Automatizacion",
     "n_proyectos": 1,
-    "health_score": 65,
+    "health_score": 79,
     "risk_score": 35,
-    "estado": "amarillo"
+    "estado": "verde"
   }
 ]

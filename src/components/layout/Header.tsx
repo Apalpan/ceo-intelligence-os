@@ -53,6 +53,23 @@ export function Header({ route }: { route: string }) {
         </button>
       </div>
 
+      {/* freshness banner — el sistema declara su propia ceguera (anti dato-muerto) */}
+      {bundle && (() => {
+        const age = bundle.meta.vault_age_hours;
+        const stale = age == null || age > 6;
+        if (!stale) return null;
+        const txt = age == null
+          ? "Frescura del dato desconocida"
+          : `Datos de hace ${age < 1 ? "menos de 1" : Math.round(age)}h`;
+        return (
+          <div role="status"
+            className="flex items-center gap-2 px-3 sm:px-4 py-1.5 text-[11px] font-medium border-t border-amber-500/30 bg-amber-500/[0.12] text-amber-600">
+            <span aria-hidden>⚠</span>
+            <span>{txt} — corre <code className="font-mono">npm run etl</code> para actualizar.</span>
+          </div>
+        );
+      })()}
+
       {/* company filter rail */}
       {bundle && (
         <div className="flex items-center gap-1.5 px-3 sm:px-4 pb-2 overflow-x-auto scrollbar-thin">

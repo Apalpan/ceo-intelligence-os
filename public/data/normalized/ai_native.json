@@ -1,5 +1,5 @@
 {
-  "overall_score": 31,
+  "overall_score": 19,
   "clasificacion": "operación manual vulnerable",
   "por_persona": [
     {
@@ -25,25 +25,167 @@
       "confianza": "Inferido"
     },
     {
-      "colaborador": "Marlon",
+      "colaborador": "Emanuel",
       "ai_native_score": 60,
-      "ai_leverage_score": 60,
+      "ai_leverage_score": 64,
       "herramientas_actuales": [
-        "Claude Code",
-        "C#",
-        "Canva"
+        "Python",
+        "AWS",
+        "n8n"
       ],
       "herramientas_recomendadas": [
-        "Summit Agent",
-        "QA Agent"
+        "Workflow Migration Agent"
       ],
       "agentes_recomendados": [
-        "Summit Agent",
-        "Computer Vision Product Agent"
+        "Workflow Migration Agent",
+        "Demo / Deployment Agent",
+        "Context Pipeline Agent"
       ],
       "procesos_delegables": [
-        "QA web",
-        "Seguimiento de certificados"
+        "Migración de flujos",
+        "Diagnóstico conectividad"
+      ],
+      "confianza": "Inferido"
+    },
+    {
+      "colaborador": "Erika",
+      "ai_native_score": 54,
+      "ai_leverage_score": 52,
+      "herramientas_actuales": [
+        "Sheets",
+        "WhatsApp"
+      ],
+      "herramientas_recomendadas": [
+        "Sponsors Agent"
+      ],
+      "agentes_recomendados": [
+        "Sponsors Agent"
+      ],
+      "procesos_delegables": [
+        "CRM sponsors vivo",
+        "Corte sponsor diario"
+      ],
+      "confianza": "Inferido"
+    },
+    {
+      "colaborador": "Genesis",
+      "ai_native_score": 45,
+      "ai_leverage_score": 44,
+      "herramientas_actuales": [
+        "GHL",
+        "WhatsApp"
+      ],
+      "herramientas_recomendadas": [
+        "Ventas B2C Agent"
+      ],
+      "agentes_recomendados": [
+        "Ventas B2C Agent"
+      ],
+      "procesos_delegables": [
+        "Seguimiento de leads",
+        "Corte de ventas"
+      ],
+      "confianza": "Inferido"
+    },
+    {
+      "colaborador": "Anggie",
+      "ai_native_score": 50,
+      "ai_leverage_score": 50,
+      "herramientas_actuales": [
+        "Agentes marketing"
+      ],
+      "herramientas_recomendadas": [
+        "Marketing Attribution Agent"
+      ],
+      "agentes_recomendados": [
+        "Marketing Attribution Agent"
+      ],
+      "procesos_delegables": [
+        "Dashboard de métricas"
+      ],
+      "confianza": "Inferido"
+    },
+    {
+      "colaborador": "Carolina",
+      "ai_native_score": 50,
+      "ai_leverage_score": 46,
+      "herramientas_actuales": [
+        "Sheets",
+        "Zoom"
+      ],
+      "herramientas_recomendadas": [
+        "Training Operations Agent"
+      ],
+      "agentes_recomendados": [
+        "Training Operations Agent",
+        "Certificados Agent"
+      ],
+      "procesos_delegables": [
+        "Tablero por diplomado",
+        "Estado de certificados"
+      ],
+      "confianza": "Inferido"
+    },
+    {
+      "colaborador": "Patrick",
+      "ai_native_score": 44,
+      "ai_leverage_score": 42,
+      "herramientas_actuales": [
+        "Zoom",
+        "Sheets"
+      ],
+      "herramientas_recomendadas": [
+        "Certificados Agent"
+      ],
+      "agentes_recomendados": [
+        "Certificados Agent"
+      ],
+      "procesos_delegables": [
+        "Matriz certificados/notas/recursos"
+      ],
+      "confianza": "Inferido"
+    },
+    {
+      "colaborador": "Kevin",
+      "ai_native_score": 56,
+      "ai_leverage_score": 56,
+      "herramientas_actuales": [
+        "Revit",
+        "Python",
+        "C#"
+      ],
+      "herramientas_recomendadas": [
+        "QA/QC BIM Agent"
+      ],
+      "agentes_recomendados": [
+        "QA/QC BIM Agent",
+        "Delivery BIM Agent"
+      ],
+      "procesos_delegables": [
+        "Scripts BESCO",
+        "Plataforma"
+      ],
+      "confianza": "Inferido"
+    },
+    {
+      "colaborador": "Daniella",
+      "ai_native_score": 60,
+      "ai_leverage_score": 58,
+      "herramientas_actuales": [
+        "Canva",
+        "Claude"
+      ],
+      "herramientas_recomendadas": [
+        "Comercial B2B Agent",
+        "Startup Agent"
+      ],
+      "agentes_recomendados": [
+        "Startup / Convocatorias Agent",
+        "Comercial B2B Agent"
+      ],
+      "procesos_delegables": [
+        "Materiales comerciales",
+        "Postmortems"
       ],
       "confianza": "Inferido"
     },
@@ -91,343 +233,6 @@
       "confianza": "Inferido"
     },
     {
-      "colaborador": "Carolina",
-      "ai_native_score": 50,
-      "ai_leverage_score": 46,
-      "herramientas_actuales": [
-        "Sheets",
-        "Zoom"
-      ],
-      "herramientas_recomendadas": [
-        "Training Operations Agent"
-      ],
-      "agentes_recomendados": [
-        "Training Operations Agent",
-        "Certificados Agent"
-      ],
-      "procesos_delegables": [
-        "Tablero por diplomado",
-        "Estado de certificados"
-      ],
-      "confianza": "Inferido"
-    },
-    {
-      "colaborador": "Talia",
-      "ai_native_score": 51,
-      "ai_leverage_score": 50,
-      "herramientas_actuales": [
-        "GHL",
-        "WhatsApp"
-      ],
-      "herramientas_recomendadas": [
-        "Ventas B2C Agent"
-      ],
-      "agentes_recomendados": [
-        "Ventas B2C Agent"
-      ],
-      "procesos_delegables": [
-        "SLA por lead",
-        "Reporte de funnel"
-      ],
-      "confianza": "Inferido"
-    },
-    {
-      "colaborador": "Genesis",
-      "ai_native_score": 45,
-      "ai_leverage_score": 44,
-      "herramientas_actuales": [
-        "GHL",
-        "WhatsApp"
-      ],
-      "herramientas_recomendadas": [
-        "Ventas B2C Agent"
-      ],
-      "agentes_recomendados": [
-        "Ventas B2C Agent"
-      ],
-      "procesos_delegables": [
-        "Seguimiento de leads",
-        "Corte de ventas"
-      ],
-      "confianza": "Inferido"
-    },
-    {
-      "colaborador": "Yadira",
-      "ai_native_score": 42,
-      "ai_leverage_score": 40,
-      "herramientas_actuales": [
-        "GHL"
-      ],
-      "herramientas_recomendadas": [
-        "Ventas B2C Agent"
-      ],
-      "agentes_recomendados": [
-        "Ventas B2C Agent"
-      ],
-      "procesos_delegables": [
-        "Separar venta completa/cuota"
-      ],
-      "confianza": "Inferido"
-    },
-    {
-      "colaborador": "Erika",
-      "ai_native_score": 54,
-      "ai_leverage_score": 52,
-      "herramientas_actuales": [
-        "Sheets",
-        "WhatsApp"
-      ],
-      "herramientas_recomendadas": [
-        "Sponsors Agent"
-      ],
-      "agentes_recomendados": [
-        "Sponsors Agent"
-      ],
-      "procesos_delegables": [
-        "CRM sponsors vivo",
-        "Corte sponsor diario"
-      ],
-      "confianza": "Inferido"
-    },
-    {
-      "colaborador": "Paola",
-      "ai_native_score": 56,
-      "ai_leverage_score": 52,
-      "herramientas_actuales": [
-        "Sheets"
-      ],
-      "herramientas_recomendadas": [
-        "Sponsors Agent"
-      ],
-      "agentes_recomendados": [
-        "Sponsors Agent"
-      ],
-      "procesos_delegables": [
-        "Cruce pago-beneficio-delegación"
-      ],
-      "confianza": "Inferido"
-    },
-    {
-      "colaborador": "Arantxa",
-      "ai_native_score": 53,
-      "ai_leverage_score": 54,
-      "herramientas_actuales": [
-        "Meta Ads",
-        "GHL",
-        "Canva"
-      ],
-      "herramientas_recomendadas": [
-        "Marketing Attribution Agent"
-      ],
-      "agentes_recomendados": [
-        "Marketing Attribution Agent"
-      ],
-      "procesos_delegables": [
-        "Sprint de campaña",
-        "Landing"
-      ],
-      "confianza": "Inferido"
-    },
-    {
-      "colaborador": "Jessica",
-      "ai_native_score": 53,
-      "ai_leverage_score": 56,
-      "herramientas_actuales": [
-        "GHL"
-      ],
-      "herramientas_recomendadas": [
-        "Marketing Attribution Agent"
-      ],
-      "agentes_recomendados": [
-        "Marketing Attribution Agent"
-      ],
-      "procesos_delegables": [
-        "Flujos GHL",
-        "Tracking end-to-end"
-      ],
-      "confianza": "Inferido"
-    },
-    {
-      "colaborador": "Enma",
-      "ai_native_score": 49,
-      "ai_leverage_score": 50,
-      "herramientas_actuales": [
-        "Canva",
-        "TikTok"
-      ],
-      "herramientas_recomendadas": [
-        "Marketing Attribution Agent"
-      ],
-      "agentes_recomendados": [
-        "Marketing Attribution Agent"
-      ],
-      "procesos_delegables": [
-        "Piezas",
-        "Brochures versión única"
-      ],
-      "confianza": "Inferido"
-    },
-    {
-      "colaborador": "Anggie",
-      "ai_native_score": 50,
-      "ai_leverage_score": 50,
-      "herramientas_actuales": [
-        "Agentes marketing"
-      ],
-      "herramientas_recomendadas": [
-        "Marketing Attribution Agent"
-      ],
-      "agentes_recomendados": [
-        "Marketing Attribution Agent"
-      ],
-      "procesos_delegables": [
-        "Dashboard de métricas"
-      ],
-      "confianza": "Inferido"
-    },
-    {
-      "colaborador": "Kevin",
-      "ai_native_score": 56,
-      "ai_leverage_score": 56,
-      "herramientas_actuales": [
-        "Revit",
-        "Python",
-        "C#"
-      ],
-      "herramientas_recomendadas": [
-        "QA/QC BIM Agent"
-      ],
-      "agentes_recomendados": [
-        "QA/QC BIM Agent",
-        "Delivery BIM Agent"
-      ],
-      "procesos_delegables": [
-        "Scripts BESCO",
-        "Plataforma"
-      ],
-      "confianza": "Inferido"
-    },
-    {
-      "colaborador": "Israel",
-      "ai_native_score": 46,
-      "ai_leverage_score": 42,
-      "herramientas_actuales": [
-        "Revit",
-        "InfraWorks"
-      ],
-      "herramientas_recomendadas": [
-        "Control de Alcance BIM Agent"
-      ],
-      "agentes_recomendados": [
-        "Control de Alcance BIM Agent"
-      ],
-      "procesos_delegables": [
-        "Matriz de alcance"
-      ],
-      "confianza": "Inferido"
-    },
-    {
-      "colaborador": "Robert Herrera",
-      "ai_native_score": 36,
-      "ai_leverage_score": 32,
-      "herramientas_actuales": [
-        "Revit"
-      ],
-      "herramientas_recomendadas": [
-        "Delivery BIM Agent"
-      ],
-      "agentes_recomendados": [
-        "Delivery BIM Agent"
-      ],
-      "procesos_delegables": [
-        "Reporte de avance estandarizado"
-      ],
-      "confianza": "Inferido"
-    },
-    {
-      "colaborador": "Luis Vergara",
-      "ai_native_score": 36,
-      "ai_leverage_score": 32,
-      "herramientas_actuales": [
-        "Revit",
-        "Rhino"
-      ],
-      "herramientas_recomendadas": [
-        "Delivery BIM Agent"
-      ],
-      "agentes_recomendados": [
-        "Delivery BIM Agent"
-      ],
-      "procesos_delegables": [
-        "Documentar flujos y cambios"
-      ],
-      "confianza": "Inferido"
-    },
-    {
-      "colaborador": "Guisella",
-      "ai_native_score": 36,
-      "ai_leverage_score": 32,
-      "herramientas_actuales": [
-        "Revit"
-      ],
-      "herramientas_recomendadas": [
-        "Control de Alcance BIM Agent"
-      ],
-      "agentes_recomendados": [
-        "Control de Alcance BIM Agent"
-      ],
-      "procesos_delegables": [
-        "Matriz dovela",
-        "Valorización de cambios"
-      ],
-      "confianza": "Inferido"
-    },
-    {
-      "colaborador": "Daniella",
-      "ai_native_score": 60,
-      "ai_leverage_score": 58,
-      "herramientas_actuales": [
-        "Canva",
-        "Claude"
-      ],
-      "herramientas_recomendadas": [
-        "Comercial B2B Agent",
-        "Startup Agent"
-      ],
-      "agentes_recomendados": [
-        "Startup / Convocatorias Agent",
-        "Comercial B2B Agent"
-      ],
-      "procesos_delegables": [
-        "Materiales comerciales",
-        "Postmortems"
-      ],
-      "confianza": "Inferido"
-    },
-    {
-      "colaborador": "Emanuel",
-      "ai_native_score": 60,
-      "ai_leverage_score": 64,
-      "herramientas_actuales": [
-        "Python",
-        "AWS",
-        "n8n"
-      ],
-      "herramientas_recomendadas": [
-        "Workflow Migration Agent"
-      ],
-      "agentes_recomendados": [
-        "Workflow Migration Agent",
-        "Demo / Deployment Agent",
-        "Context Pipeline Agent"
-      ],
-      "procesos_delegables": [
-        "Migración de flujos",
-        "Diagnóstico conectividad"
-      ],
-      "confianza": "Inferido"
-    },
-    {
       "colaborador": "Anderson",
       "ai_native_score": 35,
       "ai_leverage_score": 36,
@@ -446,41 +251,37 @@
       "confianza": "Inferido"
     },
     {
-      "colaborador": "Yudely",
-      "ai_native_score": 38,
-      "ai_leverage_score": 36,
+      "colaborador": "Marlon",
+      "ai_native_score": 60,
+      "ai_leverage_score": 60,
       "herramientas_actuales": [
-        "Sheets"
+        "Claude Code",
+        "C#",
+        "Canva"
       ],
       "herramientas_recomendadas": [
-        "Producto Digital / Testing Agent"
+        "Summit Agent",
+        "QA Agent"
       ],
       "agentes_recomendados": [
-        "Producto Digital / Testing Agent"
+        "Summit Agent",
+        "Computer Vision Product Agent"
       ],
       "procesos_delegables": [
-        "Revisión Fase 3"
+        "QA web",
+        "Seguimiento de certificados"
       ],
       "confianza": "Inferido"
     },
     {
-      "colaborador": "Patrick",
-      "ai_native_score": 44,
-      "ai_leverage_score": 42,
-      "herramientas_actuales": [
-        "Zoom",
-        "Sheets"
-      ],
-      "herramientas_recomendadas": [
-        "Certificados Agent"
-      ],
-      "agentes_recomendados": [
-        "Certificados Agent"
-      ],
-      "procesos_delegables": [
-        "Matriz certificados/notas/recursos"
-      ],
-      "confianza": "Inferido"
+      "colaborador": "Yudely",
+      "ai_native_score": 0,
+      "ai_leverage_score": 0,
+      "herramientas_actuales": [],
+      "herramientas_recomendadas": [],
+      "agentes_recomendados": [],
+      "procesos_delegables": [],
+      "confianza": "No se tiene claro"
     },
     {
       "colaborador": "Jordi",
@@ -523,6 +324,16 @@
       "confianza": "No se tiene claro"
     },
     {
+      "colaborador": "Paola",
+      "ai_native_score": 0,
+      "ai_leverage_score": 0,
+      "herramientas_actuales": [],
+      "herramientas_recomendadas": [],
+      "agentes_recomendados": [],
+      "procesos_delegables": [],
+      "confianza": "No se tiene claro"
+    },
+    {
       "colaborador": "Paolo",
       "ai_native_score": 0,
       "ai_leverage_score": 0,
@@ -543,7 +354,27 @@
       "confianza": "No se tiene claro"
     },
     {
+      "colaborador": "Luis",
+      "ai_native_score": 0,
+      "ai_leverage_score": 0,
+      "herramientas_actuales": [],
+      "herramientas_recomendadas": [],
+      "agentes_recomendados": [],
+      "procesos_delegables": [],
+      "confianza": "No se tiene claro"
+    },
+    {
       "colaborador": "Janet",
+      "ai_native_score": 0,
+      "ai_leverage_score": 0,
+      "herramientas_actuales": [],
+      "herramientas_recomendadas": [],
+      "agentes_recomendados": [],
+      "procesos_delegables": [],
+      "confianza": "No se tiene claro"
+    },
+    {
+      "colaborador": "Robert",
       "ai_native_score": 0,
       "ai_leverage_score": 0,
       "herramientas_actuales": [],
@@ -563,7 +394,47 @@
       "confianza": "No se tiene claro"
     },
     {
+      "colaborador": "Israel",
+      "ai_native_score": 0,
+      "ai_leverage_score": 0,
+      "herramientas_actuales": [],
+      "herramientas_recomendadas": [],
+      "agentes_recomendados": [],
+      "procesos_delegables": [],
+      "confianza": "No se tiene claro"
+    },
+    {
+      "colaborador": "Guisella",
+      "ai_native_score": 0,
+      "ai_leverage_score": 0,
+      "herramientas_actuales": [],
+      "herramientas_recomendadas": [],
+      "agentes_recomendados": [],
+      "procesos_delegables": [],
+      "confianza": "No se tiene claro"
+    },
+    {
       "colaborador": "Ivana",
+      "ai_native_score": 0,
+      "ai_leverage_score": 0,
+      "herramientas_actuales": [],
+      "herramientas_recomendadas": [],
+      "agentes_recomendados": [],
+      "procesos_delegables": [],
+      "confianza": "No se tiene claro"
+    },
+    {
+      "colaborador": "Jessica",
+      "ai_native_score": 0,
+      "ai_leverage_score": 0,
+      "herramientas_actuales": [],
+      "herramientas_recomendadas": [],
+      "agentes_recomendados": [],
+      "procesos_delegables": [],
+      "confianza": "No se tiene claro"
+    },
+    {
+      "colaborador": "Enma",
       "ai_native_score": 0,
       "ai_leverage_score": 0,
       "herramientas_actuales": [],
@@ -613,7 +484,27 @@
       "confianza": "No se tiene claro"
     },
     {
+      "colaborador": "Talia",
+      "ai_native_score": 0,
+      "ai_leverage_score": 0,
+      "herramientas_actuales": [],
+      "herramientas_recomendadas": [],
+      "agentes_recomendados": [],
+      "procesos_delegables": [],
+      "confianza": "No se tiene claro"
+    },
+    {
       "colaborador": "Reiner",
+      "ai_native_score": 0,
+      "ai_leverage_score": 0,
+      "herramientas_actuales": [],
+      "herramientas_recomendadas": [],
+      "agentes_recomendados": [],
+      "procesos_delegables": [],
+      "confianza": "No se tiene claro"
+    },
+    {
+      "colaborador": "Yadira",
       "ai_native_score": 0,
       "ai_leverage_score": 0,
       "herramientas_actuales": [],
@@ -626,12 +517,12 @@
   "por_empresa": [
     {
       "empresa": "GEN+",
-      "ai_native_score": 44,
-      "clasificacion": "uso superficial"
+      "ai_native_score": 39,
+      "clasificacion": "operación manual vulnerable"
     },
     {
       "empresa": "AECODE",
-      "ai_native_score": 31,
+      "ai_native_score": 17,
       "clasificacion": "operación manual vulnerable"
     },
     {
@@ -641,18 +532,13 @@
     },
     {
       "empresa": "AgentFlow",
-      "ai_native_score": 60,
+      "ai_native_score": 64,
       "clasificacion": "IA asistida"
     },
     {
       "empresa": "THESIA",
       "ai_native_score": 67,
       "clasificacion": "IA asistida"
-    },
-    {
-      "empresa": "AP",
-      "ai_native_score": 38,
-      "clasificacion": "operación manual vulnerable"
     }
   ],
   "agentes_propuestos": 27,

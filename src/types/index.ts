@@ -141,6 +141,7 @@ export interface DataQuality {
 export interface Bundle {
   meta: {
     generated_at: string; vault: string; first_run: boolean; corte: string;
+    vault_age_hours?: number | null;
     periodo: string; periodo_costos: string;
     counts: Record<string, number>;
   };

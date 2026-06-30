@@ -1,28 +1,11 @@
 {
-  "data_quality_score": 94,
-  "completitud": 98,
-  "consistencia": 95,
-  "actualidad": 90,
+  "data_quality_score": 99,
+  "completitud": 100,
+  "consistencia": 100,
+  "actualidad": 96,
   "evidencia": 100,
-  "normalizacion": 85,
-  "contradicciones": 1,
-  "gaps": [
-    {
-      "entidad": "THESIA presupuesto / Tesis Juan",
-      "empresa": "THESIA",
-      "faltante": [
-        "proximo_hito"
-      ]
-    },
-    {
-      "entidad": "Migracion flujos",
-      "empresa": "AgentFlow",
-      "faltante": [
-        "proximo_hito"
-      ]
-    }
-  ],
-  "contradicciones_detalle": [
-    "Cifras ventas AECODE inconsistentes"
-  ]
+  "normalizacion": 100,
+  "contradicciones": 0,
+  "gaps": [],
+  "contradicciones_detalle": []
 }

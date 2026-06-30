@@ -37,6 +37,9 @@ export function XMark({ size = 32, radius = 10 }: { size?: number; radius?: numb
 }
 
 export const AECODITO = `${ASSET}logos/aecodito.png`;
+export const GEN_WORDMARK = `${ASSET}logos/gen-wordmark.png`;
+export const GEN_WORDMARK_WHITE = `${ASSET}logos/gen-wordmark-white.png`;
+export const LOGO_WORDMARK: Record<string, string> = { "GEN+": `${ASSET}logos/gen-wordmark.png`, AECODE: `${ASSET}logos/aecode.svg` };
 
 /* ----------------------------------------------------------------- color */
 export const scoreColor = (v: number | string) =>

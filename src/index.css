@@ -6,109 +6,120 @@
    DESIGN TOKENS — OKLCH, light default, dark aware.
    The whole system is driven by these variables (design-tokens-oklch).
    ========================================================================== */
-/* GEN+ Light — Deep Navy #0E2A6B · Primary Blue #2165FF · Light Blue #4D84FF · Ice Blue #E9F0FF */
+/* ============================================================================
+   GEN+ DESIGN SYSTEM — tokens oficiales (DESIGN.md). Light default.
+   ========================================================================== */
 :root,
 [data-theme="light"] {
   color-scheme: light;
 
-  --bg: oklch(0.982 0.008 255);          /* ice-tinted canvas */
-  --surface: oklch(1 0 0);
-  --surface-2: oklch(0.968 0.012 255);
-  --surface-3: oklch(0.945 0.020 255);   /* Ice Blue */
-  --border: oklch(0.905 0.018 255);
-  --border-strong: oklch(0.835 0.026 255);
+  --bg: #F4F7FF;            /* surface-subtle como canvas */
+  --surface: #FFFFFF;
+  --surface-2: #F4F7FF;
+  --surface-3: #E9F0FF;     /* blue.ice */
+  --border: #DCE5F2;
+  --border-strong: #B3BBC8;
 
-  --fg: oklch(0.20 0.035 262);           /* Deep Black/Navy text */
-  --fg-2: oklch(0.42 0.052 258);         /* Slate Blue */
-  --muted: oklch(0.55 0.040 258);        /* Storm Gray */
+  --fg: #101828;            /* text-primary */
+  --fg-2: #53657D;          /* text-secondary */
+  --muted: #7A8AA0;         /* text-muted */
 
-  --navy: oklch(0.32 0.13 264);          /* Deep Navy */
-  --brand: oklch(0.56 0.20 263);         /* Primary Blue #2165FF */
-  --brand-soft: oklch(0.56 0.20 263 / 0.13);
-  --blue-light: oklch(0.66 0.16 263);    /* Light Blue #4D84FF */
-  --violet: oklch(0.53 0.24 293);
-  --cyan: oklch(0.66 0.12 230);
-  --emerald: oklch(0.64 0.15 162);
-  --amber: oklch(0.74 0.16 73);
-  --red: oklch(0.59 0.22 26);
-  --slate: oklch(0.40 0.045 258);
+  --navy: #0E2A6B;          /* blue.deep-navy */
+  --brand: #2165FF;         /* blue.primary */
+  --brand-hover: #1E5CE8;
+  --brand-soft: rgba(33, 101, 255, 0.12);
+  --blue-light: #4D84FF;
+  --violet: #4A3AC1;        /* AECODE primary */
+  --cyan: #1E5CE8;
+  --emerald: #19C356;       /* success */
+  --amber: #E0A516;         /* warning (legible) */
+  --red: #EE1211;           /* danger */
+  --slate: #53657D;
 
   --ok: var(--emerald);
   --warn: var(--amber);
   --crit: var(--red);
   --info: var(--brand);
 
-  --ring: oklch(0.56 0.20 263 / 0.55);
-  --shadow-color: 224 45% 22%;
+  --ring: rgba(33, 101, 255, 0.35);
+  --shadow-color: 224 64% 28%;
+  --shadow-sm: 0 2px 8px rgba(16, 49, 124, 0.06);
+  --shadow-md: 0 12px 28px rgba(16, 49, 124, 0.10);
+  --shadow-lg: 0 18px 42px rgba(16, 49, 124, 0.14);
+  --shadow-focus: 0 0 0 4px rgba(33, 101, 255, 0.35);
 
-  /* brand accent per company (GEN+ = Primary Blue) */
-  --c-genplus: oklch(0.56 0.20 263);
-  --c-aecode: oklch(0.64 0.15 162);
-  --c-visionpro: oklch(0.53 0.24 293);
-  --c-agentflow: oklch(0.66 0.12 230);
-  --c-thesia: oklch(0.74 0.16 73);
-  --c-spplus: oklch(0.50 0.045 258);
-  --c-ap: oklch(0.32 0.13 264);
+  /* acentos por empresa */
+  --c-genplus: #2165FF;
+  --c-aecode: #4A3AC1;
+  --c-visionpro: #6D12E3;
+  --c-agentflow: #1E5CE8;
+  --c-thesia: #E0A516;
+  --c-spplus: #53657D;
+  --c-ap: #0E2A6B;
 }
 
-/* GEN+ Dark — Deep Black #040F20 base, Primary/Light Blue accents */
+/* GEN+ Dark (toggle de contenido) — neutral.deep-black base */
 [data-theme="dark"] {
   color-scheme: dark;
 
-  --bg: oklch(0.155 0.022 262);
-  --surface: oklch(0.198 0.025 262);
-  --surface-2: oklch(0.238 0.027 262);
-  --surface-3: oklch(0.280 0.029 262);
-  --border: oklch(0.300 0.026 262);
-  --border-strong: oklch(0.40 0.028 262);
+  --bg: #040F20;
+  --surface: #06142A;
+  --surface-2: #071A36;
+  --surface-3: #0A244C;
+  --border: rgba(255, 255, 255, 0.14);
+  --border-strong: rgba(255, 255, 255, 0.24);
 
-  --fg: oklch(0.96 0.012 255);
-  --fg-2: oklch(0.79 0.024 255);
-  --muted: oklch(0.64 0.026 256);
+  --fg: #FFFFFF;
+  --fg-2: rgba(255, 255, 255, 0.78);
+  --muted: rgba(255, 255, 255, 0.58);
 
-  --navy: oklch(0.62 0.14 264);
-  --brand: oklch(0.70 0.17 263);
-  --brand-soft: oklch(0.70 0.17 263 / 0.20);
-  --blue-light: oklch(0.74 0.15 263);
-  --violet: oklch(0.66 0.22 293);
-  --cyan: oklch(0.74 0.13 219);
-  --emerald: oklch(0.74 0.15 162);
-  --amber: oklch(0.81 0.16 76);
-  --red: oklch(0.68 0.20 26);
-  --slate: oklch(0.70 0.03 257);
+  --navy: #4D84FF;
+  --brand: #4D84FF;
+  --brand-hover: #6A98FF;
+  --brand-soft: rgba(77, 132, 255, 0.20);
+  --blue-light: #6A98FF;
+  --violet: #A6A7FF;
+  --cyan: #6A98FF;
+  --emerald: #65D78E;
+  --amber: #EED611;
+  --red: #F46060;
+  --slate: #8E9AAD;
 
-  --ring: oklch(0.70 0.17 263 / 0.6);
-  --shadow-color: 222 50% 3%;
+  --ring: rgba(77, 132, 255, 0.45);
+  --shadow-color: 222 60% 2%;
+  --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.30);
+  --shadow-md: 0 14px 34px rgba(0, 0, 0, 0.38);
+  --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.45);
+  --shadow-focus: 0 0 0 4px rgba(77, 132, 255, 0.45);
 
-  --c-genplus: oklch(0.70 0.17 263);
-  --c-aecode: oklch(0.76 0.15 162);
-  --c-visionpro: oklch(0.66 0.22 293);
-  --c-agentflow: oklch(0.74 0.13 219);
-  --c-thesia: oklch(0.81 0.16 76);
-  --c-spplus: oklch(0.70 0.03 257);
-  --c-ap: oklch(0.62 0.13 264);
+  --c-genplus: #4D84FF;
+  --c-aecode: #A6A7FF;
+  --c-visionpro: #B07CFF;
+  --c-agentflow: #6A98FF;
+  --c-thesia: #EED611;
+  --c-spplus: #8E9AAD;
+  --c-ap: #6A98FF;
 }
 
-/* Executive DARK SHELL (sidebar + header) — constante sobre el canvas claro */
+/* Executive DARK SHELL (sidebar + header) — GEN+ neutral dark, constante */
 :root {
-  --shell-bg: oklch(0.165 0.028 262);
-  --shell-surface: oklch(0.205 0.030 262);
-  --shell-surface-2: oklch(0.255 0.032 262);
-  --shell-fg: oklch(0.97 0.012 255);
-  --shell-fg-2: oklch(0.76 0.024 255);
-  --shell-muted: oklch(0.60 0.026 256);
-  --shell-border: oklch(0.31 0.030 262);
+  --shell-bg: #040F20;          /* neutral.deep-black */
+  --shell-surface: #06142A;     /* neutral.dark-slate */
+  --shell-surface-2: #0A244C;   /* neutral.navy-shadow */
+  --shell-fg: #FFFFFF;
+  --shell-fg-2: rgba(255, 255, 255, 0.78);
+  --shell-muted: rgba(255, 255, 255, 0.58);
+  --shell-border: rgba(255, 255, 255, 0.14);
   --accent: var(--brand);
   --accent2: var(--emerald);
 }
 
-/* Theming por empresa: set data-company en un contenedor.
-   Cambia el acento primario (--brand) y un secundario (--accent2). */
-[data-company="GEN+"]     { --brand: oklch(0.56 0.20 263); --blue-light: oklch(0.66 0.16 263); --accent: var(--brand); --accent2: oklch(0.66 0.16 263); }
-[data-company="AECODE"]   { --brand: oklch(0.50 0.19 288); --blue-light: oklch(0.80 0.10 288); --accent: var(--brand); --accent2: oklch(0.62 0.17 152); }
-[data-company="VisionPro"]{ --brand: oklch(0.53 0.24 293); --blue-light: oklch(0.74 0.16 293); --accent: var(--brand); --accent2: oklch(0.66 0.16 263); }
-[data-company="THESIA"]   { --brand: oklch(0.68 0.15 75);  --blue-light: oklch(0.80 0.12 75);  --accent: var(--brand); --accent2: oklch(0.56 0.20 263); }
-[data-company="AgentFlow"]{ --brand: oklch(0.62 0.13 230); --blue-light: oklch(0.74 0.12 230); --accent: var(--brand); --accent2: oklch(0.62 0.17 152); }
+/* Theming por empresa (data-company): cambia acento primario + secundario */
+[data-company="GEN+"]     { --brand: #2165FF; --brand-hover: #1E5CE8; --blue-light: #4D84FF; --accent: var(--brand); --accent2: #4D84FF; }
+[data-company="AECODE"]   { --brand: #4A3AC1; --brand-hover: #4235B0; --blue-light: #A6A7FF; --accent: var(--brand); --accent2: #17B14E; }
+[data-company="VisionPro"]{ --brand: #6D12E3; --brand-hover: #5A0FBE; --blue-light: #B07CFF; --accent: var(--brand); --accent2: #2165FF; }
+[data-company="THESIA"]   { --brand: #C98A0A; --brand-hover: #A8740A; --blue-light: #F2C75A; --accent: var(--brand); --accent2: #2165FF; }
+[data-company="AgentFlow"]{ --brand: #1E5CE8; --brand-hover: #1748B5; --blue-light: #6A98FF; --accent: var(--brand); --accent2: #17B14E; }
 [data-company="AECODE"]   { font-family: "Manrope", "Plus Jakarta Sans", system-ui, sans-serif; }
 
 /* Kill transitions during theme swap to avoid color crossfade flash */
@@ -161,14 +172,13 @@
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: 16px;
-    box-shadow: 0 1px 2px -1px hsl(var(--shadow-color) / 0.10),
-      0 2px 8px -3px hsl(var(--shadow-color) / 0.08);
+    box-shadow: var(--shadow-sm);
   }
   .glass {
-    background: color-mix(in oklch, var(--surface) 72%, transparent);
-    backdrop-filter: blur(14px) saturate(1.4);
-    -webkit-backdrop-filter: blur(14px) saturate(1.4);
-    border: 1px solid color-mix(in oklch, var(--border) 80%, transparent);
+    background: color-mix(in srgb, var(--surface) 80%, transparent);
+    backdrop-filter: blur(16px) saturate(1.3);
+    -webkit-backdrop-filter: blur(16px) saturate(1.3);
+    border: 1px solid color-mix(in srgb, var(--border) 85%, transparent);
   }
   .tnum {
     font-variant-numeric: tabular-nums;

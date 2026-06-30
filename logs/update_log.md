@@ -69,3 +69,10 @@
 - Entidades: 13 proyectos, 37 colaboradores, 11 riesgos, 5 decisiones, 0 prioridades, 27 agentes, 12 procesos.
 - Data Quality Score: 99 · AI-Native Score: 19.
 - Deltas detectados: 0.
+
+## 2026-06-29 23:05
+
+- Corrida ETL parse_vault.py (delta).
+- Entidades: 13 proyectos, 37 colaboradores, 11 riesgos, 5 decisiones, 0 prioridades, 27 agentes, 12 procesos.
+- Data Quality Score: 99 · AI-Native Score: 19.
+- Deltas detectados: 0.

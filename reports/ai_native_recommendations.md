@@ -1,4 +1,4 @@
-# Recomendaciones AI-Native — 2026-06-29 20:37
+# Recomendaciones AI-Native — 2026-06-29 23:05
 
 AI-Native Score global: **19** (operación manual vulnerable)
 

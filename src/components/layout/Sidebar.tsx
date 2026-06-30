@@ -2,7 +2,7 @@ import { PanelLeftClose, PanelLeft, Command, Activity, ExternalLink } from "luci
 import { WORKSPACES, WS_BY_ID, NAV_BY_ID } from "@/nav";
 import { useStore } from "@/store";
 import { cx, SHELL_STYLE } from "@/lib/format";
-import { XMark, BrandMark } from "@/components/ui";
+import { XMark, BrandMark, GEN_WORDMARK_WHITE } from "@/components/ui";
 
 const depthColor = { core: "var(--emerald)", live: "var(--brand)", scaffold: "var(--amber)" } as const;
 const COMPANIES = ["GEN+", "AECODE", "VisionPro", "THESIA", "AgentFlow"];
@@ -112,7 +112,13 @@ export function Sidebar({ route, param, navigate }: { route: string; param: stri
           </div>
         </nav>
 
-        <div className="border-t border-[var(--border)] p-2.5 space-y-0.5">
+        <div className="border-t border-[var(--border)] p-2.5 space-y-1">
+          {!collapsed && (
+            <div className="flex items-center gap-2 px-1 pb-1.5 opacity-80">
+              <span className="text-[9px] uppercase tracking-wider text-shell-muted" style={{ color: "var(--shell-muted)" }}>Ecosistema</span>
+              <img src={GEN_WORDMARK_WHITE} alt="GEN+" className="h-3.5 w-auto" />
+            </div>
+          )}
           <a href={`${import.meta.env.BASE_URL}activity/`} target="_blank" rel="noreferrer"
             title="AECODE Activity Control OS"
             className={cx("w-full press flex items-center gap-2.5 rounded-lg h-9 text-[13px] text-fg-2 hover:bg-surface-2 hover:text-fg transition-colors",

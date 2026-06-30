@@ -2,7 +2,7 @@ import { useMemo } from "react";
 import { Activity, ShieldAlert, Gavel, Users, FolderKanban, Banknote, Boxes } from "lucide-react";
 import { useStore } from "@/store";
 import { dash, companyVar, cx } from "@/lib/format";
-import { Card, SectionTitle, KPICard, Badge, ScoreRing, Semaforo, EmptyState, scoreColor, riskColor, BrandMark, AECODITO, DepthTag } from "@/components/ui";
+import { Card, SectionTitle, KPICard, Badge, ScoreRing, Semaforo, EmptyState, scoreColor, riskColor, BrandMark, AECODITO, DepthTag, LOGO_WORDMARK } from "@/components/ui";
 import { Grid, type ViewProps } from "./_shared";
 
 const soles = (v: number) => "S/ " + v.toLocaleString("es-PE");
@@ -43,8 +43,13 @@ export default function CompanyDashboard({ empresa, navigate }: { empresa: strin
         <div className="flex items-center gap-3 min-w-0">
           <BrandMark name={empresa} size={52} radius={16} />
           <div className="min-w-0">
-            <div className="flex items-center gap-2"><h1 className="text-display">{empresa}</h1><DepthTag depth="live" /></div>
-            <p className="text-sm text-muted mt-0.5">Dashboard de empresa · periodo {bundle.meta.periodo}</p>
+            <div className="flex items-center gap-2.5">
+              {LOGO_WORDMARK[empresa]
+                ? <img src={LOGO_WORDMARK[empresa]} alt={empresa} className="h-7 sm:h-9 w-auto" style={{ maxWidth: 240 }} />
+                : <h1 className="text-display">{empresa}</h1>}
+              <DepthTag depth="live" />
+            </div>
+            <p className="text-sm text-muted mt-1">Dashboard de empresa · periodo {bundle.meta.periodo}</p>
           </div>
         </div>
         <div className="flex items-center gap-3">
